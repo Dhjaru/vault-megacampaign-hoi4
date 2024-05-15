@@ -1841,35 +1841,15 @@ focus_tree = {
 		completion_reward = {
 			438 = {
 				add_extra_state_shared_building_slots = 10
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 			679 = {
 				add_extra_state_shared_building_slots = 10
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 			680 = {
 				add_extra_state_shared_building_slots = 10
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 			682 = {
 				add_extra_state_shared_building_slots = 10
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 		}
 	}
@@ -1903,35 +1883,15 @@ focus_tree = {
 		completion_reward = {
 			669 = {
 				add_extra_state_shared_building_slots = 10
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 			673 = {
 				add_extra_state_shared_building_slots = 10
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 			671 = {
 				add_extra_state_shared_building_slots = 10
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 			668 = {
 				add_extra_state_shared_building_slots = 10
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 		}
 	}
@@ -1966,43 +1926,18 @@ focus_tree = {
 		completion_reward = {
 			687 = {
 				add_extra_state_shared_building_slots = 10
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 			684 = {
 				add_extra_state_shared_building_slots = 10
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 			689 = {
 				add_extra_state_shared_building_slots = 10
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 			688 = {
 				add_extra_state_shared_building_slots = 10
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 			443 = {
 				add_extra_state_shared_building_slots = 10
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 		}
 	}
@@ -2511,7 +2446,7 @@ focus_tree = {
 		id = SOV_fighter_focus
 		icon = GFX_SOV_fighter_designer
 
-		prerequisite = { focus = SOV_new_branch_of_the_military focus = SOV_integrated_air_corps }
+		prerequisite = { focus = SOV_new_branch_of_the_military }
 		relative_position_id = SOV_new_branch_of_the_military
 
 		search_filters = { FOCUS_FILTER_AIR_XP }
@@ -2756,10 +2691,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			swap_ideas = {
-				add_idea = SOV_scars_of_the_reactionary_navy_2
-				remove_idea = SOV_scars_of_the_reactionary_navy
-			}
 		}
 	}
 	focus = {
@@ -2790,14 +2721,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			406 = {
-				add_extra_state_shared_building_slots = 5
-				add_building_construction = {
-					type = dockyard
-					level = 5
-					instant_build = yes
-				}
-			}
 		}
 	}
 	focus = {
@@ -2828,14 +2751,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			417 = {
-				add_extra_state_shared_building_slots = 5
-				add_building_construction = {
-					type = dockyard
-					level = 5
-					instant_build = yes
-				}
-			}
 		}
 	}
 	focus = {
@@ -2866,14 +2781,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			422 = {
-				add_extra_state_shared_building_slots = 5
-				add_building_construction = {
-					type = dockyard
-					level = 5
-					instant_build = yes
-				}
-			}
 		}
 	}
 	focus = {
@@ -2904,21 +2811,13 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			456 = {
-				add_extra_state_shared_building_slots = 5
-				add_building_construction = {
-					type = dockyard
-					level = 5
-					instant_build = yes
-				}
-			}
 		}
 	}
 	focus = {
 		id = SOV_develop_the_navy
 		icon = GFX_goal_generic_construct_naval_dockyard
 
-		prerequisite = { focus = SOV_osterkoping focus = SOV_rostov focus = SOV_petersborg focus = SOV_osteros }
+		prerequisite = { focus = SOV_osterkoping focus = SOV_Rostov focus = SOV_petersborg focus = SOV_osteros }
 		relative_position_id = SOV_four_ocean_navy_act
 
 		search_filters = { FOCUS_FILTER_NAVY_XP }
@@ -2942,10 +2841,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			swap_ideas = {
-				add_idea = SOV_scars_of_the_reactionary_navy_3
-				remove_idea = SOV_scars_of_the_reactionary_navy_2
-			}
 		}
 	}
 	focus = {
@@ -2976,9 +2871,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			set_technology = {
-				coastal_defense_ships = 1
-			}
 		}
 	}
 	focus = {
@@ -3009,8 +2901,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = TODO
-		#TODO fjord and archipelago bonus
 		}
 	}
 	focus = {
@@ -3041,11 +2931,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_tech_bonus = {
-				bonus = 1
-				uses = 3
-				category = marine_tech
-			}
 		}
 	}
 	focus = {
@@ -3076,42 +2961,14 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			#TODO
-			451 = {
-				set_building_level = {
-					type = coastal_bunker
-					level = 5
-					province = {
-						limit_to_naval_base = yes
-					}
-				}
-			}
-			417 = {
-				set_building_level = {
-					type = coastal_bunker
-					level = 5
-					province = {
-						limit_to_naval_base = yes
-					}
-				}
-			}
-			422 = {
-				set_building_level = {
-					type = coastal_bunker
-					level = 5
-					province = {
-						limit_to_naval_base = yes
-					}
-				}
-			}
 		}
 	}
 
 	### ARMY
 
 	focus = {
-		id = SOV_support_the_german_communist_union
-		icon = GFX_SOV_molotov_ribbentrop_pact
+		id = SOV_reform_the_red_army
+		icon = GFX_SOV_red_army
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		x = 18
@@ -3124,7 +2981,7 @@ focus_tree = {
 		}
 
 		available = {		
-			date > 1936.6.1	
+			date > 1939.1.1	
 		}
 		
 		bypass = {
@@ -3135,37 +2992,14 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			army_experience = 100
-			W31 = {
-				add_equipment_to_stockpile = {
-					type = infantry_equipment
-					amount = 15000
-					producer = SOV
-				}
-				add_equipment_to_stockpile = {
-					type = support_equipment
-					amount = 1000
-					producer = SOV
-				}
-				add_equipment_to_stockpile = {
-					type = radio_equipment
-					amount = 1000
-					producer = SOV
-				}
-				add_equipment_to_stockpile = {
-					type = artillery_equipment
-					amount = 1500
-					producer = SOV
-				}
-			}
 		}
 	}
 	focus = {
 		id = SOV_expand_the_radio_corps
 		icon = GFX_SOV_improve_signals
 
-		prerequisite = { focus = SOV_support_the_german_communist_union }
-		relative_position_id = SOV_support_the_german_communist_union
+		prerequisite = { focus = SOV_reform_the_red_army }
+		relative_position_id = SOV_reform_the_red_army
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		x = -2
@@ -3188,11 +3022,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_tech_bonus = {
-				bonus = 1
-				uses = 2
-				category = electronics
-			}
 		}
 	}
 	focus = {
@@ -3223,11 +3052,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_tech_bonus = {
-				bonus = 3
-				uses = 3
-				category = radar_tech
-			}
 		}
 	}
 	focus = {
@@ -3258,22 +3082,14 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_tech_bonus = {
-				bonus = 1
-				uses = 3
-				technology = tech_logistics_company
-				technology = tech_logistics_company2
-				technology = tech_logistics_company3
-				technology = tech_logistics_company4
-			}
 		}
 	}
 	focus = {
 		id = SOV_found_armored_research_division
 		icon = GFX_SOV_armour_development
 
-		prerequisite = { focus = SOV_support_the_german_communist_union }
-		relative_position_id = SOV_support_the_german_communist_union
+		prerequisite = { focus = SOV_reform_the_red_army }
+		relative_position_id = SOV_reform_the_red_army
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		x = 0
@@ -3296,12 +3112,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = SOV_armor_research_division
-			add_tech_bonus = {
-				bonus = 1
-				uses = 1
-				category = armor
-			}
 		}
 	}
 	focus = {
@@ -3332,11 +3142,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_tech_bonus = {
-				bonus = 1
-				uses = 2
-				category = cat_mechanized_equipment
-			}
 		}
 	}
 	focus = {
@@ -3367,11 +3172,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_tech_bonus = {
-				bonus = 0.75
-				uses = 1
-				category = cat_heavy_armor
-			}
 		}
 	}
 	focus = {
@@ -3402,11 +3202,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_tech_bonus = {
-				bonus = 0.75
-				uses = 1
-				category = cat_medium_armor
-			}
 		}
 	}
 
@@ -3414,8 +3209,8 @@ focus_tree = {
 		id = SOV_found_artillery_research_division
 		icon = GFX_SOV_artillery_development
 
-		prerequisite = { focus = SOV_support_the_german_communist_union }
-		relative_position_id = SOV_support_the_german_communist_union
+		prerequisite = { focus = SOV_reform_the_red_army }
+		relative_position_id = SOV_reform_the_red_army
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		x = 3
@@ -3438,12 +3233,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = SOV_artillery_research_division
-			add_tech_bonus = {
-				bonus = 1
-				uses = 1
-				category = artillery
-			}
 		}
 	}
 
@@ -3476,7 +3265,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = SOV_a_peoples_rifle
 		}
 	}
 
@@ -3509,7 +3297,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = SOV_a_rifle_for_the_people
 		}
 	}
 
@@ -3541,11 +3328,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_tech_bonus = {
-				bonus = 1.5
-				uses = 4
-				category = rocketry
-			}
 		}
 	}
 
@@ -3553,9 +3335,9 @@ focus_tree = {
 
 	focus = {
 		id = SOV_great_patriotic_war
-		icon = GFX_SOV_red_army
+		icon = GFX_SOV_katyusha
 
-		relative_position_id = SOV_support_the_german_communist_union
+		relative_position_id = SOV_reform_the_red_army
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		x = 0
@@ -3589,7 +3371,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_winter_supply_lines
-		icon = GFX_SOV_lessons_of_the_winter_war
+		icon = GFX_SOV_katyusha
 
 		prerequisite = { focus = SOV_great_patriotic_war }
 		prerequisite = { focus = SOV_logistics_development }
@@ -3609,6 +3391,7 @@ focus_tree = {
 		}
 		
 		bypass = {
+			has_war = yes
 		}
 
 		cancel_if_invalid = no
@@ -3616,13 +3399,12 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = SOV_winter_supply
 		}
 	}
 
 	focus = {
 		id = SOV_red_army_reform
-		icon = GFX_focus_generic_full_social_mobilization
+		icon = GFX_SOV_katyusha
 
 		prerequisite = { focus = SOV_great_patriotic_war }
 		relative_position_id = SOV_great_patriotic_war
@@ -3641,6 +3423,7 @@ focus_tree = {
 		}
 		
 		bypass = {
+			has_war = yes
 		}
 
 		cancel_if_invalid = no
@@ -3648,13 +3431,12 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = SOV_red_army
 		}
 	}
 
 	focus = {
 		id = SOV_camouflage
-		icon = GFX_goal_generic_position_armies
+		icon = GFX_SOV_katyusha
 
 		prerequisite = { focus = SOV_great_patriotic_war }
 		relative_position_id = SOV_great_patriotic_war
@@ -3673,6 +3455,7 @@ focus_tree = {
 		}
 		
 		bypass = {
+			has_war = yes
 		}
 
 		cancel_if_invalid = no
@@ -3680,13 +3463,12 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = SOV_camouflage
 		}
 	}
 
 	focus = {
 		id = SOV_spaa_focus
-		icon = GFX_SOV_assault_guns
+		icon = GFX_SOV_katyusha
 
 		prerequisite = { focus = SOV_great_patriotic_war }
 		prerequisite = { focus = SOV_motorized_rocket_artillery }
@@ -3706,6 +3488,7 @@ focus_tree = {
 		}
 		
 		bypass = {
+			has_war = yes
 		}
 
 		cancel_if_invalid = no
@@ -3713,13 +3496,12 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = SOV_spaa_focus
 		}
 	}
 
 	focus = {
 		id = SOV_a_radio_for_every_company
-		icon = GFX_goal_generic_radio_development_2
+		icon = GFX_SOV_katyusha
 
 		prerequisite = { focus = SOV_winter_supply_lines }
 		prerequisite = { focus = SOV_red_army_reform }
@@ -3739,6 +3521,7 @@ focus_tree = {
 		}
 		
 		bypass = {
+			has_war = yes
 		}
 
 		cancel_if_invalid = no
@@ -3746,18 +3529,12 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_tech_bonus = {
-				bonus = 1.5
-				ahead_reduction = 2
-				uses = 1
-				technology = infantry_radio
-			}
 		}
 	}
 
 	focus = {
 		id = SOV_field_gun_development
-		icon = GFX_z_goal_new_artillery
+		icon = GFX_SOV_katyusha
 
 		prerequisite = { focus = SOV_red_army_reform }
 		prerequisite = { focus = SOV_camouflage }
@@ -3777,6 +3554,7 @@ focus_tree = {
 		}
 		
 		bypass = {
+			has_war = yes
 		}
 
 		cancel_if_invalid = no
@@ -3784,13 +3562,12 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = SOV_modern_field_gun
 		}
 	}
 
 	focus = {
 		id = SOV_100k_program
-		icon = GFX_goal_generic_license_tanks
+		icon = GFX_SOV_katyusha
 
 		prerequisite = { focus = SOV_spaa_focus }
 		relative_position_id = SOV_spaa_focus
@@ -3809,6 +3586,7 @@ focus_tree = {
 		}
 		
 		bypass = {
+			has_war = yes
 		}
 
 		cancel_if_invalid = no
@@ -3816,10 +3594,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_timed_idea = {
-				idea = SOV_100k_program
-				days = 365
-			}
 		}
 	}
 }
