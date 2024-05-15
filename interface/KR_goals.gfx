@@ -12226,4 +12226,8 @@ SpriteType = {
 		name = "GFX_means_of_production"
 		texturefile = "gfx/interface/goals/jap/means_of_production.dds"
 	}
+	SpriteType = {
+		name = "GFX_z_goal_new_artillery"
+		texturefile = "gfx/interface/goals/jap/z_goal_new_artillery.dds"
+	}
 }
