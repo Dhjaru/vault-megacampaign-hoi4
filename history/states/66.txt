@@ -10,6 +10,7 @@ state={
 		owner = X14
 		victory_points = {
 			7011 15 
+			4076 20
 		}
 		buildings = {
 			infrastructure = 5
