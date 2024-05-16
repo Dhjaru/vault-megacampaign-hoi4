@@ -520,5 +520,256 @@ ideas = {
 				defensive_war_stability_factor = 0.15
 			}
 		}
+		SOV_armor_research_division = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			picture = nkvd_2
+			
+			research_bonus = {
+				armor = 0.15
+			}
+		}
+		SOV_artillery_research_division = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			picture = nkvd_2
+			
+			research_bonus = {
+				artillery = 0.15
+			}
+			equipment_bonus = {
+				artillery = {
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
+		}
+		SOV_a_peoples_rifle = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			picture = nkvd_2
+			
+			equipment_bonus = {
+				infantry_equipment = {
+					soft_attack = 0.10
+					defense = 0.10 instant = yes
+				}
+			}
+		}
+		SOV_a_rifle_for_the_people = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			picture = nkvd_2
+			
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.15 instant = yes
+				}
+			}
+		}
+		SOV_spaa_focus = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			picture = nkvd_2
+			
+			equipment_bonus = {
+				light_sp_anti_air_brigade = {
+					anti_air_attack = 0.1
+					soft_attack = 0.15
+					build_cost_ic = -0.15
+				}
+				medium_sp_anti_air_brigade = {
+					anti_air_attack = 0.1
+					soft_attack = 0.15
+					build_cost_ic = -0.15
+				}
+				heavy_sp_anti_air_brigade = {
+					anti_air_attack = 0.1
+					soft_attack = 0.15
+					build_cost_ic = -0.15
+				}
+				super_heavy_sp_anti_air_brigade = {
+					anti_air_attack = 0.1
+					soft_attack = 0.15
+					build_cost_ic = -0.15
+				}
+			}
+		}
+		SOV_100k_program = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			picture = nkvd_2
+			
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.15 instant = yes
+				}
+			}
+		}
+		SOV_modern_field_gun = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			picture = nkvd_2
+			
+			equipment_bonus = {
+				armor = {
+					hard_attack = 0.2
+					ap_attack = 0.5 instant = yes
+				}
+			}
+		}
+		SOV_winter_supply = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			picture = nkvd_2
+			
+			modifier = {
+				winter_attrition_factor = -0.5
+				supply_node_range = 0.1
+				no_supply_grace = 120
+				supply_consumption_factor = -0.15
+			}
+		}
+		SOV_red_army = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			picture = nkvd_2
+			
+			modifier = {
+				army_org_factor = 0.15
+				army_org_regain = 0.3
+			}
+		}
+		SOV_camouflage = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			picture = nkvd_2
+			
+			modifier = {
+				cas_damage_reduction = 0.33
+				enemy_army_bonus_air_superiority_factor = -0.25
+				army_bonus_air_superiority_factor = -0.25
+				ground_attack_factor = -0.15
+			}
+		}
+		SOV_scars_of_the_reactionary_navy = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			picture = nkvd_2
+			
+			modifier = {
+				production_speed_dockyard_factor = -0.5
+			}
+		}
+		SOV_scars_of_the_reactionary_navy_2 = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			picture = nkvd_2
+			
+			modifier = {
+				production_speed_dockyard_factor = -0.5
+				industrial_capacity_dockyard = 0.1
+			}
+		}
+		SOV_scars_of_the_reactionary_navy_3 = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			picture = nkvd_2
+			
+			modifier = {
+				production_speed_dockyard_factor = -0.5
+				industrial_capacity_dockyard = 0.2
+			}
+		}
 	}
 }
