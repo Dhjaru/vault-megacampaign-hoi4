@@ -52,5 +52,15 @@ characters={
 			id=-1
 		}
 	}
-
+	USA_emperor_norton={
+		name=USA_emperor_norton
+		portraits={
+			large="gfx/leaders/USA/portrait_USA_Norton"
+		}
+		}
+		country_leader={
+			ideology=democratic
+			expire="1944.1.1.1"
+			id=-1
+	}
 }

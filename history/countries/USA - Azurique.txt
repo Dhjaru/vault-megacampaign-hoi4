@@ -1,6 +1,6 @@
 ﻿capital = 549
 set_major = yes
-set_research_slots = 5
+set_research_slots = 6
 add_named_threat = { threat = 2.5235 name = infamy }
 
 oob = "USA_OOB"
@@ -30,6 +30,7 @@ set_technology = { #player
 	marines2 = 1
 	special_equipment = 1
 	electronic_mechanical_engineering = 1
+	mechanical_computing = 1
 	radio = 1
 	tech_dig_1 = 1
     usa_motorised_infantry = 1
@@ -82,7 +83,8 @@ set_technology = { #player
 	synth_oil_experiments = 1
 	oil_processing = 1
 	construction1 = 1
-	
+	construction2 = 1
+
 	USA_infrastructure_tech = 1
 }
    
@@ -259,19 +261,21 @@ if = {
 add_ideas = {
 	great_power
 	volunteer_only
-	civilian_economy
-	export_focus
+	undisturbed_isolation
+	free_trade
 	culture_nouvellien
 }
-set_stability = 0.60
-set_war_support = 0.46
+set_stability = 0.80
+set_war_support = 0.10
 
 recruit_character = USA_john_cena
 recruit_character = USA_essioff_leblanc
 recruit_character = USA_huguel_masson
 recruit_character = USA_letellier_pantaleon
 recruit_character = USA_huguel_perodeau
-recruit_character = USA_theodore_langelier
+recruit_character = USA_emperor_norton
+
+
 
 if = {
 	limit = {
@@ -519,4 +523,4 @@ if = {
 add_equipment_to_stockpile = { type = artillery_equipment amount = 2772 producer = USA }
 add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 1216 producer = USA }
 add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 103 producer = USA }
-
+add_equipment_to_stockpile = { type = basic_train amount = 200 producer = USA}
