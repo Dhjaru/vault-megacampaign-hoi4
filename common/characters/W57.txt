@@ -112,5 +112,17 @@ characters={
 			id=-1
 		}
 	}
+	USA_emperor_norton={
+		name=USA_emperor_norton
+		portraits={
+			civilian{
+			large="gfx/leaders/USA/portrait_USA_Emperor_Norton.dds"
+			}
+		}
+		country_leader={
+			ideology=conservatism
+			expire="1944.1.1.1"
+			id=-1
+	}
 
 }
