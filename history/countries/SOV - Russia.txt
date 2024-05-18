@@ -68,6 +68,7 @@ set_technology = { #player
 	sov_naval_bomber_1936 = 1
 
 	mass_assault = 1
+	width_tech = 1
 	fleet_in_being = 1
 	############## economy ###########
 	basic_machine_tools = 1
@@ -127,19 +128,19 @@ if = {
 		type = light_tank_rocket_chassis_1934
 		parent_version = 0
 		modules = {
-			main_armament_slot = tank_heavy_machine_gun
+			main_armament_slot = tank_close_support_gun
 			turret_type_slot = tank_light_casemate_turret
 			suspension_type_slot = tank_bogie_suspension
 			armor_type_slot = tank_riveted_armor
 			armor_sloping_slot = unsloped_armor
 			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = secondary_cannon_support_cannon_small
 		}
 		upgrades = {
-			tank_nsb_engine_upgrade = 1
+			tank_nsb_engine_upgrade = 9
 			tank_nsb_armor_upgrade = 1
 		}
 		icon = "gfx/interface/technologies/land/sov/t27.tga"
-		obsolete = yes
 	}
 	create_equipment_variant = {
 		name = "T-26 Obr.31"
@@ -174,7 +175,7 @@ if = {
 			special_type_slot_1 = flamethrower
 		}
 		upgrades = {
-			tank_nsb_engine_upgrade = 2
+			tank_nsb_engine_upgrade = 5
 			tank_nsb_armor_upgrade = 1
 		}
 		icon = "gfx/interface/technologies/land/sov/t26e.tga"
@@ -193,7 +194,7 @@ if = {
 			engine_type_slot = tank_gasoline_engine
 		}
 		upgrades = {
-			tank_nsb_engine_upgrade = 2
+			tank_nsb_engine_upgrade = 6
 			tank_nsb_armor_upgrade = 2
 		}
 		icon = "gfx/interface/technologies/land/sov/sov_light_t26.tga"
@@ -268,10 +269,10 @@ if = {
 			engine_type_slot = tank_gasoline_engine
 			radio_slot = tank_radio_1
 			special_type_slot_1 = secondary_turret_hmg
-			special_type_slot_2 = secondary_turret_hmg
+			special_type_slot_2 = additional_machine_guns
 		}
 		upgrades = {
-			tank_nsb_engine_upgrade = 9
+			tank_nsb_engine_upgrade = 8
 			tank_nsb_armor_upgrade = 3
 		}
 		icon = "gfx/interface/technologies/land/sov/SOV_medium_tank_1.tga"
@@ -283,19 +284,19 @@ if = {
 		modules = {
 			main_armament_slot = tank_close_support_gun
 			turret_type_slot = tank_heavy_two_man_tank_turret
-			suspension_type_slot = tank_bogie_suspension
+			suspension_type_slot = tank_torsion_bar_suspension
 			armor_type_slot = tank_welded_armor
 			armor_sloping_slot = unsloped_armor
-			engine_type_slot = tank_gasoline_engine
+			engine_type_slot = tank_diesel_engine
 			radio_slot = tank_radio_1
 			special_type_slot_1 = secondary_turret_small_cannon_big
-			special_type_slot_2 = secondary_turret_hmg_big
-			special_type_slot_3 = secondary_turret_hmg_big
-			special_type_slot_4 = secondary_turret_small_cannon_big
+			special_type_slot_2 = additional_machine_guns
+			special_type_slot_3 = extra_ammo_storage
+			special_type_slot_4 = extra_ammo_storage
 		}
 		upgrades = {
-			tank_nsb_engine_upgrade = 9
-			tank_nsb_armor_upgrade = 3
+			tank_nsb_engine_upgrade = 7
+			tank_nsb_armor_upgrade = 2
 		}
 		icon = "gfx/interface/technologies/land/sov/SOV_heavy_tank_1.tga"
 	}
@@ -368,6 +369,7 @@ if = {
 # Research Bonuses
 
 set_country_flag = conv_russia
+set_country_flag = fuel_system_enabled
 starting_train_buffer = 4
 set_convoys = 500
 
@@ -401,6 +403,7 @@ add_ideas = {
 	SOV_legacy_of_five_year_plan_start
 	SOV_ruined_academia
 	SOV_legacy_of_great_purge
+	Disorganized_airforce_1_1
 }
 set_stability = 0.60
 set_war_support = 0.60
@@ -625,7 +628,6 @@ if = {
 		}
 }
 ### TANK DESIGNS ###
-add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 14028 producer = SOV }
 if = {
 	limit = { has_dlc = "No Step Back" }
 	add_equipment_to_stockpile = { type = light_tank_chassis_1934 variant_name = "T-26 Obr.31" amount = 2760 producer = SOV }
@@ -639,6 +641,13 @@ if = {
 	limit = { has_dlc = "No Step Back" }
 	add_equipment_to_stockpile = { type = light_tank_chassis_1934 variant_name = "OT-26" amount = 3 producer = SOV }
 }
+add_equipment_to_stockpile = { type = field_gun_equipment_1 amount = 14028 producer = SOV }
 add_equipment_to_stockpile = { type = pack_artillery_equipment_1 amount = 5207 producer = SOV }
-add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 5699 producer = SOV }
-
+add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 95699 producer = SOV }
+add_equipment_to_stockpile = { type = radio_equipment_1 amount = 2200 producer = SOV }
+add_equipment_to_stockpile = { type = support_equipment_1 amount = 3500 producer = SOV }
+add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 170 producer = SOV }
+add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 9500 producer = SOV }
+add_equipment_to_stockpile = { type = horse_equipment_0 amount = 21500 producer = SOV }
+add_equipment_to_stockpile = { type = heavy_anti_air_equipment_1 amount = 350 producer = SOV }
+add_equipment_to_stockpile = { type = anti_tank_equipment_1 amount = 390 producer = SOV }

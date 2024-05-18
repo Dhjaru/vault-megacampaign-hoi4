@@ -208,61 +208,14 @@ on_actions = {
 		effect = {
 			
 			every_country = {
-				limit = { 
-					OR ={
-						tag = ETH
-						tag = CHI
-						tag = SWE
-						tag = NOR
-						tag = BEL
-						tag = LUX
-						tag = HOL
-						tag = IRQ
-						tag = PER
-						tag = TUR
-						tag = INS 
-						tag = SIA 
-						tag = VEN 
-						tag = POR
-						tag = BRA
-						tag = PAR
-						tag = MEX 
-						tag = DEN
-						tag = LAT
-						tag = ALB 
-						tag = AUS
-						tag = IRE
-						tag = YUG
-						tag = GRE
-						tag = SWI
-						tag = DNZ
-						tag = SOV
-					}	
+				add_timed_idea = {
+				    idea = fix_production_idea
+				    days = 7
 				}
 				add_ideas = no_market	
+				add_ideas = no_guarantees 
 			}
 			
-			every_country = {
-				limit = { 
-					is_in_faction_with = ENG
-					NOT = {
-						tag = ENG
-						tag = AST 
-					}
-					
-				}
-				add_timed_idea = {
-					days = 1460
-					idea = ENG_prepare_for_the_inevitable_idea
-				}
-		
-			}
-			
-			CHI = {
-				set_variable = { CHI_juntuan_division_cap = 0 }
-				set_division_template_cap = {  division_template = "Juntuan" division_cap = CHI_juntuan_division_cap }
-				
-			}
 			JAP = {
 				add_opinion_modifier = {
 					modifier = usa_jap_trade
@@ -275,31 +228,6 @@ on_actions = {
 					target = JAP
 				}
 			}
-			every_country = {
-				add_ideas = no_guarantees 
-			}
-			SPR = {
-				every_state = {
-					limit = {
-						OR = {
-							state = 171
-							state = 174
-							state = 788
-							state = 791
-							state = 176
-							state = 166
-							state = 172
-							state = 170
-							state = 169
-							
-						}
-					}
-					set_state_flag = SPA_northern_garrisons_state_flag
-					add_to_variable = { var = SPA_garrison_control value = 3 }
-
-					SPA_garrison_control_cost_calculation = yes
-				}
-			}
 			
 			every_country = {
 				set_variable = { speeches_enabled = 0 }
@@ -307,116 +235,6 @@ on_actions = {
 				country_event = { 
 					id = startevent.2 
 				} 
-			}
-			SOV = {
-				set_country_flag = convoys400_flag
-			}
-			if = {
-				limit = {
-					NZL = {
-						is_ai = no
-					}
-				}
-				
-				517 = {
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = industrial_complex
-						level = 2
-						instant_build = yes
-					}
-				}
-				285 = {
-					add_extra_state_shared_building_slots = 3
-					add_building_construction = {
-						type = industrial_complex
-						level = 3
-						instant_build = yes
-					}
-			
-				}
-				521 = {
-					add_extra_state_shared_building_slots = 4
-					add_building_construction = {
-						type = industrial_complex
-						level = 2
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = arms_factory
-						level = 2
-						instant_build = yes
-					}
-			
-				}
-				519 = {
-					add_extra_state_shared_building_slots = 4
-					add_building_construction = {
-						type = industrial_complex
-						level = 2
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = arms_factory
-						level = 2
-						instant_build = yes
-					}
-				
-				}
-				522 = {
-					add_extra_state_shared_building_slots = 4
-					add_building_construction = {
-						type = industrial_complex
-						level = 2
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = arms_factory
-						level = 2
-						instant_build = yes
-					}
-			
-				}
-				518 = {
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = arms_factory
-						level = 2
-						instant_build = yes
-					}
-				
-				}
-			}
-			if = {
-				limit = {
-					NZL = {
-						is_ai = yes
-					}
-				}
-				AST = {
-					annex_country = {
-						target = NZL
-						transfer_troops = yes
-					}	
-				}
-				284 = {
-					add_extra_state_shared_building_slots = 3
-					add_building_construction = {
-						type = arms_factory
-						level = 3
-						instant_build = yes
-					}
-					add_core_of = AST
-				}
-				723 = {
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = industrial_complex
-						level = 2
-						instant_build = yes
-					}
-					add_core_of = AST
-				}
 			}
 			if = {
 				limit = {
@@ -596,208 +414,41 @@ on_actions = {
 					date > 1936.01.01 
 				}
 				set_global_flag = SP_start_bm
-			}			
-			GER = {
-				if = {
-					limit = { 
-						GER = { 
-							is_ai = yes 
-						}
-					} 
-					add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 10000 producer = GER }
-					add_equipment_to_stockpile = { type = support_equipment_1 amount = 8000 producer = GER }
-					add_equipment_to_stockpile = { type = horse_equipment_0 amount = 4000 producer = GER } 					
-					add_equipment_to_stockpile = { type = special_equipment_1 amount = 8000 producer = GER } 					
-
-					54 = { add_extra_state_shared_building_slots = 25 add_building_construction = { type = arms_factory level = 25 } }
-					59 = { add_extra_state_shared_building_slots = 25 add_building_construction = { type = arms_factory level = 25 } }
-					60 = { add_extra_state_shared_building_slots = 15 add_building_construction = { type = industrial_complex level = 25 } }
-
-					59 = { add_extra_state_shared_building_slots = 2 add_building_construction = { type = synthetic_refinery level = 2 instant_build = yes } }
-					64 = { add_extra_state_shared_building_slots = 2 add_building_construction = { type = synthetic_refinery level = 2 instant_build = yes } }
-					60 = { add_extra_state_shared_building_slots = 2 add_building_construction = { type = synthetic_refinery level = 2 instant_build = yes } }
-					54 = { add_extra_state_shared_building_slots = 2 add_building_construction = { type = synthetic_refinery level = 2 instant_build = yes } }
-					50 = { add_extra_state_shared_building_slots = 2 add_building_construction = { type = synthetic_refinery level = 2 instant_build = yes } }
-				}
-			}	
-			FIN = {
-				if = {
-					limit = { 
-						FIN = { is_ai = yes }
-					}
-					add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 15000 producer = FIN }
-					add_equipment_to_stockpile = { type = support_equipment_1 amount = 1000 producer = FIN }
-					add_equipment_to_stockpile = { type = horse_equipment_0 amount = 1000 producer = FIN }
-					add_equipment_to_stockpile = { type = pack_artillery_equipment_1 amount = 2000 producer = FIN }
-				}
-			}					
-			JAP = {
-				if = {
-					limit = { 
-						JAP = { 
-							is_ai = yes 
-						}
-					}
-
-					set_technology = {
-						trench_warfare = 0
-						superior_firepower = 1
-					}
-				}
-			}			
-			RAJ = {
-				if = {
-					limit = { 
-						RAJ = {
-							is_ai = yes
-						}
-					}
-					add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 25000 producer = RAJ }
-					add_equipment_to_stockpile = { type = support_equipment_1 amount = 4000 producer = RAJ }
-					add_equipment_to_stockpile = { type = horse_equipment_0 amount = 5000 producer = RAJ } 
-				}
-			}
-			HUN = {
-				if = { limit = { HUN = { is_ai = yes } } load_oob = "Infantry_ai" }
-			}
-			ROM = {
-				if = { limit = { ROM = { is_ai = yes } } load_oob = "Infantry_ai" }
-			}
-			HOL = {
-				if = { limit = { HOL = { is_ai = yes } } load_oob = "Infantry_ai" }
-			}
-			MAN = {
-				if = { limit = { MAN = { is_ai = yes } } load_oob = "Infantry_ai" }
-			}
-			SOV = {
-				516 = { set_state_flag = SOV_gulag_economy_flag }
-				644 = { set_state_flag = SOV_gulag_economy_flag }
-				562 = { set_state_flag = SOV_gulag_economy_flag }
-				579 = { set_state_flag = SOV_gulag_economy_flag }
-				574 = { set_state_flag = SOV_gulag_economy_flag }
-				575 = { set_state_flag = SOV_gulag_economy_flag }
-				576 = { set_state_flag = SOV_gulag_economy_flag }
-				577 = { set_state_flag = SOV_gulag_economy_flag }
-				580 = { set_state_flag = SOV_gulag_economy_flag }
-
-				if = {
-					limit = { 
-						SOV = { is_ai = yes }
-					}
-					229 = { add_building_construction = { type = infrastructure level = 6 instant_build = yes } }
-
-					add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 5000 producer = SOV }
-					add_equipment_to_stockpile = { type = support_equipment_1 amount = 4000 producer = SOV }
-					add_equipment_to_stockpile = { type = pack_artillery_equipment_1 amount = 1500 producer = SOV }
-					add_equipment_to_stockpile = { type = horse_equipment_0 amount = 4000 producer = SOV } 
-					add_equipment_to_stockpile = { type = armored_cars_equipment_1 amount = 1000 producer = SOV } 
-					add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 2000 producer = SOV } 
-					add_equipment_to_stockpile = { type = anti_air_equipment_1 amount = 1000 producer = SOV } 
-
-					delete_unit_template_and_units = {
-						division_template = "Kavaleriyskaya Diviziya"
-						disband = yes
-					}
-					delete_unit_template_and_units = {
-						division_template = "NKVD Pogranichnaya Diviziya"
-						disband = yes
-					}
-				}
-			}
-
-			if = {
-				limit = { 
-					GER = { is_ai = yes }
-					ROM = { is_ai = yes }
-				}
-				ROM = {
-					give_resource_rights = { receiver = GER state = 46 }
-				}
-			}
-
-			if = {
-				limit = { 
-					POL = { is_ai = no }
-				}
-				830 = {
-					set_building_level = {
-						type = infrastructure
-						level = 9
-					}
-				}
 			}
 			
 			USA = {
 				country_event = { id = usa.31 days = 20 }
 			}
-			ENG = {
-				if = {
-					limit = { 
-						ENG = { is_ai = yes } 
-					}
-					delete_unit_template_and_units = {
-						division_template = "Cavalry Brigade"
-					}
-					delete_unit_template_and_units = {
-						division_template = "Army Tank Brigade"
-					}
-				}	
-			}
-		
-			if = {
-				limit = { GER = { is_ai = yes } }
-				GER = { add_ideas = ger_ai load_oob = "GER_ai" }
-			}
-			if = {
-				limit = { SOV = { is_ai = yes } }
-				SOV = { add_ideas = sov_ai load_oob = "SOV_ai" }
-			}
-			if = {
-				limit = { JAP = { is_ai = yes } }
-				JAP = { add_ideas = jap_ai load_oob = "JAP_ai" }
-			}
-			if = {
-				limit = { USA = { is_ai = yes } }
-				USA = { add_ideas = usa_ai load_oob = "USA_ai" }
-			}
-			if = {
-				limit = { ITA = { is_ai = yes } }
-				ITA = { add_ideas = ita_ai load_oob = "Infantry_ai" }
-			}
-			if = {
-				limit = { ENG = { is_ai = yes } }
-				ENG = { add_ideas = eng_ai load_oob = "ENG_ai" }
-			}
-			if = {
-				limit = {
-					has_dlc = "Man the Guns"
-				}
-				PER = {
-					give_resource_rights = { receiver = ENG state = 411 }
-					give_resource_rights = { receiver = ENG state = 412 }
-					give_resource_rights = { receiver = ENG state = 413 }
-				}
-				IRQ = {
-					give_resource_rights = { receiver = ENG state = 291 }
-					give_resource_rights = { receiver = ENG state = 676 }
-				}
-				MAN = {
-					give_resource_rights = { receiver = JAP state = 716 }
-					give_resource_rights = { receiver = JAP state = 328 }
-				}
-			}
-			#Mexican oil concessions
-			if = {
-				limit = {
-					has_dlc = "Man the Guns"
-				}
-				MEX = {
-					give_resource_rights = { receiver = ENG state = 476 }
-					give_resource_rights = { receiver = ENG state = 477 }
-					give_resource_rights = { receiver = USA state = 479 }
-					give_resource_rights = { receiver = USA state = 480 }
-				}
-			}
+			#if = {
+			#	limit = {
+			#		has_dlc = "Man the Guns"
+			#	}
+			#	PER = {
+			#		give_resource_rights = { receiver = ENG state = 411 }
+			#		give_resource_rights = { receiver = ENG state = 412 }
+			#		give_resource_rights = { receiver = ENG state = 413 }
+			#	}
+			#	IRQ = {
+			#		give_resource_rights = { receiver = ENG state = 291 }
+			#		give_resource_rights = { receiver = ENG state = 676 }
+			#	}
+			#	MAN = {
+			#		give_resource_rights = { receiver = JAP state = 716 }
+			#		give_resource_rights = { receiver = JAP state = 328 }
+			#	}
+			#}
+			##Mexican oil concessions
+			#if = {
+			#	limit = {
+			#		has_dlc = "Man the Guns"
+			#	}
+			#	MEX = {
+			#		give_resource_rights = { receiver = ENG state = 476 }
+			#		give_resource_rights = { receiver = ENG state = 477 }
+			#		give_resource_rights = { receiver = USA state = 479 }
+			#		give_resource_rights = { receiver = USA state = 480 }
+			#	}
+			#}
 		}
 	}
 	on_unit_leader_promote_from_ranks_veteran = { #Unit leader scope, FROM is unit
