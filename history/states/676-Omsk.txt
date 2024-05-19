@@ -13,6 +13,7 @@ state={
 		buildings = {
 			infrastructure = 7
 			air_base = 0
+			fuel_silo = 3
 		}
 	}
 	state_category=metropolis

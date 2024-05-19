@@ -1231,7 +1231,7 @@ leader_traits = {
 		cost = 200
 
 		corps_commander_modifier = {
-			max_commander_army_size = -5
+			max_commander_army_size = -6
 		}
 
 		modifier = {
@@ -1573,7 +1573,7 @@ leader_traits = {
 		cost = 1000
 
 		corps_commander_modifier = {
-			max_commander_army_size = -9
+			max_commander_army_size = -6
 		}
 
 		modifier = {
