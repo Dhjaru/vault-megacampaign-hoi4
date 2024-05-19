@@ -4,7 +4,7 @@ division_template = {
 
 	regiments = {
 		medium_armor = { x = 0 y = 0 }
-		light_armor = { x = 0 y = 1 }
+		medium_armor = { x = 0 y = 1 }
 		light_armor = { x = 0 y = 2 }
 		light_armor = { x = 0 y = 3}
 		
@@ -13,10 +13,10 @@ division_template = {
 		light_armor = { x = 1 y = 2 }
 		light_armor = { x = 1 y = 3 }
 		
-		light_armor = { x = 2 y = 0 }
-		light_armor = { x = 2 y = 1 }
-		light_armor = { x = 2 y = 2 }
-		light_armor = { x = 2 y = 3 }
+		light_sp_artillery_brigade = { x = 2 y = 0 }
+		light_sp_artillery_brigade = { x = 2 y = 1 }
+		light_sp_artillery_brigade = { x = 2 y = 2 }
+		light_sp_artillery_brigade = { x = 2 y = 3 }
 		
 		motorized = { x = 3 y = 0 }
 		motorized = { x = 3 y = 1 }
@@ -29,7 +29,7 @@ division_template = {
 		artillery = { x = 0 y = 0 } 
 		mobile_engineer = { x = 0 y = 1 } 	
 		recon_ac = { x = 0 y = 2 }
-		artillery_heavy_support = { x = 0 y = 3 }
+		field_hospital = { x = 0 y = 3 }
 		maintenance_company = { x = 1 y = 0 }
 		logistics_company_mot = { x = 1 y = 1 }	
 		anti_air_heavy_support = { x = 1 y = 2 }
@@ -56,19 +56,19 @@ division_template = {
 		motorized = { x = 2 y = 2 }
 		motorized = { x = 2 y = 3 }
 		
-		field_gun_brigade_mot = { x = 3 y = 0 }
-		field_gun_brigade_mot = { x = 3 y = 1 }
-		field_gun_brigade_mot = { x = 3 y = 2 }
+		light_sp_artillery_brigade = { x = 3 y = 0 }
+		light_sp_artillery_brigade = { x = 3 y = 1 }
+		light_sp_artillery_brigade = { x = 3 y = 2 }
 
 		anti_tank_brigade_mot = { x = 4 y = 0 }
-		anti_tank_brigade_mot = { x = 4 y = 1 }
+		motorized = { x = 4 y = 1 }
 				
 	}
 	support = {
 		artillery = { x = 0 y = 0 } 
 		mobile_engineer = { x = 0 y = 1 } 	
 		recon_ac = { x = 0 y = 2 }
-		artillery_heavy_support = { x = 0 y = 3 }
+		light_assault_gun_company = { x = 0 y = 3 }
 		maintenance_company = { x = 1 y = 0 }
 		logistics_company_mot = { x = 1 y = 1 }	
 		anti_air_heavy_support = { x = 1 y = 2 }
@@ -100,8 +100,8 @@ division_template = {
 		pack_artillery_brigade_mot = { x = 3 y = 2 }		
 		anti_tank_brigade_mot = { x = 3 y = 3 }
 		
-		light_armor = { x = 4 y = 0 }
-		light_armor = { x = 4 y = 1 }
+		light_sp_artillery_brigade = { x = 4 y = 0 }
+		light_sp_artillery_brigade = { x = 4 y = 1 }
 	}
 	support = {
 		artillery = { x = 0 y = 0 } 
@@ -110,7 +110,8 @@ division_template = {
 		logistics_company_mot = { x = 0 y = 3 }
 		light_armor_recon = { x = 1 y = 0 } 		
 		anti_air_heavy_support = { x = 1 y = 1 }
-		artillery_heavy_support = { x = 0 y = 2 }
+		artillery_heavy_support = { x = 1 y = 2 }
+		field_hospital = { x = 0 y = 3 }
 	}
 }
 
@@ -250,8 +251,8 @@ division_template = {
 		cavalry = { x = 2 y = 2 }
 		cavalry = { x = 2 y = 3 }
 		
-		light_assault_gun_brigade = { x = 3 y = 0 }
-		light_assault_gun_brigade = { x = 3 y = 1 }
+		light_sp_artillery_brigade = { x = 3 y = 0 }
+		light_sp_artillery_brigade = { x = 3 y = 1 }
 		
 		field_gun_brigade_mot = { x = 4 y = 0 }	
 		field_gun_brigade_mot = { x = 4 y = 1 }	
@@ -1016,6 +1017,13 @@ units = {
 		start_equipment_factor = 1.0
 	}
 	division = {
+		name = "4. Mechanized Division"
+		location = 9292
+		division_template = "Mechanized Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
 		name = "2. Armored Division"
 		location = 1821
 		division_template = "Armored Division"
@@ -1024,6 +1032,13 @@ units = {
 	}
 	division = {
 		name = "2. Mechanized Division"
+		location = 1821
+		division_template = "Mechanized Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "5. Mechanized Division"
 		location = 1821
 		division_template = "Mechanized Division"
 		start_experience_factor = 0.3
@@ -1041,6 +1056,76 @@ units = {
 		location = 10696
 		division_template = "Mechanized Division"
 		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "6. Mechanized Division"
+		location = 10696
+		division_template = "Mechanized Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "1. Motorized Division"
+		location = 9461
+		division_template = "Motorized Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "2. Motorized Division"
+		location = 9461
+		division_template = "Motorized Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "3. Motorized Division"
+		location = 9461
+		division_template = "Motorized Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "4. Motorized Division"
+		location = 6474
+		division_template = "Motorized Division"
+		start_experience_factor = 0.35
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "5. Motorized Division"
+		location = 6474
+		division_template = "Motorized Division"
+		start_experience_factor = 0.35
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "6. Motorized Division"
+		location = 6474
+		division_template = "Motorized Division"
+		start_experience_factor = 0.35
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "7. Motorized Division"
+		location = 9417
+		division_template = "Motorized Division"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "8. Motorized Division"
+		location = 9417
+		division_template = "Motorized Division"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "9. Motorized Division"
+		location = 9417
+		division_template = "Motorized Division"
+		start_experience_factor = 0.4
 		start_equipment_factor = 1.0
 	}
 }

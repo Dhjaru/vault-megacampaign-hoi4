@@ -10,6 +10,10 @@ if = {
 	}
 }
 
+set_variable = {
+	var = min_fuel
+	value = 0.100
+}
 
 set_technology = { #player 
 	basic_train = 1

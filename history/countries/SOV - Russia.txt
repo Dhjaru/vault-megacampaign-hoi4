@@ -10,6 +10,10 @@ if = {
 		set_naval_oob = "SOV_1936_naval_legacy"
 	}
 }
+set_variable = {
+	var = min_fuel
+	value = 0.100
+}
 
 set_technology = { #player 
 	basic_train = 1
@@ -102,6 +106,7 @@ set_technology = { #player
 			engine_tech_1 = 1
 			engine_tech_2 = 1
 			automatic_gun2 = 1
+			howizer = 1
 		}
 	}
 
@@ -137,7 +142,7 @@ if = {
 			special_type_slot_1 = secondary_cannon_support_cannon_small
 		}
 		upgrades = {
-			tank_nsb_engine_upgrade = 9
+			tank_nsb_engine_upgrade = 3
 			tank_nsb_armor_upgrade = 1
 		}
 		icon = "gfx/interface/technologies/land/sov/t27.tga"
@@ -149,13 +154,13 @@ if = {
 		modules = {
 			main_armament_slot = tank_heavy_machine_gun
 			turret_type_slot = tank_light_one_man_tank_turret
-			suspension_type_slot = tank_bogie_suspension
+			suspension_type_slot = tank_christie_suspension
 			armor_type_slot = tank_riveted_armor
 			armor_sloping_slot = unsloped_armor
 			engine_type_slot = tank_gasoline_engine
 		}
 		upgrades = {
-			tank_nsb_engine_upgrade = 2
+			tank_nsb_engine_upgrade = 8
 			tank_nsb_armor_upgrade = 1
 		}
 		icon = "gfx/interface/technologies/land/sov/t26e.tga"
@@ -188,16 +193,17 @@ if = {
 		modules = {
 			main_armament_slot = tank_small_cannon_2
 			turret_type_slot = tank_light_two_man_tank_turret
-			suspension_type_slot = tank_bogie_suspension
+			suspension_type_slot = tank_christie_suspension
 			armor_type_slot = tank_riveted_armor
 			armor_sloping_slot = unsloped_armor
 			engine_type_slot = tank_gasoline_engine
 		}
 		upgrades = {
-			tank_nsb_engine_upgrade = 6
+			tank_nsb_engine_upgrade = 9
 			tank_nsb_armor_upgrade = 2
 		}
 		icon = "gfx/interface/technologies/land/sov/sov_light_t26.tga"
+		obsolete = yes
 	}
 	create_equipment_variant = {
 		name = "BT-2"
@@ -243,16 +249,37 @@ if = {
 		parent_version = 0
 		modules = {
 			main_armament_slot = tank_small_cannon_2
-			turret_type_slot = tank_light_two_man_tank_turret
+			turret_type_slot = tank_light_three_man_tank_turret
 			suspension_type_slot = tank_christie_suspension
 			armor_type_slot = tank_welded_armor
 			armor_sloping_slot = unsloped_armor
 			engine_type_slot = tank_gasoline_engine
 			radio_slot = tank_radio_1
+			special_type_slot_1 = smoke_launchers
 		}
 		upgrades = {
 			tank_nsb_engine_upgrade = 8
-			tank_nsb_armor_upgrade = 2
+			tank_nsb_armor_upgrade = 3
+		}
+		icon = "gfx/interface/technologies/land/sov/bt7.tga"
+	}
+	create_equipment_variant = {
+		name = "SU-10"
+		type = light_tank_artillery_chassis_1936
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_medium_howitzer
+			turret_type_slot = tank_light_opentop_turret
+			suspension_type_slot = tank_christie_suspension
+			armor_type_slot = tank_welded_armor
+			armor_sloping_slot = unsloped_armor
+			engine_type_slot = tank_gasoline_engine
+			radio_slot = tank_radio_1
+			special_type_slot_1 = frontal_engine
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 9
+			tank_nsb_armor_upgrade = 3
 		}
 		icon = "gfx/interface/technologies/land/sov/bt7.tga"
 	}

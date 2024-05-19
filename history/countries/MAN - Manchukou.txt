@@ -6,18 +6,6 @@ set_stability = 0.25
 set_war_support = 0.5
 
 oob = "MAN_1936"
-add_dynamic_modifier = {
-	modifier = JAP_china_war_bonus
-}
-add_dynamic_modifier = {
-	modifier = MAN_industry_spirit_zaibatsus
-}
-add_dynamic_modifier = {
-	modifier = MAN_military
-}
-add_dynamic_modifier = {
-	modifier = MAN_monsters_in_uniform
-}
 
 set_variable = { JAP_factory_output_modifier = 0.3 }
 set_variable = { JAP_dockyard_output_modifier = 0.25 }
@@ -58,17 +46,6 @@ set_variable = { MAN_comi_modifier =0.06 }
 set_variable = { MAN_democracy =0.02 }
 
 
-if = {
-	limit = { has_dlc = "Waking the Tiger" }
-	set_country_flag = MAN_northern_bandits
-	set_country_flag = MAN_eastern_bandits
-	set_country_flag = MAN_western_bandits
-	add_ideas = MAN_banditry
-	add_ideas = MAN_kwantung_veto
-	add_ideas = MAN_Heavy_Industry
-	add_ideas = MAN_low_legitimacy_5
-}
-
 #set_power_balance = {
 #	id = MAN_centralization_balance
 #	set_default = yes  # whether or not to reset the power balance to the initial value, default = no
@@ -78,43 +55,6 @@ if = {
 
 set_country_flag = JAP_no_grinding_flag
 set_research_slots = 3
-
-recruit_character = MAN_Tojo_Hideki
-recruit_character = MAN_naoki_hoshino
-recruit_character = MAN_nobusuke_kishi
-recruit_character = MAN_furumi_tadayuki
-recruit_character = MAN_masahiko_amakasu
-recruit_character = MAN_toichi_sasaki
-recruit_character = MAN_Hajime_Satomi
-recruit_character = MAN_Grigory_Semyonov
-recruit_character = MAN_Chu_Kudo
-recruit_character = MAN_zang_shiyi
-
-recruit_character = Yu_Zhishan
-recruit_character = Urzhin_Garmaev
-recruit_character = su_bingwen
-recruit_character = Vladimir_Kislitsin
-recruit_character = Konstantin_Rodzaevsky
-
-recruit_character = MAN_zhang_jinghui
-recruit_character = MAN_nalan_linge
-recruit_character = MAN_aisin_gioro_puyi
-recruit_character = MAN_zhang_haipeng
-recruit_character = MAN_aisin_gioro_xiqia
-recruit_character = MAN_yoshiko_kawashima
-recruit_character = MAN_suksaha_kangan
-recruit_character = MAN_guan_zhanshan
-recruit_character = MAN_juraj_mesko
-recruit_character = MAN_guan_xingde
-recruit_character = MAN_nakajima_kesago
-recruit_character = MAN_yin_zuoqian
-
-recruit_character = MAN_hesehn_tiemei
-recruit_character = MAN_kyoiji_tomonaga
-recruit_character = MAN_yonimitsu_kasahara
-recruit_character = MAN_hung_zhehuang
-recruit_character = MAN_xian_yuan
-
 
 set_technology = {
 	basic_train = 1
