@@ -1304,7 +1304,7 @@ remove_effect = {
             }
         }
     }
-    develop_nigeria_rubber_plantations = { #422
+    develop_nigeria_rubber_plantations = { #195
         
         icon = rubber
 
@@ -1313,19 +1313,19 @@ remove_effect = {
         }
 
         available = {
-            owns_state = 422
-            controls_state = 422
+            owns_state = 195
+            controls_state = 195
             num_of_civilian_factories_available_for_projects > 2
         }
 
         highlight_states = {
-            highlight_state_targets = { state = 422
+            highlight_state_targets = { state = 195
         }}
 
         visible = {
-            owns_state = 422
-            controls_state = 422
-            422 = {
+            owns_state = 195
+            controls_state = 195
+            195 = {
                 NOT = {
                     has_state_flag = nigeria_rubber_developed
                 }
@@ -1346,10 +1346,10 @@ remove_effect = {
         }
 
         remove_effect = {
-            422 = {
+            195 = {
                 set_state_flag = nigeria_rubber_developed
             }
-            422 = {
+            195 = {
                 add_resource = {
                     type = rubber
                     amount = 20
