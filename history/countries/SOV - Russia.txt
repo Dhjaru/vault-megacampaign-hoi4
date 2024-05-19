@@ -407,17 +407,30 @@ add_ideas = {
 }
 set_stability = 0.60
 set_war_support = 0.60
-
+#Leader
+recruit_character = SOV_august_spangberg
+recruit_character = SOV_asgeir_hafstein
+#Generals
 recruit_character = SOV_sigurdur_bjornsson
 recruit_character = SOV_jon_stefansson
-recruit_character = SOV_aleksandr_vassilievich_samsonov
+recruit_character = SOV_svenn_johanesson
 recruit_character = SOV_gunnar_hafstein
 recruit_character = SOV_hermann_asgeirsson
 recruit_character = SOV_gunnar_jonsson
+recruit_character = SOV_johannes_alfsteinn
+recruit_character = SOV_simon_timsson
+recruit_character = SOV_filip_ragber
+recruit_character = SOV_kristjan_rylander
+recruit_character = SOV_valgerthur_thorsson
+recruit_character = SOV_mikael_thyssenius
+recruit_character = SOV_alexander_vilhelmssson
+recruit_character = SOV_nikolaj_vinstrom
+recruit_character = SOV_ingvar_koren
+recruit_character = SOV_boris_saltpetter
+#Admiral
 recruit_character = SOV_gunnar_johanesson
 recruit_character = SOV_jon_arnorsson
-recruit_character = SOV_asgeir_hafstein
-recruit_character = SOV_august_spangberg
+#Advisor
 recruit_character = SOV_torsten_gardlund
 recruit_character = SOV_erik_lindahl
 recruit_character = SOV_gustav_cassel
