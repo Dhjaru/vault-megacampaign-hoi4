@@ -181,11 +181,6 @@ if = {
     add_to_tech_sharing_group = ENG_research
 }
 
-give_guarantee = ENG
-if = {
-	limit = { NOT = { has_non_aggression_pact_with = ENG } }
-	diplomatic_relation = { country = ENG relation = non_aggression_pact }
-}
 add_ideas = {
 	volunteer_only
 	civilian_economy

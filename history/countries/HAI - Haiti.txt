@@ -70,17 +70,13 @@ if = {
     add_to_tech_sharing_group = HOL_research
 }
 
-give_guarantee = HOL
-if = {
-	limit = { NOT = { has_non_aggression_pact_with = HOL } }
-	diplomatic_relation = { country = HOL relation = non_aggression_pact }
-}
 
 add_ideas = {
 	volunteer_only
 	civilian_economy
 	export_focus
 	culture_nieuwereld
+	HAI_puppet
 }
 set_stability = 0.60
 set_war_support = 0.61

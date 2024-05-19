@@ -62,11 +62,6 @@ set_popularities = {
 	neutrality = 13
 }
 
-give_guarantee = SOV
-if = {
-	limit = { NOT = { has_non_aggression_pact_with = SOV } }
-	diplomatic_relation = { country = SOV relation = non_aggression_pact }
-}
 
 add_ideas = {
 	volunteer_only
