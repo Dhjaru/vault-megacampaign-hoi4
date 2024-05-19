@@ -1318,6 +1318,9 @@ focus_tree = {
 				add_idea = SOV_total_war_industry
 			}
 		}
+		select_effect = {
+			add_ideas = tot_economic_mobilisation
+		}
 	}
 
 	focus = {
@@ -1881,7 +1884,7 @@ focus_tree = {
 
 		completion_reward = {
 			438 = {
-				add_extra_state_shared_building_slots = 10
+				add_extra_state_shared_building_slots = 16
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -1889,7 +1892,7 @@ focus_tree = {
 				}
 			}
 			679 = {
-				add_extra_state_shared_building_slots = 10
+				add_extra_state_shared_building_slots = 16
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -1897,7 +1900,7 @@ focus_tree = {
 				}
 			}
 			680 = {
-				add_extra_state_shared_building_slots = 10
+				add_extra_state_shared_building_slots = 16
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -1905,7 +1908,7 @@ focus_tree = {
 				}
 			}
 			682 = {
-				add_extra_state_shared_building_slots = 10
+				add_extra_state_shared_building_slots = 16
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -1943,7 +1946,7 @@ focus_tree = {
 
 		completion_reward = {
 			669 = {
-				add_extra_state_shared_building_slots = 10
+				add_extra_state_shared_building_slots = 16
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -1951,7 +1954,7 @@ focus_tree = {
 				}
 			}
 			673 = {
-				add_extra_state_shared_building_slots = 10
+				add_extra_state_shared_building_slots = 16
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -1959,7 +1962,7 @@ focus_tree = {
 				}
 			}
 			671 = {
-				add_extra_state_shared_building_slots = 10
+				add_extra_state_shared_building_slots = 16
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -1967,7 +1970,7 @@ focus_tree = {
 				}
 			}
 			668 = {
-				add_extra_state_shared_building_slots = 10
+				add_extra_state_shared_building_slots = 16
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -2006,7 +2009,7 @@ focus_tree = {
 
 		completion_reward = {
 			687 = {
-				add_extra_state_shared_building_slots = 10
+				add_extra_state_shared_building_slots = 16
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -2014,7 +2017,7 @@ focus_tree = {
 				}
 			}
 			684 = {
-				add_extra_state_shared_building_slots = 10
+				add_extra_state_shared_building_slots = 16
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -2022,7 +2025,7 @@ focus_tree = {
 				}
 			}
 			689 = {
-				add_extra_state_shared_building_slots = 10
+				add_extra_state_shared_building_slots = 16
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -2030,7 +2033,7 @@ focus_tree = {
 				}
 			}
 			688 = {
-				add_extra_state_shared_building_slots = 10
+				add_extra_state_shared_building_slots = 16
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -2038,7 +2041,7 @@ focus_tree = {
 				}
 			}
 			443 = {
-				add_extra_state_shared_building_slots = 10
+				add_extra_state_shared_building_slots = 16
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -3694,10 +3697,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = tot_economic_mobilisation
-		}
-		select_effect = {
-			add_ideas = tot_economic_mobilisation
 		}
 	}
 

@@ -117,7 +117,7 @@ ideas = {
 			
 			modifier = {
 				production_speed_infrastructure_factor = 0.10
-				production_speed_industrial_complex_factor = 0.10
+				production_speed_industrial_complex_factor = 0.2
 			}
 		}
 		SOV_siberian_plan_2 = {
@@ -134,7 +134,7 @@ ideas = {
 			
 			modifier = {
 				production_speed_infrastructure_factor = 0.15
-				production_speed_industrial_complex_factor = 0.15
+				production_speed_industrial_complex_factor = 0.3
 			}
 		}
 		SOV_siberian_plan_3 = {
@@ -151,7 +151,7 @@ ideas = {
 			
 			modifier = {
 				production_speed_infrastructure_factor = 0.15
-				production_speed_industrial_complex_factor = 0.15
+				production_speed_industrial_complex_factor = 0.3
 				local_resources_factor = 0.15
 			}
 		}
@@ -169,7 +169,7 @@ ideas = {
 			
 			modifier = {
 				production_speed_infrastructure_factor = 0.15
-				production_speed_industrial_complex_factor = 0.15
+				production_speed_industrial_complex_factor = 0.3
 				local_resources_factor = 0.15
 				production_factory_start_efficiency_factor = 0.05
 				production_factory_efficiency_gain_factor = 0.15
