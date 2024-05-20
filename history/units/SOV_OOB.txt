@@ -61,7 +61,7 @@ division_template = {
 		light_sp_artillery_brigade = { x = 3 y = 2 }
 
 		anti_tank_brigade_mot = { x = 4 y = 0 }
-		motorized = { x = 4 y = 1 }
+		anti_tank_brigade_mot = { x = 4 y = 1 }
 				
 	}
 	support = {
