@@ -17,6 +17,7 @@ ideas = {
                 production_factory_max_efficiency_factor = -0.1
                 local_resources_factor = -0.5
                 stability_factor = -0.7
+                political_power_gain = -0.5
             }
          }
 
@@ -37,6 +38,7 @@ ideas = {
                 production_factory_max_efficiency_factor = -0.1
                 local_resources_factor = -0.5
                 stability_factor = -0.7
+                political_power_gain = -0.5
             }
          }
          USA_marshal_plan3 = {
@@ -56,6 +58,7 @@ ideas = {
                 production_factory_max_efficiency_factor = -0.1
                 local_resources_factor = -0.5
                 stability_factor = -0.7
+                political_power_gain = -0.5
             }
          }
     }    
