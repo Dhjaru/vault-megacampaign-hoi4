@@ -352,15 +352,15 @@ adjacency_rule =
 	}
 	neutral =
 	{
-		army = yes
-		navy = yes
-		submarine = yes
-		trade = yes
+		army = no
+		navy = no
+		submarine = no
+		trade = no
 	}
 	
-	required_provinces = { 10904 7982 4959 13312 }
+	required_provinces = { 10760 }
 		
-	icon = 10904
+	icon = 10760
 	offset = { 2 0 12 }
 }
 
