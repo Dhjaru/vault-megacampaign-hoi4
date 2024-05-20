@@ -34,7 +34,6 @@ ideas = {
 			picture = tur_etatism_bonus
 			
 			modifier = {
-				consumer_goods_expected_value = 0.10
 				production_speed_arms_factory_factor = -0.80
 				production_speed_industrial_complex_factor = 0.20
 			}
@@ -53,7 +52,6 @@ ideas = {
 			picture = tur_etatism_bonus
 			
 			modifier = {
-				consumer_goods_expected_value = 0.10
 				production_speed_arms_factory_factor = 0.15
 				production_speed_industrial_complex_factor = 0.20
 				
@@ -77,4 +75,23 @@ ideas = {
 			}
 		}
 		
+		PER_recovery_from_the_five_year_plan_3 = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			picture = tur_etatism_bonus
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = 0.20
+				production_factory_max_efficiency_factor = 0.05
+			}
 		}
+		
+	}
