@@ -3,10 +3,10 @@ state={
 	id=541
 	name="STATE_541"
 	resources={
-		aluminium=18.000
-		oil=7.000
-		steel=14.000
-		tungsten=2.000
+		aluminium=180.000
+		oil=70.000
+		steel=140.000
+		tungsten=60.000
 	}
 
 	history={
@@ -15,22 +15,21 @@ state={
 			853 1 
 		}
 		buildings = {
-			infrastructure = 1
-			industrial_complex = 1
+			infrastructure = 8
+			industrial_complex = 6
 			arms_factory = 0
 			air_base = 0
 
 		}
 		add_core_of = USA
-		add_claim_by = W32
 	}
 
 	provinces={
 		850 853 1793 1972 2102 3834 3867 3883 4796 4799 4975 5044 6897 7747 7821 7920 8070 8115 10573 10642 10645 10783 10867 10914 11814 12425 12552 12684 12720 12765 12791 
 	}
-	manpower=645692
+	manpower=2645692
 	buildings_max_level_factor=1.000
-	state_category=rural
+	state_category=USA_state
 
 	local_supplies=10.0
 }

@@ -3,7 +3,8 @@ state={
 	id=593
 	name="STATE_593"
 	resources={
-		steel=13.000
+		steel=130.000
+		chromium=50
 	}
 
 	history={
@@ -12,24 +13,21 @@ state={
 			6696 1 
 		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 5
 			industrial_complex = 0
-			arms_factory = 0
+			arms_factory = 2
 			air_base = 0
 
 		}
 		add_core_of = USA
-		add_core_of = CAN
-		add_claim_by = CSA
-		add_claim_by = W20
 	}
 
 	provinces={
 		913 1445 1582 1758 4452 4988 6696 7547 7791 8014 8083 9727 10657 10909 12568 12637 12709 
 	}
-	manpower=1615580
+	manpower=815580
 	buildings_max_level_factor=1.000
-	state_category=rural
+	state_category=USA_state
 
 	local_supplies=10.0
 }
