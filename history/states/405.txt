@@ -26,7 +26,6 @@ state={
 		}
 		add_core_of = SOV
 		add_claim_by = SCA
-		add_claim_by = W20
 
 	}
 

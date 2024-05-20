@@ -7,7 +7,6 @@ state={
 	history={
 		owner = ENG
 		add_core_of = W71
-		add_claim_by = W20
 	}
 
 	provinces={

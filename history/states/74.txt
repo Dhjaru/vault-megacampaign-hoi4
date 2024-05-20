@@ -18,7 +18,6 @@ state={
 		add_core_of = SUD
 		add_core_of = W44
 		add_claim_by = ETH
-		add_claim_by = W20
 	}
 
 	provinces={

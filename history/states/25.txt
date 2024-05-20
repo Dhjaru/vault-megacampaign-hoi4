@@ -24,7 +24,6 @@ state={
 
 		}
 		add_core_of = BRA
-		add_claim_by = W20
 
 	}
 

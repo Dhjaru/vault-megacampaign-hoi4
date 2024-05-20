@@ -274,6 +274,7 @@ recruit_character = USA_huguel_masson
 recruit_character = USA_letellier_pantaleon
 recruit_character = USA_huguel_perodeau
 recruit_character = USA_emperor_norton
+recruit_character = USA_walt_disney
 
 
 

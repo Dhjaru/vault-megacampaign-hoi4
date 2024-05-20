@@ -11,7 +11,6 @@ state={
 		}
 		add_core_of = CRI
 		add_core_of = SOV
-		add_claim_by = W20
 		victory_points = {
 			9461 5
 		}

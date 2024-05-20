@@ -10,7 +10,6 @@ state={
 		}
 		add_core_of = TIB
 		add_core_of = W41
-		add_claim_by = W20
 	}
 
 	provinces={

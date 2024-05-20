@@ -29,7 +29,6 @@ state={
 		add_claim_by = PER
 		add_claim_by = SAU
 		add_claim_by = TIB
-		add_claim_by = W20
 
 	}
 

@@ -27,7 +27,6 @@ state={
 		add_core_of = OMA
 		add_core_of = SAU
 		add_claim_by = PER
-		add_claim_by = W20
 
 	}
 

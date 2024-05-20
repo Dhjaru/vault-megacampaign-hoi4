@@ -24,7 +24,6 @@ state={
 		}
 		add_core_of = ALG
 		add_core_of = X14
-		add_claim_by = W20
 
 	}
 

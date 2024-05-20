@@ -238,4 +238,10 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 13313;8051;sea;2691;-1;-1;-1;-1;;Bahrain
 761;13315;sea;9092;-1;-1;-1;-1;;Ontario
 13196;13314;sea;9092;-1;-1;-1;-1;;Northern Quebec
+61;11115;impassable;-1;-1;-1;-1;-1;;Torneaelven
+6168;11115;impassable;-1;-1;-1;-1;-1;;Torneaelven
+6168;3193;impassable;-1;-1;-1;-1;-1;;Torneaelven
+201;3193;impassable;-1;-1;-1;-1;-1;;Torneaelven
+9147;3193;impassable;-1;-1;-1;-1;-1;;Torneaelven
+9147;11125;impassable;-1;-1;-1;-1;-1;;Torneaelven
 -1;-1;;-1;-1;-1;-1;-1;-1 

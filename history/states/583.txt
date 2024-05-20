@@ -9,7 +9,7 @@ state={
 			3863 1 
 		}
 		buildings = {
-			infrastructure = 3
+			infrastructure = 8
 			industrial_complex = 0
 			arms_factory = 0
 			6882 = {
@@ -18,16 +18,15 @@ state={
 			air_base = 1
 
 		}
-		add_core_of = CAN
-		add_claim_by = W32
+		add_core_of = USA
 	}
 
 	provinces={
 		3693 3863 6882 9801 9864 11740 11782 11900 
 	}
-	manpower=741960
+	manpower=1741960
 	buildings_max_level_factor=1.000
-	state_category=rural
+	state_category=USA_state
 
 	local_supplies=10.0
 }

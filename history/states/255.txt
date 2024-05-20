@@ -16,9 +16,7 @@ state={
 
 		}
 		add_core_of = GER
-		add_claim_by = AUS
 		add_claim_by = ITA
-		add_claim_by = W20
 	}
 
 	provinces={
