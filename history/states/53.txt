@@ -24,7 +24,6 @@ state={
 		add_core_of = X14
 		add_claim_by = EGY
 		add_claim_by = IRQ
-		add_claim_by = W20
 	}
 
 	provinces={

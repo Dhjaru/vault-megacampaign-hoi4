@@ -26,7 +26,6 @@ state={
 		add_core_of = MAL
 		add_core_of = W05
 		add_core_of = W78
-		add_claim_by = W20
 	}
 
 	provinces={

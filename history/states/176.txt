@@ -19,7 +19,6 @@ state={
 		add_claim_by = PAK
 		add_claim_by = RAJ
 		add_claim_by = TIB
-		add_claim_by = W20
 
 	}
 

@@ -17,7 +17,6 @@ state={
 		}
 		add_core_of = PER
 		add_core_of = W10
-		add_claim_by = W20
 
 	}
 

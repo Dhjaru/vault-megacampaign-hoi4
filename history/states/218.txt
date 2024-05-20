@@ -21,7 +21,6 @@ state={
 		}
 		add_core_of = FRA
 		add_core_of = OCC
-		add_claim_by = W20
 
 	}
 

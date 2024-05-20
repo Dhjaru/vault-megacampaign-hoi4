@@ -21,7 +21,6 @@ state={
 		add_core_of = VIN
 		add_core_of = W75
 		add_core_of = X16
-		add_claim_by = W20
 		add_claim_by = X50
 	}
 

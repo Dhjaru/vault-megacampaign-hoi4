@@ -24,7 +24,6 @@ state={
 		add_core_of = COG
 		add_core_of = W77
 		add_claim_by = TIG
-		add_claim_by = W20
 		add_claim_by = X66
 	}
 

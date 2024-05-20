@@ -430,6 +430,7 @@ add_ideas = {
 	SOV_legacy_of_five_year_plan_start
 	SOV_ruined_academia
 	SOV_legacy_of_great_purge
+	SOV_scars_of_the_reactionary_navy
 	Disorganized_airforce_1_1
 }
 set_stability = 0.60

@@ -17,9 +17,7 @@ state={
 
 		}
 		add_core_of = GER
-		add_claim_by = AUS
 		add_claim_by = SLO
-		add_claim_by = W20
 
 	}
 

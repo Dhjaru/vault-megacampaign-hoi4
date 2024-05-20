@@ -23,7 +23,6 @@ state={
 		}
 		add_core_of = ENG
 		add_core_of = IRE
-		add_claim_by = W20
 	}
 
 	provinces={

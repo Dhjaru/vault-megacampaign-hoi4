@@ -22,7 +22,6 @@ state={
 		add_core_of = GER
 		add_core_of = W06
 		add_core_of = W48
-		add_claim_by = W20
 	}
 
 	provinces={
