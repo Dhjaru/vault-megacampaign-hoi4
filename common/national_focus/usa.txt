@@ -19,16 +19,15 @@ focus = {
 		y = 0
 		cost = 10
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		completion_reward = {
-			add_ideas = USA_robert_taft
-			add_timed_idea =  { idea = USA_resources   days =  1338  }
+			swap_ideas ={
+				remove_idea = USA_marshal_plan
+				add_idea = USA_marshal_plan2
+			}
 		}
 	} 
 focus = {
-		id = USA_wpa
+		id = USA_ask_for_capitalist_support
 		icon = GFX_USA_WPA
 		x = 4
 		y = 1
@@ -37,7 +36,10 @@ focus = {
 		prerequisite = { focus =USA_failure_of_the_marshal_plan  }
 		relative_position_id=USA_continue_the_new_deal
 		completion_reward = {
-			add_ideas = USA_henry_morgenthau
+			swap_ideas = {
+				remove_idea = USA_marshal_plan2
+				add_idea = USA_marshal_plan3
+			}
 		}
 	}		
 focus = {
@@ -71,7 +73,7 @@ focus = {
 		cost = 5
 		
 		prerequisite = { focus = USA_the_new_american_generations   }
-		prerequisite = { focus = USA_wpa  }
+		prerequisite = { focus = USA_ask_for_capitalist_support  }
 		relative_position_id=USA_the_new_american_generations
 		completion_reward = {
 			add_political_power = 100

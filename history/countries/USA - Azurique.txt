@@ -244,9 +244,9 @@ set_politics = {
 
 set_popularities = {
 	communism = 2
-	democratic = 79
-	fascism = 6
-	neutrality = 13
+	democratic = 88
+	fascism = 2
+	neutrality = 8
 }
 
 # DIPLOMACY
@@ -264,6 +264,7 @@ add_ideas = {
 	undisturbed_isolation
 	free_trade
 	culture_nouvellien
+	USA_marshal_plan
 }
 set_stability = 0.80
 set_war_support = 0.10
