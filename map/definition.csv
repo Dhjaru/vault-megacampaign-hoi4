@@ -1153,7 +1153,7 @@
 1152;5;150;215;land;false;mountain;5
 1153;5;153;30;land;false;forest;6
 1154;5;153;180;land;false;plains;6
-1155;5;156;95;land;true;desert;7
+1155;5;156;95;land;true;suez_desert;7
 1156;5;156;145;land;true;mountain;1
 1157;5;156;200;land;true;jungle;6
 1158;5;159;60;land;true;plains;6
@@ -9945,7 +9945,7 @@
 9944;131;9;169;land;false;forest;6
 9945;131;12;29;land;true;urban;5
 9946;131;12;84;land;false;plains;6
-9947;131;12;134;land;true;desert;7
+9947;131;12;134;land;true;suez_desert;7
 9948;131;15;49;land;false;jungle;6
 9949;131;15;94;land;false;plains;2
 9950;131;15;199;land;true;plains;6
