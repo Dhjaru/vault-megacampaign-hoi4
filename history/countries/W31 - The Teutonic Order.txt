@@ -1,34 +1,151 @@
 ﻿capital = 267
 set_research_slots = 3
 
+set_stability = 1
+set_war_support = 1
+
 oob = "W31_OOB"
 
 # Starting tech
+set_technology = { #player 
+	#docs 
+
+	mobile_warfare = 1
+	trade_interdiction = 1
+	formation_flying = 1
+	######### infantry ##########
+	tech_mountaineers = 1
+	marines = 1
+	support_weapons = 1
+	fuel_refining = 1
+	infantry_weapons = 1  
+	support_weapons = 1
+	fuel_silos = 1 
+	field_equipment = 1 
+	tech_radio_1 = 1 
+	infantry_weapons1 = 1
+	special_equipment = 1
+	electronic_mechanical_engineering = 1
+	radio = 1
+	tech_dig_1 = 1
+	paratroopers = 1
+	########### Support ########
+	tech_recon = 1	
+	tech_support = 1		
+	tech_engineers = 1
+	tech_military_police = 1
+	tech_maintenance_company = 1
+	tech_field_hospital = 1
+	tech_logistics_company = 1
+	tech_signal_company = 1
+	############## artillery #######
+	artillery1 = 1 
+	artillery2 = 1
+	artillery3 = 1
+	artillery4 = 1
+	field_gun = 1
+	field_gun2_1 = 1
+	field_gun2_2 = 1
+	gw_pack_artillery = 1
+	pack_artillery_m_1 = 1
+	pack_artillery1 = 1
+	heavy_artillery1 = 1
+	heavy_artillery2 = 1
+	heavy_antiair = 1
+	heavy_antiair_1 = 1
+	heavy_antiair_2 = 1
+	interwar_antiair = 1
+	interwar_antitank = 1
+	at_line_mot = 1
+	siege_artillery1 = 1
+	siege_artillery2 = 1
+	############# aircraft #######
+	ger_fighter_1934 = 1
+	ger_fighter_1936 = 1
+	ger_tactical_bomber_1934 = 1
+	ger_tactical_bomber_1936 = 1
+	ger_naval_bomber_1936 = 1
+	ger_CAS_1935 = 1
+	ger_heavy_fighter_1936 = 1
+	############## economic ###########
+	mechanical_computing = 1
+	basic_train = 1
+	basic_machine_tools = 1
+	synth_oil_experiments = 1
+	starting_industry = 1
+	construction1 = 1
+}
 # Research Bonuses
 
 set_country_flag = conv_germany
 set_convoys = 0
 
 set_politics = {
-    ruling_party = neutrality
+    ruling_party = communism
     last_election = "1836.1.1"
     election_frequency = 48
     elections_allowed = no
 }
 
 set_popularities = {
-	democratic = 93
-	neutrality = 7
+	communism = 93
+	democratic = 7
 }
 add_ideas = {
-	volunteer_only
-	civilian_economy
-	export_focus
+	wartime_conscription
+	war_economy
+	closed_economy
 	culture_north_german
 }
 
+recruit_character = GER_adolf_hitler
 recruit_character = W31_erwin_von_moltke
-
+recruit_character = GER_august_bockman
+recruit_character = GER_walter_kruger
+recruit_character = GER_heinz_guderian
+recruit_character = GER_wilhelm_keitel
+recruit_character = GER_werner_blomberg
+recruit_character = GER_werner_fritsch
+recruit_character = GER_albert_kesselring
+recruit_character = GER_erwin_rommel
+recruit_character = GER_gerd_von_rundstedt
+recruit_character = GER_kurt_student
+recruit_character = GER_karl_doenitz
+recruit_character = GER_konrad_adenauer
+recruit_character = GER_wilhelm_pieck
+recruit_character = GER_wilhelm_iii
+recruit_character = GER_friedrich_paulus
+recruit_character = GER_erich_von_manstein
+recruit_character = GER_günther_von_kluge
+recruit_character = GER_wilhelm_list
+recruit_character = GER_ewald_von_kleist
+recruit_character = GER_fedor_von_bock
+recruit_character = GER_walter_model
+recruit_character = GER_maximilian_von_weichs
+recruit_character = GER_wilhelm_ritter_von_leeb
+recruit_character = GER_georghans_reinhardt
+recruit_character = GER_erwin_von_witzleben
+recruit_character = GER_hermann_hoth
+recruit_character = GER_johannes_blaskowitz
+recruit_character = GER_friedrich_schulz
+recruit_character = GER_georg_von_küchler
+recruit_character = GER_alfred_jodl
+recruit_character = GER_hasso_von_manteuffel
+recruit_character = GER_gotthard_heinrici
+recruit_character = GER_ernsteberhard_hell
+recruit_character = GER_eduard_dietl
+recruit_character = GER_werner_kempf
+recruit_character = GER_hermann_balck
+recruit_character = GER_ferdiand_schörner
+recruit_character = GER_walter_weiß
+recruit_character = GER_walter_von_brauchitsch
+recruit_character = GER_karl_dönitz
+recruit_character = GER_erich_raeder
+recruit_character = GER_alfred_saalwächter
+recruit_character = GER_hermann_boehm
+recruit_character = GER_wilhelm_marschall
+recruit_character = GER_günther_lütjens
+recruit_character = GER_fritz_todt
 if = {
 	limit = {
 		has_dlc = "La Resistance"
@@ -98,3 +215,116 @@ if = {
 	limit = { has_dlc = "No Step Back" }
 }
 
+
+    
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	create_equipment_variant = {
+		name = "Panzer I Ausf. A"
+		type = light_tank_chassis_1934
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_heavy_machine_gun
+			turret_type_slot = tank_light_one_man_tank_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_welded_armor
+			armor_sloping_slot = unsloped_armor
+			engine_type_slot = tank_gasoline_engine
+		    radio_slot = tank_radio_1
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 1
+			tank_nsb_armor_upgrade = 1
+		}
+		icon = "gfx/interface/technologies/land/ger/pz_i.tga"
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "Panzer I Ausf. B"
+		type = light_tank_chassis_1934
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_heavy_machine_gun
+			turret_type_slot = tank_light_one_man_tank_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_welded_armor
+			armor_sloping_slot = unsloped_armor
+			engine_type_slot = tank_gasoline_engine
+		    radio_slot = tank_radio_1
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 3
+			tank_nsb_armor_upgrade = 1
+		}
+		icon = "gfx/interface/technologies/land/ger/p1b.tga"
+	}
+
+	create_equipment_variant = {
+		name = "Panzer II Ausf.a"
+		type = light_tank_chassis_1936
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_auto_cannon
+			turret_type_slot = tank_light_one_man_tank_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_welded_armor
+			armor_sloping_slot = unsloped_armor
+			engine_type_slot = tank_gasoline_engine
+		    radio_slot = tank_radio_1
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 3
+			tank_nsb_armor_upgrade = 2
+		}
+		icon = "gfx/interface/technologies/land/ger/pz_ii_a.tga"
+	}
+
+	create_equipment_variant = {
+		name = "Panzer III Ausf.A"
+		type = medium_tank_chassis_1936
+		parent_version = 0
+		modules = {
+		    main_armament_slot = tank_small_cannon
+			turret_type_slot = tank_medium_three_man_tank_turret
+			suspension_type_slot = tank_torsion_bar_suspension
+			armor_type_slot = tank_welded_armor
+			armor_sloping_slot = unsloped_armor
+			engine_type_slot = tank_gasoline_engine
+			radio_slot = tank_radio_1
+			special_type_slot_1 = basket
+			special_type_slot_2 = cupola
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 4
+			tank_nsb_armor_upgrade = 2
+		}
+		icon = "gfx/interface/technologies/land/ger/pz_iii_a.tga"
+	}
+	create_equipment_variant = {
+		name = "Neubaufahrzeug"
+		type = heavy_tank_chassis_1934
+		parent_version = 0
+		modules = {
+		    main_armament_slot = tank_small_cannon
+			turret_type_slot = tank_heavy_three_man_tank_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_welded_armor
+			armor_sloping_slot = unsloped_armor
+			engine_type_slot = tank_gasoline_engine
+			radio_slot = tank_radio_1
+			special_type_slot_1 = secondary_turret_hmg_big
+			special_type_slot_2 = cupola
+			special_type_slot_3 = secondary_cannon_support_cannon_big
+			special_type_slot_4 = secondary_turret_hmg_big
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 6
+			tank_nsb_armor_upgrade = 2
+		}
+		icon = "gfx/interface/technologies/land/ger/grosstractor.tga"
+	}
+}
+add_manpower = 300000

@@ -15,7 +15,7 @@ characters={
 	}
 
 	SOV_august_spangberg={
-		name="August Spangberg"
+		name="August Spångberg"
 		portraits={
 			civilian = {
 				large = "SOV_august_spangberg"

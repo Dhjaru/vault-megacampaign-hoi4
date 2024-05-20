@@ -1,0 +1,101 @@
+ideas = {
+	hidden_ideas = {
+	}
+
+	country = {
+
+		GER_death_before_surrender = {
+
+			name = SPR_death_before_surrender
+
+			picture = spanish_civil_war
+
+			allowed = {
+				original_tag = GER
+			}
+			cancel = {
+				has_global_flag = gcw_over
+			}	
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				surrender_limit = 0.85
+				army_org_factor = 0.1
+				max_dig_in = -2
+				army_defence_factor = 0.25
+				dig_in_speed_factor = 1.0
+				max_surrender_limit_offset = 0.15
+				army_leader_cost_factor = 5
+				breakthrough_factor = 0.5
+				experience_gain_army_factor = -0.5
+				army_core_attack_factor = -0.2
+				army_core_defence_factor = -0.2
+			}
+		}
+		GER_death_before_surrender2 = {
+
+			name = SPR_death_before_surrender
+
+			picture = spanish_civil_war
+
+			allowed = {
+				original_tag = GER
+			}
+			cancel = {
+				has_global_flag = gcw_over
+			}	
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				surrender_limit = -1
+				army_org_factor = 0.1
+				max_dig_in = -2
+				army_defence_factor = 0.25
+				dig_in_speed_factor = 1.0
+				max_surrender_limit_offset = 0.15
+				army_leader_cost_factor = 5
+				breakthrough_factor = 0.5
+				experience_gain_army_factor = -0.5
+				army_core_attack_factor = -0.2
+				army_core_defence_factor = -0.2
+			}
+		}
+
+		W31_death_before_surrender = {
+
+			picture = spanish_civil_war
+
+			allowed = {
+				original_tag = W31
+				NOT = { has_government = fascism }
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			rule = {
+				can_join_factions = no 
+			}
+			modifier = {
+				experience_gain_army_factor = -0.5
+				surrender_limit = 0.78
+				army_org_factor = 0.1
+				max_dig_in = -2
+				army_defence_factor = 0.25
+				dig_in_speed_factor = 1.0
+				breakthrough_factor = 0.5
+				max_surrender_limit_offset = 0.15
+				base_fuel_gain = 1000
+				army_core_attack_factor = -0.2
+				army_core_defence_factor = -0.2
+				consumer_goods_expected_value = 1 
+				production_lack_of_resource_penalty_factor = -1
+				
+			}
+		}
+	}
+}

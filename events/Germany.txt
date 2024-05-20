@@ -3,6 +3,278 @@
 ###########################
 
 add_namespace = germany
+add_namespace = lar_germany
+
+# German Civil War - La Resistance Edition
+country_event = {
+	id = lar_germany.2
+	title = lar_germany.2.t
+	desc = lar_germany.2.desc
+	picture = GFX_report_event_spain_civil_war_soldiers
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			GER = {
+				set_cosmetic_tag = GER_nationalist_spain 
+				remove_ideas = SPA_awaiting_the_rebellion
+
+			}
+			W31 = {
+				set_cosmetic_tag = GER_republican_spain
+			}
+			SOV = {
+				diplomatic_relation = {
+					country = W31
+					relation = military_access
+					active = yes
+				}
+			}
+			every_country = {
+				set_variable = { var = super_event value = 5 }			
+			}
+			every_country = {limit = { check_variable= { music_enabled > 0}  }
+				scoped_sound_effect = "se_spanish_civil_war"
+			}
+	
+			set_global_flag = { flag = GER_civil_war_startup value = 1 days = 14 } # Make AI avoid attacking for a few days
+			add_named_threat = { threat = 5 name = GER_civil_war_threat }
+		}	
+		hidden_effect = {
+				W31 = {
+					country_event = { id = spain.1000 days = 60 }
+				}
+				# Add Nationalist and Republican Garrison division templates
+				set_war_support = 1
+				division_template = {
+					name = "Nationalist Guard"
+					is_locked = yes
+					template_counter = 6
+					division_names_group = GER_INF_02
+					regiments = {
+						infantry_spain = { x = 0 y = 0 }
+						infantry_spain = { x = 0 y = 1 }
+						infantry_spain = { x = 0 y = 2 }
+						infantry_spain = { x = 0 y = 3 }
+						
+						infantry_spain = { x = 1 y = 0 }
+						infantry_spain = { x = 1 y = 1 }
+						infantry_spain = { x = 1 y = 2 }
+					}
+					support = {
+						anti_air_company = { x = 0 y = 0 }
+					}
+				}
+				W31 = {
+					set_war_support = 1
+					division_template = {
+						name = "MP"		
+					
+						regiments = {
+							garrison = { x = 0 y = 0 }	
+							garrison = { x = 0 y = 1 }
+							garrison = { x = 0 y = 2 }
+							
+							garrison = { x = 1 y = 0 }
+							garrison = { x = 1 y = 1 }
+							garrison = { x = 1 y = 2 }	
+							
+							garrison = { x = 2 y = 0 }	
+							garrison = { x = 2 y = 1 }	
+							garrison = { x = 2 y = 2 }	
+							
+							garrison = { x = 3 y = 0 }
+							garrison = { x = 3 y = 1 }	
+							garrison = { x = 3 y = 2 }
+							garrison = { x = 3 y = 3 }
+
+							garrison = { x = 4 y = 0 }
+							garrison = { x = 4 y = 1 }	
+						}
+						support = {
+							
+						}
+
+						priority = 2
+					}
+					division_template = {
+						name = "Gebrigs Division"		
+						division_names_group = SOV_MNT_01 
+						regiments = {
+							mountaineers = { x = 0 y = 0 }	
+							mountaineers = { x = 0 y = 1 }
+							mountaineers = { x = 0 y = 2 }
+							
+							mountaineers = { x = 1 y = 0 }
+							mountaineers = { x = 1 y = 1 }
+							mountaineers = { x = 1 y = 2 }	
+							
+							mountaineers = { x = 2 y = 0 }	
+							mountaineers = { x = 2 y = 1 }	
+							mountaineers = { x = 2 y = 2 }	
+							
+							artillery_heavy = { x = 3 y = 0 }
+							artillery_heavy = { x = 3 y = 1 }	
+							artillery_heavy = { x = 3 y = 2 }
+							artillery_heavy = { x = 3 y = 3 }
+
+							artillery_heavy = { x = 4 y = 0 }
+							artillery_heavy = { x = 4 y = 1 }	
+						}
+						support = {
+							artillery = { x = 0 y = 0 } 
+							engineer = { x = 0 y = 1 } 		
+							recon = { x = 0 y = 2 }
+							artillery_heavy_support = { x = 0 y = 3 }
+							pack_artillery = { x = 1 y = 0 }
+							logistics_company = { x = 1 y = 1 }
+							anti_air_company = { x = 1 y = 2 }
+							field_gun_support = { x = 1 y = 3 }
+						}
+
+						priority = 2
+					}
+					
+					random_owned_state = {
+						
+						limit = {
+							check_variable = { var = SPA_garrison_control value = 2 compare = less_than_or_equals }
+						}
+						prioritize = {167}
+					
+						create_unit = {
+							division = "division_template = \"Gebrigs Division\" start_experience_factor = 0.6" 
+							owner = W31
+							allow_spawning_on_enemy_provs = no
+							count = 4
+						}
+					}
+					division_template = {
+						name = "Union Volenteer"
+						is_locked = yes
+						template_counter = 6
+						division_names_group = GER_INF_01
+						regiments = {
+							infantry_spain = { x = 0 y = 0 }
+							infantry_spain = { x = 0 y = 1 }
+							infantry_spain = { x = 0 y = 2 }
+							infantry_spain = { x = 0 y = 3 }
+							
+							infantry_spain = { x = 1 y = 0 }
+							infantry_spain = { x = 1 y = 1 }
+							infantry_spain = { x = 1 y = 2 }
+						}
+						support = {
+							anti_air_company = { x = 0 y = 0 }
+						}
+					}
+					random_owned_state = {
+						
+						limit = {
+							check_variable = { var = SPA_garrison_control value = 2 compare = less_than_or_equals }
+						}
+						prioritize = {167}
+					
+						create_unit = {
+							division = "division_template = \"Union Volenteer\" start_experience_factor = 0.1" 
+							owner = W31
+							allow_spawning_on_enemy_provs = no
+							count = 2
+						}
+					}
+
+				}
+				
+				
+				
+				# Trigger war between the sides - necessary because the next effects spawn units on contested provinces and this requires both sides to be at war
+				GER = {
+					declare_war_on = {
+						target = W31
+						type = annex_everything
+					}
+				}
+				W31 = {
+					add_ideas = GER_death_before_surrender
+				}
+				add_ideas = W31_death_before_surrender
+				set_global_flag = spanish_civil_war # Start civil war - used in many triggers
+				country_event = { id = lar_germany.6 days = 7 } # SCW notification event for the player
+			}
+		}
+		
+		option = { # Option for Nationalists - Franco
+			name = lar_germany.2.a
+			GER = {
+				remove_ideas = GER_military_disloyalty
+				remove_ideas = GER_political_violence
+			}
+			W31 = {
+				remove_ideas = GER_military_disloyalty
+				remove_ideas = GER_political_violence
+			}
+			
+		}
+}
+
+
+# Spanish Civil War - Frontlines Solidify
+country_event = {
+	id = lar_germany.6
+	title = lar_germany.6.t
+	desc = lar_germany.6.desc
+	picture = GFX_report_event_spr_spanish_civil_war2
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			remove_ideas = SPA_planned_uprising
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = GER
+						is_core_of = W31
+					}
+				}
+				add_province_modifier = {
+					static_modifiers = { unplanned_offensive }
+					province = {
+						all_provinces = yes
+					}
+				}
+				set_state_flag = SPR_unplanned_offensive_flag
+			}
+		}
+	}
+	
+	option = {
+		name = lar_germany.6.a
+		if = {
+			limit = {
+				tag = GER
+			}
+			effect_tooltip = { remove_ideas = SPA_planned_uprising }
+		}
+		effect_tooltip = {
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = GER
+						is_core_of = W31
+					}
+				}
+				add_province_modifier = {
+					static_modifiers = { unplanned_offensive }
+					province = {
+						all_provinces = yes
+					}
+				}
+			}
+		}
+	}
+}
 
 # Austrian Anschluss Completed
 country_event = {
@@ -196,7 +468,7 @@ country_event = {
 		GER = {
 			create_wargoal = {
 				type = take_state
-				target = SPR
+				target = GER
 				generator = { 41 }
 			}
 		}
@@ -6073,7 +6345,7 @@ country_event = {
 				transfer_state = 458
 				transfer_state = 665
 			}
-			SPR = {
+			GER = {
 				white_peace = ENG
 				white_peace = USA
 				white_peace = SOV
@@ -6378,7 +6650,7 @@ country_event = {
 				province = 13349
 				value = 1
 			}
-			SPR = {
+			GER = {
 				white_peace = ENG
 				white_peace = USA
 				white_peace = SOV
