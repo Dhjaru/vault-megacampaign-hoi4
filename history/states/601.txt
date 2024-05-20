@@ -18,7 +18,6 @@ state={
 		add_core_of = AUS
 		add_claim_by = BOS
 		add_claim_by = CRO
-		add_claim_by = W20
 		add_claim_by = YUG
 
 	}

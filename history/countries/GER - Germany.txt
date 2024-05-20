@@ -304,17 +304,17 @@ starting_train_buffer = 1.5
 set_convoys = 26
 
 set_politics = {
-    ruling_party = democratic
+    ruling_party = neutrality
     last_election = "1908.6.6"
     election_frequency = 48
     elections_allowed = yes
 }
 
 set_popularities = {
-	communism = 2
-	democratic = 75
+	communism = 0
+	democratic = 14
 	fascism = 9
-	neutrality = 14
+	neutrality = 77
 }
 
 # DIPLOMACY

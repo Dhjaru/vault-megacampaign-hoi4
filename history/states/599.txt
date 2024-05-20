@@ -19,7 +19,6 @@ state={
 
 		}
 		add_core_of = CRO
-		add_claim_by = AUS
 		add_claim_by = ITA
 		add_claim_by = W32
 		add_claim_by = YUG

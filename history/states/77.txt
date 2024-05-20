@@ -17,7 +17,6 @@ state={
 		}
 		add_core_of = AFA
 		add_core_of = ETH
-		add_claim_by = W20
 	}
 
 	provinces={

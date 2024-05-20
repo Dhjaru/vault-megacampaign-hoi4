@@ -16,9 +16,7 @@ state={
 
 		}
 		add_core_of = ROM
-		add_claim_by = AUS
 		add_claim_by = HUN
-		add_claim_by = W20
 	}
 
 	provinces={

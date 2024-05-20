@@ -1108,6 +1108,7 @@ ideas = {
 				consumer_goods_expected_value = 0.7
 				stability_factor = -1
 				training_time_army_factor = -10
+				min_export = 0.2
 			
 			}
 		}

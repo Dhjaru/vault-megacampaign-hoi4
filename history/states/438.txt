@@ -15,7 +15,6 @@ state={
 			fuel_silo = 4
 		}
 		add_core_of = SOV
-		add_claim_by = W20
 
 	}
 

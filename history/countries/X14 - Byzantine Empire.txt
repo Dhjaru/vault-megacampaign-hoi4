@@ -82,7 +82,6 @@ if = {
 }create_faction = GRE_argos_alliance
 add_to_faction = X14
 add_to_faction = FRA
-add_to_faction = GER
 add_to_faction = SCA
 
 set_global_flag = KIEL_CANAL_UNBUILT

@@ -203,8 +203,8 @@ set_country_flag = conv_iberia
 set_convoys = 48
 
 set_politics = {
-    ruling_party = fascism
-    last_election = "1908.1.1"
+    ruling_party = democratic
+    last_election = "1928.1.1"
     election_frequency = 48
     elections_allowed = no
 }
