@@ -233,7 +233,7 @@ if = {
 # Research Bonuses
 
 set_country_flag = conv_mexico
-set_convoys = 0
+set_convoys = 1000
 
 set_politics = {
     ruling_party = democratic
