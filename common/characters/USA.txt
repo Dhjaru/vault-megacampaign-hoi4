@@ -61,7 +61,7 @@ characters={
 		}
 		country_leader={
 			ideology=conservatism
-			expire="1944.1.1.1"
+			expire="1938.1.1.1"
 			id=-1
 		}
 	}
@@ -75,6 +75,19 @@ characters={
 		country_leader={
 			ideology=conservatism
 			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	USA_walt_disney={
+		name=USA_walt_disney
+		portraits={
+			civilian={
+				large="gfx/leaders/USA/Portrait_USA_Walt_Disney.png"
+			}
+		}
+		country_leader={
+			idelogy=conservatism
+			expire="1966.1.1"
 			id=-1
 		}
 	}
