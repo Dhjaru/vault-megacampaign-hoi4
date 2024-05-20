@@ -53,20 +53,20 @@ if = {
 
 set_country_flag = conv_greece
 starting_train_buffer = 5
-set_convoys = 16
+set_convoys = 50
 
 set_politics = {
     ruling_party = democratic
-    last_election = "1908.1.1"
+    last_election = "1934.1.1"
     election_frequency = 48
     elections_allowed = yes
 }
 
 set_popularities = {
-	communism = 3
-	democratic = 83
-	fascism = 5
-	neutrality = 9
+	communism = 6
+	democratic = 46
+	fascism = 8
+	neutrality = 40
 }
 
 # DIPLOMACY

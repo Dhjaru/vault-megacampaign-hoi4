@@ -241,6 +241,7 @@ if = {
 # Research Bonuses
 
 set_country_flag = conv_britain
+set_country_flag = fuel_system_enabled
 starting_train_buffer = 3
 set_convoys = 116
 

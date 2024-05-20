@@ -327,6 +327,7 @@ if = {
 # Research Bonuses
 
 set_country_flag = FRA_begin_rearmament_ITA_zone
+set_country_flag = fuel_system_enabled
 set_country_flag = conv_france
 starting_train_buffer = 2
 set_convoys = 0

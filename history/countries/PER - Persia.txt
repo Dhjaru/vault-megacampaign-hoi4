@@ -1,8 +1,6 @@
 capital = 391
 set_research_slots = 4
 
-recruit_character = PER_Reza_Shah
-
 oob = "PER_OOB"
 if = {
 	limit = { has_dlc = "Man the Guns" }
@@ -12,6 +10,10 @@ if = {
 	}
 }
 
+set_variable = {
+	var = min_fuel
+	value = 0.100
+}
 
 set_technology = { #player 
 	basic_train = 1
@@ -399,7 +401,7 @@ recruit_character = PER_abdolazim_airom
 recruit_character = PER_fazlollah_khan
 recruit_character = PER_fazlollah_tahmasebi
 recruit_character = PER_hasan_farhani
-recruit_character = PER_reza_khan
+recruit_character = PER_Reza_Shah
 
 if = {
 	limit = {

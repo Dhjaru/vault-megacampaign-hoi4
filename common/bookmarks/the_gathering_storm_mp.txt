@@ -66,17 +66,17 @@
 			history = "SOV_GATHERING_STORM_DESC"
 			ideology = communism
 			ideas = {
-				trotskyite_plot
-				home_of_revolution
-				SOV_STAVKA1
-				stalins_reign_of_terror_1
-				SOV_idea_2_5_year_plan
+				SOV_legacy_of_five_year_plan_start
+				SOV_ruined_academia
+				SOV_legacy_of_great_purge
+				SOV_scars_of_the_reactionary_navy
+				Disorganized_airforce_1_1
 			}
 			focuses = {
-				SOV_the_great_patriotic_war
-				SOV_great_purge
-				SOV_air_volunteers_in_china
-			}	
+				SOV_start_the_siberian_plan
+				SOV_total_war_industry
+				SOV_100k_program
+			}
 		}
 
 		"---"={

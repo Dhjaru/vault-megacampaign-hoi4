@@ -41,13 +41,14 @@ focus_tree = {
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = PER_recovery_from_the_five_year_plan_start
-				add_idea = PER_recovery_from_the_five_year_plan
+				add_idea = PER_recovery_from_the_five_year_plan_1
+		}
+			add_ideas = partial_economic_mobilisation
 		}
 	}
-		}
 	
 	focus = {
-		id = PER_develop_isfahan
+		id = PER_revitalize_the_silk_road
 		icon = GFX_goal_generic_light_industry
 		
 		prerequisite = { focus = PER_recover_from_the_five_year_plan }
@@ -74,11 +75,48 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+		
+		387 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+		
+			}
+			
+			389 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+		
+			}
+			
+			390 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+		
+			}
+			
+			391 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+		
 			}
 	}
 	
+	}
+	
 	focus = {
-		id = PER_develop_khorasan
+		id = PER_develop_the_steel_mines_of_khorasan
 		icon = GFX_goal_generic_light_industry
 		
 		prerequisite = { focus = PER_recover_from_the_five_year_plan }
@@ -105,15 +143,34 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+		
+		388 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 20
+				}
+			}
+		
 			}
 	}
 	
 	focus = {
-		id = PER_develop_afghanistan
+		id = PER_repair_the_afghani_industry
 		icon = GFX_goal_generic_light_industry
 		
-		prerequisite = { focus = PER_develop_khorasan }
-		relative_position_id = PER_develop_khorasan
+		prerequisite = { focus = PER_develop_the_steel_mines_of_khorasan }
+		relative_position_id = PER_develop_the_steel_mines_of_khorasan
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		x = 0
@@ -136,6 +193,35 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+		
+		395 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+			396 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+	
 			}
 	}
 	
@@ -143,8 +229,8 @@ focus_tree = {
 		id = PER_isfahan_academy_of_science
 		icon = GFX_goal_research_silver
 		
-		prerequisite = { focus = PER_develop_isfahan }
-		relative_position_id = PER_develop_isfahan
+		prerequisite = { focus = PER_revitalize_the_silk_road }
+		relative_position_id = PER_revitalize_the_silk_road
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		x = -2
@@ -167,15 +253,16 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			add_research_slot = 1
 			}
 	}
 	
 	focus = {
-		id = PER_develop_fars
+		id = PER_economic_growth_in_fars
 		icon = GFX_goal_generic_light_industry
 		
-		prerequisite = { focus = PER_develop_isfahan }
-		relative_position_id = PER_develop_isfahan
+		prerequisite = { focus = PER_revitalize_the_silk_road }
+		relative_position_id = PER_revitalize_the_silk_road
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		x = 2
@@ -198,15 +285,34 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+		
+		384 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 20
+				}
+		
 			}
+	}
 	}
 	
 	focus = {
-		id = PER_develop_azerbaijan
+		id = PER_expand_tabriz_tungsten_mines
 		icon = GFX_goal_generic_light_industry
 		
-		prerequisite = { focus = PER_develop_isfahan }
-		relative_position_id = PER_develop_isfahan
+		prerequisite = { focus = PER_revitalize_the_silk_road }
+		relative_position_id = PER_revitalize_the_silk_road
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		x = 0
@@ -229,17 +335,35 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+		
+		386 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_resource = {
+					type = tungsten
+					amount = 20
+				}
 			}
+	}
 	}
 	
 	focus = {
 		id = PER_kickstart_our_military_industry
 		icon = GFX_RAJ_home_defence_industry
 		
-		prerequisite = { focus = PER_develop_azerbaijan }
-		prerequisite = { focus = PER_develop_fars }
-		prerequisite = { focus = PER_develop_afghanistan }
-		relative_position_id = PER_develop_fars
+		prerequisite = { focus = PER_expand_tabriz_tungsten_mines }
+		prerequisite = { focus = PER_economic_growth_in_fars }
+		prerequisite = { focus = PER_repair_the_afghani_industry }
+		relative_position_id = PER_economic_growth_in_fars
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		x = 0
@@ -262,6 +386,10 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+		swap_ideas = {
+				remove_idea = PER_recovery_from_the_five_year_plan_1
+				add_idea = PER_recovery_from_the_five_year_plan_2
+		}
 			}
 	}
 	
@@ -269,8 +397,8 @@ focus_tree = {
 		id = PER_persian_rubber_industry
 		icon = GFX_GER_synthetic_oil_refinery
 		
-		prerequisite = { focus = PER_develop_azerbaijan }
-		relative_position_id = PER_develop_azerbaijan
+		prerequisite = { focus = PER_expand_tabriz_tungsten_mines }
+		relative_position_id = PER_expand_tabriz_tungsten_mines
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		x = -1
@@ -293,6 +421,11 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+		add_building_construction = {
+					type = synthetic_rubber_refinery
+					level = 5
+					instant_build = yes
+				}
 			}
 	}
 	
@@ -483,3 +616,227 @@ focus_tree = {
 		add_ideas = tot_economic_mobilisation
 			}
 	}
+	
+	
+	### Political Tree 
+	
+	focus = {
+		id = PER_state_of_our_lost_territories
+		icon = GFX_goal_generic_improve_relations
+		
+		relative_position_id = PER_recover_from_the_five_year_plan
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 10
+		y = 0
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {			
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = PER_lay_claim_to_former_baluchi_lands
+		icon = GFX_goal_generic_improve_relations
+		
+		prerequisite = { focus = PER_state_of_our_lost_territories }
+		relative_position_id = PER_state_of_our_lost_territories
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {			
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = PER_revoke_our_iraqi_claims
+		icon = GFX_goal_generic_improve_relations
+		
+		prerequisite = { focus = PER_state_of_our_lost_territories }
+		relative_position_id = PER_state_of_our_lost_territories
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = -1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {			
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	
+	
+	focus = {
+		id = PER_a_strange_visitor
+		icon = GFX_goal_unkown
+		
+		relative_position_id = PER_state_of_our_lost_territories
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 7
+		y = 0
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {			
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = PER_proclamation_of_the_aryan_commune
+		icon = GFX_goal_support_communism
+		
+		prerequisite = { focus = PER_a_strange_visitor }
+		relative_position_id = PER_a_strange_visitor
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 1
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {			
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = PER_establishing_the_aryan_legion
+		icon = GFX_goal_support_communism
+		
+		prerequisite = { focus = PER_a_strange_visitor }
+		relative_position_id = PER_a_strange_visitor
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = -1
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {			
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_ideas = PER_the_aryan_legion
+		}
+	}
+	
+	focus = {
+		id = PER_give_hitler_command_of_the_army
+		icon = GFX_goal_support_communism
+		
+		prerequisite = { focus = PER_establishing_the_aryan_legion }
+		relative_position_id = PER_establishing_the_aryan_legion
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 0
+		y = 1
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {			
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	
+	
+	
+	

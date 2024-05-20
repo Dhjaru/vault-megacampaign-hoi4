@@ -282,6 +282,7 @@ if = {
 # Research Bonuses
 
 set_country_flag = conv_japan
+set_country_flag = fuel_system_enabled
 set_convoys = 37
 
 set_politics = {

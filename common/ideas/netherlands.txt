@@ -2,6 +2,29 @@ ideas = {
 
 	country = {
 	
+		HAI_puppet = {
+			name = "A Second Dutch Home"
+
+			picture = hol_lead_the_minor_democracies
+			
+			allowed = {
+				original_tag = HAI
+				overlord = { tag = HOL }
+			}
+
+			allowed_civil_war = {
+				overlord = { tag = HOL }
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				cic_to_overlord_factor = 1
+				mic_to_overlord_factor = 1
+				global_building_slots_factor = 0.5
+			}
+		}
+	
 		HOL_wilhelmina = {
 
 			picture = hol_wilhelmina

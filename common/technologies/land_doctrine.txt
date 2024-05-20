@@ -2735,6 +2735,12 @@ technologies = {
 		xor = { mobile_warfare superior_firepower trench_warfare }
 		
 		on_research_complete = {
+			custom_effect_tooltip = width_tt
+			hidden_effect = {
+				set_technology = {
+					width_tech = 1
+				}
+			}
 			hidden_effect = {
 				set_technology = {
 					gbp_second_bonus = 0
@@ -2906,10 +2912,6 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		
-		category_all_infantry = {
-			max_organisation = 3
-		}
 
 		#land_reinforce_rate = 0.02
 		
@@ -3045,13 +3047,9 @@ technologies = {
 			add_to_variable = { doctrine_research_count = 1 }
 		}
 	
-		on_research_complete = {
-			custom_effect_tooltip = width_tt
-			hidden_effect = {
-				set_technology = {
-					width_tech = 1
-				}
-			}
+		
+		category_all_infantry = {
+			max_organisation = 3
 		}
 
 		enable_tactic = tactic_relentless_assault

@@ -1318,6 +1318,9 @@ focus_tree = {
 				add_idea = SOV_total_war_industry
 			}
 		}
+		select_effect = {
+			add_ideas = tot_economic_mobilisation
+		}
 	}
 
 	focus = {
@@ -1584,6 +1587,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 100
+			add_stability = 0.05
 		}
 	}
 	focus = {
@@ -1880,7 +1884,7 @@ focus_tree = {
 
 		completion_reward = {
 			438 = {
-				add_extra_state_shared_building_slots = 10
+				add_extra_state_shared_building_slots = 16
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -1888,7 +1892,7 @@ focus_tree = {
 				}
 			}
 			679 = {
-				add_extra_state_shared_building_slots = 10
+				add_extra_state_shared_building_slots = 16
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -1896,7 +1900,7 @@ focus_tree = {
 				}
 			}
 			680 = {
-				add_extra_state_shared_building_slots = 10
+				add_extra_state_shared_building_slots = 16
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -1904,7 +1908,7 @@ focus_tree = {
 				}
 			}
 			682 = {
-				add_extra_state_shared_building_slots = 10
+				add_extra_state_shared_building_slots = 16
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -1942,7 +1946,7 @@ focus_tree = {
 
 		completion_reward = {
 			669 = {
-				add_extra_state_shared_building_slots = 10
+				add_extra_state_shared_building_slots = 16
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -1950,7 +1954,7 @@ focus_tree = {
 				}
 			}
 			673 = {
-				add_extra_state_shared_building_slots = 10
+				add_extra_state_shared_building_slots = 16
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -1958,7 +1962,7 @@ focus_tree = {
 				}
 			}
 			671 = {
-				add_extra_state_shared_building_slots = 10
+				add_extra_state_shared_building_slots = 16
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -1966,7 +1970,7 @@ focus_tree = {
 				}
 			}
 			668 = {
-				add_extra_state_shared_building_slots = 10
+				add_extra_state_shared_building_slots = 16
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -2005,7 +2009,7 @@ focus_tree = {
 
 		completion_reward = {
 			687 = {
-				add_extra_state_shared_building_slots = 10
+				add_extra_state_shared_building_slots = 16
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -2013,7 +2017,7 @@ focus_tree = {
 				}
 			}
 			684 = {
-				add_extra_state_shared_building_slots = 10
+				add_extra_state_shared_building_slots = 16
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -2021,7 +2025,7 @@ focus_tree = {
 				}
 			}
 			689 = {
-				add_extra_state_shared_building_slots = 10
+				add_extra_state_shared_building_slots = 16
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -2029,7 +2033,7 @@ focus_tree = {
 				}
 			}
 			688 = {
-				add_extra_state_shared_building_slots = 10
+				add_extra_state_shared_building_slots = 16
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -2037,7 +2041,7 @@ focus_tree = {
 				}
 			}
 			443 = {
-				add_extra_state_shared_building_slots = 10
+				add_extra_state_shared_building_slots = 16
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -2145,6 +2149,7 @@ focus_tree = {
 				remove_idea = SOV_pansarberg
 				add_idea = SOV_russian_steel
 			}
+			add_stability = 0.1
 		}
 	}
 	focus = {
@@ -2282,6 +2287,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 100
+			add_stability = 0.1
 			442 = {
 				add_resource = {
 					type = aluminium
@@ -2424,6 +2430,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			add_ideas = SOV_ministry_of_aircraft_production
 		}
 	}
 
@@ -2517,6 +2524,10 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			swap_ideas = {
+				add_idea = Disorganized_airforce_2_1
+				remove_idea = Disorganized_airforce_1_1
+			}
 		}
 	}
 
@@ -2550,6 +2561,10 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			swap_ideas = {
+				add_idea = Disorganized_airforce_1_2
+				remove_idea = Disorganized_airforce_1_1
+			}
 		}
 	}
 
@@ -2581,6 +2596,11 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 3
+				category = light_fighter
+			}
 		}
 	}
 
@@ -2601,7 +2621,13 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {			
+		available = {
+			OR = {
+				date > 1940.1.1
+				FRA = {
+					has_war = yes
+				}
+			}
 		}
 		
 		bypass = {
@@ -2612,6 +2638,10 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			swap_ideas = {
+				add_idea = SOV_ministry_of_aircraft_production_2
+				remove_idea = SOV_ministry_of_aircraft_production
+			}
 		}
 	}
 
@@ -2643,6 +2673,11 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 3
+				category = tactical_bomber
+			}
 		}
 	}
 
@@ -2674,6 +2709,11 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 3
+				category = cas_bomber
+			}
 		}
 	}
 
@@ -2707,6 +2747,14 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			swap_ideas = {
+				add_idea = Disorganized_airforce_2_2
+				remove_idea = Disorganized_airforce_1_2
+			}
+			swap_ideas = {
+				add_idea = Disorganized_airforce_3_1
+				remove_idea = Disorganized_airforce_2_1
+			}
 		}
 	}
 
@@ -2740,6 +2788,14 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			swap_ideas = {
+				add_idea = Disorganized_airforce_2_2
+				remove_idea = Disorganized_airforce_2_1
+			}
+			swap_ideas = {
+				add_idea = Disorganized_airforce_1_3
+				remove_idea = Disorganized_airforce_1_2
+			}
 		}
 	}
 
@@ -2771,6 +2827,21 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			swap_ideas = {
+				add_idea = iron_will_1_3_2
+				remove_idea = Disorganized_airforce_1_3
+			}
+			swap_ideas = {
+				add_idea = iron_will_3_1_2
+				remove_idea = Disorganized_airforce_3_1
+			}
+			swap_ideas = {
+				add_idea = iron_will_2_2_2
+				remove_idea = Disorganized_airforce_2_2
+			}
+		
+
+
 		}
 	}
 
@@ -3626,10 +3697,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = tot_economic_mobilisation
-		}
-		select_effect = {
-			add_ideas = tot_economic_mobilisation
 		}
 	}
 

@@ -14,7 +14,7 @@ state={
 		}
 		buildings = {
 			infrastructure = 2
-			industrial_complex = 2
+			industrial_complex = 5
 			arms_factory = 0
 			dockyard = 1
 			911 = {
@@ -35,6 +35,6 @@ state={
 	}
 	manpower=3715984
 	buildings_max_level_factor=1.000
-	state_category=city
+	state_category=large_city
 	local_supplies=10.000
 }
