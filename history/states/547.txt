@@ -9,13 +9,13 @@ state={
 			4956 1 
 		}
 		buildings = {
-			infrastructure = 3
-			industrial_complex = 1
+			infrastructure = 10
+			industrial_complex = 2
 			arms_factory = 0
 			12810 = {
 				naval_base = 15
 			}
-			air_base = 1
+			air_base = 20
 
 		}
 		add_core_of = USA
@@ -24,9 +24,9 @@ state={
 	provinces={
 		1952 4956 8079 10732 10889 12810 
 	}
-	manpower=1265076
+	manpower=3265076
 	buildings_max_level_factor=1.000
-	state_category=rural
+	state_category=USA_state
 
 	local_supplies=10.0
 }

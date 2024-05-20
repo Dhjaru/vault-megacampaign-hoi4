@@ -12,7 +12,7 @@ state={
 			4982 1 
 		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 6
 			industrial_complex = 0
 			arms_factory = 0
 			12716 = {
@@ -21,15 +21,15 @@ state={
 			air_base = 0
 
 		}
-		add_core_of = COL
+		add_core_of = USA
 	}
 
 	provinces={
 		1928 4934 4982 8107 10906 12716 12828 12885 
 	}
-	manpower=918836
+	manpower=1518836
 	buildings_max_level_factor=1.000
-	state_category=rural
+	state_category=USA_state
 
 	local_supplies=10.0
 }

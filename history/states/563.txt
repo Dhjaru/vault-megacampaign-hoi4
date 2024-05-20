@@ -9,21 +9,22 @@ state={
 			10747 1 
 		}
 		buildings = {
-			infrastructure = 3
+			infrastructure = 6
 			industrial_complex = 0
 			arms_factory = 0
+			dockyard = 5
 			air_base = 1
 
 		}
-		add_core_of = COL
+		add_core_of = USA
 	}
 
 	provinces={
 		1887 2007 5026 7993 10747 10792 12729 12770 12825 
 	}
-	manpower=1480996
+	manpower=3080996
 	buildings_max_level_factor=1.000
-	state_category=rural
+	state_category=USA_state
 
 	local_supplies=10.0
 }
