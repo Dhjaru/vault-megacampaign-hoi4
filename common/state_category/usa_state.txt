@@ -2,7 +2,7 @@ state_categories = {
 usa_state = {
 	local_building_slots = 30
 	local_supplies = 0.15
-	color = { 0 30 240 }
+	color = { 240 20 240 }
 
 }
 }

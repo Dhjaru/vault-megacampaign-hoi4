@@ -29,12 +29,12 @@ focus = {
 focus = {
 		id = USA_ask_for_capitalist_support
 		icon = GFX_USA_WPA
-		x = 4
+		x = -1
 		y = 1
 		cost = 10
 		
 		prerequisite = { focus =USA_failure_of_the_marshal_plan  }
-		relative_position_id=USA_continue_the_new_deal
+		relative_position_id=USA_failure_of_the_marshal_plan
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = USA_marshal_plan2
@@ -45,12 +45,12 @@ focus = {
 focus = {
 		id = USA_bourgeoisie
 		icon = GFX_family
-		x = 6
+		x = 1
 		y = 1
 		cost = 5
 		
 		prerequisite = { focus =USA_failure_of_the_marshal_plan }
-		relative_position_id=USA_continue_the_new_deal
+		relative_position_id=USA_failure_of_the_marshal_plan
 		completion_reward = {
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = USA_whittaker_chambers 
@@ -74,7 +74,7 @@ focus = {
 		
 		prerequisite = { focus = USA_bourgeoisie  }
 		prerequisite = { focus = USA_ask_for_capitalist_support  }
-		relative_position_id=USA_the_new_american_generations
+		relative_position_id=USA_bourgeoisie
 		completion_reward = {
 			add_political_power = 100
 		}
@@ -109,7 +109,7 @@ focus = {
 focus = {
 		id = USA_neutrality_act
 		icon = GFX_USA_An_Act_of_Neutrality
-		x = -5
+		x = -2
 		y = 2
 		cost = 5
 		prerequisite = { focus = USA_walt_carries_on_the_mantle }
@@ -130,7 +130,7 @@ focus = {
 		id = USA_open_new_ford_manufacturing_plant
 		icon = GFX_goal_generic_construction
 		x = 2
-		y = 2
+		y = 1
 		cost = 5
 		
 		prerequisite = {  focus = USA_neutrality_act  }
@@ -166,8 +166,8 @@ focus = {
 focus = {
 		id = USA_revive_core_industry
 		icon = GFX_focus_hol_the_foundations_of_defense
-		x = 4
-		y = 2
+		x = -2
+		y = 1
 		cost = 5
 		
 		prerequisite = {  focus = USA_neutrality_act  }
@@ -180,8 +180,8 @@ focus = {
 focus = {
 		id = USA_mass_industrialization
 		icon = GFX_focus_mex_privatisation
-		x = 3
-		y = 3
+		x = -1
+		y = 2
 		cost = 5
 		
 		prerequisite = {  focus = USA_neutrality_act  }
@@ -224,7 +224,7 @@ focus = {
 		id = USA_improve_our_building_plans
 		icon = GFX_focus_generic_industry_2
 		x = 1
-		y = 1
+		y = 2
 		cost = 5
 		
 		prerequisite = {  focus = USA_neutrality_act  }
@@ -245,7 +245,7 @@ focus = {
 		id = USA_public_project
 		icon = GFX_goal_generic_production
 		x = 0
-		y = 4
+		y = 3
 		cost = 5
 		
 		prerequisite = {  focus = USA_neutrality_act }
@@ -279,7 +279,7 @@ focus = {
 	}
 focus = {
 		id = USA_arsenal_of_democracy
-		x = 2
+		x = 0
 		icon = GFX_focus_USA_arsenal
 		y = 1
 		cost = 5
@@ -333,7 +333,7 @@ focus = {
 		available = {
 			
 		}
-		x = -3
+		x = 6
 		y = 1
 		relative_position_id = USA_arsenal_of_democracy
 		cost = 2
@@ -381,12 +381,12 @@ focus = {
 focus = {
 		id = USA_USACE_projects
 		icon = GFX_soldier
-		x = 0
+		x = 2
 		y = 1
 		cost = 5
 		
-		available = {	has_war_support > 0.3	}
-		prerequisite = {  focus = USA_military_construction  focus = USA_public_project }
+		available = { has_war_support > 0.3	}
+		prerequisite = { focus = USA_public_project }
 		relative_position_id= USA_public_project
 		completion_reward = {
 			373 = {
@@ -421,7 +421,7 @@ focus = {
 		bypass = { has_idea = war_economy } 
 		continue_if_invalid = yes
 		x = 0
-		y = 2 
+		y = 1
 		relative_position_id = USA_arsenal_of_democracy
 		cost = 5
 
@@ -483,11 +483,11 @@ focus = {
 		id = USA_wartime_industry
 		icon = GFX_goal_generic_construct_mil_factory
 		x = 0
-		y = 4
+		y = 2
 		cost = 5	
 		
 		prerequisite = {  focus = USA_the_giant_wakes  }
-		relative_position_id=USA_arsenal_of_democracy
+		relative_position_id=USA_the_giant_wakes
 		available = { has_war = yes }
 		completion_reward = {
 			add_ideas = war_economy
@@ -586,7 +586,7 @@ focus = {
 focus = {
 		id = USA_manhattan_project
 		icon = GFX_focus_wonderweapons 
-		x = 6
+		x = 3
 		y = 1
 		
 		prerequisite = {
@@ -1173,7 +1173,7 @@ focus = {
 focus = {
 		id = USA_extraction_of_rare_metals
 		icon = GFX_goal_generic_construction2
-		x = -1
+		x = 0
 		y = 1
 		cost = 5
 		
@@ -1298,7 +1298,7 @@ focus = {
 focus = {
 		id = USA_farm_secutity_administartion
 		icon = GFX_House
-		x = 1
+		x = 0
 		y = 1
 		cost = 5
 		
@@ -1462,8 +1462,8 @@ focus = {
  	focus = {
 		id = USA_war_plans_division
 		icon = GFX_goal_generic_position_armies
-		x = 10	
-		y = 10
+		x = 11
+		y = 0
 
 		cost = 5
 
@@ -1524,7 +1524,7 @@ focus = {
 		prerequisite = {
 			focus = USA_war_plans_division
 		}
-		x = 8
+		x = 4
 		y = 1
 		completion_reward = {
 			add_political_power = 150
@@ -2301,7 +2301,7 @@ focus = {
 	focus = {
 		id = USA_intervention_in_europe
 		icon = GFX_goal_generic_territory_or_war
-		x = -2
+		x = -3
 		y = 1
 		prerequisite = { focus = USA_war_plans_division } 
 		relative_position_id = USA_war_plans_division 
@@ -2429,8 +2429,8 @@ focus = {
 		}
 		bypass = { has_war_with = JAP}
 		relative_position_id = USA_war_plans_division
-		x = 2
-		y = 1
+		x = 0
+		y = 2
 		cost = 2
 		completion_reward = {
 			JAP = { complete_national_focus = JAP_strike_on_the_southern_resource_area }
@@ -2484,7 +2484,7 @@ focus = {
  focus = {
 	id = USA_war_department
 	icon = GFX_goal_generic_army_doctrines
-	x = 24
+	x = 26
 	y = 0
 
 	cost = 5
@@ -3408,7 +3408,7 @@ focus = {
 	id = USA_reform_army
 	icon = GFX_focus_NORDIC_com_selector_army
 	x = 4
-	y = 7
+	y = 6
 
 	prerequisite = {  focus = USA_war_department }
 	relative_position_id= USA_war_department 
