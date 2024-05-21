@@ -17,7 +17,7 @@ focus_tree = {
 		id = HOL_koninkrijk_der_nederlanden
 		icon = GFX_hungarian_continue_work_plan
 		search_filters = { FOCUS_FILTER_INDUSTRY }
-		x = 25
+		x = 10
 		y = 0
 
 		cost = 5
@@ -39,6 +39,35 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 150
+		}
+	}
+
+		focus = {
+		id = HOL_economic_recovery_plan
+		icon = GFX_hungarian_continue_work_plan
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		x = 10
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {			
+		}
+		
+		bypass = {
+			has_war = yes 	
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.05
 		}
 	}
 }
