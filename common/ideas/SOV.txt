@@ -548,7 +548,7 @@ ideas = {
 				has_government = communism
 			}
 			
-			picture = nkvd_2
+			picture = generic_artillery_regiments
 			
 			research_bonus = {
 				artillery = 0.15
@@ -569,7 +569,7 @@ ideas = {
 				has_government = communism
 			}
 			
-			picture = nkvd_2
+			picture = USA_infantry_industry
 			
 			equipment_bonus = {
 				infantry_equipment = {
@@ -588,7 +588,7 @@ ideas = {
 				has_government = communism
 			}
 			
-			picture = nkvd_2
+			picture = USA_infantry_industry
 			
 			equipment_bonus = {
 				infantry_equipment = {
@@ -606,7 +606,7 @@ ideas = {
 				has_government = communism
 			}
 			
-			picture = nkvd_2
+			picture = SWE_let_fly_all_guns
 			
 			equipment_bonus = {
 				light_sp_anti_air_brigade = {
@@ -641,7 +641,7 @@ ideas = {
 				has_government = communism
 			}
 			
-			picture = nkvd_2
+			picture = generic_acquire_tanks
 			
 			equipment_bonus = {
 				armor = {
@@ -659,7 +659,7 @@ ideas = {
 				has_government = communism
 			}
 			
-			picture = nkvd_2
+			picture = generic_artillery_regiments
 			
 			equipment_bonus = {
 				field_gun_equipment = {
@@ -678,7 +678,7 @@ ideas = {
 				has_government = communism
 			}
 			
-			picture = nkvd_2
+			picture = SOV_the_road_of_life
 			
 			modifier = {
 				winter_attrition_factor = -0.5
@@ -697,7 +697,7 @@ ideas = {
 				has_government = communism
 			}
 			
-			picture = nkvd_2
+			picture = winter_offensive
 			
 			modifier = {
 				army_org_factor = 0.15
@@ -714,7 +714,7 @@ ideas = {
 				has_government = communism
 			}
 			
-			picture = nkvd_2
+			picture = SOV_gulag_economy_1
 			
 			modifier = {
 				cas_damage_reduction = 0.33
@@ -733,7 +733,7 @@ ideas = {
 				has_government = communism
 			}
 			
-			picture = nkvd_2
+			picture = sevmash_plant_no_402
 			
 			modifier = {
 				production_speed_dockyard_factor = -0.5
@@ -749,7 +749,7 @@ ideas = {
 				has_government = communism
 			}
 			
-			picture = nkvd_2
+			picture = sevmash_plant_no_402
 			
 			modifier = {
 				production_speed_dockyard_factor = -0.5
@@ -766,7 +766,7 @@ ideas = {
 				has_government = communism
 			}
 			
-			picture = nkvd_2
+			picture = sevmash_plant_no_402
 			
 			modifier = {
 				production_speed_dockyard_factor = -0.5
