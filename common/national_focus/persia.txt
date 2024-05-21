@@ -43,6 +43,37 @@ focus_tree = {
 				remove_idea = PER_recovery_from_the_five_year_plan_start
 				add_idea = PER_recovery_from_the_five_year_plan_1
 		}
+		}
+	}
+	
+	focus = {
+		id = PER_copy_russian_siberian_plan
+		icon = GFX_SOV_one_way_trip_to_hell
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = PER_recover_from_the_five_year_plan }
+		relative_position_id = PER_recover_from_the_five_year_plan
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {			
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = PER_khorasani_plan
 			add_ideas = partial_economic_mobilisation
 		}
 	}
@@ -51,8 +82,8 @@ focus_tree = {
 		id = PER_revitalize_the_silk_road
 		icon = GFX_goal_generic_light_industry
 		
-		prerequisite = { focus = PER_recover_from_the_five_year_plan }
-		relative_position_id = PER_recover_from_the_five_year_plan
+		prerequisite = { focus = PER_copy_russian_siberian_plan }
+		relative_position_id = PER_copy_russian_siberian_plan
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		x = -2
@@ -119,8 +150,8 @@ focus_tree = {
 		id = PER_develop_the_steel_mills_of_khorasan
 		icon = GFX_goal_generic_light_industry
 		
-		prerequisite = { focus = PER_recover_from_the_five_year_plan }
-		relative_position_id = PER_recover_from_the_five_year_plan
+		prerequisite = { focus = PER_copy_russian_siberian_plan }
+		relative_position_id = PER_copy_russian_siberian_plan
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		x = 2
@@ -402,7 +433,7 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = PER_kickstart_our_military_industry
+		id = PER_full_industrial_recovery
 		icon = GFX_RAJ_home_defence_industry
 		
 		prerequisite = { focus = PER_expand_tabriz_tungsten_mines }
@@ -420,8 +451,7 @@ focus_tree = {
 			factor = 1
 		}
 		
-		available = {
-			date > 1939.9.1
+		available = {		
 		}
 		
 		bypass = {
@@ -435,6 +465,87 @@ focus_tree = {
 		swap_ideas = {
 				remove_idea = PER_recovery_from_the_five_year_plan_1
 				add_idea = PER_recovery_from_the_five_year_plan_2
+		}
+		swap_ideas = {
+				remove_idea = PER_khorasani_plan
+				add_idea = PER_khorasani_plan_2
+		}
+			}
+	}
+	
+	focus = {
+		id = PER_kickstart_our_military_industry
+		icon = GFX_RAJ_home_defence_industry
+		
+		prerequisite = { focus = PER_full_industrial_recovery }
+		relative_position_id = PER_full_industrial_recovery
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		x = 0
+		y = 1
+
+		cost = 5
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {		
+			OR = {
+				date > 1940.1.1
+				FRA = {
+					has_war = yes
+				}
+			}	
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+		swap_ideas = {
+				remove_idea = PER_recovery_from_the_five_year_plan_2
+				add_idea = PER_recovery_from_the_five_year_plan_3
+		}
+			}
+	}
+	
+	focus = {
+		id = PER_total_war_industry
+		icon = GFX_RAJ_home_defence_industry
+		
+		prerequisite = { focus = PER_kickstart_our_military_industry }
+		relative_position_id = PER_kickstart_our_military_industry
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		x = 0
+		y = 1
+
+		cost = 5
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {			
+			has_war = yes
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+		swap_ideas = {
+				remove_idea = PER_recovery_from_the_five_year_plan_3
+				add_idea = PER_recovery_from_the_five_year_plan_4
 		}
 			}
 	}
@@ -493,7 +604,7 @@ focus_tree = {
 		relative_position_id = PER_kickstart_our_military_industry
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
-		x = -2
+		x = -4
 		y = 1
 
 		cost = 5
@@ -540,7 +651,7 @@ focus_tree = {
 		relative_position_id = PER_kickstart_our_military_industry
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
-		x = 0
+		x = -2
 		y = 1
 
 		cost = 5
@@ -595,7 +706,7 @@ focus_tree = {
 		relative_position_id = PER_kickstart_our_military_industry
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
-		x = 2
+		x = 3
 		y = 1
 
 		cost = 5
@@ -664,8 +775,8 @@ focus_tree = {
 
 		completion_reward = {
 			swap_ideas = {
-				remove_idea = PER_recovery_from_the_five_year_plan_2
-				add_idea = PER_recovery_from_the_five_year_plan_3
+				remove_idea = PER_khorasani_plan_2
+				add_idea = PER_khorasani_plan_3
 				}
 			}
 	}
@@ -766,6 +877,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+		add_political_power = 150
 		}
 	}
 	
@@ -829,6 +941,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+		news_event = per_news.1
 		remove_state_core = 103
 		remove_state_core = 104
 		}

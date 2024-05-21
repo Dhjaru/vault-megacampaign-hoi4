@@ -1,10 +1,11 @@
 
 add_namespace = per
+add_namespace = per_news
 
 country_event = {
 	id = per.1
 	title = "A strange visitor"
-	desc = "After showing up at our doorstep Hitler explained that, after he lost the civil war he had to flee from the new French supported German governemt. Now he's asking us for shelter."
+	desc = "After showing up at our doorstep Hitler explained that, after he lost the civil war he had to flee from the new French supported German government. Now he's asking us for shelter."
 	picture = GFX_report_event_usa_election_generic
 
 	is_triggered_only = yes
@@ -29,5 +30,24 @@ country_event = {
 			}
 		}
 	}
+}
 	
+news_event = {
+	id = per_news.1
+	title = "Persia is revoking their claims to Iraq"
+	desc = "After careful consideration the Persian government has decided to, even if it is painful, revoke their claims on their old Iraqi land to better their relations with the great power of Byzantium."
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	trigger = {
+		tag = PER
+		date > 1936.1.1
 	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "This will mean peace in our time"
+	}
+}
