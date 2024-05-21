@@ -5,6 +5,7 @@ state={
 	resources={
 		aluminium=20.000
 		chromium=50.000
+		steel=30.000
 	}
 
 	history={
@@ -22,7 +23,6 @@ state={
 		add_core_of = PER
 		add_core_of = X62
 		add_claim_by = TUR
-		add_claim_by = W20
 	}
 
 	provinces={

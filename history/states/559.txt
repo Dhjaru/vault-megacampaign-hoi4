@@ -3,9 +3,9 @@ state={
 	id=559
 	name="STATE_559"
 	resources={
-		aluminium=5.000
-		oil=31.000
-		steel=7.000
+		aluminium=50.000
+		oil=81.000
+		steel=70.000
 	}
 
 	history={
@@ -14,25 +14,25 @@ state={
 			10855 1 
 		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 8
 			industrial_complex = 0
 			arms_factory = 0
+			dockyard = 2
 			12772 = {
 				naval_base = 10
 			}
 			air_base = 0
 
 		}
-		add_core_of = COL
-		add_claim_by = W20
+		add_core_of = USA
 	}
 
 	provinces={
 		1944 1997 2052 4526 5088 10855 12772 
 	}
-	manpower=853476
+	manpower=1853476
 	buildings_max_level_factor=1.000
-	state_category=rural
+	state_category=USA_state
 
 	local_supplies=10.0
 }

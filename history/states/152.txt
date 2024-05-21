@@ -20,7 +20,6 @@ state={
 		add_core_of = X57
 		add_claim_by = BRM
 		add_claim_by = RAJ
-		add_claim_by = W20
 		add_claim_by = X50
 		add_claim_by = X58
 	}

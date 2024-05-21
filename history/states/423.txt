@@ -16,7 +16,6 @@ state={
 
 		}
 		add_core_of = SOV
-		add_claim_by = W20
 
 	}
 
@@ -25,6 +24,6 @@ state={
 	}
 	manpower=1715120
 	buildings_max_level_factor=1.000
-	state_category=large_town
+	state_category=city
 	local_supplies=10.000
 }

@@ -22,7 +22,6 @@ state={
 		add_core_of = SIA
 		add_core_of = VIN
 		add_core_of = W69
-		add_claim_by = W20
 		add_claim_by = X50
 	}
 

@@ -16,7 +16,6 @@ state={
 
 		}
 		add_core_of = KEN
-		add_claim_by = W20
 	}
 
 	provinces={

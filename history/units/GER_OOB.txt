@@ -6,15 +6,27 @@ division_template = {
 		light_armor = { x = 0 y = 0 }
 		light_armor = { x = 0 y = 1 }
 		light_armor = { x = 0 y = 2 }
+		light_armor = { x = 0 y = 3 }
 		light_armor = { x = 1 y = 0 }
 		light_armor = { x = 1 y = 1 }
 		light_armor = { x = 1 y = 2 }
+		light_armor = { x = 1 y = 3 }
 		motorized = { x = 2 y = 0 }
 		motorized = { x = 2 y = 1 }
 		motorized = { x = 2 y = 2 }
+		motorized = { x = 2 y = 3 }
+		motorized = { x = 3 y = 0 }
+		motorized = { x = 3 y = 1 }
+		motorized = { x = 3 y = 2 }
 	}
 	support = {
-		artillery = { x = 0 y = 0 }
+		artillery = { x = 0 y = 0 } 
+		mobile_engineer = { x = 0 y = 1 } 	
+		recon_ac = { x = 0 y = 2 }
+		field_hospital = { x = 0 y = 3 }
+		maintenance_company = { x = 1 y = 0 }
+		logistics_company_mot = { x = 1 y = 1 }	
+		anti_air_heavy_support = { x = 1 y = 2 }
 	}
 }
 
@@ -25,15 +37,27 @@ division_template = {
 		light_armor = { x = 0 y = 0 }
 		light_armor = { x = 0 y = 1 }
 		light_armor = { x = 0 y = 2 }
+		light_armor = { x = 0 y = 3 }
 		motorized = { x = 1 y = 0 }
 		motorized = { x = 1 y = 1 }
 		motorized = { x = 1 y = 2 }
+		motorized = { x = 1 y = 3 }
 		motorized = { x = 2 y = 0 }
 		motorized = { x = 2 y = 1 }
 		motorized = { x = 2 y = 2 }
+		motorized = { x = 2 y = 3 }
+		motorized = { x = 3 y = 0 }
+		motorized = { x = 3 y = 1 }
+		motorized = { x = 3 y = 2 }
 	}
 	support = {
-		artillery = { x = 0 y = 0 }
+		artillery = { x = 0 y = 0 } 
+		mobile_engineer = { x = 0 y = 1 } 	
+		recon_ac = { x = 0 y = 2 }
+		field_hospital = { x = 0 y = 3 }
+		maintenance_company = { x = 1 y = 0 }
+		logistics_company_mot = { x = 1 y = 1 }	
+		anti_air_heavy_support = { x = 1 y = 2 }
 	}
 }
 
@@ -44,15 +68,27 @@ division_template = {
 		motorized = { x = 0 y = 0 }
 		motorized = { x = 0 y = 1 }
 		motorized = { x = 0 y = 2 }
+		motorized = { x = 0 y = 3 }
 		motorized = { x = 1 y = 0 }
 		motorized = { x = 1 y = 1 }
 		motorized = { x = 1 y = 2 }
+		motorized = { x = 1 y = 3 }
 		motorized = { x = 2 y = 0 }
 		motorized = { x = 2 y = 1 }
 		motorized = { x = 2 y = 2 }
+		artillery_brigade_mot = { x = 3 y = 0 }
+		artillery_brigade_mot = { x = 3 y = 1 }
+		artillery_brigade_mot = { x = 3 y = 2 }
+		artillery_brigade_mot = { x = 3 y = 3 }
 	}
 	support = {
-		artillery = { x = 0 y = 0 }
+		artillery = { x = 0 y = 0 } 
+		mobile_engineer = { x = 0 y = 1 } 	
+		recon_ac = { x = 0 y = 2 }
+		field_hospital = { x = 0 y = 3 }
+		maintenance_company = { x = 1 y = 0 }
+		logistics_company_mot = { x = 1 y = 1 }	
+		anti_air_heavy_support = { x = 1 y = 2 }
 	}
 }
 
@@ -63,9 +99,11 @@ division_template = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
 		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
 		infantry = { x = 1 y = 0 }
 		infantry = { x = 1 y = 1 }
 		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
 		infantry = { x = 2 y = 0 }
 		infantry = { x = 2 y = 1 }
 		infantry = { x = 2 y = 2 }
@@ -75,20 +113,13 @@ division_template = {
 		light_armor = { x = 4 y = 0 }
 	}
 	support = {
-	}
-}
-
-division_template = {
-	name = "Assault Brigade"
-
-	regiments = {
-		infantry = { x = 0 y = 0 }
-		infantry = { x = 0 y = 1 }
-		infantry = { x = 0 y = 2 }
-		artillery_brigade = { x = 1 y = 0 }
-		light_armor = { x = 2 y = 0 }
-	}
-	support = {
+		artillery = { x = 0 y = 0 } 
+		mobile_engineer = { x = 0 y = 1 } 	
+		recon_ac = { x = 0 y = 2 }
+		field_hospital = { x = 0 y = 3 }
+		maintenance_company = { x = 1 y = 0 }
+		logistics_company_mot = { x = 1 y = 1 }	
+		anti_air_heavy_support = { x = 1 y = 2 }
 	}
 }
 
@@ -114,13 +145,17 @@ division_template = {
 }
 
 division_template = {
-	name = "Infantry Brigade"
+	name = "Infantry Division"
 
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
 		infantry = { x = 0 y = 2 }
-		artillery_brigade = { x = 1 y = 0 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		artillery_brigade = { x = 1 y = 3 }
 	}
 	support = {
 	}
@@ -130,29 +165,28 @@ division_template = {
 	name = "Light Infantry Division"
 
 	regiments = {
-		infantry = { x = 0 y = 0 }
-		infantry = { x = 0 y = 1 }
-		infantry = { x = 0 y = 2 }
-		infantry = { x = 1 y = 0 }
-		infantry = { x = 1 y = 1 }
-		infantry = { x = 1 y = 2 }
-		infantry = { x = 2 y = 0 }
-		infantry = { x = 2 y = 1 }
-		infantry = { x = 2 y = 2 }
+		volkssturm_infantry = { x = 0 y = 0 }
+		volkssturm_infantry = { x = 0 y = 1 }
+		volkssturm_infantry = { x = 0 y = 2 }
+		volkssturm_infantry = { x = 0 y = 3 }
+		volkssturm_infantry = { x = 1 y = 0 }
+		volkssturm_infantry = { x = 1 y = 1 }
+		volkssturm_infantry = { x = 1 y = 2 }
+		volkssturm_infantry = { x = 1 y = 3 }
+		volkssturm_infantry = { x = 2 y = 0 }
+		volkssturm_infantry = { x = 2 y = 1 }
+		volkssturm_infantry = { x = 2 y = 2 }
+		volkssturm_infantry = { x = 2 y = 3 }
+		volkssturm_infantry = { x = 3 y = 0 }
+		volkssturm_infantry = { x = 3 y = 1 }
+		volkssturm_infantry = { x = 3 y = 2 }
 	}
 	support = {
-	}
-}
-
-division_template = {
-	name = "Light Infantry Brigade"
-
-	regiments = {
-		infantry = { x = 0 y = 0 }
-		infantry = { x = 0 y = 1 }
-		infantry = { x = 0 y = 2 }
-	}
-	support = {
+		artillery = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+		field_gun_support = { x = 0 y = 2 }
+		military_police = { x = 1 y = 0 }
+		recon = { x = 1 y = 1 }
 	}
 }
 
@@ -163,24 +197,18 @@ division_template = {
 		cavalry = { x = 0 y = 0 }
 		cavalry = { x = 0 y = 1 }
 		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 0 y = 3 }
 		cavalry = { x = 1 y = 0 }
 		cavalry = { x = 1 y = 1 }
 		cavalry = { x = 1 y = 2 }
+		cavalry = { x = 1 y = 3 }
 		cavalry = { x = 2 y = 0 }
 		cavalry = { x = 2 y = 1 }
 		cavalry = { x = 2 y = 2 }
-	}
-	support = {
-	}
-}
-
-division_template = {
-	name = "Cavalry Brigade"
-
-	regiments = {
-		cavalry = { x = 0 y = 0 }
-		cavalry = { x = 0 y = 1 }
-		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 2 y = 3 }
+		cavalry = { x = 3 y = 0 }
+		cavalry = { x = 3 y = 1 }
+		cavalry = { x = 3 y = 2 }
 	}
 	support = {
 	}
@@ -241,142 +269,142 @@ instant_effect = {
 }
 units = {
 	division = {
-		name = "1. Light Infantry Brigade"
-		location = 10803
-		division_template = "Light Infantry Brigade"
+		name = "1. Light Infantry Division"
+		location = 3703
+		division_template = "Light Infantry Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "1. Cavalry Brigade"
-		location = 10803
-		division_template = "Cavalry Brigade"
+		name = "1. Cavalry Division"
+		location = 3703
+		division_template = "Cavalry Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "1. Infantry Division"
-		location = 6631
+		location = 3703
 		division_template = "Infantry Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "2. Infantry Division"
-		location = 6631
+		location = 3703
 		division_template = "Infantry Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "1. Infantry Brigade"
-		location = 6631
-		division_template = "Infantry Brigade"
+		name = "1. Infantry Division"
+		location = 3703
+		division_template = "Infantry Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "1. Cavalry Brigade"
-		location = 6631
-		division_template = "Cavalry Brigade"
+		name = "1. Cavalry Division"
+		location = 3703
+		division_template = "Cavalry Division"
 		start_experience_factor = 0.4
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "2. Cavalry Brigade"
-		location = 6631
-		division_template = "Cavalry Brigade"
+		name = "2. Cavalry Division"
+		location = 3703
+		division_template = "Cavalry Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "1. Cavalry Brigade"
-		location = 6573
-		division_template = "Cavalry Brigade"
+		name = "1. Cavalry Division"
+		location = 3703
+		division_template = "Cavalry Division"
 		start_experience_factor = 0.7
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "2. Cavalry Brigade"
-		location = 6573
-		division_template = "Cavalry Brigade"
+		name = "2. Cavalry Division"
+		location = 3703
+		division_template = "Cavalry Division"
 		start_experience_factor = 0.4
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "1. Cavalry Brigade"
-		location = 11679
-		division_template = "Cavalry Brigade"
+		name = "1. Cavalry Division"
+		location = 3703
+		division_template = "Cavalry Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "2. Cavalry Brigade"
-		location = 11679
-		division_template = "Cavalry Brigade"
+		name = "2. Cavalry Division"
+		location = 3703
+		division_template = "Cavalry Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "1. Cavalry Brigade"
-		location = 417
-		division_template = "Cavalry Brigade"
+		name = "1. Cavalry Division"
+		location = 3703
+		division_template = "Cavalry Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "2. Cavalry Brigade"
-		location = 417
-		division_template = "Cavalry Brigade"
+		name = "2. Cavalry Division"
+		location = 3703
+		division_template = "Cavalry Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "1. Cavalry Brigade"
-		location = 9661
-		division_template = "Cavalry Brigade"
+		name = "1. Cavalry Division"
+		location = 3703
+		division_template = "Cavalry Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "1. Cavalry Brigade"
-		location = 9692
-		division_template = "Cavalry Brigade"
+		name = "1. Cavalry Division"
+		location = 3703
+		division_template = "Cavalry Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "2. Cavalry Brigade"
-		location = 9692
-		division_template = "Cavalry Brigade"
+		name = "2. Cavalry Division"
+		location = 3703
+		division_template = "Cavalry Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "1. Cavalry Brigade"
-		location = 3484
-		division_template = "Cavalry Brigade"
+		name = "1. Cavalry Division"
+		location = 3703
+		division_template = "Cavalry Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "1. Cavalry Brigade"
-		location = 11539
-		division_template = "Cavalry Brigade"
+		name = "1. Cavalry Division"
+		location = 3703
+		division_template = "Cavalry Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "2. Cavalry Brigade"
-		location = 11539
-		division_template = "Cavalry Brigade"
+		name = "2. Cavalry Division"
+		location = 3703
+		division_template = "Cavalry Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "1. Cavalry Brigade"
-		location = 9661
-		division_template = "Cavalry Brigade"
+		name = "1. Cavalry Division"
+		location = 3703
+		division_template = "Cavalry Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
 	}

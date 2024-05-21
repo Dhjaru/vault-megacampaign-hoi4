@@ -116,7 +116,7 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = PER_develop_the_steel_mines_of_khorasan
+		id = PER_develop_the_steel_mills_of_khorasan
 		icon = GFX_goal_generic_light_industry
 		
 		prerequisite = { focus = PER_recover_from_the_five_year_plan }
@@ -169,8 +169,8 @@ focus_tree = {
 		id = PER_repair_the_afghani_industry
 		icon = GFX_goal_generic_light_industry
 		
-		prerequisite = { focus = PER_develop_the_steel_mines_of_khorasan }
-		relative_position_id = PER_develop_the_steel_mines_of_khorasan
+		prerequisite = { focus = PER_develop_the_steel_mills_of_khorasan }
+		relative_position_id = PER_develop_the_steel_mills_of_khorasan 
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		x = 0
@@ -421,12 +421,22 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-		add_building_construction = {
+			385 = {
+				add_building_construction = {
 					type = synthetic_rubber_refinery
 					level = 5
 					instant_build = yes
 				}
 			}
+			385 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+		
+			}
+		}
 	}
 	
 	focus = {
@@ -457,6 +467,22 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+		386 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		389 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
 			}
 	}
 	
@@ -488,6 +514,30 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+		390 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		391 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		384 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
 			}
 	}
 	
@@ -519,6 +569,22 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+		395 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		396 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
 			}
 	}
 	
@@ -551,6 +617,10 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = PER_recovery_from_the_five_year_plan_2
+				add_idea = PER_recovery_from_the_five_year_plan_3
+		}
 			}
 	}
 	
@@ -571,7 +641,8 @@ focus_tree = {
 			factor = 1
 		}
 		
-		available = {			
+		available = {
+		num_of_factories > 150
 		}
 		
 		bypass = {
@@ -582,6 +653,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+		add_research_slot = 1
 			}
 	}
 	
@@ -602,7 +674,8 @@ focus_tree = {
 			factor = 1
 		}
 		
-		available = {			
+		available = {	
+			date > 1941.7.1
 		}
 		
 		bypass = {
@@ -627,10 +700,10 @@ focus_tree = {
 		relative_position_id = PER_recover_from_the_five_year_plan
 		
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		x = 10
+		x = 7
 		y = 0
 
-		cost = 5
+		cost = 7.5
 
 		ai_will_do = {
 			factor = 1
@@ -678,6 +751,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+		add_state_core = 183
 		}
 	}
 	
@@ -709,6 +783,8 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+		remove_state_core = 103
+		remove_state_core = 104
 		}
 	}
 	
@@ -838,5 +914,146 @@ focus_tree = {
 	}
 	
 	
+		### Military Tree
+		
 	
+	focus = {
+		id = PER_modernize_our_armed_forces
+		icon = GFX_SOV_ppsh_hand_angry
+		
+		relative_position_id = PER_a_strange_visitor
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 7
+		y = 0
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {			
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = PER_copy_russian_gun_designs
+		icon = GFX_SOV_ppsh_hand_angry
+		
+		prerequisite = { focus = PER_modernize_our_armed_forces }
+		relative_position_id = PER_modernize_our_armed_forces
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = -1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {			
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_tech_bonus = {
+				bonus = 1
+				uses = 2 
+				category = infantry_weapons
+			}
+		}
+	}	
+	
+	focus = {
+		id = PER_new_mountaineers
+		icon = GFX_SOV_ppsh_hand_angry
+		
+		prerequisite = { focus = PER_modernize_our_armed_forces }
+		relative_position_id = PER_modernize_our_armed_forces
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {			
+		}
+		
+		bypass = {
+		add_tech_bonus = {
+				bonus = 1 
+				uses = 2 
+				category = mountaineers_tech
+				### doesn't work idfk why
+			}
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = PER_revival_of_the_immortals
+		icon = GFX_SOV_ppsh_hand_angry
+		
+		prerequisite = { focus = PER_copy_russian_gun_designs }
+		relative_position_id = PER_copy_russian_gun_designs
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {			
+		}
+		
+		bypass = {
+		add_tech_bonus = {
+				bonus = 1 
+				uses = 2 
+				category = mountaineers_tech
+				### doesn't work idfk why
+			}
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
 	

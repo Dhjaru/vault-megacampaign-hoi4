@@ -9,9 +9,9 @@ state={
 			13087 1 
 		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 7
 			industrial_complex = 0
-			arms_factory = 0
+			arms_factory = 1
 			12878 = {
 				naval_base = 10
 			}
@@ -19,15 +19,14 @@ state={
 
 		}
 		add_core_of = USA
-		add_claim_by = W32
 	}
 
 	provinces={
 		12878 13087 13092 
 	}
-	manpower=345388
+	manpower=845388
 	buildings_max_level_factor=1.000
-	state_category=rural
+	state_category=USA_state
 
 	local_supplies=10.0
 }

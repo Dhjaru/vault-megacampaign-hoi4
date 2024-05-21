@@ -9,9 +9,9 @@ state={
 			4464 1 
 		}
 		buildings = {
-			infrastructure = 1
+			infrastructure = 6
 			industrial_complex = 1
-			arms_factory = 0
+			arms_factory = 4
 			4464 = {
 				naval_base = 8
 			}
@@ -19,10 +19,6 @@ state={
 
 		}
 		add_core_of = USA
-		add_core_of = X70
-		add_claim_by = CSA
-		add_claim_by = USA
-		add_claim_by = W32
 	}
 
 	provinces={
@@ -30,7 +26,7 @@ state={
 	}
 	manpower=533608
 	buildings_max_level_factor=1.000
-	state_category=rural
+	state_category=USA_state
 
 	local_supplies=10.0
 }

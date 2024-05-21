@@ -27,7 +27,6 @@ state={
 		add_claim_by = ARM
 		add_claim_by = AZR
 		add_claim_by = TUR
-		add_claim_by = W20
 
 	}
 

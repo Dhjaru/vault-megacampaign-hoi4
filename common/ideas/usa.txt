@@ -1,0 +1,65 @@
+ideas = {
+    country = {
+        USA_marshal_plan = {
+            removal_cost = -1
+
+            allowed = {
+                always = no
+            }
+
+            modifier = {
+                industrial_capacity_factory = -0.70
+                industrial_capacity_dockyard = -0.50
+                production_speed_infrastructure_factor = -0.5
+                production_speed_industrial_complex_factor = -0.7
+                production_speed_arms_factory_factor = -0.5
+                production_speed_arms_factory_factor = -0.5
+                production_factory_max_efficiency_factor = -0.1
+                local_resources_factor = -0.5
+                stability_factor = -0.7
+                political_power_gain = -0.5
+            }
+         }
+
+         USA_marshal_plan2 = {
+            removal_cost = -1
+
+            allowed = {
+                always = no
+            }
+
+            modifier = {
+                industrial_capacity_factory = -0.70
+                industrial_capacity_dockyard = -0.50
+                production_speed_infrastructure_factor = 0.5
+                production_speed_industrial_complex_factor = -0.7
+                production_speed_arms_factory_factor = -0.5
+                production_speed_arms_factory_factor = -0.5
+                production_factory_max_efficiency_factor = -0.1
+                local_resources_factor = -0.5
+                stability_factor = -0.7
+                political_power_gain = -0.5
+            }
+         }
+         USA_marshal_plan3 = {
+            removal_cost = -1
+
+            allowed = {
+                always = no
+            }
+
+            modifier = {
+                industrial_capacity_factory = -0.70
+                industrial_capacity_dockyard = -0.50
+                production_speed_infrastructure_factor = 0.5
+                production_speed_industrial_complex_factor = 0.3
+                production_speed_arms_factory_factor = -0.5
+                production_speed_arms_factory_factor = -0.5
+                production_factory_max_efficiency_factor = -0.1
+                local_resources_factor = -0.5
+                stability_factor = -0.7
+                political_power_gain = -0.5
+            }
+         }
+    }    
+}

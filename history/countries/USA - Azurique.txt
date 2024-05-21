@@ -233,7 +233,7 @@ if = {
 # Research Bonuses
 
 set_country_flag = conv_mexico
-set_convoys = 0
+set_convoys = 1000
 
 set_politics = {
     ruling_party = democratic
@@ -244,9 +244,9 @@ set_politics = {
 
 set_popularities = {
 	communism = 2
-	democratic = 79
-	fascism = 6
-	neutrality = 13
+	democratic = 88
+	fascism = 2
+	neutrality = 8
 }
 
 # DIPLOMACY
@@ -264,6 +264,7 @@ add_ideas = {
 	undisturbed_isolation
 	free_trade
 	culture_nouvellien
+	USA_marshal_plan
 }
 set_stability = 0.80
 set_war_support = 0.10
@@ -274,6 +275,7 @@ recruit_character = USA_huguel_masson
 recruit_character = USA_letellier_pantaleon
 recruit_character = USA_huguel_perodeau
 recruit_character = USA_emperor_norton
+recruit_character = USA_walt_disney
 
 
 

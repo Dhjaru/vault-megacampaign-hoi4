@@ -9,7 +9,7 @@ state={
 			10790 1 
 		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 5
 			industrial_complex = 0
 			arms_factory = 0
 			dockyard = 1
@@ -19,17 +19,15 @@ state={
 			air_base = 0
 
 		}
-		add_core_of = COL
 		add_core_of = USA
-		add_claim_by = W20
 	}
 
 	provinces={
 		2079 7936 7991 10790 10846 12872 
 	}
-	manpower=957300
+	manpower=1557300
 	buildings_max_level_factor=1.000
-	state_category=rural
+	state_category=USA_state
 
 	local_supplies=10.0
 }

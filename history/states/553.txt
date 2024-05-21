@@ -2,6 +2,9 @@
 state={
 	id=553
 	name="STATE_553"
+	resources={
+		rubber=40
+	}
 
 	history={
 		owner = USA
@@ -9,10 +12,10 @@ state={
 			12823 3 
 		}
 		buildings = {
-			infrastructure = 3
+			infrastructure = 7
 			industrial_complex = 2
-			arms_factory = 1
-			dockyard = 1
+			arms_factory = 2
+			dockyard = 2
 			2031 = {
 				naval_base = 10
 			}
@@ -20,15 +23,14 @@ state={
 
 		}
 		add_core_of = USA
-		add_claim_by = W20
 	}
 
 	provinces={
 		2031 8017 12823 12865 13093 
 	}
-	manpower=2041180
+	manpower=5041180
 	buildings_max_level_factor=1.000
-	state_category=city
+	state_category=USA_state
 
 	local_supplies=10.0
 }

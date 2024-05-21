@@ -24,7 +24,6 @@ state={
 		add_core_of = MAD
 		add_core_of = W19
 		add_core_of = W67
-		add_claim_by = W20
 		add_claim_by = W27
 	}
 

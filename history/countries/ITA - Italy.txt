@@ -54,7 +54,7 @@ set_country_flag = conv_italy
 set_convoys = 0
 
 set_politics = {
-    ruling_party = neutrality
+    ruling_party = fascism
     last_election = "1908.5.12"
     election_frequency = 48
     elections_allowed = no
@@ -62,8 +62,8 @@ set_politics = {
 
 set_popularities = {
 	communism = 0
-	democratic = 77
-	fascism = 14
+	democratic = 14
+	fascism = 77
 	neutrality = 9
 }
 

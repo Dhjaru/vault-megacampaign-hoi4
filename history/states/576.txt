@@ -9,9 +9,10 @@ state={
 			7202 1 
 		}
 		buildings = {
-			infrastructure = 2
-			industrial_complex = 0
+			infrastructure = 6
+			industrial_complex = 2
 			arms_factory = 0
+			dockyard = 7
 			7202 = {
 				naval_base = 10
 			}
@@ -19,16 +20,14 @@ state={
 
 		}
 		add_core_of = USA
-		add_claim_by = CSA
-		add_claim_by = W20
 	}
 
 	provinces={
 		1485 1547 3994 4491 4653 7012 7134 7202 7527 10029 10047 11927 
 	}
-	manpower=845268
+	manpower=1845268
 	buildings_max_level_factor=1.000
-	state_category=rural
+	state_category=USA_state
 
 	local_supplies=10.0
 }

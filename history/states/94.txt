@@ -16,7 +16,6 @@ state={
 
 		}
 		add_core_of = COG
-		add_claim_by = W20
 
 	}
 

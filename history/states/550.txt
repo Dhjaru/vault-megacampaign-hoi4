@@ -9,26 +9,25 @@ state={
 			4887 3 
 		}
 		buildings = {
-			infrastructure = 3
+			infrastructure = 9
 			industrial_complex = 3
 			arms_factory = 1
 			dockyard = 1
 			8032 = {
 				naval_base = 10
 			}
-			air_base = 2
+			air_base = 20
 
 		}
 		add_core_of = USA
-		add_claim_by = W20
 	}
 
 	provinces={
 		4887 5066 8032 8236 10730 10773 10832 12712 
 	}
-	manpower=2349576
+	manpower=6349576
 	buildings_max_level_factor=1.000
-	state_category=city
+	state_category=USA_state
 
 	local_supplies=10.0
 }

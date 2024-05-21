@@ -22,7 +22,6 @@ state={
 		add_core_of = X45
 		add_core_of = X57
 		add_core_of = X89
-		add_claim_by = W20
 		add_claim_by = X50
 	}
 

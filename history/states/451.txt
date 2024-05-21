@@ -23,7 +23,6 @@ state={
 		add_core_of = X14
 		add_core_of = X33
 		add_claim_by = SOV
-		add_claim_by = W20
 	}
 
 	provinces={
