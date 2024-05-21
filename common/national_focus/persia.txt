@@ -226,6 +226,50 @@ focus_tree = {
 	}
 	
 	focus = {
+		id = PER_persian_tungsten_exports
+		icon = GFX_goal_generic_light_industry
+		
+		prerequisite = { focus = PER_repair_the_afghani_industry }
+		relative_position_id = PER_repair_the_afghani_industry
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		x = 1
+		y = 1
+
+		cost = 5
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {			
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+		395 = {
+				add_resource = {
+					type = tungsten
+					amount = 20
+				}
+			}
+		396 = {
+				add_resource = {
+					type = tungsten
+					amount = 20
+				}
+			}
+			
+			}
+	}
+	
+	focus = {
 		id = PER_isfahan_academy_of_science
 		icon = GFX_goal_research_silver
 		
@@ -233,7 +277,7 @@ focus_tree = {
 		relative_position_id = PER_revitalize_the_silk_road
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
-		x = -2
+		x = -3
 		y = 1
 
 		cost = 5
@@ -256,6 +300,7 @@ focus_tree = {
 			add_research_slot = 1
 			}
 	}
+	
 	
 	focus = {
 		id = PER_economic_growth_in_fars
@@ -375,7 +420,8 @@ focus_tree = {
 			factor = 1
 		}
 		
-		available = {			
+		available = {
+			date > 1939.9.1
 		}
 		
 		bypass = {
@@ -620,7 +666,7 @@ focus_tree = {
 			swap_ideas = {
 				remove_idea = PER_recovery_from_the_five_year_plan_2
 				add_idea = PER_recovery_from_the_five_year_plan_3
-		}
+				}
 			}
 	}
 	
@@ -653,7 +699,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-		add_research_slot = 1
+		add_ideas = PER_increased_military_spending
 			}
 	}
 	
@@ -703,7 +749,7 @@ focus_tree = {
 		x = 7
 		y = 0
 
-		cost = 7.5
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -805,7 +851,10 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {			
+		available = {	
+				NOT = {
+					country_exists = w31	
+				}		
 		}
 		
 		bypass = {
@@ -816,6 +865,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			country_event = per.1
 		}
 	}	
 	
