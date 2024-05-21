@@ -51,7 +51,7 @@ ideas = {
 			picture = tur_etatism
 			
 			modifier = {
-				industrial_capacity_factory = -0.80
+				industrial_capacity_factory = -0.65
 				consumer_goods_expected_value = 0.15
 			}
 		}
@@ -68,7 +68,7 @@ ideas = {
 			picture = tur_etatism
 			
 			modifier = {
-				industrial_capacity_factory = -0.65
+				industrial_capacity_factory = -0.5
 			}
 		}
 		SOV_total_war_industry = {
@@ -84,7 +84,8 @@ ideas = {
 			picture = NORDIC_industry_communist
 			
 			modifier = {
-				industrial_capacity_factory = 0.10
+				industrial_capacity_factory = 0.0
+				production_speed_arms_factory_factor = 0.15
 			}
 		}
 		SOV_total_war_industry_2 = {
@@ -101,6 +102,7 @@ ideas = {
 			
 			modifier = {
 				industrial_capacity_factory = 0.25
+				production_speed_arms_factory_factor = 0.15
 			}
 		}
 		SOV_siberian_plan = {
@@ -116,7 +118,7 @@ ideas = {
 			picture = SOV_third_five_year_plan_civilian
 			
 			modifier = {
-				production_speed_infrastructure_factor = 0.10
+				production_speed_infrastructure_factor = 0.20
 				production_speed_industrial_complex_factor = 0.2
 			}
 		}
@@ -133,7 +135,7 @@ ideas = {
 			picture = SOV_third_five_year_plan_civilian
 			
 			modifier = {
-				production_speed_infrastructure_factor = 0.15
+				production_speed_infrastructure_factor = 0.3
 				production_speed_industrial_complex_factor = 0.3
 			}
 		}
@@ -151,7 +153,7 @@ ideas = {
 			
 			modifier = {
 				production_speed_infrastructure_factor = 0.15
-				production_speed_industrial_complex_factor = 0.3
+				production_speed_industrial_complex_factor = 0.45
 				local_resources_factor = 0.15
 			}
 		}
@@ -423,7 +425,7 @@ ideas = {
 			picture = man_five_year_plan_industry
 			
 			modifier = {
-				production_speed_arms_factory_factor = 0.1
+				production_speed_arms_factory_factor = 0.2
 			}
 		}
 		SOV_pansarberg = {
