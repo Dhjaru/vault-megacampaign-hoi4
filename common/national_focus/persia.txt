@@ -1165,6 +1165,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+		army_experience = 100
 		}
 	}	
 	
@@ -1225,19 +1226,18 @@ focus_tree = {
 		}
 		
 		bypass = {
-		add_tech_bonus = {
-				bonus = 1 
-				uses = 2 
-				category = mountaineers_tech
-				### doesn't work idfk why
 			}
-		}
 
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
+		add_tech_bonus = {
+				bonus = 1 
+				uses = 2 
+				category = mountaineers_tech
+			}
 		}
 	}
 	
@@ -1281,7 +1281,7 @@ focus_tree = {
 		relative_position_id = PER_copy_russian_gun_designs
 		
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		x = 0
+		x = -2
 		y = 1
 
 		cost = 5
@@ -1294,12 +1294,6 @@ focus_tree = {
 		}
 		
 		bypass = {
-		add_tech_bonus = {
-				bonus = 1 
-				uses = 2 
-				category = mountaineers_tech
-				### doesn't work idfk why
-			}
 		}
 
 		cancel_if_invalid = no
@@ -1309,4 +1303,43 @@ focus_tree = {
 		completion_reward = {
 		}
 	}
+	
+	focus = {
+		id = PER_more_radios
+		icon = GFX_SOV_improve_signals
+		
+		prerequisite = { focus = PER_copy_russian_gun_designs }
+		relative_position_id = PER_copy_russian_gun_designs
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = -2
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {			
+		}
+		
+		bypass = {
+			}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = electronics
+			}
+			army_experience = 50
+		}
+		}
+									
+}
+
 	
