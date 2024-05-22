@@ -28,10 +28,15 @@ country_event = {
 			traits = {
 				Fuehrer 
 			}
+		
+		
+		}
 		}
 	}
 }
-	
+
+}
+
 news_event = {
 	id = per_news.1
 	title = "Persia is revoking their claims to Iraq"

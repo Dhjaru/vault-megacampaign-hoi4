@@ -392,8 +392,8 @@ add_ideas = {
 	collectivised_economy
 	PER_recovery_from_the_five_year_plan_start
 }
-set_stability = 0.60
-set_war_support = 0.60
+set_stability = 0.40
+set_war_support = 0.30
 
 recruit_character = PER_hasan_ansari
 recruit_character = PER_karim_kashani
