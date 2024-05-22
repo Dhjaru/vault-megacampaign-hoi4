@@ -643,7 +643,7 @@ technologies = {
 				type = medium_tank_chassis_1940
 				parent_version = 0
 				modules = {
-				main_armament_slot = tank_small_cannon_2
+				main_armament_slot = tank_high_velocity_cannon
 				turret_type_slot = tank_medium_two_man_tank_turret
 				suspension_type_slot = tank_bogie_suspension
 				armor_type_slot = tank_welded_armor
@@ -657,6 +657,9 @@ technologies = {
 				}
 				icon = "gfx/interface/technologies/land/fra/s40.tga"
 				
+			}
+			set_technology = {
+				small_gun3
 			}
 		}
 	}	

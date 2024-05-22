@@ -734,7 +734,6 @@ technologies = {
 		}
 			
 		dependencies = {
-			improved_machine_tools = 1
 		}
 		research_cost = 1.8
 		start_year = 1939

@@ -12230,4 +12230,8 @@ SpriteType = {
 		name = "GFX_z_goal_new_artillery"
 		texturefile = "gfx/interface/goals/jap/z_goal_new_artillery.dds"
 	}
+	SpriteType = {
+		name = "GFX_r56_goal_FRA_char_de_bataille"
+		texturefile = "gfx/interface/RT56/goals/fra/r56_goal_FRA_char_de_bataille.dds"
+	}
 }
