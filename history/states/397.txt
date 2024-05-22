@@ -27,4 +27,5 @@ state={
 	state_category=rural
 
 	local_supplies=10.0
+	impassable = yes
 }

@@ -1206,6 +1206,38 @@ focus_tree = {
 	}	
 	
 	focus = {
+		id = PER_mass_motorization
+		icon = GFX_goal_generic_army_motorized
+		
+		prerequisite = { focus = PER_copy_russian_gun_designs }
+		relative_position_id = PER_copy_russian_gun_designs
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {			
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_ideas = PER_trucks_idea
+		}
+	}	
+	
+	focus = {
 		id = PER_new_mountaineers
 		icon = GFX_SOV_ppsh_hand_angry
 		
