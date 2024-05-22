@@ -19,7 +19,7 @@
 		icon = GFX_FRA_front_de_la_liberte
 		x = 0
 		y = 0
-		cost = 10
+		cost = 5
 
 		completion_reward = {
 			add_political_power = 150
@@ -33,7 +33,7 @@
 		icon = GFX_FRA_martial_law
 		x = 5
 		y = 1
-		cost = 10
+		cost = 5
 		prerequisite = {focus = FRA_solidify_junta_control }
 				
 		completion_reward = {
@@ -44,12 +44,12 @@
 	
 	focus = {
 		id = FRA_invest_in_victory
-		icon = GFX_goal_FRA_autarchy
+		icon = GFX_r56_goal_FRA_alliance_with_industrialists
 		prerequisite = { focus = FRA_start_rationing }
 		x = 3
 		y = 1
 		relative_position_id = FRA_start_rationing
-		cost = 10
+		cost = 5
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -78,7 +78,7 @@
 		x = 2
 		y = 1
 		relative_position_id = FRA_invest_in_victory
-		cost = 10
+		cost = 5
 
 
 		completion_reward = {
@@ -101,7 +101,7 @@
 		x = 0
 		y = 1
 		relative_position_id = FRA_burgundy_arms_factory
-		cost = 10
+		cost = 5
 
 
 		completion_reward = {
@@ -118,12 +118,12 @@
 
 	focus = {
 		id = FRA_coal_liquidization
-		icon = GFX_focus_FRA_oil
+		icon = GFX_focus_rubber
 		prerequisite = { focus = FRA_invest_in_victory }
 		x = 0
 		y = 1
 		relative_position_id = FRA_invest_in_victory
-		cost = 10
+		cost = 5
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -137,12 +137,12 @@
 
 	focus = {
 		id = FRA_synthetic_rubber
-		icon = GFX_focus_FRA_rubber
+		icon = GFX_focus_generic_rubber
 		prerequisite = { focus = FRA_coal_liquidization }
 		x = 0
 		y = 1
 		relative_position_id = FRA_coal_liquidization
-		cost = 10
+		cost = 5
 
 		completion_reward = {
 			modify_building_resources = {
@@ -161,7 +161,7 @@
 		x = -2
 		y = 1
 		relative_position_id = FRA_invest_in_victory
-		cost = 10
+		cost = 5
 		
 		completion_reward = {
 			custom_effect_tooltip = FRA_radio_production_tt
@@ -223,14 +223,60 @@
 		}	
 	}
 		
-		
 	focus = {
-		id = FRA_pool_technical_know_how
-		icon = GFX_france_first
+		id = FRA_burgundy_industrial_complex
+		icon = GFX_FRA_liberalize_the_economy
 		prerequisite = { focus = FRA_devalue_the_franc }
 		x = 0
 		y = 1
 		relative_position_id = FRA_devalue_the_franc
+		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			231 = {
+				add_extra_state_shared_building_slots = 8
+				add_building_construction = {
+					type = industrial_complex
+					level = 8
+					instant_build = yes
+				}
+			}
+		}
+	}
+		
+	focus = {
+		id = FRA_toulouse_industrial_complex
+		icon = GFX_FRA_nationalization_of_arms_industries
+		prerequisite = { focus = FRA_burgundy_industrial_complex }
+		x = 1
+		y = 1
+		relative_position_id = FRA_burgundy_industrial_complex
+		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			220 = {
+				add_extra_state_shared_building_slots = 8
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+		
+	focus = {
+		id = FRA_pool_technical_know_how
+		icon = GFX_france_first
+		prerequisite = { focus = FRA_burgundy_industrial_complex }
+		x = -1
+		y = 1
+		relative_position_id = FRA_burgundy_industrial_complex
 		cost = 5
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
@@ -240,13 +286,13 @@
 
 	focus = {
 		id = FRA_gun_production
-		icon = GFX_focus_FRA_FRAmanwareconomy
+		icon = GFX_goal_machine_gun
 		prerequisite = { focus = FRA_radio_production  }
 		
 		x = 0
 		y = 1
 		relative_position_id = FRA_radio_production
-		cost = 10
+		cost = 5
 		available = { FRA = { has_war_with = ENG }  }
 		
 		completion_reward = {
@@ -264,8 +310,7 @@
 	
 	focus = {
 		id = FRA_air_innovation
-		text = air_innovation
-		icon = GFX_focus_FRA_air_inno_1
+		icon = GFX_FRA_six_national_aircraft_companies
 		x = 13
 		y = 1
 		cost = 5
@@ -285,7 +330,7 @@
 
 	focus = {
 		id = FRA_bob
-		icon = GFX_goal_generic_air_bomber
+		icon = GFX_goal_generic_air_tactical_bomber_new
 		prerequisite = { focus = FRA_air_innovation }
 		x = 0
 		y = 1
@@ -306,7 +351,7 @@
 	}
 	focus = {
 		id = FRA_tactical_air_effort
-		icon = GFX_focus_FRA_cas
+		icon = GFX_goal_generic_air_CAS_new
 		prerequisite = { focus = FRA_air_innovation }
 		x = 1
 		y = 2
@@ -328,7 +373,7 @@
 
 	focus = {
 		id = FRA_long_range_escorts
-		icon = GFX_focus_FRA_heavy_fighter
+		icon = GFX_goal_generic_air_heavy_fighter_new
 		prerequisite = { focus = FRA_air_innovation }
 		x = 2
 		y = 1
@@ -351,8 +396,7 @@
 
 	focus = {
 		id = FRA_naval_air_effort
-		text = naval_air_effort
-		icon = GFX_focus_FRA_arado
+		icon = GFX_modern_cas_doctrince
 		prerequisite = { focus = FRA_air_innovation }
 		x = -2
 		y = 1
@@ -369,7 +413,7 @@
 
 	focus = {
 		id = FRA_strategic_air_effort
-		icon = GFX_focus_FRA_bomber
+		icon = GFX_goal_generic_air_strategic_bomber_new
 		prerequisite = { focus = FRA_air_innovation }
 		x = -1
 		y = 2
@@ -395,7 +439,7 @@
 		x = 0
 		y = 1
 		relative_position_id = FRA_strategic_air_effort
-		cost = 10
+		cost = 5
 
 		mutually_exclusive = { focus = FRA_sustainable_airforce  }
 		available_if_capitulated = yes
@@ -419,7 +463,7 @@
 		x = 2
 		y = 1
 		relative_position_id = FRA_strategic_air_effort
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 		available = { HOL = { has_capitulated = yes }  }
@@ -441,12 +485,12 @@
 	
 	focus = {
 		id = FRA_air_innovation_2
-		icon = GFX_FRA_goal_air
+		icon = GFX_goal_generic_air_fighter_new
 		prerequisite = { focus = FRA_air_shield focus = FRA_airforce_expansion focus = FRA_sustainable_airforce  }
 		x = 1
 		y = 1
 		relative_position_id = FRA_airforce_expansion 
-		cost = 10
+		cost = 5
 
 		completion_reward = { 
 			air_experience=  100
@@ -471,7 +515,7 @@
 		icon = GFX_FRA_declare_state_of_emergency
 		x = 0
 		y = 1
-		cost = 10
+		cost = 5
 
 		prerequisite = {focus = FRA_solidify_junta_control }
 		available_if_capitulated = yes
@@ -555,7 +599,7 @@
 		x = -1
 		y = 1
 		relative_position_id = FRA_army_expansion
-		cost = 10
+		cost = 5
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -569,12 +613,12 @@
 
 	focus = {
 		id = FRA_mechanization
-		icon = GFX_focus_FRA_army2
+		icon = GFX_goal_mechanized_offensive
 		prerequisite = { focus = FRA_tank_investment }
 		x = -1
 		y = 1
 		relative_position_id = FRA_tank_investment
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 
@@ -596,13 +640,13 @@
 	
 	focus = {
 		id = FRA_mechanization2
-		icon = GFX_focus_FRA_army3
+		icon = GFX_HUN_motorize_our_infantry
 		prerequisite = { focus = FRA_mechanization }
 		available = { custom_trigFRA_tooltip = { has_war_with = ENG tooltip = "We have declared war on the Allies"}}
 		x = 0
 		y = 1
 		relative_position_id = FRA_mechanization
-		cost = 10
+		cost = 5
 		available = { HOL = { has_capitulated = yes }  }
 
 		available_if_capitulated = yes
@@ -633,13 +677,13 @@
 	
 	focus = {
 		id = FRA_mechanization3
-		icon = GFX_focus_FRA_army3
-		prerequisite = { focus = FRA_mechanization }
+		icon = GFX_focus_ROC_mech_units
+		prerequisite = { focus = FRA_mechanization2 }
 		available = { custom_trigFRA_tooltip = { has_war_with = ENG tooltip = "We have declared war on the Allies"}}
 		x = 0
 		y = 1
-		relative_position_id = FRA_mechanization
-		cost = 10
+		relative_position_id = FRA_mechanization2
+		cost = 5
 		available = { HOL = { has_capitulated = yes }  }
 
 		available_if_capitulated = yes
@@ -656,7 +700,7 @@
 		x = 1
 		y = 1
 		relative_position_id = FRA_tank_investment
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 
@@ -668,12 +712,12 @@
 
 	focus = {
 		id = FRA_armor_production
-		icon = GFX_focus_FRA_army2
+		icon = GFX_pol_siedmiotonowy_polski
 		prerequisite = { focus = FRA_armor_genius }
 		x = 0
 		y = 1
 		relative_position_id = FRA_armor_genius
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 
@@ -685,7 +729,7 @@
 	
 	focus = {
 		id = FRA_anschluss
-		icon = GFX_anschluss
+		icon = GFX_sca_focus_generic_political
 		prerequisite = { focus = FRA_solidify_junta_control }
 		available_if_capitulated = no
 		available = {
@@ -695,7 +739,7 @@
 		x = -4
 		y = 1
 		relative_position_id = FRA_solidify_junta_control
-		cost = 10
+		cost = 5
 		completion_reward = {
 			custom_effect_tooltip = FRA_anschluss_focus_tt
 			add_political_power = 75
@@ -731,7 +775,7 @@
 	}
 	focus = {
 		id = FRA_anti_comitern_pact
-		icon = GFX_focus_generic_attack_communists
+		icon = GFX_ENG_alliance
 		prerequisite = { focus = FRA_solidify_junta_control  }
 		x = -2
 		y = 1
@@ -739,13 +783,13 @@
 		cost = 5
 
 		completion_reward = {
-			every_country = { limit = { OR = { tag = FRA tag = X14 tag = SCA tag = ROM tag = GER }} add_war_support = 0.05	}		
+			every_country = { limit = { OR = { tag = FRA tag = X14 tag = SCA tag = ROM tag = GER tag = ENG }} add_war_support = 0.05	}		
 		}
 	}
 		  
 	focus = {
 		id = FRA_ussr_war_goal
-		icon = GFX_FRA_barb
+		icon = GFX_GER_ussr_war_goal
 		prerequisite = { focus = FRA_prepare}
 		available_if_capitulated = no
 		will_lead_to_war_with = SOV
@@ -756,7 +800,7 @@
 		x = 0
 		y = 1
 		relative_position_id = FRA_prepare
-		cost = 10
+		cost = 5
 
 		bypass = {
 			has_war_with = SOV
@@ -880,7 +924,7 @@
 	
 	focus = {
 		id = FRA_prepare
-		icon = GFX_FRA_Generalplan_Ost
+		icon = GFX_goal_war_infrastructure
 		prerequisite = { focus = FRA_anti_comitern_pact }
 		available = {
 
@@ -901,8 +945,8 @@
 	
 	
 	focus = {
-		id = FRA_danzig_or_war
-		icon = GFX_focus_FRA_danzig
+		id = FRA_cartagena_or_war
+		icon = GFX_sca_focus_generic_political
 		prerequisite = { focus = FRA_end_of_italy }
 		available = {
 			ALWAYS = NO
@@ -911,7 +955,7 @@
 		x = 0
 		y = 1
 		relative_position_id = FRA_end_of_italy
-		cost = 10
+		cost = 5
 
 		completion_reward = {
 		
@@ -926,7 +970,7 @@
 				news_event = { id = bba_news.0 hours = 4 random_hours = 8}
 		}
 		custom_effect_tooltip = FRA_decision_focus_tt
-			add_named_threat = { threat = 10 name = FRA_danzig_or_war }
+			add_named_threat = { threat = 10 name = FRA_cartagena_or_war }
 			POL = {	country_event = { id = FRAmany.86 }	}
 							HOL = {
 					country_event = { id = mtg_FRAmany.1 hours = 6 }
@@ -1061,12 +1105,12 @@
 	
 	focus = {
 		id = FRA_demand_sardinia
-		icon = GFX_focus_FRA_sud
+		icon = GFX_sca_focus_generic_political
 		prerequisite = { focus = FRA_anschluss }
 		x = 0
 		y = 1
 		relative_position_id = FRA_anschluss
-		cost = 10
+		cost = 5
 
 		completion_reward = {
 			ENG = {	country_event = FRAmany.40	}
@@ -1078,7 +1122,7 @@
 	}
 	focus = {
 		id = FRA_end_of_italy
-		icon = GFX_focus_FRA_cze
+		icon = GFX_sca_focus_generic_political
 		prerequisite = { focus = FRA_demand_sardinia }
 
 		x = 0
@@ -1086,7 +1130,7 @@
 		
 		relative_position_id = FRA_demand_sardinia
 		
-		cost = 10
+		cost = 5
 
 		completion_reward = {
 			add_political_power = -20
@@ -1134,7 +1178,7 @@
 
 	focus = {
 		id = FRA_naval_rearmament
-		icon = GFX_focus_FRA_naval_rearm
+		icon = GFX_sca_focus_blue_navy
 		x = 18
 		y = 1
 		cost = 1
@@ -1185,7 +1229,7 @@
 
 	focus = {
 		id = FRA_plan_z
-		icon = GFX_focus_FRA_plan_z
+		icon = GFX_focus_ARG_study_the_battle_of_the_river_plate
 		prerequisite = { focus = FRA_naval_effort2 }
 		x = -2
 		y = 2
@@ -1264,13 +1308,13 @@
 			}
 		}
 		
-		}
+	}
 		
 		
 		
 	focus = {
 		id = FRA_plan_z_cv
-		icon = GFX_focus_FRA_graf 
+		icon = GFX_goal_generic_navy_carrier 
 		prerequisite = { focus = FRA_plan_z }
 		x = 1
 		y = 1
@@ -1338,7 +1382,7 @@
 	}
 	focus = {
 		id = FRA_plan_z_bb
-		icon = GFX_focus_FRA_bismarck
+		icon = GFX_focus_generic_navy_battleship2
 		prerequisite = { focus = FRA_plan_z }
 		x = -1
 		y = 1
@@ -1400,7 +1444,7 @@
 
 	focus = {
 		id = FRA_u_boat_effort
-		icon = GFX_focus_FRA_sub_plan
+		icon = GFX_goal_generic_navy_submarine
 		prerequisite = { focus = FRA_naval_effort2 }
 		x = 2
 		y = 2
@@ -1444,7 +1488,7 @@
 
 	focus = {
 		id = FRA_trade_interdiction
-		icon = GFX_focus_FRA_interdiction
+		icon = GFX_focus_generic_cruiser_submarines
 		prerequisite = { focus = FRA_naval_effort2 }
 		x = -1
 		y = 1
@@ -1481,7 +1525,7 @@
 	}
 	focus = {
 		id = FRA_modular_construction
-		icon = GFX_focus_FRA_sub
+		icon = GFX_ITA_submarine_production
 		prerequisite = { focus = FRA_u_boat_effort }
 		x = 0
 		y = 1
@@ -1505,12 +1549,12 @@
 		x = -1
 		y = 1
 		relative_position_id = FRA_modular_construction
-		cost = 10
+		cost = 5
 		completion_reward = {
 			every_state = {
 				limit = {
 					is_fully_controlled_by = ROOT
-					atlantikwall_states = yes
+					atlantic_wall_states = yes
 					arms_factory > 1
 				}
 				add_extra_state_shared_building_slots = 2
@@ -1596,11 +1640,11 @@
 	
 	focus = {
 		id = FRA_netherlands_gg
-		icon = GFX_fall_of_france
-		prerequisite = { focus = FRA_danzig_or_war }
+		icon = GFX_sca_focus_generic_political
+		prerequisite = { focus = FRA_cartagena_or_war }
 		x = 0
 		y = 1
-		relative_position_id = FRA_danzig_or_war
+		relative_position_id = FRA_cartagena_or_war
 		cost = 1
 		available = { HOL = { has_capitulated = yes }  }
 			
@@ -1641,10 +1685,11 @@
 		relative_position_id = FRA_netherlands_gg
 		cost = 1
 		completion_reward = {
-			add_state_core = 8
-			add_state_core = 28
+			add_state_core = 321
+			add_state_core = 319
 			add_war_support = 0.05
-			transfer_state = 28
+			transfer_state = 321
+			transfer_state = 319
 			321 = { set_state_name = "Picardy" }
 		}
 	}
@@ -2493,8 +2538,8 @@ add_to_variable = { FRAmany_war_army_core_defence_factor = 0.3	}
 
 	
 	focus = {
-		id = FRA_atlantikwall
-		icon = GFX_focus_FRA_atlantikwall
+		id = FRA_atlantic_wall
+		icon = GFX_FRA_field_fortification_efforts
 		prerequisite = { focus = FRA_start_rationing }
 		x = 1
 		y = 1

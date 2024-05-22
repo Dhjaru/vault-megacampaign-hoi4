@@ -12234,4 +12234,12 @@ SpriteType = {
 		name = "GFX_r56_goal_FRA_char_de_bataille"
 		texturefile = "gfx/interface/RT56/goals/fra/r56_goal_FRA_char_de_bataille.dds"
 	}
+	SpriteType = {
+		name = "GFX_focus_rubber"
+		texturefile = "gfx/interface/goals/Rubber.dds"
+	}
+	SpriteType = {
+		name = "GFX_ITA_submarine_production"
+		texturefile = "gfx/interface/goals/ITA_submarine_production.dds"
+	}
 }
