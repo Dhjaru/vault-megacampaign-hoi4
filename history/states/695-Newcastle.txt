@@ -8,6 +8,10 @@ state={
 		victory_points = {
 			9379 7 
 		}
+		buildings = {
+			infrastructure = 4
+			dockyard = 3
+		}
 		owner = ENG
 		add_core_of = ENG
 	}

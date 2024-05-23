@@ -655,7 +655,7 @@ NProduction = {
 	RESOURCE_PENALTY_WARNING_CRITICAL_RATIO = 0.75, -- Switch to red progress bar if penalty is over threshold 
 	BASE_FACTORY_SPEED = 5, 				-- Base factory speed multiplier (how much hoi3 style IC each factory gives).
 	BASE_FACTORY_SPEED_MIL = 3.9, 				-- Base factory speed multiplier (how much hoi3 style IC each factory gives).
-	BASE_FACTORY_SPEED_NAV = 1.7, 				-- Base factory speed multiplier (how much hoi3 style IC each factory gives).
+	BASE_FACTORY_SPEED_NAV = 3.4, 				-- Base factory speed multiplier (how much hoi3 style IC each factory gives).
 	BASE_FACTORY_START_EFFICIENCY_FACTOR = 10,	-- Base start efficiency for factories expressed in %.
 	BASE_FACTORY_MAX_EFFICIENCY_FACTOR = 35,	-- Base max efficiency for factories expressed in %.
 	BASE_FACTORY_EFFICIENCY_GAIN = 0.95,		-- Base efficiency gain for factories per unit produced in %. 1.00
@@ -3552,9 +3552,9 @@ NAI = {
 	
 	MAX_FULLY_TRAINED_SHIP_RATIO_FOR_TRAINING = 0.7,			-- ai will not train a taskforce if fully trained ships are above this ratio
 	
-	NUM_SILOS_PER_CIVILIAN_FACTORIES = 0.0025,					-- ai will try to build a silo per this ratio of civ factories
-	NUM_SILOS_PER_MILITARY_FACTORIES = 0.012,					-- ai will try to build a silo per this ratio of mil factories
-	NUM_SILOS_PER_DOCKYARDS = 0.02,								-- ai will try to build a silo per this ratio of dockyards
+	NUM_SILOS_PER_CIVILIAN_FACTORIES = 0.0,					-- ai will try to build a silo per this ratio of civ factories
+	NUM_SILOS_PER_MILITARY_FACTORIES = 0.0,					-- ai will try to build a silo per this ratio of mil factories
+	NUM_SILOS_PER_DOCKYARDS = 0.0,								-- ai will try to build a silo per this ratio of dockyards
 	
 	SHIP_STR_RATIO_PUT_ON_REPAIRS = 0.99,						-- if ships are damaged below this ratio, they are put for repairs
 	SHIP_STR_RATIO_EXIT_REPAIRS = 1.00,							-- the ships will leave repairs if they are >= this ratio of total str
