@@ -147,7 +147,7 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = PER_develop_the_steel_mills_of_khorasan
+		id = PER_urbanization_of_isfahan
 		icon = GFX_goal_generic_light_industry
 		
 		prerequisite = { focus = PER_copy_russian_siberian_plan }
@@ -175,7 +175,48 @@ focus_tree = {
 
 		completion_reward = {
 		
-		388 = {
+		391 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+			}
+		
+			}
+	}
+	
+	focus = {
+		id = PER_industrialization_of_kerman
+		icon = GFX_goal_generic_light_industry
+		
+		prerequisite = { focus = PER_urbanization_of_isfahan }
+		relative_position_id = PER_urbanization_of_isfahan
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		x = 2
+		y = 1
+
+		cost = 5
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {			
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+		
+		393 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = infrastructure
@@ -188,7 +229,7 @@ focus_tree = {
 					instant_build = yes
 				}
 				add_resource = {
-					type = steel
+					type = aluminium
 					amount = 20
 				}
 			}
@@ -197,14 +238,58 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = PER_expand_the_khorasani_mines
+		id = PER_develop_the_steel_mills_of_khorasan
+		icon = GFX_goal_generic_light_industry
+		
+		prerequisite = { focus = PER_copy_russian_siberian_plan }
+		relative_position_id = PER_copy_russian_siberian_plan
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		x = 0
+		y = 1
+
+		cost = 5
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {			
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+		
+		388 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 40
+				}
+			}
+		
+			}
+	}
+	
+	focus = {
+		id = PER_further_expand_the_khorasani_mines
 		icon = GFX_goal_generic_light_industry
 		
 		prerequisite = { focus = PER_develop_the_steel_mills_of_khorasan}
 		relative_position_id = PER_develop_the_steel_mills_of_khorasan
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
-		x = 2
+		x = 0
 		y = 1
 
 		cost = 5
@@ -245,8 +330,8 @@ focus_tree = {
 		id = PER_repair_the_afghani_industry
 		icon = GFX_goal_generic_light_industry
 		
-		prerequisite = { focus = PER_develop_the_steel_mills_of_khorasan }
-		relative_position_id = PER_develop_the_steel_mills_of_khorasan 
+		prerequisite = { focus = PER_urbanization_of_isfahan }
+		relative_position_id = PER_urbanization_of_isfahan
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		x = 0
@@ -349,11 +434,11 @@ focus_tree = {
 		id = PER_isfahan_academy_of_science
 		icon = GFX_goal_research_silver
 		
-		prerequisite = { focus = PER_revitalize_the_silk_road }
-		relative_position_id = PER_revitalize_the_silk_road
+		prerequisite = { focus = PER_cooperate_with_the_ASNĀF_guilds }
+		relative_position_id = PER_cooperate_with_the_ASNĀF_guilds
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
-		x = -3
+		x = 0
 		y = 1
 
 		cost = 5
@@ -387,7 +472,7 @@ focus_tree = {
 		relative_position_id = PER_revitalize_the_silk_road
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
-		x = 2
+		x = -2
 		y = 1
 
 		cost = 5
@@ -483,12 +568,11 @@ focus_tree = {
 		icon = GFX_RAJ_home_defence_industry
 		
 		prerequisite = { focus = PER_expand_tabriz_tungsten_mines }
-		prerequisite = { focus = PER_economic_growth_in_fars }
 		prerequisite = { focus = PER_repair_the_afghani_industry }
-		relative_position_id = PER_economic_growth_in_fars
+		relative_position_id = PER_expand_tabriz_tungsten_mines
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
-		x = 0
+		x = 2
 		y = 1
 
 		cost = 5
@@ -733,14 +817,6 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-		384 = {
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = arms_factory
-					level = 3
-					instant_build = yes
-				}
-			}
 			}
 	}
 	
@@ -752,7 +828,7 @@ focus_tree = {
 		relative_position_id = PER_kickstart_our_military_industry
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
-		x = 3
+		x = 4
 		y = 1
 
 		cost = 5
@@ -785,6 +861,53 @@ focus_tree = {
 				add_building_construction = {
 					type = arms_factory
 					level = 2
+					instant_build = yes
+				}
+			}
+			}
+	}
+	
+	focus = {
+		id = PER_southern_persian_military_industry
+		icon = GFX_RAJ_home_defence_industry
+		
+		prerequisite = { focus = PER_kickstart_our_military_industry }
+		relative_position_id = PER_kickstart_our_military_industry
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		x = 2
+		y = 1
+
+		cost = 5
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {			
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+		384 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		393 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -833,10 +956,11 @@ focus_tree = {
 		icon = GFX_SOV_production_targets
 		
 		prerequisite = { focus = PER_eastern_persian_military_industry }
-		relative_position_id = PER_eastern_persian_military_industry
+		prerequisite = { focus = PER_southern_persian_military_industry }
+		relative_position_id = PER_southern_persian_military_industry
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
-		x = 0
+		x = 1
 		y = 1
 
 		cost = 5
@@ -995,146 +1119,6 @@ focus_tree = {
 	}
 	
 	
-	focus = {
-		id = PER_a_strange_visitor
-		icon = GFX_goal_unkown
-		
-		relative_position_id = PER_cooperate_with_the_ASNĀF_guilds
-		
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		x = 4
-		y = 0
-
-		cost = 0
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {	
-				NOT = {
-					country_exists = w31	
-				}		
-		}
-		
-		bypass = {
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		completion_reward = {
-			country_event = per.1
-		}
-	}	
-	
-	focus = {
-		id = PER_proclamation_of_the_aryan_commune
-		icon = GFX_goal_support_communism
-		
-		prerequisite = { focus = PER_a_strange_visitor }
-		relative_position_id = PER_a_strange_visitor
-		
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		x = 1
-		y = 1
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {			
-		}
-		
-		bypass = {
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		completion_reward = {
-		}
-	}
-	
-	focus = {
-		id = PER_establishing_the_aryan_legion
-		icon = GFX_goal_support_communism
-		
-		prerequisite = { focus = PER_a_strange_visitor }
-		relative_position_id = PER_a_strange_visitor
-		
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		x = -1
-		y = 1
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {			
-		}
-		
-		bypass = {
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		completion_reward = {
-		add_ideas = PER_the_aryan_legion
-		}
-	}
-	
-	focus = {
-		id = PER_give_hitler_command_of_the_army
-		icon = GFX_goal_support_communism
-		
-		prerequisite = { focus = PER_establishing_the_aryan_legion }
-		relative_position_id = PER_establishing_the_aryan_legion
-		
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		x = 0
-		y = 1
-
-		cost = 1
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {			
-		}
-		
-		bypass = {
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		completion_reward = {
-		create_field_marshal = {
-			name = "Adolf Hitler"
-			picture = gfx/leaders/GER/Portrait_Germany_Adolf_Hitler.dds
-			traits={ hill_fighter infantry_officer brilliant_strategist infantry_leader organizer mountaineer }
-			skill=5
-			attack_skill=7
-			defense_skill=3
-			planning_skill=6
-			logistics_skill=4
-			legacy_id=0
-		}
-		}
-	}
-	
-	
 		### Military Tree
 		
 	
@@ -1142,7 +1126,7 @@ focus_tree = {
 		id = PER_modernize_our_armed_forces
 		icon = GFX_SOV_ppsh_hand_angry
 		
-		relative_position_id = PER_a_strange_visitor
+		relative_position_id = PER_cooperate_with_the_ASNĀF_guilds
 		
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		x = 7
