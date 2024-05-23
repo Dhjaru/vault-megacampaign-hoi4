@@ -203,6 +203,41 @@ ideas = {
 			}
 		}
 		
+	PER_muslim_suppresion = {
+		
+			allowed = {
+				always = no # Added via focus
+			}
+
+			removal_cost = -1
+
+			picture = generic_purge
+
+			equipment_bonus = {
+			}
+			modifier = {
+			war_support_factor = 0.10
+			}
+		}
+		
+	PER_rekindeled_flames = {
+		
+			allowed = {
+				always = no # Added via focus
+			}
+
+			removal_cost = -1
+
+			picture = generic_purge
+
+			equipment_bonus = {
+			}
+			modifier = {
+			army_defence_factor = 0.1
+			army_attack_factor = 0.1
+			}
+		}
+		
 	PER_divided_we_fall_together_we_stand_1 = {
 		
 			allowed = {
