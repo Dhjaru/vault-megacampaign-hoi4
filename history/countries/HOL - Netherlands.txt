@@ -229,11 +229,6 @@ if = {
         freedom_level = 0.4
     }
     set_autonomy = {
-        target = W76
-        autonomous_state = autonomy_integrated_puppet
-        freedom_level = 0.4
-    }
-    set_autonomy = {
         target = W77
         autonomous_state = autonomy_integrated_puppet
         freedom_level = 0.4
@@ -243,23 +238,10 @@ if = {
         autonomous_state = autonomy_integrated_puppet
         freedom_level = 0.4
     }
-    set_autonomy = {
-        target = W79
-        autonomous_state = autonomy_integrated_puppet
-        freedom_level = 0.4
-    }
-    set_autonomy = {
-        target = W80
-        autonomous_state = autonomy_colony
-        freedom_level = 0.4
-    }
     else = {
         puppet = HAI
-        puppet = W76
         puppet = W77
         puppet = W78
-        puppet = W79
-        puppet = W80
     }
 }
 

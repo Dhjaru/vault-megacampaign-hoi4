@@ -22,7 +22,6 @@ state={
 		add_core_of = X05
 		add_claim_by = RAJ
 		add_claim_by = W14
-		add_claim_by = W32
 	}
 
 	provinces={

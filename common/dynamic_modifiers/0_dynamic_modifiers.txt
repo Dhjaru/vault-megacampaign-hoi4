@@ -727,6 +727,14 @@ kemalist_loyalties = {
 	state_production_speed_buildings_factor = 0.1
 }
 
+noobtrap_avoider = {
+	enable = { always = yes }
+	remove_trigger = { has_war = yes }
+
+	icon = GFX_idea_man_five_year_plan_industry
+	local_building_slots_factor = -3
+}
+
 kemalist_schemers = {
 	enable = { always = yes }
 

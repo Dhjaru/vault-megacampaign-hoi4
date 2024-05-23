@@ -21,7 +21,6 @@ state={
 		add_core_of = W59
 		add_core_of = X01
 		add_claim_by = JAP
-		add_claim_by = W32
 	}
 
 	provinces={

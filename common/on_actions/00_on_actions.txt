@@ -1,212 +1,27 @@
 on_actions = {
-	on_daily_SOV = {
-		effect = {
-			
-			
-			if = {
-				limit = {
-					SOV = {
-						OR = {
-							NOT = {
-								controls_state = 212
-								controls_state = 806
-								controls_state = 46
-								controls_state = 84
-								controls_state = 83
-								controls_state = 807
-								controls_state = 43
-								controls_state = 70
-								controls_state = 75
-
-							}
-						}
-					}			
-					SOV = {
-						OR = {
-							divisions_in_state = {
-								type = infantry
-								size > 0
-								state = 152
-							}
-							divisions_in_state = {
-								type = infantry
-								size > 0
-								state = 153
-							}
-							divisions_in_state = {
-								type = infantry
-								size > 0
-								state = 736
-							}
-							divisions_in_state = {
-								type = infantry
-								size > 0
-								state = 797
-							}
-							divisions_in_state = {
-								type = infantry
-								size > 0
-								state = 4
-							}
-							divisions_in_state = {
-								type = infantry
-								size > 0
-								state = 808
-							}
-							divisions_in_state = {
-								type = infantry
-								size > 0
-								state = 155
-							}
-							divisions_in_state = {
-								type = infantry
-								size > 0
-								state = 154
-							}
-							divisions_in_state = {
-								type = infantry
-								size > 0
-								state = 82
-							}
-							divisions_in_state = {
-								type = infantry
-								size > 0
-								state = 81
-							}
-							divisions_in_state = {
-								type = infantry
-								size > 0
-								state = 48
-							}
-							divisions_in_state = {
-								type = infantry
-								size > 0
-								state = 731
-							}
-							divisions_in_state = {
-								type = infantry
-								size > 0
-								state = 185
-							}
-						
-							divisions_in_state = {
-								type = infantry
-								size > 0
-								state = 160
-							}
-							divisions_in_state = {
-								type = infantry
-								size > 0
-								state = 161
-							}
-							divisions_in_state = {
-								type = infantry
-								size > 0
-								state = 157
-							}
-							divisions_in_state = {
-								type = infantry
-								size > 0
-								state = 117
-							}
-							divisions_in_state = {
-								type = infantry
-								size > 0
-								state = 156
-							}
-							
-						}
-						
-					}
-				}
-				SOV = {
-					delete_unit = {
-						state = 736
-						disband = no #will refund equipment and manpower
-					}
-					delete_unit = {
-						state = 153
-						disband = no #will refund equipment and manpower
-					}
-					delete_unit = {
-						state = 152
-						disband = no #will refund equipment and manpower
-					}
-					delete_unit = {
-						state = 808
-						disband = no #will refund equipment and manpower
-					}
-					delete_unit = {
-						state = 155
-						disband = no #will refund equipment and manpower
-					}
-					delete_unit = {
-						state = 154
-						disband = no #will refund equipment and manpower
-					}
-					delete_unit = {
-						state = 82
-						disband = no #will refund equipment and manpower
-					}
-					delete_unit = {
-						state = 81
-						disband = no #will refund equipment and manpower
-					}
-					delete_unit = {
-						state = 48
-						disband = no #will refund equipment and manpower
-					}
-					delete_unit = {
-						state = 731
-						disband = no #will refund equipment and manpower
-					}
-					delete_unit = {
-						state = 185
-						disband = no #will refund equipment and manpower
-					}
-					delete_unit = {
-						state = 156
-						disband = no #will refund equipment and manpower
-					}
-					delete_unit = {
-						state = 117
-						disband = no #will refund equipment and manpower
-					}
-					delete_unit = {
-						state = 157
-						disband = no #will refund equipment and manpower
-					}
-					delete_unit = {
-						state = 161
-						disband = no #will refund equipment and manpower
-					}
-					delete_unit = {
-						state = 160
-						disband = no #will refund equipment and manpower
-					}
-					delete_unit = {
-						state = 797
-						disband = no #will refund equipment and manpower
-					}
-					delete_unit = {
-						state = 736
-						disband = no #will refund equipment and manpower
-					}
-					delete_unit = {
-						state = 4
-						disband = no #will refund equipment and manpower
-					}
-				
-				}
-				
-			}
-
-		}
-		
-	}
 	on_startup = {
 		effect = {
-			
+			HOL = {
+				every_owned_state = { 
+					limit = { is_on_continent = europe }
+					add_dynamic_modifier = { modifier = noobtrap_avoider }
+					days = 1277
+				}
+			}
+			SPR = {
+				every_owned_state = { 
+					limit = {
+						NOT={ state = 487 }
+						NOT={ state = 488 }
+						NOT={ state = 503 }
+						NOT={ state = 489 }
+						NOT={ state = 490 }
+						NOT={ state = 491 }
+					}
+					add_dynamic_modifier = { modifier = noobtrap_avoider }
+					days = 1277
+				}
+			}
 			every_country = {
 				add_timed_idea = {
 				    idea = fix_production_idea

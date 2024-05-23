@@ -22,7 +22,6 @@ state={
 		add_core_of = SOV
 		add_core_of = X80
 		add_claim_by = CHI
-		add_claim_by = W32
 		add_claim_by = W59
 	}
 

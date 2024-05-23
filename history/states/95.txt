@@ -16,7 +16,6 @@ state={
 
 		}
 		add_core_of = CHA
-		add_claim_by = W32
 	}
 
 	provinces={

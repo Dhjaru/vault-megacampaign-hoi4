@@ -23,7 +23,6 @@ state={
 		}
 		add_core_of = X14
 		add_claim_by = EGY
-		add_claim_by = W32
 		add_claim_by = X20
 	}
 

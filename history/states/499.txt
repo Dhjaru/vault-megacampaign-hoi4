@@ -7,7 +7,6 @@ state={
 	history={
 		owner = SPR
 		add_core_of = W82
-		add_claim_by = W32
 	}
 
 	provinces={

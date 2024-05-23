@@ -23,7 +23,6 @@ state={
 
 		}
 		add_core_of = W68
-		add_claim_by = W32
 
 	}
 

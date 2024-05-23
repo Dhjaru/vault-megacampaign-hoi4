@@ -21,7 +21,6 @@ state={
 		}
 		add_core_of = HAI
 		add_claim_by = TIG
-		add_claim_by = W32
 	}
 
 	provinces={

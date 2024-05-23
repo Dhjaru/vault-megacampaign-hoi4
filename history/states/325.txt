@@ -25,7 +25,6 @@ state={
 		add_core_of = BRU
 		add_core_of = W78
 		add_claim_by = MAL
-		add_claim_by = W32
 		add_claim_by = X67
 	}
 

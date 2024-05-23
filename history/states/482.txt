@@ -21,7 +21,6 @@ state={
 		add_core_of = MOR
 		add_core_of = SPR
 		add_claim_by = ALG
-		add_claim_by = W32
 	}
 
 	provinces={

@@ -21,7 +21,6 @@ state={
 		}
 		add_core_of = CAN
 		add_claim_by = CAN
-		add_claim_by = W32
 
 	}
 

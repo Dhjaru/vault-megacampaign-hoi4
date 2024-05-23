@@ -221,40 +221,6 @@ if = {
     limit = {
         has_dlc = "Together for Victory"
     }
-    set_autonomy = {
-        target = W81
-        autonomous_state = autonomy_integrated_puppet
-    }
-    set_autonomy = {
-        target = W82
-        autonomous_state = autonomy_integrated_puppet
-    }
-    set_autonomy = {
-        target = W83
-        autonomous_state = autonomy_integrated_puppet
-    }
-    set_autonomy = {
-        target = W84
-        autonomous_state = autonomy_integrated_puppet
-    }
-    else = {
-        set_autonomy = {
-            target = W81
-            autonomous_state = autonomy_puppet
-        }
-        set_autonomy = {
-            target = W82
-            autonomous_state = autonomy_puppet
-        }
-        set_autonomy = {
-            target = W83
-            autonomous_state = autonomy_puppet
-        }
-        set_autonomy = {
-            target = W84
-            autonomous_state = autonomy_puppet
-        }
-    }
 }
 
 if = {
