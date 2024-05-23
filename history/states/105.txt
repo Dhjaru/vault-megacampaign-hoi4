@@ -26,11 +26,6 @@ state={
 
 		}
 		add_core_of = ITA
-		add_core_of = TTS
-		add_core_of = W40
-		add_core_of = X92
-		add_claim_by = TIG
-		add_claim_by = X14
 	}
 
 	provinces={

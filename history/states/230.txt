@@ -9,7 +9,7 @@ state={
 			1903 10 
 		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 4
 			industrial_complex = 0
 			arms_factory = 0
 			1903 = {

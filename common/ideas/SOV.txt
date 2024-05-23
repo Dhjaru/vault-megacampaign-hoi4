@@ -838,7 +838,7 @@ ideas = {
 		}
 		
 		Disorganized_airforce_1_1 = {
-		
+			name = disorganized_airforce
 			allowed = {
 				always = no # Triggered via event
 			}
@@ -861,6 +861,7 @@ ideas = {
 		}
 		
 		Disorganized_airforce_2_1 = {
+			name = disorganized_airforce
 		
 			allowed = {
 				always = no # Triggered via event
@@ -880,6 +881,7 @@ ideas = {
 		}
 		
 		Disorganized_airforce_3_1 = {
+			name = disorganized_airforce
 		
 			allowed = {
 				always = no # Triggered via event
@@ -901,6 +903,7 @@ ideas = {
 		}
 		
 		Disorganized_airforce_1_2 = {
+			name = disorganized_airforce
 		
 			allowed = {
 				always = no # Triggered via event
@@ -922,6 +925,7 @@ ideas = {
 		}
 		
 		Disorganized_airforce_1_3 = {
+			name = disorganized_airforce
 		
 			allowed = {
 				always = no # Triggered via event
@@ -944,6 +948,7 @@ ideas = {
 		}
 		
 		Disorganized_airforce_2_2 = {
+			name = disorganized_airforce
 		
 			allowed = {
 				always = no # Triggered via event

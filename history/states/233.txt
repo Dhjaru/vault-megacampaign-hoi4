@@ -9,7 +9,7 @@ state={
 			1513 10 
 		}
 		buildings = {
-			infrastructure = 4
+			infrastructure = 7
 			industrial_complex = 4
 			arms_factory = 2
 			dockyard = 3

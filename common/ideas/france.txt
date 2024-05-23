@@ -1296,6 +1296,28 @@ ideas = {
 				production_speed_arms_factory_factor = 0.2
  			}
 		}
+
+		FRA_SNCASO = {
+			allowed = {
+				original_tag = FRA
+				has_war = NO
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			available = { date < 1939.9.1 }
+			
+
+			removal_cost = -1
+
+			picture = ger_mefo_bills
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+ 			}
+		}
 	}
 	
 	industrial_concern = {
