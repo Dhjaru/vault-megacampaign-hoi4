@@ -2,6 +2,9 @@
 state={
 	id=282
 	name="STATE_282"
+	resources={
+		chromium=20
+	}
 
 	history={
 		owner = ITA

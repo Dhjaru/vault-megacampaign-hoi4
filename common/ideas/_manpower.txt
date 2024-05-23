@@ -151,8 +151,11 @@ ideas = {
 				}
 			}
 			visible = {
-				ROOT = {
-					has_completed_focus = CAN_national_resources_mobilization_act
+				OR = {
+					ROOT = {
+						has_completed_focus = CAN_national_resources_mobilization_act
+					}
+					tag = FRA
 				}
 			}
 

@@ -1,23 +1,44 @@
 characters={
-	FRA_hubert_lyautey={
-		name=FRA_hubert_lyautey
+	FRA_henri_giraud = {
+		name="Henri Giraud"
 		portraits={
 			army={
-				large="GFX_portrait_Philippe_Petain"
+				small="GFX_idea_henri_giraud"
 			}
 			army={
-				small="GFX_portrait_Philippe_Petain"
+				large="gfx/leaders/FRA/portrait_france_henri_giraud.dds"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = FRA_henri_giraud
+			ledger = army
+
+			available = {
+				has_completed_focus = FRA_appoint_giraud
+			}
+			
+			allowed = {
+				original_tag = FRA
+			}
+			cost = 150
+			traits = { army_commando_3 air_airborne_2 }
+			
+			ai_will_do = {
+				factor = 0.2
 			}
 		}
 		corps_commander={
-			skill=2
-			attack_skill=2
-			defense_skill=4
-			planning_skill=1
-			logistics_skill=1
+			traits={ inflexible_strategist brilliant_strategist desert_fox trait_mountaineer infantry_leader commando }
+			skill=5
+			attack_skill=5
+			defense_skill=3
+			planning_skill=9
+			logistics_skill=3
 			legacy_id=0
 		}
 	}
+
 
 	FRA_philippe_billot={
 		name=FRA_philippe_billot
@@ -98,6 +119,20 @@ characters={
 			legacy_id=0
 		}
 	}
+	FRA_philippe_pétain={
+		name="Philippe Pétain"
+		portraits={
+			civilian={
+				large="gfx/leaders/FRA/Portrait_France_Philippe_Petain.dds"
+			}
+		}
+		country_leader={
+			#desc="POLITICS_PHILIPPE_PÉTAIN_DESC"
+			ideology=dictatorship_neutral
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
 
 	FRA_guillaume_joffre={
 		name=FRA_guillaume_joffre
@@ -107,10 +142,9 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=dictatorship_neutral
+			ideology=fascism_ideology
 			expire="1965.1.1.1"
 			id=-1
 		}
 	}
-
 }

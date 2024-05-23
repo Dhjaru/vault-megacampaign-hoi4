@@ -410,11 +410,11 @@ if = {
 			armor_type_slot = tank_welded_armor
 			armor_sloping_slot = unsloped_armor
 			engine_type_slot = tank_gasoline_engine
-			radio_slot = tank_radio_1
-			special_type_slot_1 = smoke_launchers
+			radio_slot = tank_radio_2
+			special_type_slot_1 = secondary_turret_small_cannon_small
 		}
 		upgrades = {
-			tank_nsb_engine_upgrade = 8
+			tank_nsb_engine_upgrade = 10
 			tank_nsb_armor_upgrade = 3
 		}
 		icon = "gfx/interface/technologies/land/ita/l338.tga"

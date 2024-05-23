@@ -1,4 +1,4 @@
-﻿capital = 475
+﻿capital = 474
 set_cosmetic_tag = SPR_union
 set_research_slots = 4
 

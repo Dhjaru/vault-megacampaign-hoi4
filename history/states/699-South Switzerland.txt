@@ -1,7 +1,7 @@
 
 state={
-	id=504
-	name="STATE_504"
+	id=699
+	name="STATE_699"
 	resources={
 		aluminium=204.000
 	}
@@ -9,26 +9,24 @@ state={
 	history={
 		owner = SWI
 		victory_points = {
-			663 20 
+			3662 5
 		}
 		buildings = {
-			infrastructure = 8
-			industrial_complex = 8
-			arms_factory = 4
-			air_base = 10
+			infrastructure = 6
+			industrial_complex = 3
+			arms_factory = 2
 
 		}
 		add_core_of = GER
 		add_core_of = SWI
-		add_claim_by = TIG
 	}
 
 	provinces={
-		661 663 11601 11604 11623 
+		658 3641 3660 3662 9600 
 	}
-	manpower=3329024
+	manpower=1229024
 	buildings_max_level_factor=1.000
-	state_category=industrial_heartland
+	state_category=city
 
 	local_supplies=10.0
 }

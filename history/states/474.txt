@@ -8,6 +8,12 @@ state={
 		victory_points = {
 			1048 3 
 		}
+		victory_points = {
+			7183 25
+		}
+		victory_points = {
+			875 50 
+		}
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 3
@@ -20,7 +26,6 @@ state={
 
 		}
 		add_core_of = SPR
-		add_claim_by = TIG
 	}
 
 	provinces={

@@ -1,87 +1,6 @@
 ideas = {
-hidden_ideas = { 
-						GER_jaegernotprogramm_hidden = {
-			allowed = {	always = yes	}
-			removal_cost = -1
-			picture = generic_air_payment
-			equipment_bonus = {
-		 anti_tank_equipment = { build_cost_ic = 0.06 instant = yes }  artillery_equipment = { build_cost_ic = 0.06 instant = yes  } anti_air_equipment = { build_cost_ic = 0.06 instant = yes  } infantry_equipment = { build_cost_ic = 0.06 instant = yes  } support_equipment = { build_cost_ic = 0.06 instant = yes  }
-		  motorized_equipment = { build_cost_ic = 0.06 instant = yes  } mech_chassis = { build_cost_ic = 0.06 instant = yes  } light_tank_chassis = { build_cost_ic = 0.06 instant = yes  } medium_tank_chassis = { build_cost_ic = 0.06 instant = yes  } heavy_tank_chassis = { build_cost_ic = 0.06 instant = yes  }
-		   rocket_artillery_equipment = { build_cost_ic = 0.06 instant = yes  } armored_car_chassis = { build_cost_ic = 0.06 instant = yes  } super_heavy_tank_chassis = { build_cost_ic = 0.06 instant = yes  }  motorized_rocket_equipment = { build_cost_ic = 0.06 instant = yes  }
-		   modern_tank_chassis = { build_cost_ic = 0.06 instant = yes  }
-	}
-	}
-							ENG_late_game_production_nerf = {
-			allowed = {	always = yes	}
-			removal_cost = -1
-			picture = generic_air_payment
-			equipment_bonus = {
-			cv_small_plane_airframe = { build_cost_ic = 0.2 instant = yes  } small_plane_airframe = { build_cost_ic = 0.2 instant = yes  } medium_plane_fighter_airframe = { build_cost_ic = 0.2 instant = yes  } 
-		anti_tank_equipment = { build_cost_ic = 0.2 instant = yes }  artillery_equipment = { build_cost_ic = 0.2 instant = yes  } anti_air_equipment = { build_cost_ic = 0.2 instant = yes  } infantry_equipment = { build_cost_ic = 0.2 instant = yes  } support_equipment = { build_cost_ic = 0.2 instant = yes  }
-		  motorized_equipment = { build_cost_ic = 0.2 instant = yes  } mech_chassis = { build_cost_ic = 0.2 instant = yes  } light_tank_chassis = { build_cost_ic = 0.2 instant = yes  } medium_tank_chassis = { build_cost_ic = 0.2 instant = yes  } heavy_tank_chassis = { build_cost_ic = 0.2 instant = yes  }
-		   rocket_artillery_equipment = { build_cost_ic = 0.2 instant = yes  } armored_car_chassis = { build_cost_ic = 0.2 instant = yes  }  super_heavy_tank_chassis = { build_cost_ic = 0.2 instant = yes  } motorized_rocket_equipment = { build_cost_ic = 0.2 instant = yes  }
-		   modern_tank_chassis = { build_cost_ic = 0.2 instant = yes  } 
-	}
-	}
-	
-	
-}
-	country = {
-	ITA_FRA_neutrality = {
-	picture = neutrality_idea
-	available = { FRA=  { owns_state = 16 } }
-		targeted_modifier = {
-    tag = FRA
-    attack_bonus_against = -0.5
-}
-}
-		FRA_ITA_neutrality = {
-	picture = neutrality_idea
-	available = { FRA=  { owns_state = 16 } }
-		targeted_modifier = {
-    tag = ITA
-    attack_bonus_against = -0.5
-}
-}
-	GER_bel_neutrality = {
-	picture = neutrality_idea
-	available=  { NOT ={ GER= { has_war_with = HOL } }  }
-		targeted_modifier = {
-    tag = BEL
-    attack_bonus_against = -0.5
-}
-}
-	
-			GER_the_blitzkrieg = {
-			allowed = {	always = no	}
-			available = { NOT = { GER = { has_country_flag = NO_MORE_FASCISM} }   NOT = { any_country = { the_axis = yes OR ={  controls_state = 551 controls_state = 587 controls_state = 588 }}} }
-			removal_cost = -1
-			picture = GER_blitzkrieg
-			modifier = {  army_strength_factor = 1.5 supply_consumption_factor = -0.1	air_fuel_consumption_factor = -0.25 supply_node_range = 0.25	}
-			equipment_bonus = {
-				small_plane_airframe = {  air_defence = 0.35 instant = yes }
-				armor = {
-					reliability = 0.3 instant = yes
-				}
-				motorized_equipment = { 
-					reliability = 0.3	 instant = yes		
-				}
-				mech_chassis= { 
-					reliability = 0.3  instant = yes
-				}
-			}
-		}
-				GER_jaegernotprogramm = {
-			allowed = {	always = yes	}
-			removal_cost = -1
-			picture = generic_air_payment
-			equipment_bonus = {	
-				large_plane_airframe = {		build_cost_ic = -0.25 instant = yes	}
-			small_plane_airframe = { build_cost_ic = -0.25 instant = yes	} 
-			medium_plane_airframe = { build_cost_ic = -0.25 instant = yes	}
-			}
-		}
-		GER_winterdebuff = {
+	country = {		
+		FRA_winterdebuff = {
             allowed = {
                 always = no
             }
@@ -95,7 +14,7 @@ hidden_ideas = {
                 acclimatization_cold_climate_gain_factor = -0.5
             }
         }
-		GER_totaler_krieg_idea = {
+		FRA_totaler_krieg_idea = {
 			removal_cost = -1
 			allowed = {	always = no	}
 			allowed_civil_war = {	always = yes	}
@@ -104,9 +23,9 @@ hidden_ideas = {
 				consumer_goods_factor = -0.04
 			}
 		}
-		GER_otto_skorzeny_reform = {
+		FRA_special_forces_genius = {
 
-			name = GER_otto_skorzeny
+			name = FRA_special_forces_genius
 
 			allowed = {
 				always = no
@@ -129,9 +48,111 @@ hidden_ideas = {
 			removal_cost = -1			
 			
 		}
-		GER_apointalbertspeer_idea= {
+		FRA_armor_genius = {
 
-			name = GER_apointalbertspeer
+			name = FRA_armor_genius
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_armor_attack_factor = 0.05
+				army_armor_defence_factor = 0.05
+			}
+
+			picture = eng_special_air_service
+			
+			removal_cost = -1			
+			
+		}
+		FRA_armor_genius2 = {
+
+			name = FRA_armor_genius
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
+
+			modifier = {
+				army_armor_attack_factor = 0.05
+				army_armor_defence_factor = 0.05
+			}
+
+			picture = eng_special_air_service
+			
+			removal_cost = -1			
+			
+		}
+		FRA_mechanized_genius = {
+
+			name = FRA_mechanized_genius
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				mechanized_attack_factor = 0.05
+				mechanized_defence_factor = 0.05
+				motorized_attack_factor = 0.05
+				motorized_defence_factor = 0.05
+			}
+
+			picture = eng_special_air_service
+			
+			removal_cost = -1			
+		}
+		FRA_mechanized_genius2 = {
+
+			name = FRA_mechanized_genius
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			equipment_bonus = {
+				mechanized = {
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
+
+			modifier = {
+				mechanized_attack_factor = 0.05
+				mechanized_defence_factor = 0.05
+				motorized_attack_factor = 0.05
+				motorized_defence_factor = 0.05
+			}
+
+			picture = eng_special_air_service
+			
+			removal_cost = -1			
+		}
+		FRA_miracle_maker_idea= {
+
+			name = FRA_miracle_maker
 
 			allowed = {
 				always = no
@@ -150,7 +171,28 @@ hidden_ideas = {
 			removal_cost = -1			
 			
 		}
-		GER_fuelshortage_idea= { 
+		FRA_refinery_building = { 
+
+			name = FRA_synthetic_rubber
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_speed_synthetic_rubber_refinery_factor = 0.2
+			}
+
+			picture = generic_refining_concern_1
+			
+			removal_cost = -1			
+			
+		}
+		FRA_fuelshortage_idea= { 
 
 			name = GER_fuelshortage
 
@@ -163,7 +205,7 @@ hidden_ideas = {
 			}
 
 			modifier = {
-								production_cost_synthetic_refinery_factor	 = -0.2
+				production_cost_synthetic_refinery_factor	 = -0.2
 				consumer_goods_factor = 0.06
 			}
 
@@ -174,26 +216,25 @@ hidden_ideas = {
 		}
 		
 		
-		GER_swedish_trade= {
+		FRA_swedish_trade= {
 			removal_cost = -1
 			picture = can_wartime_prices_and_trade_board
 			modifier = {
-				consumer_goods_factor = -0.1
 				local_resources_factor = 0.1
 			}
 		}
-		GER_prepareforinevitable = {
+		FRA_prepareforinevitable = {
            	 allowed = {
                        }
            	 removal_cost = -1
            	 picture = railroad1
            	 modifier = {
-                production_speed_air_base_factor = 0.3
-                production_speed_rail_way_factor = 0.3
-                production_speed_supply_node_factor = 0.3
+                production_cost_air_base_factor = -0.3
+                production_cost_rail_way_factor = -0.3
+                production_cost_supply_node_factor = -0.3
             }
         }
-		GER_no_fuel_idea = {
+		FRA_no_fuel_idea = {
 			removal_cost = -1
 			allowed = {	always = no	}
 			allowed_civil_war = {	always = yes	}
@@ -203,7 +244,7 @@ hidden_ideas = {
 				industrial_capacity_factory = -0.3
 			}
 		}
-			GER_totaler_krieg_idea2 = {
+			FRA_totaler_krieg_idea2 = {
 			removal_cost = -1
 			allowed = {	always = no	}	
 			available = { NOT = { OR = { has_stability < 0.5 has_war_support < 0.5  }   } }
@@ -215,7 +256,7 @@ hidden_ideas = {
 				army_morale_factor = 0.1
 			}
 		}
-		GER_entrenching_idea = {
+		FRA_entrenching_idea = {
             allowed = {
                 always = no
             }
@@ -252,7 +293,7 @@ hidden_ideas = {
 				
 				
         }
-	GER_tank_industry = {
+	FRA_tank_industry = {
 			allowed = {
 				always = no
 			}
@@ -285,7 +326,7 @@ hidden_ideas = {
 				war_support_factor = 0.20 
 			}
 		}
-				GER_redirecting_naval_production = {
+				FRA_redirecting_naval_production = {
 			allowed = {
 				always = no
 			}
@@ -303,7 +344,7 @@ hidden_ideas = {
 				industrial_capacity_dockyard = -0.40
 			}
 		}
-		GER_lowe_designer = { 
+		FRA_lowe_designer = { 
 			allowed = {	always = no }
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
@@ -317,7 +358,7 @@ hidden_ideas = {
 				}				
 				}				
 		}
-		GER_e100_designer = { 
+		FRA_e100_designer = { 
 			allowed = {	always = no }
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
@@ -355,7 +396,7 @@ hidden_ideas = {
             
             
         }		
-		GER_maus_designer = { 
+		FRA_maus_designer = { 
 			allowed = {	always = no }
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
@@ -448,31 +489,11 @@ hidden_ideas = {
 				army_defence_factor = -0.03
 			}
 		}
-		GER_trust_in_the_luftwaffe_idea = { 
-			picture = goering
+		FRA_airforce_expansion_idea = {
+			picture = generic_air_bonus
 			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			equipment_bonus = {
-				small_plane_airframe = {
-					build_cost_ic = -0.05
-					instant = yes
-				}	
-			}
-			modifier = {
-				industry_repair_factor  = -0.5
-			}	
-		}
-		GER_luftwaffe_expansion_idea = { 
-			picture = generic_fighter_production_diverted
-			allowed = {
-				original_tag = GER
+				original_tag = FRA
+				always = no
 			}
 
 			allowed_civil_war = {
@@ -487,8 +508,35 @@ hidden_ideas = {
 					instant = yes
 				}
 			}
+
+			modifier = {
+				
+			}
 		}
-		
+		FRA_sustainable_airforce_idea = {
+			picture = generic_air_bonus
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+
+			modifier = {
+				
+			}
+		}
 		
 		endsieg = {
 			picture = generic_fascism_drift_2
@@ -507,7 +555,7 @@ hidden_ideas = {
 				max_dig_in_factor = 0.1
 			}
 		}
-		GER_steiner_idea = {
+		FRA_steiner_idea = {
 			picture = generic_fascism_drift_2
 			allowed = {
 				original_tag = GER
@@ -523,7 +571,7 @@ hidden_ideas = {
 				army_attack_factor = 0.2 
 			}
 		}
-		GER_pool_technical_know_how = {
+		FRA_pool_technical_know_how = {
 			allowed = {
 				always = no
 			}
@@ -540,30 +588,74 @@ hidden_ideas = {
 			picture = generic_production_bonus
 
 			equipment_bonus = {
-							armor = {
+				armor = {
 					build_cost_ic = -0.025 instant = yes
 				}	
 				support_equipment = {
 					build_cost_ic = -0.1 instant = yes
 				}			
-				infantry_equipment = {
+				radio_equipment = {
 					build_cost_ic = -0.1 instant = yes
 				}
-				artillery_equipment = {
+				special_equipment = {
 					build_cost_ic = -0.1 instant = yes
 				}
-				rocket_artillery_equipment = {
+				horse_equipment = {
 					build_cost_ic = -0.1 instant = yes
 				}	
 				anti_air_equipment = {
 					build_cost_ic = -0.1 instant = yes
 				}	
-				anti_tank_equipment = {
+				heavy_anti_air_equipment = {
 					build_cost_ic = -0.1 instant = yes
 				}
 			}
 		}
-				expanded_recruitment2 = {
+		FRA_radio_production = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				OR = {
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+
+			removal_cost = -1
+
+			picture = generic_production_bonus
+
+			equipment_bonus = {
+				radio_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+		FRA_gun_production = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				OR = {
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+
+			removal_cost = -1
+
+			picture = generic_production_bonus
+
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+		expanded_recruitment2 = {
 			picture = generic_manpower_bonus
 			allowed = {
 				original_tag = GER
@@ -592,7 +684,7 @@ hidden_ideas = {
 			}
 		}
 		
-		GER_air_innovations_2_idea = {
+		FRA_air_innovations_2_idea = {
 			removal_cost = -1
 			allowed = {
 				always = no 
@@ -605,31 +697,11 @@ hidden_ideas = {
 			picture = generic_air_bonus
 		
 			research_bonus = {
-				jet_technology = 0.10
+				jet_technology = 0.33
 			}
 
-		}	
-GER_western_trade_cooperation = {
-			allowed = {
-				always = no
-			}
-			available = {
-				OR = {has_government = democratic has_government = neutrality }
-			}
-			removal_cost = -1
-			picture = generic_foreign_capital
-			modifier = {
-				industry_repair_factor = 0.10
-				production_speed_industrial_complex_factor = 0.1
-				production_speed_infrastructure_factor = 0.1
-				research_speed_factor = 0.1
-				industrial_capacity_factory = 0.1
-				industrial_capacity_dockyard = 0.1
-				consumer_goods_factor = -0.1
-				local_resources_factor = 0.10
-			}
-			}
-		GER_rocketry_idea = {
+		}
+		FRA_rocketry_idea = {
 			removal_cost = -1
 			allowed = {
 				always = no 
@@ -650,7 +722,7 @@ GER_western_trade_cooperation = {
 	
 		}
 
-		GER_ostwall_idea = {
+		FRA_ostwall_idea = {
 		
 			allowed = {
 				original_tag = GER
@@ -670,7 +742,7 @@ GER_western_trade_cooperation = {
 			}
 		}
 
-		GER_autarky_idea = {
+		FRA_autarky_idea = {
 
 			allowed = {
 				original_tag = GER
@@ -694,7 +766,7 @@ GER_western_trade_cooperation = {
 				}
 		}
 		
-				GER_autarky_idea2 = {
+				FRA_autarky_idea2 = {
 
 			allowed = {
 				original_tag = GER
@@ -717,21 +789,21 @@ GER_western_trade_cooperation = {
 				industrial_capacity_dockyard = 0.1
 			}
 		}
-		GER_autarky_idea_ita = {
+		FRA_autarky_idea_ita = {
 			allowed = {	original_tag = ITA	always = no }
 			allowed_civil_war = {	always = yes }
 			removal_cost = -1
 			picture = generic_exploit_mines
 			modifier = { min_export = -0.1 }
 		}
-		GER_autarky_idea2_ita = {
+		FRA_autarky_idea2_ita = {
 			allowed = {	original_tag = ITA	always = no }
 			allowed_civil_war = {	always = yes }
 			removal_cost = -1
 			picture = generic_exploit_mines
 			modifier = { min_export = -0.1 production_speed_buildings_factor = 0.1 }
 		}		
-		GER_grosraumwirtschaft = {
+		FRA_grosraumwirtschaft = {
 			allowed = {
 				original_tag = GER
 				always = no
@@ -751,7 +823,7 @@ GER_western_trade_cooperation = {
 			}
 		}
 
-		GER_align_hungary = {
+		FRA_align_hungary = {
 			allowed = {
 				always = no
 			}
@@ -770,7 +842,7 @@ GER_western_trade_cooperation = {
 			}
 		}
 		
-				GER_align_bulgaria = {
+				FRA_align_bulgaria = {
 			allowed = {
 				always = no
 			}
@@ -791,7 +863,7 @@ GER_western_trade_cooperation = {
 
 
 
-		GER_align_romania = {
+		FRA_align_romania = {
 			allowed = {
 				always = no
 			}
@@ -809,7 +881,7 @@ GER_western_trade_cooperation = {
 				fascism_acceptance = 85
 			}
 		}
-		GER_abwehr_idea2 = {
+		FRA_abwehr_idea2 = {
 			
 			allowed = {
 				always = no
@@ -825,7 +897,7 @@ GER_western_trade_cooperation = {
 			}
 		}
 	
-		GER_abwehr_idea = {
+		FRA_abwehr_idea = {
 			
 			allowed = {
 				always = no
@@ -859,7 +931,7 @@ GER_western_trade_cooperation = {
 			modifier = { equipment_capture = -1  army_strength_factor = 0.2  }
 		}
 		
-		GER_marinefahrprogram_idea = {
+		FRA_marinefahrprogram_idea = {
 			picture = generic_the_london_naval_treaty
 			equipment_bonus = {
 				floating_harbor_equipment = {
@@ -867,7 +939,7 @@ GER_western_trade_cooperation = {
 				}
 			}
 		}
-		GER_barbarossa = {
+		FRA_barbarossa = {
 			allowed = {
 				always = no
 			}
@@ -894,7 +966,7 @@ GER_western_trade_cooperation = {
 				defense_bonus_against = 0.05
 			}
 		}
-				GER_blau = {
+				FRA_blau = {
 			allowed = {
 				always = no
 			}
@@ -915,7 +987,7 @@ GER_western_trade_cooperation = {
 			}
 			modifier = { supply_node_range = 0.1 }
 		}		
-		GER_barbarossa_zit = {
+		FRA_barbarossa_zit = {
 			allowed = {	always = no	}
 			allowed_civil_war = {	has_government = fascism	}
 			available = { date < 1943.11.23 }
@@ -926,7 +998,7 @@ GER_western_trade_cooperation = {
 				attack_bonus_against = 0.2
 			}
 		}
-				GER_barbarossa_son = {
+				FRA_barbarossa_son = {
 			allowed = {	always = no	}
 			allowed_civil_war = {	has_government = fascism	}
 			available = { date < 1944.11.23 }
@@ -939,7 +1011,7 @@ GER_western_trade_cooperation = {
 		}
 		
 		
-		GER_dismantle_maginot = {
+		FRA_dismantle_maginot = {
 			allowed = {
 				always = no
 			}
@@ -958,7 +1030,7 @@ GER_western_trade_cooperation = {
 			}
 		}
 
-		GER_dismantle_czechoslovakian_forts = {
+		FRA_dismantle_czechoslovakian_forts = {
 			allowed = {
 				always = no
 			}
@@ -977,7 +1049,7 @@ GER_western_trade_cooperation = {
 			}
 		}
 
-		GER_trade_interdiction_idea = {
+		FRA_trade_interdiction_idea = {
 
 			removal_cost = -1
 
@@ -990,7 +1062,7 @@ GER_western_trade_cooperation = {
 			}
 		}
 
-		GER_modular_construction = {
+		FRA_modular_construction = {
 			allowed = {
 				always = no
 			}
@@ -1009,7 +1081,7 @@ GER_western_trade_cooperation = {
 				}
 			}
 		}
-		GER_modular_construction3 = {
+		FRA_modular_construction3 = {
 			allowed = {
 				always = no
 			}
@@ -1036,7 +1108,7 @@ GER_western_trade_cooperation = {
 			modifier = { naval_retreat_speed = 0.05 }
 		}		
 		
-			GER_stuka = {
+			FRA_stuka = {
 			allowed = {
 				always = no
 			}
@@ -1059,7 +1131,7 @@ GER_western_trade_cooperation = {
 			}
 		}	
 
-		GER_mech = {
+		FRA_mech = {
 			allowed = {
 				always = no
 			}
@@ -1079,7 +1151,7 @@ GER_western_trade_cooperation = {
 			}
 		}			
 
-				GER_choco = {
+				FRA_choco = {
 			allowed = {
 				always = no
 			}
@@ -1107,7 +1179,7 @@ GER_western_trade_cooperation = {
 			}
 		}			
 
-				GER_pillen = {
+				FRA_pillen = {
 			allowed = {
 				always = no
 			}
@@ -1127,7 +1199,7 @@ GER_western_trade_cooperation = {
 		}		
 
 
-		GER_at_stuff = {
+		FRA_at_stuff = {
 			picture = generic_production_bonus
 			allowed = {	original_tag = GER	}
 			allowed_civil_war = {	always = yes	}
@@ -1135,13 +1207,13 @@ GER_western_trade_cooperation = {
 			modifier = {
 				license_anti_tank_eq_production_speed_factor = 0.25
 			}
-		}		
+		}
 
-
-		GER_mefo_bills_1 = {
-			name = GER_mefo_bills
+		FRA_netherlands_reparations = {
+			name = FRA_netherlands_reparations
 			allowed = {
-				original_tag = GER
+				original_tag = FRA
+				has_war = NO
 			}
 
 			allowed_civil_war = {
@@ -1156,15 +1228,17 @@ GER_western_trade_cooperation = {
 			picture = ger_mefo_bills
 
 			modifier = {
-				#consumer_goods_expected_value = -0.05
-				consumer_goods_factor = -0.35
+				consumer_goods_expected_value = -0.05
+                industry_repair_factor = 0.5
+                industry_free_repair_factor = 3
  			}
 		}
 
-		GER_mefo_bills_2 = {
-			name = GER_mefo_bills
+		FRA_french_rationing = {
+			name = FRA_french_rationing
 			allowed = {
-				original_tag = GER
+				original_tag = FRA
+				has_war = NO
 			}
 
 			allowed_civil_war = {
@@ -1172,39 +1246,55 @@ GER_western_trade_cooperation = {
 			}
 			
 			available = { date < 1939.9.1 }
+			
 
 			removal_cost = -1
 
 			picture = ger_mefo_bills
 
 			modifier = {
-				consumer_goods_factor = -0.35
-				production_speed_buildings_factor = 0.25
-				production_factory_start_efficiency_factor = 0.15
-			}
+				consumer_goods_expected_value = -0.10
+				production_factory_start_efficiency_factor = 0.2
+				production_speed_industrial_complex_factor = 0.1
+ 			}
 		}
 
-
-		GER_mefo_bills_ended = {	
+		FRA_devalued_franc = {
+			name = FRA_devalued_franc
 			allowed = {
-				original_tag = GER
+				original_tag = FRA
 			}
 
 			allowed_civil_war = {
 				has_government = fascism
 			}
 			
-			available = { has_war = no }
+			removal_cost = -1
+
+			picture = ger_mefo_bills
+
+			modifier = {
+				consumer_goods_expected_value = -0.05
+ 			}
+		}
+
+		FRA_invest_in_victory_idea = {
+			name = FRA_devalued_franc
+			allowed = {
+				original_tag = FRA
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
 			
 			removal_cost = -1
 
-			picture = ger_mefo_bills_payment
+			picture = ger_mefo_bills
 
 			modifier = {
-				consumer_goods_factor = 0.5
-				#industrial_capacity_factory = 0.05
-				#industrial_capacity_dockyard = 0.05
-			}
+				production_speed_arms_factory_factor = 0.2
+ 			}
 		}
 	}
 	

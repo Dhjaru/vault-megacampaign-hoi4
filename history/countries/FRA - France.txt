@@ -365,21 +365,24 @@ if = {
     limit = {has_dlc = "Together for Victory" }
 
     add_to_tech_sharing_group = FRA_research
-}add_ideas = {
+}
+add_ideas = {
 	great_power
 	limited_conscription
-	civilian_economy
-	export_focus
+	partial_economic_mobilisation
+	limited_exports
 	culture_french
 }
 set_stability = 0.60
 set_war_support = 0.60
 
-recruit_character = FRA_hubert_lyautey
+recruit_character = FRA_henri_giraud
+recruit_character = FRA_henri_giraud
 recruit_character = FRA_philippe_billot
 recruit_character = FRA_francois_billot
 recruit_character = FRA_ferdinand_foch
 recruit_character = FRA_fernand_franchet_d'esperey
+recruit_character = FRA_philippe_pétain
 recruit_character = FRA_guillaume_joffre
 
 if = {
