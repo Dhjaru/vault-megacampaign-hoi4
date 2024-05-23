@@ -441,7 +441,7 @@ ideas = {
 			picture = man_five_year_plan_tank
 			
 			modifier = {
-				production_speed_arms_factory_factor = 0.1
+				production_speed_arms_factory_factor = 0.2
 			}
 
 			equipment_bonus = {
@@ -463,7 +463,7 @@ ideas = {
 			picture = ARG_economic_reactivation
 			
 			modifier = {
-				production_speed_arms_factory_factor = 0.1
+				production_speed_arms_factory_factor = 0.2
 				production_factory_max_efficiency_factor = 0.05
 			}
 

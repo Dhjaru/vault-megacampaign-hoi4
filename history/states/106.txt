@@ -2,6 +2,9 @@
 state={
 	id=106
 	name="STATE_106"
+	resources={
+		chromium=200
+	}
 
 	history={
 		owner = X14

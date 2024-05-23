@@ -29,9 +29,58 @@
 	}
 
 	focus = {
+		id = FRA_support_germany
+		icon = GFX_goal_GER_flag_germany_democratic
+		x = 3
+		y = 1
+		cost = 5
+		prerequisite = {focus = FRA_solidify_junta_control }
+				
+		completion_reward = {
+			GER = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 15000
+					producer = FRA
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 1000
+					producer = FRA
+				}
+				add_equipment_to_stockpile = {
+					type = radio_equipment
+					amount = 1000
+					producer = FRA
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = 1500
+					producer = FRA
+				}
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_1936
+					amount = 400
+					producer = FRA
+				}
+				add_equipment_to_stockpile = {
+					type = tac_bomber_equipment_1934
+					amount = 200
+					producer = FRA
+				}
+				give_resource_rights = { 
+					receiver = FRA
+					state = 268
+				}
+			}
+			
+		}
+	}
+
+	focus = {
 		id = FRA_start_rationing
 		icon = GFX_FRA_martial_law
-		x = 5
+		x = 6
 		y = 1
 		cost = 5
 		prerequisite = {focus = FRA_solidify_junta_control }
@@ -45,10 +94,10 @@
 	focus = {
 		id = FRA_invest_in_victory
 		icon = GFX_r56_goal_FRA_alliance_with_industrialists
-		prerequisite = { focus = FRA_start_rationing }
-		x = 3
+		prerequisite = { focus = FRA_paris_industrial_complex focus = FRA_burgundy_industrial_complex  focus = FRA_alsace_industrial_complex}
+		x = 0
 		y = 1
-		relative_position_id = FRA_start_rationing
+		relative_position_id = FRA_burgundy_industrial_complex
 		cost = 5
 
 		completion_reward = {
@@ -59,23 +108,23 @@
 				category = excavation_tech
 			}
 			swap_ideas = {	remove_idea = FRA_invest_in_victory_idea	add_idea = FRA_invest_in_victory_idea2	}
-			ITA = {
-			add_tech_bonus = {
-				name = FRA_invest_in_victory
-				bonus = 3.0
-				uses = 3 
-				category = excavation_tech
-			}
+			GER = {
+				add_tech_bonus = {
+					name = FRA_invest_in_victory
+					bonus = 3.0
+					uses = 3 
+					category = excavation_tech
+				}
 			}
 		}
 	}
 
 	focus = {
 		id = FRA_burgundy_arms_factory
-		icon = GFX_FRA_strengthen_industrial_economic_cooperation
+		icon = GFX_FRA_triple_defence_spending
 		dynamic = yes
 		prerequisite = { focus = FRA_invest_in_victory }
-		x = 2
+		x = 0
 		y = 1
 		relative_position_id = FRA_invest_in_victory
 		cost = 5
@@ -90,8 +139,8 @@
 					instant_build = yes
 				}
 			}
-			}
 		}
+	}
 
 	focus = {
 		id = FRA_alsace_arms_factory
@@ -117,10 +166,33 @@
 	}
 
 	focus = {
+		id = FRA_paris_arms_factory
+		icon = GFX_FRA_triple_defence_spending
+		dynamic = yes
+		prerequisite = { focus = FRA_alsace_arms_factory }
+		x = 0
+		y = 1
+		relative_position_id = FRA_alsace_arms_factory
+		cost = 5
+
+
+		completion_reward = {
+			212 = {
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = arms_factory
+					level = 6
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
 		id = FRA_coal_liquidization
 		icon = GFX_focus_rubber
 		prerequisite = { focus = FRA_invest_in_victory }
-		x = 0
+		x = 2
 		y = 1
 		relative_position_id = FRA_invest_in_victory
 		cost = 5
@@ -177,12 +249,26 @@
 	}
 
 	focus = {
-		id = FRA_paris_industrial_complex
-		icon = GFX_FRA_Strengthen_industrial_monopolies
+		id = FRA_devalue_the_franc
+		icon = GFX_FRA_devaluate_the_franc
 		prerequisite = { focus = FRA_start_rationing }
-		x = -1
+		x = 0
 		y = 1
 		relative_position_id = FRA_start_rationing
+		cost = 5
+
+		completion_reward = {
+			add_ideas = FRA_devalued_franc
+		}	
+	}
+
+	focus = {
+		id = FRA_paris_industrial_complex
+		icon = GFX_FRA_Strengthen_industrial_monopolies
+		prerequisite = { focus = FRA_devalue_the_franc }
+		x = -2
+		y = 1
+		relative_position_id = FRA_devalue_the_franc
 		cost = 5
 
 		completion_reward = {
@@ -208,19 +294,31 @@
 	}
 
 	focus = {
-		id = FRA_devalue_the_franc
-		icon = GFX_FRA_devaluate_the_franc
-		prerequisite = { focus = FRA_paris_industrial_complex }
-		x = 0
+		id = FRA_alsace_industrial_complex
+		icon = GFX_FRA_strengthen_industrial_economic_cooperation
+		prerequisite = { focus = FRA_devalue_the_franc }
+		x = 2
 		y = 1
-		relative_position_id = FRA_paris_industrial_complex
+		relative_position_id = FRA_devalue_the_franc
 		cost = 5
 
-		
-		available = { HOL = { has_capitulated = yes }  }
-		
 		completion_reward = {
-		}	
+			212 = {
+				add_extra_state_shared_building_slots = 8
+				add_building_construction = {
+					type = industrial_complex
+					level = 8
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = FRA_paris_industrial_complex
+				bonus = 1.0
+				uses = 1
+				category = concentrated_industry_category
+				category = dispersed_industry_category
+			}
+		}
 	}
 		
 	focus = {
@@ -241,14 +339,20 @@
 					instant_build = yes
 				}
 			}
+			add_tech_bonus = {
+				name = FRA_paris_industrial_complex
+				bonus = 1.0
+				uses = 1
+				category = construction_tech
+			}
 		}
 	}
 		
 	focus = {
 		id = FRA_toulouse_industrial_complex
 		icon = GFX_FRA_nationalization_of_arms_industries
-		prerequisite = { focus = FRA_burgundy_industrial_complex }
-		x = 1
+		prerequisite = { focus = FRA_paris_industrial_complex focus = FRA_burgundy_industrial_complex  focus = FRA_alsace_industrial_complex}
+		x = 2
 		y = 1
 		relative_position_id = FRA_burgundy_industrial_complex
 		cost = 5
@@ -266,6 +370,12 @@
 					level = 4
 					instant_build = yes
 				}
+			add_tech_bonus = {
+				name = FRA_air_innovation
+				uses = 1
+				bonus = 1
+				category = light_fighter
+			}
 			}
 		}
 	}
@@ -273,10 +383,11 @@
 	focus = {
 		id = FRA_pool_technical_know_how
 		icon = GFX_france_first
-		prerequisite = { focus = FRA_burgundy_industrial_complex }
-		x = -1
+		prerequisite = { focus = FRA_paris_industrial_complex focus = FRA_burgundy_industrial_complex  focus = FRA_alsace_industrial_complex}
+		x = -2
 		y = 1
 		relative_position_id = FRA_burgundy_industrial_complex
+		available = { HOL = { has_capitulated = yes }  }
 		cost = 5
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
@@ -311,7 +422,7 @@
 	focus = {
 		id = FRA_air_innovation
 		icon = GFX_FRA_six_national_aircraft_companies
-		x = 13
+		x = 11
 		y = 1
 		cost = 5
 		available_if_capitulated = yes
@@ -548,7 +659,7 @@
 
 		completion_reward = {
 			add_tech_bonus = { 
-				name = FRA_mechanization
+				name = FRA_gun_bonus
 				bonus = 0.75
 				uses = 2 
 				category = infantry_weapons
@@ -568,7 +679,7 @@
 
 		completion_reward = {
 			add_tech_bonus = { 
-				name = FRA_mechanization
+				name = FRA_arty_bonus
 				bonus = 0.75
 				uses = 2 
 				category = artillery
@@ -587,6 +698,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
+			army_experience = 75
 			add_ideas = FRA_special_forces_genius
 		}
 	}
@@ -623,7 +735,6 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			army_experience = 75
 			add_tech_bonus = {
 				name = mech_army_bonus
 				bonus = 1.0
@@ -689,6 +800,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = { 
+			army_experience = 50
 			add_ideas = FRA_mechanized_production
 		}
 	}
@@ -747,8 +859,8 @@
 			add_stability = 0.05
 			add_named_threat = { threat = 10 name = FRAmany.4.t }
 			annex_country = {
-			    target = SWI
-			    transfer_troops = yes
+				target = SWI
+				transfer_troops = yes
 			}
 			504 = { add_core_of = FRA }
 			news_event = { hours = 6 id = news.36 }
@@ -1024,8 +1136,8 @@
 	}
 	
 	focus = { 
-		id = FRA_weserubung2
-		icon = GFX_focus_generic_attack_norway
+		id = FRA_pressure_scandinavia
+		icon = GFX_focus_fin_push_towards_scandinavia
 		prerequisite = { focus = FRA_netherlands_gg }
 		
 		available = {
@@ -1039,62 +1151,53 @@
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-		custom_effect_tooltip = FRA_decision_focus_tt
-	hidden_effect = { 	
-	NOR = { transfer_state = 323 if =  { limit = { is_ai = no } complete_national_focus = NOR_fascist_invasion_of_norway }  }
-		declare_war_on = {
-				target = NOR
-				type = annex_everything
-			}	
-							ROOT_call_against_norway = yes 
+			custom_effect_tooltip = FRA_decision_focus_tt
+			hidden_effect = { 	
+				NOR = { transfer_state = 323 if =  { limit = { is_ai = no } complete_national_focus = NOR_fascist_invasion_of_norway }  }
+				declare_war_on = {
+					target = NOR
+					type = annex_everything
+				}	
+				ROOT_call_against_norway = yes 
 				if = { limit = { AND = { NOT = {EFR = { has_country_flag = EFR_torch_declared}} EFR = {owns_state = 26 }} } EFR = { add_to_war = { targeted_alliance = FRA enemy = NOR } every_owned_state = {  limit ={  NOT = { has_state_flag = keep_milled } }  set_demilitarized_zone = yes } 26 = { set_demilitarized_zone = no  } } }  
-
-	}	
-	
+			}
 		}
 	}
 	focus = {
-		id = FRA_pressure_sweden
-		icon = GFX_focus_FRA_pressure_sweden
-		prerequisite = { focus = FRA_weserubung2 }
-		relative_position_id = FRA_weserubung2
+		id = FRA_force_a_deal
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = FRA_pressure_scandinavia }
+		mutually_exclusive = { focus = FRA_lenient_trade_deal }
+		relative_position_id = FRA_pressure_scandinavia
 		x = 0
 		y = 1
 		cost = 5
 		available = {
-			FRA = { controls_state = 110 }
 		}
-		mutually_exclusive = { focus = FRA_trade_deal_with_sweden }
 		completion_reward = {
-			ENG = {
-				country_event = britain.193
-			}
-			FRA = {
-				country_event = britain.193
-			}
-			NOR = {
-				country_event = britain.193
-			}
-			SWE = {
-				give_resource_rights = { receiver = FRA state = 576 }
+			SCA = {
+				give_resource_rights = { 
+					receiver = FRA
+					state = 460
+					resources = { tungsten chromium }
+				}
 			}
 			add_political_power = 100
 		}
 	}
 	
 	focus = {
-		id = FRA_trade_deal_with_sweden
-		icon = GFX_goal_generic_befriend_sweden  
-		prerequisite = { focus = FRA_weserubung2 } 
+		id = FRA_lenient_trade_deal
+		icon = GFX_goal_generic_positive_trade_relations  
+		prerequisite = { focus = FRA_pressure_scandinavia } 
+		mutually_exclusive = { focus = FRA_force_a_deal }
 		x = 2
 		y = 1
-		relative_position_id = FRA_weserubung2
+		relative_position_id = FRA_pressure_scandinavia
 		cost = 5
 
 		available = {
-			FRA = { controls_state = 110 }
 		}
-		mutually_exclusive = { focus = FRA_pressure_sweden }
 		available_if_capitulated = no
 
 		completion_reward = {
@@ -1136,8 +1239,8 @@
 			add_political_power = -20
 			set_global_flag = end_of_czechoslovakia	
 			annex_country = {
-			    target = ITA
-			    transfer_troops = no
+				target = ITA
+				transfer_troops = no
 			}
 
 			add_war_support = 0.1
@@ -1179,7 +1282,7 @@
 	focus = {
 		id = FRA_naval_rearmament
 		icon = GFX_sca_focus_blue_navy
-		x = 18
+		x = 16
 		y = 1
 		cost = 1
 		prerequisite = {focus = FRA_solidify_junta_control }
@@ -1656,8 +1759,8 @@
 			}
 	}
 	focus = {
-		id = FRA_ot
-		icon = GFX_todt
+		id = FRA_total_war
+		icon = GFX_r56_goal_FRA_increase_military_spendings
 		prerequisite = { focus = FRA_netherlands_gg  }
 		x = 0
 		y = 1
@@ -1665,7 +1768,7 @@
 		cost = 5
 		completion_reward = {
 					add_tech_bonus = {
-				name = FRA_ot
+				name = FRA_total_war
 				bonus = 1.0
 				uses = 2
 				category = construction_tech
@@ -1694,856 +1797,85 @@
 		}
 	}
 		
-	focus = {
-		id = FRA_festungwesteneuropa
-		icon = GFX_FRA_festung_europa
-		prerequisite = { focus = FRA_netherlands_gg }
-		x = -1
-		y = 2
-		relative_position_id = FRA_netherlands_gg
-		cost = 1
-		 ai_will_do = {
-			factor = 1
-		}
-			
-		available_if_capitulated = yes
-
-		completion_reward = {
-	57 = {
-			add_building_construction = {
-				type = bunker
-				level = 3
-				province = 495
-				instant_build = yes
-			}		 
-			}
-				
-		if = { limit = { controls_province = 495 } }
-	50 = {
-			add_building_construction = {
-				type = bunker
-				level = 3
-				province = 9517
-				instant_build = yes
-			}		 
-			}
-				
-		if = { limit = { controls_province = 9517 } }
-	50 = {
-			add_building_construction = {
-				type = bunker
-				level = 3
-				province = 6568
-				instant_build = yes
-			}		 
-			}
-				
-		if = { limit = { controls_province = 6568 } }
-	50 = {
-			add_building_construction = {
-				type = bunker
-				level = 3
-				province = 6581
-				instant_build = yes
-			}		 
-			}
-				
-		if = { limit = { controls_province = 6581 } }
-	50 = {
-			add_building_construction = {
-				type = bunker
-				level = 3
-				province = 6555
-				instant_build = yes
-			}		 
-			}
-				
-		if = { limit = { controls_province = 6555 } }
-	59 = {
-			add_building_construction = {
-				type = bunker
-				level = 3
-				province = 3326
-				instant_build = yes
-			}		 
-			}
-				
-		if = { limit = { controls_province = 3326 } }
-	59 = {
-			add_building_construction = {
-				type = bunker
-				level = 3
-				province = 3271
-				instant_build = yes
-			}		 
-			}
-				
-		if = { limit = { controls_province = 3271 } }
-	59 = {
-			add_building_construction = {
-				type = bunker
-				level = 3
-				province = 3395
-				instant_build = yes
-			}		 
-			}
-				
-		if = { limit = { controls_province = 3395 } }
-	59 = {
-			add_building_construction = {
-				type = bunker
-				level = 3
-				province = 11493
-				instant_build = yes
-			}		 
-			}
-				
-		if = { limit = { controls_province = 11493 } }
-	59 = {
-			add_building_construction = {
-				type = bunker
-				level = 3
-				province = 6513
-				instant_build = yes
-			}		 
-			}
-				
-		if = { limit = { controls_province = 6513 } }
-	59 = {
-			add_building_construction = {
-				type = bunker
-				level = 3
-				province = 3561
-				instant_build = yes
-			}		 
-			}
-				
-		if = { limit = { controls_province = 3561 } }
-	59 = {
-			add_building_construction = {
-				type = bunker
-				level = 3
-				province = 3500
-				instant_build = yes
-			}		 
-			}
-				
-		if = { limit = { controls_province = 3500 } }
-	59 = {
-			add_building_construction = {
-				type = bunker
-				level = 3
-				province = 6377
-				instant_build = yes
-			}		 
-			}
-				
-		if = { limit = { controls_province = 6377 } }
-	59 = {
-			add_building_construction = {
-				type = bunker
-				level = 3
-				province = 6325
-				instant_build = yes
-			}		 
-			}
-				
-		if = { limit = { controls_province = 6325 } }
-	59 = {
-			add_building_construction = {
-				type = bunker
-				level = 3
-				province = 6323
-				instant_build = yes
-			}		 
-			}
-				
-		if = { limit = { controls_province = 6323 } }
-		
-		  }
-		}
-		
-	
-
-	focus = {
-		id = FRA_festungosteuropa
-		icon = GFX_FRA_festung_europa
-		prerequisite = { focus = FRA_netherlands_gg }
-		x = 1
-		y = 2
-		relative_position_id = FRA_netherlands_gg
-		cost = 1
-
-	   completion_reward = {
-		330 = {
-			add_building_construction = {
-				type = bunker
-				level = 3
-				province = 6332
-				instant_build = yes
-			}		 
-			}
-				
-		if = { limit = { controls_province = 6332 } }
-	330 = {
-			add_building_construction = {
-				type = bunker
-				level = 3
-				province = 11245
-				instant_build = yes
-			}		 
-			}
-			
-		if = { limit = { controls_province = 11245 } }
-	330 = {
-			add_building_construction = {
-				type = bunker
-				level = 3
-				province = 281
-				instant_build = yes
-			}		 
-			}
-				
-		if = { limit = { controls_province = 281 } }
-	330 = {
-			add_building_construction = {
-				type = bunker
-				level = 3
-				province = 395
-				instant_build = yes
-			}		 
-			}
-				
-		if = { limit = { controls_province = 395 } }	
-	330 = {
-			add_building_construction = {
-				type = bunker
-				level = 3
-				province = 348
-				instant_build = yes
-			}		 
-			}
-				
-		if = { limit = { controls_province = 348 } }
-	330 = {
-			add_building_construction = {
-				type = bunker
-				level = 3
-				province = 11265
-				instant_build = yes
-			}		 
-			}
-				
-		if = { limit = { controls_province = 11265 } }	
-		}
-	}
-		
 		
 	focus = {
-		id = FRA_apointalbertspeer
-		icon = GFX_FRA_ammunitions_miracle
+		id = FRA_miracle_maker
+		icon = GFX_FRA_avant_la_france
 		x = 0
-		y = 2
-		relative_position_id = FRA_ot
-		prerequisite = { focus = FRA_ot }
+		y = 1
+		relative_position_id = FRA_total_war
+		prerequisite = { focus = FRA_total_war }
 		available = { 			custom_trigFRA_tooltip = { tooltip = barb_failed date > 1941.11.22 } }
 		cost = 5
 
 		completion_reward = {
-			add_ideas = FRA_apointalbertspeer_idea
+			add_ideas = FRA_miracle_maker_idea
 		}
 	}
 	
-	
-
-	focus = {
-		id = FRA_fuelshortage
-		icon = GFX_FRA_oil 
-		prerequisite = { focus = FRA_apointalbertspeer}
-		x = -2
-		y = 1
-		relative_position_id = FRA_apointalbertspeer
-		cost = 5
-
-		available_if_capitulated = yes
-		
-		available = {
-		fuel_ratio < 0.3
-		}
-
-		completion_reward = {
-			add_timed_idea = { days = 180 idea = FRA_fuelshortage_idea }
-		}
-	}
 	focus = {
 		id = FRA_betterlogistics
-		icon = GFX_FRA_mans_driving_somewhere
-		prerequisite = { focus = FRA_apointalbertspeer}
-		x = 2
+		icon = GFX_winter_equipment
+		prerequisite = { focus = FRA_miracle_maker}
+		x = 1
 		y = 1
-		relative_position_id = FRA_apointalbertspeer
+		relative_position_id = FRA_miracle_maker
 		cost = 5
 
 		available_if_capitulated = yes
 
 		completion_reward = {
-				 add_timed_idea ={ idea = FRA_prepareforinevitable days = 40 }
-				hidden_effect = {
-				 ROM = {add_timed_idea={ idea = FRA_prepareforinevitable days = 40}}
-				 HUN = {add_timed_idea={ idea = FRA_prepareforinevitable days = 40}}
-				 BUL = {add_timed_idea={ idea = FRA_prepareforinevitable days = 40}}
-				 SPR = {add_timed_idea={ idea = FRA_prepareforinevitable days = 40}}
-				 }	
-	add_equipment_to_stockpile = { type = train_equipment_1 amount = 50 }
-	add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 400 }				 
+			add_timed_idea ={ idea = FRA_prepareforinevitable days = 40 }
+			hidden_effect = {
+				ROM = {add_timed_idea={ idea = FRA_prepareforinevitable days = 40}}
+				HUN = {add_timed_idea={ idea = FRA_prepareforinevitable days = 40}}
+				BUL = {add_timed_idea={ idea = FRA_prepareforinevitable days = 40}}
+				SPR = {add_timed_idea={ idea = FRA_prepareforinevitable days = 40}}
+			}	
+			add_equipment_to_stockpile = { type = train_equipment_1 amount = 50 }
+			add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 400 }				 
 		}
 	}
-
-
-	focus = { 
-		id = FRA_the_great_turn
-		icon = GFX_FRA_hitlers_meddling
-		prerequisite = { focus = FRA_apointalbertspeer  }
-		available = {
-		OR ={  
-			has_country_flag = blau_failed
-			NOT = { controls_state = 16 } 
-			NOT = { controls_state = 6 }
-			NOT = { controls_state = 7 }
-			surrender_progress > 0.2 
-			AND = { 
-			ROM = { surrender_progress > 0.2 }
-			country_exists = ROM
-			}
-			has_global_flag = ITA_cap 
-			}
-			has_war_with = SOV
-			controls_province = 6521
-		}
-		 
-		x = 0
-		y = 1
-		relative_position_id = FRA_apointalbertspeer 
-		cost = 1
-		
-	completion_reward = {
-	custom_effect_tooltip = endsieg_tt 
-	hidden_effect = { delete_unit_template_and_units = { division_template = "Endsieg Infanterie" } load_oob = "FRA_army2" }
-	if = { limit = {  has_idea = extensive_conscription }  add_ideas = service_by_requirement  }
-	add_timed_idea = {
-		idea = endsieg
-		days = 365
-	} 
-			if = { limit = { country_exists = HUN }    
-			HUN = { add_dynamic_modifier  = { modifier =  FRA_war_exhaustion } }
-		}
-		if = { limit = { country_exists = CZE }    
-			CZE = { add_dynamic_modifier  = { modifier =  FRA_war_exhaustion } }
-		}	
-	hidden_effect = {
-	7 = {
-		if = {
-			limit = { is_controlled_by = ROOT }
-			set_building_level = {
-				type = bunker
-				level = 4
-				province = 3211
-			}
-			set_building_level = {
-				type = bunker
-				level = 4
-				province = 391
-			}
-		}
-	}
-
-	36 = {
-		if = {
-			limit = { is_controlled_by = ROOT }
-			set_building_level = {
-				type = bunker
-				level = 4
-				province = 6241
-			}
-			set_building_level = {
-				type = bunker
-				level = 4
-				province = 9363
-			}
-		}
-	}
-	
-	51 = {
-		if = {
-			limit = { is_controlled_by = ROOT }
-			set_building_level = {
-				type = bunker
-				level = 4
-				province = 3512
-			}
-			set_building_level = {
-				type = bunker
-				level = 4
-				province = 6469
-			}
-			set_building_level = {
-				type = bunker
-				level = 4
-				province = 6570
-			}
-			set_building_level = {
-				type = bunker
-				level = 4
-				province = 529
-			}
-		}
-
-	}
-	55 = {
-		if = {
-			limit = { is_controlled_by = ROOT }
-			set_building_level = {
-				type = bunker
-				level = 4
-				province = 6444
-			}
-			set_building_level = {
-				type = bunker
-				level = 4
-				province = 6488
-			}
-			set_building_level = {
-				type = bunker
-				level = 4
-				province = 589
-			}
-		}
-
-	}
-	50 = {
-		if = {
-			limit = { is_controlled_by = ROOT }
-			set_building_level = {
-				type = bunker
-				level = 4
-				province = 6568
-			}
-			set_building_level = {
-				type = bunker
-				level = 4
-				province = 3530
-			}
-			set_building_level = {
-				type = bunker
-				level = 4
-				province = 6542
-			}
-			set_building_level = {
-				type = bunker
-				level = 4
-				province = 6712
-			}
-			set_building_level = {
-				type = bunker
-				level = 4
-				province = 11640
-			}
-		}
-
-	}
-	64 = {
-		if = {
-			limit = { is_controlled_by = ROOT }
-			set_building_level = {
-				type = bunker
-				level = 8
-				province = 6521
-			}
-			set_building_level = {
-				type = bunker
-				level = 6
-				province = 3499
-			}
-			set_building_level = {
-				type = bunker
-				level = 6
-				province = 9456
-			}
-			set_building_level = {
-				type = bunker
-				level = 6
-				province = 11444
-			}
-			set_building_level = {
-				type = bunker
-				level = 6
-				province = 11505
-			}
-			set_building_level = {
-				type = bunker
-				level = 6
-				province = 9428
-			}
-			set_building_level = {
-				type = bunker
-				level = 6
-				province = 478
-			}
-			set_building_level = {
-				type = bunker
-				level = 6
-				province = 11415
-			}
-			set_building_level = {
-				type = bunker
-				level = 4
-				province = 9496
-			}
-		}
-
-	}
-	65 = {
-		if = {
-			limit = { is_controlled_by = ROOT }
-			set_building_level = {
-				type = bunker
-				level = 4
-				province = 6441
-			}
-			set_building_level = {
-				type = bunker
-				level = 4
-				province = 514
-			}
-		}
-
-	}
-
-	63 = {
-		if = {
-			limit = { is_controlled_by = ROOT }
-			set_building_level = {
-				type = bunker
-				level = 4
-				province = 6282
-			}
-		}
-
-	}
-
-	62 = {
-		if = {
-			limit = { is_controlled_by = ROOT }
-			set_building_level = {
-				type = bunker
-				level = 4
-				province = 3207
-			}
-		}
-
-	}
-
-	68 = {
-		if = {
-			limit = { is_controlled_by = ROOT }
-			set_building_level = {
-				type = bunker
-				level = 4
-				province = 3572
-			}
-		}
-
-	}
-
-	66 = {
-		if = {
-			limit = { is_controlled_by = ROOT }
-			set_building_level = {
-				type = bunker
-				level = 4
-				province = 3438
-			}
-			set_building_level = {
-				type = bunker
-				level = 4
-				province = 6595
-			}
-			set_building_level = {
-				type = bunker
-				level = 4
-				province = 552
-			}
-			set_building_level = {
-				type = bunker
-				level = 4
-				province = 9570
-			}
-		}
-
-	}
-
-	67 = {
-		if = {
-			limit = { is_controlled_by = ROOT }
-			set_building_level = {
-				type = bunker
-				level = 4
-				province = 6512
-			}
-			set_building_level = {
-				type = bunker
-				level = 4
-				province = 9457
-			}
-		}
-
-	}
-	}
-	
-add_to_variable = { FRAmany_war_army_core_attack_factor = 0.3	} 
-add_to_variable = { FRAmany_war_army_core_defence_factor = 0.3	} 
-		}	
-	}
-	
-	
-	
-	
-	focus = {
-		id = FRA_festungdesdeutschenvaterland
-		icon = GFX_fortify 
-
-		prerequisite = { focus = FRA_the_great_turn }
-		x = 1
-		y = 1
-		relative_position_id = FRA_the_great_turn
-		cost = 1
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-		add_war_support = 0.05
-		add_manpower = 1000000
-		if = { limit = { controls_province = 3473 } }
-		  68 = {
-			add_building_construction = {
-				type = bunker
-				level = 3
-				province = 3473
-				instant_build = yes
-			}		 
-			}
-			
-			
-		if = { limit = { controls_province = 6282 } }
-		  63 = {
-			add_building_construction = {
-				type = bunker
-				level = 3
-				province = 6282
-				instant_build = yes
-			}		 
-			}
-			
-			
-		if = { limit = { controls_province = 9570 } }
-		  66 = {
-			add_building_construction = {
-				type = bunker
-				level = 3
-				province = 9570
-				instant_build = yes
-			}		 
-			}
-			
-				
-		if = { limit = { controls_province = 514 } }
-		  65 = {
-			add_building_construction = {
-				type = bunker
-				level = 3
-				province = 514
-				instant_build = yes
-			}		 
-			}
-			
-		if = { limit = { controls_province = 3535 } }
-		  65 = {
-			add_building_construction = {
-				type = bunker
-				level = 3
-				province = 3535
-				instant_build = yes
-			}		 
-			}
-			
-			
-		if = { limit = { controls_province = 11372 } }
-		  63 = {
-			add_building_construction = {
-				type = bunker
-				level = 3
-				province = 11372
-				instant_build = yes
-			}		 
-			}
-			
-			
-		if = { limit = { controls_province = 692 } }
-		  52 = {
-			add_building_construction = {
-				type = bunker
-				level = 3
-				province = 692
-				instant_build = yes
-			}		 
-			}
-			
-				
-		if = { limit = { controls_province = 9517 } }
-		  50 = {
-			add_building_construction = {
-				type = bunker
-				level = 3
-				province = 9517
-				instant_build = yes
-			}		 
-			}
-			
-			
-		if = { limit = { controls_province = 6488 } }
-		  55 = {
-			add_building_construction = {
-				type = bunker
-				level = 3
-				province = 6488
-				instant_build = yes
-			}		 
-			}
-			
-			
-		if = { limit = { controls_province = 587 } }
-		  51 = {
-			add_building_construction = {
-				type = bunker
-				level = 3
-				province = 587
-				instant_build = yes
-			}		 
-			}
-			
-			
-		if = { limit = { controls_province = 6469 } }
-		  51 = {
-			add_building_construction = {
-				type = bunker
-				level = 3
-				province = 6469
-				instant_build = yes
-			}		 
-			}
-			
-				
-		if = { limit = { controls_province = 495 } }
-		  57 = {
-			add_building_construction = {
-				type = bunker
-				level = 3
-				province = 495
-				instant_build = yes
-			}		 
-			}
-			
-			
-		if = { limit = { controls_province = 3326 } }
-		  59 = {
-			add_building_construction = {
-				type = bunker
-				level = 3
-				province = 3326
-				instant_build = yes
-			}		 
-			}
-			
-		if = { limit = { controls_province = 9347 } }
-		  58 = {
-			add_building_construction = {
-				type = bunker
-				level = 3
-				province = 9347
-				instant_build = yes
-			}		 
-			}
-			
-		if = { limit = { controls_province = 11542 } }
-		  9 = {
-			add_building_construction = {
-				type = bunker
-				level = 3
-				province = 11542
-				instant_build = yes
-			}		 
-			}
-			
-		
-			
-			
-			}
-		} 
 
 	focus = {
-		id = FRA_festungberlin
-		icon = GFX_battle_of_berlin_1
-		prerequisite = { focus = FRA_the_great_turn }
-		x = -1
-		y = 1
-		relative_position_id = FRA_the_great_turn
-		cost = 1
-		completion_reward = {		
-		64 = { add_dynamic_modifier = { modifier = FRA_defend_berlin } }	
-		}
-	}
-
-	
-	
-	focus = {
-		id = FRA_volkssturmm
+		id = FRA_expand_conscription
 		prerequisite = { focus = FRA_integrate_picardy_and_wallonia  }
 		available = { has_completed_focus = FRA_the_great_turn }
-		icon = GFX_FRA_volkssturmm
-		x = -1
-		y = 2
+		icon = GFX_goal_FRA_blum_violette
+		x = 0
+		y = 1
 		relative_position_id = FRA_integrate_picardy_and_wallonia
 		cost = 5
 				
-			completion_reward = {
-				unlock_decision_tooltip = FRA_volksturm
-			}
-			}
+		completion_reward = {
+			unlock_decision_tooltip = FRA_expand_conscription
+		}
+	}
 	
 	focus = {
 		id = FRA_reorganizecivilianindustries
-		icon = GFX_war_production 
-		prerequisite = { focus = FRA_volkssturmm }
-		x = 0
-		y = 2
-		relative_position_id = FRA_volkssturmm
+		icon = GFX_FRA_national_state_market_fund 
+		prerequisite = { focus = FRA_miracle_maker }
+		x = -1
+		y = 1
+		relative_position_id = FRA_miracle_maker
 		cost = 5	
 		completion_reward = {
 			add_offsite_building = {
-			type = arms_factory
-			level = 20
-				}	
-			}
+				type = arms_factory
+				level = 20
+			}	
 		}
+	}
 
 	
 	focus = {
 		id = FRA_atlantic_wall
 		icon = GFX_FRA_field_fortification_efforts
-		prerequisite = { focus = FRA_start_rationing }
-		x = 1
+		prerequisite = { focus = FRA_netherlands_gg }
+		x = 6
 		y = 1
-		relative_position_id = FRA_start_rationing
+		relative_position_id = FRA_netherlands_gg
 		cost = 5
 	
 		available = { HOL = { has_capitulated = yes }  }
@@ -2554,8 +1886,8 @@ add_to_variable = { FRAmany_war_army_core_defence_factor = 0.3	}
 	
 	
 	focus = {
-		id = FRA_ss_focus
-		icon = GFX_ss 
+		id = FRA_escouade_de_protection_focus
+		icon = GFX_FRA_VIC_francisque
 
 		relative_position_id = FRA_netherlands_gg
 		prerequisite = { focus = FRA_netherlands_gg }
@@ -2571,12 +1903,12 @@ add_to_variable = { FRAmany_war_army_core_defence_factor = 0.3	}
 	
 	
 	focus = {
-		id = FRA_appointottoskorzeny
-		icon = GFX_skorzeny_1 
-		prerequisite = { focus = FRA_ss_focus }
-		x = 1
-		y = 2
-		relative_position_id = FRA_ss_focus
+		id = FRA_appoint_giraud
+		icon = GFX_r56_goal_FRA_giraud 
+		prerequisite = { focus = FRA_escouade_de_protection_focus }
+		x = 0
+		y = 1
+		relative_position_id = FRA_escouade_de_protection_focus
 		cost = 5
 		available_if_capitulated = yes
 
@@ -2584,71 +1916,12 @@ add_to_variable = { FRAmany_war_army_core_defence_factor = 0.3	}
 			add_ideas = FRA_otto_skorzeny_reform
 			}
 		}
-	
-	
-	
-	focus = {
-		id = FRA_ardennesoffensive
-		icon = GFX_ardennes
-		prerequisite = { focus = FRA_appointottoskorzeny }
-		x = 0
-		y = 2
-		relative_position_id = FRA_appointottoskorzeny
-		cost = 5
-		 ai_will_do = {
-			factor = 1
-		}
-			
-		available_if_capitulated = yes
-
-		available = {
-			has_war_with = SOV
-		   NOT = {
-				OR = {
-					FRA = { controls_state = 16 }
-					any_other_country = {
-						is_in_faction_with = FRA
-						controls_state = 16
-					}
-				}		
-				OR = {
-					FRA = { controls_state = 14 }
-					any_other_country = {
-						is_in_faction_with = FRA
-						controls_state = 14
-					}
-				}	
-				OR = {
-					FRA = { controls_state = 15 }
-					any_other_country = {
-						is_in_faction_with = FRA
-						controls_state = 15
-					}
-				}	
-				OR = {
-					FRA = { controls_state = 30 }
-					any_other_country = {
-						is_in_faction_with = FRA
-						controls_state = 30
-					}
-				}
-		   }
-		}
- 
-		completion_reward = {
-	every_country = { 
-		limit = { is_in_faction_with = FRA tag = FRA }
-		add_timed_idea= { idea = FRA_ardennenoffensive days = 30 }
 	}
-			}
-		}
-
-	
 
 	focus = {
 		id = FRA_steinercounteroffensive
 		icon = GFX_steiner2 
-		prerequisite = { focus = FRA_ardennesoffensive focus = FRA_reorganizecivilianindustries focus = FRA_festungberlin focus = FRA_festungdesdeutschenvaterland }
+		prerequisite = { focus = FRA_reorganizecivilianindustries focus = FRA_festungberlin focus = FRA_festungdesdeutschenvaterland }
 		x = 1
 		y = 1
 		relative_position_id = FRA_festungberlin
@@ -2678,3 +1951,4 @@ add_to_variable = { FRAmany_war_army_core_defence_factor = 0.3	}
 	
 	}
 	
+		id = FRA_pressure_scandinavia

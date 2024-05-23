@@ -2,6 +2,11 @@
 state={
 	id=238
 	name="STATE_238"
+	resources={
+		aluminium=194.000
+		tungsten=120
+		chromium=90
+	}
 
 	history={
 		owner = FRA
