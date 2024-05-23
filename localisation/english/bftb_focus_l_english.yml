@@ -560,7 +560,7 @@
  TUR_the_german_turkish_friendship_treaty_desc:0 "[GER.GetNameDefCap] and [ROOT.GetNameDef] are natural friends. We do not have to see eye-to-eye on every issue, for our recent histories are not all too dissimilar. [ENG.GetAdjective] efforts to control our foreign policy will come to naught: we shall prove that with a new Treaty of Friendship, signed unilaterally between [GER.GetLeader] and [ROOT.GetLeader]."
  TUR_the_clodius_agreement:0 "The Clodius Agreement"
  TUR_the_clodius_agreement_desc:0 "The [GER.GetAdjective]s have approached us with a favorable deal: chromium ore in exchange for the means to produce more military equipment of our own. By becoming [GER.GetNameDef]'s primary source of chromium ore, we also become entitled to [GER.GetNameDef]'s protection which is quite an enviable position to be in nowadays."
- TUR_clodius_agreement_tt:1 "Every state that produces §Y65§! or more units of §YChromium§! will receive three levels of §YInfrastructure§! and two §YMilitary Factories§!."
+ TUR_clodius_agreement_tt:1 "Every state that produces §Y65§! or more units of §YRare Metals§! will receive three levels of §YInfrastructure§! and two §YMilitary Factories§!."
  TUR_purchase_italian_light_tanks:0 "Purchase Italian Light Tanks"
  TUR_purchase_italian_light_tanks_desc:0 "You cannot have a modern armed forces without strong, reliable armor supporting the backbone of the army. We simply must get our hands on some of our own, and is there any doubt that the greatest tanks produced in the world come out of [ITA.GetNameDef]?"
  TUR_approve_the_funkplan:0 "Approve the Funkplan"

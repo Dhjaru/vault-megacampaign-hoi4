@@ -68,6 +68,8 @@
 					amount = 200
 					producer = FRA
 				}
+			}
+			W75 = {
 				give_resource_rights = { 
 					receiver = FRA
 					state = 268
@@ -1179,7 +1181,7 @@
 				give_resource_rights = { 
 					receiver = FRA
 					state = 460
-					resources = { tungsten chromium }
+					resources = { chromium }
 				}
 			}
 			add_political_power = 100
