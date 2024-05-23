@@ -22,7 +22,7 @@ focus_tree = {
 		x = 4
 		y = 0
 
-		cost = 5
+		cost = 7.16
 
 		ai_will_do = {
 			factor = 1
@@ -56,7 +56,7 @@ focus_tree = {
 		prerequisite = { focus = PER_recover_from_the_five_year_plan }
 		relative_position_id = PER_recover_from_the_five_year_plan
 
-		cost = 5
+		cost = 7.16
 
 		ai_will_do = {
 			factor = 1
@@ -89,7 +89,7 @@ focus_tree = {
 		x = -2
 		y = 1
 
-		cost = 5
+		cost = 7.16
 		
 		ai_will_do = {
 			factor = 1
@@ -157,7 +157,7 @@ focus_tree = {
 		x = 2
 		y = 1
 
-		cost = 5
+		cost = 7.16
 		
 		ai_will_do = {
 			factor = 1
@@ -198,7 +198,7 @@ focus_tree = {
 		x = 2
 		y = 1
 
-		cost = 5
+		cost = 7.16
 		
 		ai_will_do = {
 			factor = 1
@@ -248,7 +248,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		cost = 5
+		cost = 7.16
 		
 		ai_will_do = {
 			factor = 1
@@ -292,7 +292,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		cost = 5
+		cost = 7.16
 		
 		ai_will_do = {
 			factor = 1
@@ -312,15 +312,11 @@ focus_tree = {
 		388 = {
 				add_resource = {
 					type = chromium
-					amount = 20
-				}
-				add_resource = {
-					type = steel
-					amount = 20
+					amount = 40
 				}
 				add_resource = {
 					type = aluminium
-					amount = 20
+					amount = 40
 				}
 			}
 		}
@@ -337,7 +333,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		cost = 5
+		cost = 7.16
 		
 		ai_will_do = {
 			factor = 1
@@ -397,7 +393,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		cost = 5
+		cost = 7.16
 		
 		ai_will_do = {
 			factor = 1
@@ -442,7 +438,7 @@ focus_tree = {
 		x = -2
 		y = 1
 
-		cost = 5
+		cost = 7.16
 		
 		ai_will_do = {
 			factor = 1
@@ -492,7 +488,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		cost = 5
+		cost = 7.16
 		
 		ai_will_do = {
 			factor = 1
@@ -542,7 +538,7 @@ focus_tree = {
 		x = 2
 		y = 1
 
-		cost = 5
+		cost = 7.16
 		
 		ai_will_do = {
 			factor = 1
@@ -658,7 +654,7 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		cost = 5
+		cost = 7.16
 		
 		ai_will_do = {
 			factor = 1
@@ -965,7 +961,7 @@ focus_tree = {
 		x = 5
 		y = 0
 
-		cost = 5
+		cost =5
 
 		ai_will_do = {
 			factor = 1
@@ -997,7 +993,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		cost = 5
+		cost =5
 
 		ai_will_do = {
 			factor = 1
@@ -1020,37 +1016,6 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = PER_the_war_of_national_survival
-		icon = GFX_goal_generic_improve_relations
-		
-		prerequisite = { focus = PER_lay_claim_to_former_baluchi_lands }
-		relative_position_id = PER_lay_claim_to_former_baluchi_lands
-		
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		x = 0
-		y = 1
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {			
-		}
-		
-		bypass = {
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		completion_reward = {
-		}
-	}
-	
-	focus = {
 		id = PER_revoke_our_iraqi_claims
 		icon = GFX_goal_generic_improve_relations
 		
@@ -1061,7 +1026,7 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		cost = 5
+		cost =5
 
 		ai_will_do = {
 			factor = 1
@@ -1071,6 +1036,7 @@ focus_tree = {
 		}
 		
 		bypass = {
+		has_war = yes
 		}
 
 		cancel_if_invalid = no
@@ -1085,6 +1051,39 @@ focus_tree = {
 		}
 	}
 	
+	
+	focus = {
+		id = PER_the_war_of_national_survival
+		icon = GFX_goal_generic_improve_relations
+		
+		relative_position_id = PER_cooperate_with_the_church
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 0
+		y = 4
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {	
+		has_war = yes
+		}
+		
+		bypass = {
+		has_war = yes
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	
 	focus = {
 		id = PER_cooperate_with_the_church
 		icon = GFX_goal_generic_improve_relations
@@ -1095,7 +1094,7 @@ focus_tree = {
 		x = 5
 		y = 0
 
-		cost = 5
+		cost =5
 
 		ai_will_do = {
 			factor = 1
@@ -1128,7 +1127,7 @@ focus_tree = {
 		x = -2
 		y = 1
 
-		cost = 5
+		cost =5
 		
 		ai_will_do = {
 			factor = 1
@@ -1163,7 +1162,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		cost = 5
+		cost =5
 		
 		ai_will_do = {
 			factor = 1
@@ -1199,7 +1198,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		cost = 5
+		cost =5
 		
 		ai_will_do = {
 			factor = 1
@@ -1230,7 +1229,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		cost = 5
+		cost =5
 		
 		ai_will_do = {
 			factor = 1
@@ -1262,7 +1261,7 @@ focus_tree = {
 		x = 2
 		y = 1
 
-		cost = 5
+		cost =5
 		
 		ai_will_do = {
 			factor = 1
@@ -1294,7 +1293,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		cost = 5
+		cost =5
 		
 		ai_will_do = {
 			factor = 1
@@ -1330,7 +1329,7 @@ focus_tree = {
 		x = 7
 		y = 0
 
-		cost = 5
+		cost =5
 
 		ai_will_do = {
 			factor = 1
@@ -1362,7 +1361,7 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		cost = 5
+		cost =5
 
 		ai_will_do = {
 			factor = 1
@@ -1388,7 +1387,7 @@ focus_tree = {
 	}	
 	
 	focus = {
-		id = PER_mass_motorization
+		id = PER_motorized_supplies
 		icon = GFX_goal_generic_army_motorized
 		
 		prerequisite = { focus = PER_copy_russian_gun_designs }
@@ -1398,7 +1397,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		cost = 5
+		cost =5
 
 		ai_will_do = {
 			factor = 1
@@ -1430,7 +1429,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		cost = 5
+		cost =5
 
 		ai_will_do = {
 			factor = 1
@@ -1466,7 +1465,7 @@ focus_tree = {
 		x = -2
 		y = 1
 
-		cost = 5
+		cost =5
 
 		ai_will_do = {
 			factor = 1
@@ -1497,7 +1496,7 @@ focus_tree = {
 		x = -2
 		y = 1
 
-		cost = 5
+		cost =5
 
 		ai_will_do = {
 			factor = 1

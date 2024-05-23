@@ -1,8 +1,8 @@
+###########################
+# Persia Events
+###########################
 
-add_namespace = per
 add_namespace = per_news
-
-}
 
 news_event = {
 	id = per_news.1
@@ -14,7 +14,6 @@ news_event = {
 	
 	trigger = {
 		tag = PER
-		date > 1936.1.1
 	}
 	
 	is_triggered_only = yes
