@@ -391,6 +391,7 @@ add_ideas = {
 	low_economic_mobilisation
 	collectivised_economy
 	PER_recovery_from_the_five_year_plan_start
+	PER_muslim_minorities
 }
 set_stability = 0.40
 set_war_support = 0.30

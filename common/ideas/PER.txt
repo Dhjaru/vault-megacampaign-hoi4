@@ -57,22 +57,6 @@ ideas = {
 			}
 		}
 		
-		PER_the_aryan_legion = {
-			removal_cost = -1
-			
-			allowed = {
-				always = no # Added via focus
-			}
-			allowed_civil_war = {
-				has_government = communism
-			}
-			
-			picture = tur_etatism_bonus
-			
-			modifier = {
-				conscription = 0.03
-			}
-		}
 		
 		PER_recovery_from_the_five_year_plan_3 = {
 			removal_cost = -1
@@ -164,7 +148,7 @@ ideas = {
 			}
 		}
 		
-		PER_increased_military_spending = {
+	PER_increased_military_spending = {
 			removal_cost = -1
 			
 			allowed = {
@@ -178,7 +162,6 @@ ideas = {
 			
 			modifier = {
 				research_speed_factor = 0.15
-
 			}
 		
 	}
@@ -186,7 +169,7 @@ ideas = {
 	PER_trucks_idea = {
 		
 			allowed = {
-				original_tag = FRA
+				always = no # Added via focus
 			}
 
 			removal_cost = -1
@@ -202,3 +185,57 @@ ideas = {
 				
 			}
 		}
+		
+	PER_muslim_minorities = {
+		
+			allowed = {
+				always = no # Added via focus
+			}
+
+			removal_cost = -1
+
+			picture = generic_purge
+
+			equipment_bonus = {
+			}
+			modifier = {
+			stability_factor = -0.10
+			}
+		}
+		
+	PER_divided_we_fall_together_we_stand_1 = {
+		
+			allowed = {
+				always = no # Added via focus
+			}
+
+			removal_cost = -1
+
+			picture = generic_reserve_divisions
+
+			equipment_bonus = {
+			}
+			modifier = {
+			stability_factor = 0.10
+			}
+		}	
+		
+	PER_divided_we_fall_together_we_stand_2 = {
+		
+			allowed = {
+				always = no # Added via focus
+			}
+
+			removal_cost = -1
+
+			picture = generic_reserve_divisions
+
+			equipment_bonus = {
+			}
+			modifier = {
+			stability_factor = 0.10
+			conscription = 0.03
+			}
+		}		
+		
+}

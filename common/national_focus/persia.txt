@@ -430,39 +430,6 @@ focus_tree = {
 			}
 	}
 	
-	focus = {
-		id = PER_isfahan_academy_of_science
-		icon = GFX_goal_research_silver
-		
-		prerequisite = { focus = PER_cooperate_with_the_ASNĀF_guilds }
-		relative_position_id = PER_cooperate_with_the_ASNĀF_guilds
-		
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		x = 0
-		y = 1
-
-		cost = 5
-		
-		ai_will_do = {
-			factor = 1
-		}
-		
-		available = {	
-			num_of_factories > 150
-		}
-		
-		bypass = {
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		completion_reward = {
-			add_research_slot = 1
-			}
-	}
-	
 	
 	focus = {
 		id = PER_economic_growth_in_fars
@@ -995,7 +962,7 @@ focus_tree = {
 		relative_position_id = PER_recover_from_the_five_year_plan
 		
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		x = 7
+		x = 5
 		y = 0
 
 		cost = 5
@@ -1053,6 +1020,37 @@ focus_tree = {
 	}
 	
 	focus = {
+		id = PER_the_war_of_national_survival
+		icon = GFX_goal_generic_improve_relations
+		
+		prerequisite = { focus = PER_lay_claim_to_former_baluchi_lands }
+		relative_position_id = PER_lay_claim_to_former_baluchi_lands
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {			
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
 		id = PER_revoke_our_iraqi_claims
 		icon = GFX_goal_generic_improve_relations
 		
@@ -1088,13 +1086,13 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = PER_cooperate_with_the_ASNĀF_guilds
+		id = PER_cooperate_with_the_church
 		icon = GFX_goal_generic_improve_relations
 		
 		relative_position_id = PER_state_of_our_lost_territories
 		
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		x = 4
+		x = 5
 		y = 0
 
 		cost = 5
@@ -1114,8 +1112,208 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-		production_speed_buildings_factor = 0.1
+		add_stability = 0.10
 		}
+	}
+	
+	focus = {
+		id = PER_cooperate_with_the_muslims
+		icon = GFX_goal_research_silver
+		
+		prerequisite = { focus = PER_cooperate_with_the_church }
+		relative_position_id = PER_cooperate_with_the_church
+		mutually_exclusive = { focus = PER_supress_the_muslims }
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		x = -2
+		y = 1
+
+		cost = 5
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = PER_muslim_minorities
+				add_idea = PER_divided_we_fall_together_we_stand_1
+		}
+			}
+	}
+	
+	focus = {
+		id = PER_muslim_integration
+		icon = GFX_goal_research_silver
+		
+		prerequisite = { focus = PER_cooperate_with_the_muslims }
+		relative_position_id = PER_cooperate_with_the_muslims
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		x = 0
+		y = 1
+
+		cost = 5
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = PER_divided_we_fall_together_we_stand_1
+				add_idea = PER_divided_we_fall_together_we_stand_2
+		}
+			}
+	}
+	
+	
+	focus = {
+		id = PER_supress_the_muslims
+		icon = GFX_goal_research_silver
+		
+		prerequisite = { focus = PER_cooperate_with_the_church }
+		relative_position_id = PER_cooperate_with_the_church
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		x = 0
+		y = 1
+
+		cost = 5
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+			}
+	}
+	
+	focus = {
+		id = PER_rekindling_of_the_flames
+		icon = GFX_goal_research_silver
+		
+		prerequisite = { focus = PER_supress_the_muslims }
+		relative_position_id = PER_supress_the_muslims
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		x = 0
+		y = 1
+
+		cost = 5
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+			}
+	}
+	
+	
+	focus = {
+		id = PER_increase_military_research_spending
+		icon = GFX_goal_research_silver
+		
+		prerequisite = { focus = PER_cooperate_with_the_church }
+		relative_position_id = PER_cooperate_with_the_church
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		x = 2
+		y = 1
+
+		cost = 5
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_ideas = PER_increased_military_spending
+			}
+	}
+	
+	focus = {
+		id = PER_isfahan_academy_of_science
+		icon = GFX_goal_research_silver
+		
+		prerequisite = { focus = PER_increase_military_research_spending }
+		relative_position_id = PER_increase_military_research_spending
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		x = 0
+		y = 1
+
+		cost = 5
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {	
+			num_of_factories > 150
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+			}
 	}
 	
 	
@@ -1126,7 +1324,7 @@ focus_tree = {
 		id = PER_modernize_our_armed_forces
 		icon = GFX_SOV_ppsh_hand_angry
 		
-		relative_position_id = PER_cooperate_with_the_ASNĀF_guilds
+		relative_position_id = PER_cooperate_with_the_church
 		
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		x = 7
@@ -1255,38 +1453,6 @@ focus_tree = {
 				category = mountaineers_tech
 			}
 		}
-	}
-	
-	focus = {
-		id = PER_increase_military_research_spending
-		icon = GFX_goal_research_silver
-		
-		prerequisite = { focus = PER_new_mountaineers }
-		relative_position_id = PER_new_mountaineers
-		
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		x = 0
-		y = 1
-
-		cost = 5
-		
-		ai_will_do = {
-			factor = 1
-		}
-		
-		available = {
-		}
-		
-		bypass = {
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		completion_reward = {
-		add_ideas = PER_increased_military_spending
-			}
 	}
 
 	focus = {
