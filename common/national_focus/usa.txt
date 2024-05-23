@@ -76,7 +76,7 @@ focus = {
 		prerequisite = { focus = USA_ask_for_capitalist_support  }
 		relative_position_id=USA_bourgeoisie
 		completion_reward = {
-			add_political_power = 100
+			add_political_power = 200
 		}
 	}
 
@@ -92,9 +92,8 @@ focus = {
 		prerequisite = { focus = USA_reorganization_act   }
 		relative_position_id=USA_reorganization_act
 		completion_reward = { 
-		swap_ideas = { remove_idea = new_deal add_idea = landon_new_deal }
 		add_ideas = monroe_doctrine
-		add_ideas = civilian_economy
+		add_ideas = isolation
 		add_country_leader_role = {
 			character = USA_walt_disney
 			promote_leader = yes
@@ -284,28 +283,11 @@ focus = {
 		y = 1
 		cost = 5
 		
-		available = {	GER = { has_war = yes }}
+		available = {	FRA = { has_war = yes }}
 		prerequisite = {  focus = USA_public_project }
 		relative_position_id= USA_public_project
 		completion_reward = {
-			if= { limit={ has_idea = monroe_doctrine2	}
-						swap_ideas = { remove_idea = monroe_doctrine2 add_idea =  monroe_doctrine3 }
-			else = {
-				if = {
-					limit = { has_idea = monroe_doctrine }
-						swap_ideas = {
-							remove_idea = monroe_doctrine
-							add_idea = monroe_doctrine2
-						}
-					}
-				else = {
-					swap_ideas = {
-						remove_idea = monroe_doctrine_limited
-						add_idea = monroe_doctrine_limited_2
-					}
-				}
-				}
-			}
+			add_ideas = low_economic_mobilisation
 			378 = {
 				add_extra_state_shared_building_slots = 6
 				add_building_construction = {
@@ -3010,20 +2992,7 @@ focus = {
 		cost = 5
 
 		available = {
-		AND = { 
-			if = {
-				limit = {
-					threat < 0.5 
-				}
-				congress_high_support_trigger = yes
-			}
-			else = {
-				congress_low_support_trigger = yes
-			}
-			}
 		OR = {  date > 1939.1.1 
-		NOT = { USA = { has_completed_focus = USA_neutrality_act }}
-		
 			}
 		}
 

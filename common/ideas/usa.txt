@@ -8,16 +8,13 @@ ideas = {
             }
 
             modifier = {
-                industrial_capacity_factory = -0.70
-                industrial_capacity_dockyard = -0.50
-                production_speed_infrastructure_factor = -0.5
                 production_speed_industrial_complex_factor = -0.7
                 production_speed_arms_factory_factor = -0.5
                 production_speed_arms_factory_factor = -0.5
-                production_factory_max_efficiency_factor = -0.1
                 local_resources_factor = -0.5
-                stability_factor = -0.7
+                stability_factor = -0.65
                 political_power_gain = -0.5
+                
             }
          }
 
@@ -29,15 +26,12 @@ ideas = {
             }
 
             modifier = {
-                industrial_capacity_factory = -0.70
-                industrial_capacity_dockyard = -0.50
                 production_speed_infrastructure_factor = 0.5
                 production_speed_industrial_complex_factor = -0.7
                 production_speed_arms_factory_factor = -0.5
                 production_speed_arms_factory_factor = -0.5
-                production_factory_max_efficiency_factor = -0.1
                 local_resources_factor = -0.5
-                stability_factor = -0.7
+                stability_factor = -0.60
                 political_power_gain = -0.5
             }
          }
@@ -49,17 +43,26 @@ ideas = {
             }
 
             modifier = {
-                industrial_capacity_factory = -0.70
-                industrial_capacity_dockyard = -0.50
                 production_speed_infrastructure_factor = 0.5
                 production_speed_industrial_complex_factor = 0.3
                 production_speed_arms_factory_factor = -0.5
                 production_speed_arms_factory_factor = -0.5
-                production_factory_max_efficiency_factor = -0.1
-                local_resources_factor = -0.5
-                stability_factor = -0.7
+                local_resources_factor = -0.4
+                stability_factor = -0.55
                 political_power_gain = -0.5
             }
+         }
+         USA_maritime_build_up = {
+            removal_cost = -1
+
+            allowed = {
+                always = no
+            }
+
+            modifier ={
+                production_speed_dockyard_factor = 0.4
+            }
+
          }
     }    
 }
