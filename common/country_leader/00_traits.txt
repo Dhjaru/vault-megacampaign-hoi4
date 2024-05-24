@@ -2666,7 +2666,8 @@ leader_traits = {
 
 	rearmer = {
 		random = no
-		industrial_capacity_factory = 0.05
+		industrial_capacity_factory = 0.1
+		war_support_factor = 0.10
 		
 		ai_will_do = {
 			factor = 1

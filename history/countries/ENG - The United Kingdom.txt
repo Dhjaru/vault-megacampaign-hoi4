@@ -254,9 +254,9 @@ set_politics = {
 
 set_popularities = {
 	communism = 2
-	democratic = 77
+	democratic = 57
 	fascism = 7
-	neutrality = 14
+	neutrality = 34
 }
 
 # DIPLOMACY
@@ -309,24 +309,167 @@ add_to_faction = ARG
 
 add_ideas = {
 	great_power
-	SAF_history_of_segregation
 	volunteer_only
 	civilian_economy
 	export_focus
 	culture_english
 }
-set_stability = 0.60
-set_war_support = 0.41
+set_stability = 0.5
+set_war_support = 0.0
 
-recruit_character = ENG_herbert_kitchener
-recruit_character = ENG_benjamin_thesiger
-recruit_character = ENG_richard_grant
-recruit_character = ENG_colbert_ragland
-recruit_character = ENG_augustus_smith
-recruit_character = ENG_winston_hardinge
-recruit_character = ENG_alfred_campbell
-recruit_character = ENG_edmund_fisher
-recruit_character = ENG_alexander_buller
+recruit_character = ENG_ramsay_macdonald
+recruit_character = ENG_philip_snowden
+recruit_character = ENG_ellen_wilkinson
+recruit_character = ENG_winston_churchill
+recruit_character = ENG_oswald_mosley
+recruit_character = ENG_harry_pollitt
+recruit_character = ENG_clement_attlee
+recruit_character = ENG_alan_brooke
+recruit_character = ENG_claude_auchinleck
+recruit_character = ENG_neil_ritchie
+recruit_character = ENG_alan_cunningham
+recruit_character = ENG_william_slim
+recruit_character = ENG_richard_oconnor
+recruit_character = ENG_william_platt
+recruit_character = ENG_george_giffard
+recruit_character = ENG_harold_alexander
+recruit_character = ENG_jackie_smyth
+recruit_character = ENG_thomas_jacomb_hutton
+recruit_character = ENG_arthur_percival
+recruit_character = ENG_merton_beckwithsmith
+recruit_character = ENG_henry_pownall
+recruit_character = ENG_john_vereker_lord_gort
+recruit_character = ENG_henry_wilson
+recruit_character = ENG_william_gott
+recruit_character = ENG_jock_campbell
+recruit_character = ENG_oliver_leese
+recruit_character = ENG_miles_dempsey
+recruit_character = ENG_brian_horrocks
+recruit_character = ENG_archibald_wavell
+recruit_character = ENG_john_dill
+recruit_character = ENG_kenneth_anderson
+recruit_character = ENG_edmond_schreiber
+recruit_character = ENG_herbert_lumsden
+recruit_character = ENG_richard_mccreery
+recruit_character = ENG_john_crocker
+recruit_character = ENG_bernard_paget
+recruit_character = ENG_ronald_scobie
+recruit_character = ENG_frederick_browning
+recruit_character = ENG_edmund_ironside
+recruit_character = ENG_james_fownes_somerville
+recruit_character = ENG_henry_harwood
+recruit_character = ENG_andrew_cunningham
+recruit_character = ENG_bruce_fraser
+recruit_character = ENG_john_tovey
+recruit_character = ENG_bernard_rawlings
+recruit_character = ENG_john_cunningham
+recruit_character = ENG_charles_forbes
+recruit_character = ENG_algernon_willis
+recruit_character = ENG_arthur_power
+recruit_character = ENG_max_horton
+recruit_character = ENG_tom_phillips
+recruit_character = ENG_percy_noble
+recruit_character = ENG_arthur_palliser
+recruit_character = ENG_dudley_pound
+recruit_character = ENG_sholto_douglas
+recruit_character = ENG_trafford_leigh_mallory
+recruit_character = ENG_frederick_bowhill
+recruit_character = ENG_louis_mountbatten
+recruit_character = ENG_david_stirling
+recruit_character = ENG_ernle_chatfield
+recruit_character = ENG_cyril_newall
+recruit_character = ENG_charles_portal
+recruit_character = ENG_edward_ellington
+recruit_character = ENG_stewart_menzies
+recruit_character = ENG_lord_halifax
+recruit_character = ENG_sir_john_simon
+recruit_character = ENG_duff_cooper
+recruit_character = ENG_sir_samuel_hoare
+recruit_character = ENG_anthony_eden
+recruit_character = ENG_william_ormsby_gore
+recruit_character = ENG_oliver_stanley
+recruit_character = ENG_lord_beaverbrook
+recruit_character = ENG_ernest_brown
+recruit_character = ENG_ernest_bevin
+#recruit_character = ENG_Viscount_Swinton
+recruit_character = ENG_Philip_Sassoon
+recruit_character = ENG_Leslie_Hore
+recruit_character = ENG_Frederick_Leathers
+recruit_character = ENG_percy_hobart
+
+add_dynamic_modifier = {
+	modifier = ENG_royal_navy_dynamic
+}
+add_dynamic_modifier = {
+	modifier = ENG_british_army_dynamic
+}
+add_dynamic_modifier = {
+	modifier = ENG_hung_parliament
+}
+add_dynamic_modifier = {
+	modifier = ENG_the_economic_problem
+}
+###HUNG PARLIAMENT
+set_variable = { ENG_political_power_factor_var = 0.0 }
+set_variable = { ENG_political_power_cost_var = 0.2 }
+
+set_variable = { ENG_stability_factor_var = -0.1 }
+set_variable = { ENG_war_support_factor_var = -0.15 }
+
+set_variable = { ENG_political_advisor_cost_factor_var = 0.33 }
+
+###THE ECONOMIC PROBLEM
+set_variable = { ENG_local_resources_factor_var = -0.3 }
+set_variable = { ENG_consumer_goods_factor_var = 0.1 }
+
+set_variable = { ENG_industrial_capacity_factory_var = 0 }
+set_variable = { ENG_industrial_capacity_dockyard_var = 0}
+
+set_variable = { ENG_production_speed_industrial_complex_factor_var = 0.1 }
+set_variable = { ENG_production_speed_arms_factory_factor_var = -0.3 }
+set_variable = { ENG_production_speed_dockyard_factor_var = -0.3 }
+set_variable = { ENG_production_speed_infrastructure_factor_var = 0.1 }
+set_variable = { ENG_production_speed_rail_way_factor_var = 0.0 }
+
+set_variable = { ENG_conversion_cost_mil_to_civ_factor_var = 0 }
+set_variable = { ENG_conversion_cost_civ_to_mil_factor_var = 0 }
+set_variable = { ENG_global_building_slots_factor_var = 0 }
+set_variable = { ENG_production_factory_efficiency_gain_factor_var = 0 }
+set_variable = { ENG_line_change_production_efficiency_factor_var = 0 }
+
+set_variable = { ENG_production_factory_max_efficiency_factor_var = 0 }
+set_variable = { ENG_research_speed_factor_var = 0 }
+set_variable = { ENG_production_factory_start_efficiency_factor_var = 0 }
+set_variable = { ENG_production_speed_buildings_factor_var = 0 }
+set_variable = { ENG_production_speed_synthetic_refinery_factor_var = 3 }
+set_variable = { ENG_production_speed_synthetic_rubber_refinery_factor_var = 3 }
+
+###ROYAL NAVY DYNAMIC
+set_variable = { ENG_production_speed_dockyard_factor2_var = 0 }
+set_variable = { ENG_production_factory_start_efficiency_factor_var = 0 }
+set_variable = { ENG_experience_gain_army_factor_var = 0 }
+set_variable = { ENG_production_speed_buildings_factor_var = 0 }
+set_variable = { ENG_production_speed_infrastructure_factor_var = 0 }
+set_variable = { ENG_refit_ic_cost_var = 0 }
+set_variable = { ENG_refit_speed_var = 0 }
+set_variable = { ENG_repair_speed_factor_var = 0 }
+set_variable = { ENG_experience_gain_destroyer_combat_factor_var = 0 }
+set_variable = { ENG_experience_gain_destroyer_training_factor_var = 0 }
+set_variable = { ENG_experience_gain_navy_factor_var = 0 }
+
+#########ARMY DYNAMIC 
+set_variable = { ENG_army_armor_attack_factor_var = 0 }
+set_variable = { ENG_army_armor_defence_factor_var = 0 }
+set_variable = { ENG_air_mission_xp_gain_factor_var = 0 }
+set_variable = { ENG_air_training_xp_gain_factor_var = 0 }
+set_variable = { ENG_amphibious_invasion_defence_var = 0 }
+set_variable = { ENG_special_forces_training_time_factor_var = 0 }
+set_variable = { ENG_training_time_army_factor_var = 0 }
+set_variable = { ENG_conscription_var = 0 }
+set_variable = { ENG_experience_gain_air_var = 0 }
+set_variable = { ENG_experience_gain_air_factor_var = 0 }
+set_variable = { ENG_decryption_power_var = 0 }
+set_variable = { ENG_crypto_strength_var = 0 }
 
 if = {
 	limit = {

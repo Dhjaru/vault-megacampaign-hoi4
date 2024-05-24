@@ -1,7 +1,5 @@
 ﻿l_english:
 SOV_barb_front:0 "Eastern Front"
-modifier_production_cost_synthetic_refinery_factor:0 "Synthetic Refinery Production Cost"
-modifier_production_cost_synthetic_rubber_refinery_factor:0 "Synthetic Rubber Refinery Production Cost"
 design_department:0 "Design Department"
 STAT_NAVY_WEATHER_PENALTY: "Weather Penalty: "
  STAT_NAVY_WEATHER_PENALTY_VALUE: "$VALUE|H0%$"

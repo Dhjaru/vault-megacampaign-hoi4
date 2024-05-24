@@ -37,18 +37,12 @@ ENG_royal_navy_dynamic = {
     icon = GFX_idea_ENG_royal_navy_dynamic
 
     experience_gain_navy_factor = ENG_experience_gain_navy_factor_var
-    production_cost_max_ship_hull_cruiser = ENG_production_cost_max_ship_hull_cruiser_var
-    production_cost_max_ship_hull_heavy = ENG_production_cost_max_ship_hull_heavy_var
-    production_cost_max_ship_hull_carrier = ENG_production_cost_max_ship_hull_carrier_var
     production_speed_dockyard_factor = ENG_production_speed_dockyard_factor2_var
     experience_gain_destroyer_combat_factor = ENG_experience_gain_destroyer_combat_factor_var
     experience_gain_destroyer_training_factor = ENG_experience_gain_destroyer_training_factor_var
     refit_ic_cost = ENG_refit_ic_cost_var
     refit_speed = ENG_refit_speed_var
     repair_speed_factor = ENG_repair_speed_factor_var
-    custom_modifier_tooltip = ENG_submarine_modifier_tt
-    custom_modifier_tooltip = ENG_cruiser_modifier_tt
-    custom_modifier_tooltip = ENG_destroyer_modifier_tt
 }
 ENG_british_army_dynamic = {
     enable = { always = yes }
@@ -72,4 +66,71 @@ ENG_british_army_dynamic = {
     custom_modifier_tooltip = ENG_tank_production_tt
     custom_modifier_tooltip = ENG_infantry_production_tt
     custom_modifier_tooltip = ENG_arty_production_tt
+}
+ENG_hung_parliament = {
+    name="Hung Parliament"
+    enable = { always = yes }
+
+    icon = GFX_generic_disjointed_gov
+
+    political_power_factor = ENG_political_power_factor_var
+    political_power_cost = ENG_political_power_cost_var
+    stability_factor = ENG_stability_factor_var
+    war_support_factor = ENG_war_support_factor_var
+    political_advisor_cost_factor = ENG_political_advisor_cost_factor_var
+}
+ENG_the_economic_problem = {
+    name="The Economic Problem"
+    enable = { always = yes }
+
+    icon = GFX_idea_EST_exploit_the_banks
+
+    industrial_capacity_factory = ENG_industrial_capacity_factory_var
+    industrial_capacity_dockyard = ENG_industrial_capacity_dockyard_var
+    production_factory_efficiency_gain_factor = ENG_production_factory_efficiency_gain_factor_var
+    line_change_production_efficiency_factor = ENG_line_change_production_efficiency_factor_var
+    production_speed_arms_factory_factor = ENG_production_speed_arms_factory_factor_var
+    production_speed_industrial_complex_factor = ENG_production_speed_industrial_complex_factor_var
+    production_speed_dockyard_factor = ENG_production_speed_dockyard_factor_var
+    conversion_cost_mil_to_civ_factor = ENG_conversion_cost_mil_to_civ_factor_var
+    conversion_cost_civ_to_mil_factor = ENG_conversion_cost_civ_to_mil_factor_var
+    production_factory_max_efficiency_factor = ENG_production_factory_max_efficiency_factor_var
+    local_resources_factor = ENG_local_resources_factor_var
+    consumer_goods_expected_value = ENG_consumer_goods_factor_var
+    production_factory_start_efficiency_factor = ENG_production_factory_start_efficiency_factor_var
+    global_building_slots_factor = ENG_global_building_slots_factor_var
+    production_speed_buildings_factor = ENG_production_speed_buildings_factor_var
+    production_speed_infrastructure_factor = ENG_production_speed_infrastructure_factor_var
+    production_speed_rail_way_factor = ENG_production_speed_rail_way_factor_var
+    production_cost_synthetic_refinery_factor = ENG_production_speed_synthetic_refinery_factor_var
+    production_cost_synthetic_rubber_refinery_factor = ENG_production_speed_synthetic_rubber_refinery_factor_var
+    research_speed_factor = ENG_research_speed_factor_var
+}
+
+ENG_new_british_economy = {
+    name="The New British Economy"
+    enable = { always = yes }
+
+    icon = GFX_idea_EST_exploit_the_banks
+
+    industrial_capacity_factory = ENG_industrial_capacity_factory_var
+    industrial_capacity_dockyard = ENG_industrial_capacity_dockyard_var
+    production_factory_efficiency_gain_factor = ENG_production_factory_efficiency_gain_factor_var
+    line_change_production_efficiency_factor = ENG_line_change_production_efficiency_factor_var
+    production_speed_arms_factory_factor = ENG_production_speed_arms_factory_factor_var
+    production_speed_industrial_complex_factor = ENG_production_speed_industrial_complex_factor_var
+    production_speed_dockyard_factor = ENG_production_speed_dockyard_factor_var
+    conversion_cost_mil_to_civ_factor = ENG_conversion_cost_mil_to_civ_factor_var
+    conversion_cost_civ_to_mil_factor = ENG_conversion_cost_civ_to_mil_factor_var
+    production_factory_max_efficiency_factor = ENG_production_factory_max_efficiency_factor_var
+    local_resources_factor = ENG_local_resources_factor_var
+    consumer_goods_expected_value = ENG_consumer_goods_factor_var
+    production_factory_start_efficiency_factor = ENG_production_factory_start_efficiency_factor_var
+    global_building_slots_factor = ENG_global_building_slots_factor_var
+    production_speed_buildings_factor = ENG_production_speed_buildings_factor_var
+    production_speed_infrastructure_factor = ENG_production_speed_infrastructure_factor_var
+    production_speed_rail_way_factor = ENG_production_speed_rail_way_factor_var
+    production_cost_synthetic_refinery_factor = ENG_production_speed_synthetic_refinery_factor_var
+    production_cost_synthetic_rubber_refinery_factor = ENG_production_speed_synthetic_rubber_refinery_factor_var
+    research_speed_factor = ENG_research_speed_factor_var
 }
