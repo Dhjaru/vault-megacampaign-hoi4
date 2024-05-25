@@ -1949,6 +1949,7 @@ characters={
 			}
 			
 			traits = { war_industrialist }
+		}
 	}
 
 	ENG_leslie_hore_belisha = {
