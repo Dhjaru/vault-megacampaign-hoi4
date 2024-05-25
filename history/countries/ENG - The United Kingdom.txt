@@ -1,7 +1,6 @@
 ﻿capital = 127
 set_major = yes
 set_research_slots = 5
-add_named_threat = { threat = 2.8806 name = infamy }
 
 oob = "ENG_OOB"
 if = {
@@ -381,7 +380,7 @@ recruit_character = ENG_cyril_newall
 recruit_character = ENG_charles_portal
 recruit_character = ENG_edward_ellington
 recruit_character = ENG_stewart_menzies
-recruit_character = ENG_lord_halifax
+recruit_character = ENG_herbert_samuel
 recruit_character = ENG_sir_john_simon
 recruit_character = ENG_duff_cooper
 recruit_character = ENG_sir_samuel_hoare
@@ -396,6 +395,9 @@ recruit_character = ENG_Philip_Sassoon
 recruit_character = ENG_Leslie_Hore
 recruit_character = ENG_Frederick_Leathers
 recruit_character = ENG_percy_hobart
+recruit_character = ENG_maxwell_aitken
+recruit_character = ENG_leslie_hore_belisha
+recruit_character = ENG_frederick_marquis
 
 add_dynamic_modifier = {
 	modifier = ENG_royal_navy_dynamic

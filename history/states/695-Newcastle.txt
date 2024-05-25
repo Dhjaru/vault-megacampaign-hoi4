@@ -9,7 +9,7 @@ state={
 			9379 7 
 		}
 		buildings = {
-			infrastructure = 4
+			infrastructure = 7
 			dockyard = 3
 		}
 		owner = ENG

@@ -13,6 +13,8 @@
  ENG_making_some_new_changes_tt:0 "Modify §YHung Parliament§! by\n£war_support_modifiericons_texticon War Support: §G+10%§!\n£political_advisor_cost_texticon Political Advisors Cost: §G-33%§!" 
  ENG_expand_re-armament_tt:0 "Modify §YThe Economic Problem§! by\n£construction_speed_milfactory_texticon §YMilitary Factory§! construction speed: §G+20%§!" 
  ENG_expand_re-armament_tt2:0 "Modify §YThe New British Economy§! by\n£construction_speed_milfactory_texticon §YMilitary Factory§! construction speed: §G+20%§!" 
+ shadow_scheme_focus_tt:0 "Modify §YThe Economic Problem§! by\n£construction_speed_milfactory_texticon §YMilitary Factory§! construction speed: §G+5%§!" 
+ shadow_scheme_focus_tt2:0 "Modify §YThe New British Economy§! by\n£construction_speed_milfactory_texticon §YMilitary Factory§! construction speed: §G+5%§!" 
  ENG_help_railways_tt:0 "Modify §YThe Economic Problem§! by\n£construction_speed_infrastructure_texticon §Y$infrastructure$§! construction speed: §G+15%§!\n£construction_speed_railway_texticon §Y$rail_way$§! construction speed: §G+15%§!" 
  ENG_a_healthy_economy_tt:0 "Renames §YThe Economic Problem§! to §YThe New British Economy§! and Modifies it by\n£construction_speed_texticon Construction Speed: §G+10%§!\n£consumer_goods_texticon Consumer Goods Factories: §Y-10%§!" 
  ENG_medicine_of_free_trade_tt:0 "Modify §YThe Economic Problem§! by\n£consumer_goods_texticon Consumer Goods Factories: §Y-10%§!" 
@@ -21,3 +23,4 @@
  ENG_18_tt:0 "Modify §YThe Economic Problem§! by\n£construction_speed_civfactory_texticon §YCivilian Factory§! construction speed: §G+10%§!" 
  ENG_wartime_rationing_tt:0 "Modify §YThe Economic Problem§! by\n£consumer_goods_texticon Consumer Goods Factories: §Y-10%§!" 
  ENG_wartime_rationing_tt2:0 "Modify §YThe New British Economy§! by\n£consumer_goods_texticon Consumer Goods Factories: §Y-10%§!" 
+ ENG_national_unity_government_tt:0 "Modify §YThe New British Economy§! by\n£civ_factory  Max Factories in a State: §G+50%§!\n£prod_eff_cap Production Efficiency Cap: §G+5%§!\n£factory_output_texticon Factory Output: §G+10%§!\n£construction_speed_milfactory_texticon Set §YMilitary Factory§! construction speed to: §Y0%§!\n£construction_speed_civfactory_texticon Set §YCivilian Factory§! construction speed to: §Y0%§!\n£construction_speed_dockyard_texticon Set §YDockyard§! construction speed to: §Y0%§!" 

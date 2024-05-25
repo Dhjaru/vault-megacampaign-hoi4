@@ -1933,6 +1933,75 @@ characters={
 			traits = { quartermaster_general }
 		}
 	}
+	ENG_maxwell_aitken = {
+		name="Maxwell Aitken"
+		portraits={
+			civilian = {
+				small="generic_political_advisor_europe_1"
+			}
+		}
+			
+		advisor={
+			slot = theorist_production
+			picture = generic_political_advisor_europe_1
+			idea_token = maxwell_aitken
+			ledger = civilian
+			
+			allowed = {
+				original_tag = ENG
+			}
+			
+			traits = { war_industrialist }
+	}
+
+	ENG_leslie_hore_belisha = {
+		name="Leslie Hore Belisha"
+		portraits={
+			civilian = {
+				small="generic_political_advisor_europe_2"
+			}
+		}
+			
+		advisor={
+			slot = theorist_production
+			picture = generic_political_advisor_europe_2
+			idea_token = leslie_hore_belisha
+			ledger = civilian
+			
+			allowed = {
+				original_tag = ENG
+			}
+			
+			traits = { armaments_organizer }
+
+			ai_will_do = {
+				factor = 16
+			}
+		}
+	}
+
+		
+	ENG_frederick_marquis = {
+		name="Frederick Marquis"
+		portraits={
+			civilian = {
+				small="generic_political_advisor_europe_4"
+			}
+		}
+		
+		advisor={
+			slot = theorist_production
+			picture = generic_political_advisor_europe_4
+			idea_token = frederick_marquis
+			ledger = civilian
+			
+			allowed = {
+				original_tag = ENG
+			}
+			
+			traits = { captain_of_industry }
+		}
+	}
 
 		
 }

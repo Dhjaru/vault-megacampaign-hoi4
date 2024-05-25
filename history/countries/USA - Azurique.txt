@@ -1,7 +1,6 @@
 ﻿capital = 549
 set_major = yes
 set_research_slots = 6
-add_named_threat = { threat = 2.5235 name = infamy }
 
 oob = "USA_OOB"
 if = {

@@ -4896,44 +4896,7 @@ ideas = {
 		}
 	}
 	theorist_production = {
-		ENG_maxwell_aitken = {
-			
-			picture = generic_political_advisor_europe_1
-			
-			allowed = {
-				original_tag = ENG
-			}
-			
-			traits = { war_industrialist }
-		}
-
-		ENG_leslie_hore_belisha = {
-			
-			picture = generic_political_advisor_europe_2
-			
-			allowed = {
-				original_tag = ENG
-			}
-			
-			traits = { armaments_organizer }
-
-			ai_will_do = {
-				factor = 16
-			}
-		}
-
-		
-		ENG_frederick_marquis = {
-		
-			picture = generic_political_advisor_europe_4
-			
-			allowed = {
-				original_tag = ENG
-			}
-			
-			traits = { captain_of_industry }
-		}
-	}	
+	}
 	theorist = {	
 	
 		bernard_montgomery = {
