@@ -1734,10 +1734,7 @@ characters={
 			on_remove = {
 				every_country = {
 					limit = {
-						AND = {
-							is_subject_of = ENG
-							has_idea = ENG_idea_secretary_of_state_for_the_colonies
-						}
+						has_idea = ENG_idea_secretary_of_state_for_the_colonies
 					}
 					remove_ideas = ENG_idea_secretary_of_state_for_the_colonies
 				}
@@ -1848,7 +1845,7 @@ characters={
 	#			}
 	#			available  = {
 	#			NOT ={
-	#			has_completed_focus = ENG_churchill_war_minsistry
+	#			has_completed_focus = ENG_issue_gasmasks
 	#		        }
     #            }
     #            traits = { air_production_5 }
@@ -1877,7 +1874,7 @@ characters={
 				original_tag = ENG
 			}
 			available = {
-				has_completed_focus = ENG_churchill_war_minsistry
+				has_completed_focus = ENG_issue_gasmasks
 			}
 			
 			traits = { air_production_2 }
@@ -1901,7 +1898,7 @@ characters={
 				original_tag = ENG 
 			}
 			available = {
-				has_completed_focus = ENG_churchill_war_minsistry
+				has_completed_focus = ENG_issue_gasmasks
 			}
 
 			traits = { ENG_minister_of_labour }
