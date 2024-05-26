@@ -2325,6 +2325,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			add_named_threat = { threat = 5 name = SOV_germano_russian_treaty }	
 			SOV = {
 				transfer_state = 277
 				transfer_state = 278
@@ -2367,6 +2368,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			add_named_threat = { threat = 5 name = SOV_annex_ukraine }	
 			annex_country = {
 				target = UKR
 				transfer_troops = no
@@ -2408,6 +2410,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			add_named_threat = { threat = 5 name = SOV_annex_riga }	
 			annex_country = {
 				target = W12
 				transfer_troops = no

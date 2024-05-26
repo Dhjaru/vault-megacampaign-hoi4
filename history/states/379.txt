@@ -28,9 +28,9 @@ state={
 	provinces={
 		634 1354 1424 4285 4342 4360 4362 4430 4432 4623 7304 7361 7379 7644 10244 12289 
 	}
-	manpower=3769004
+	manpower=2769004
 	buildings_max_level_factor=1.000
-	state_category=city
+	state_category=megalopolis
 
 	local_supplies=10.0
 }
