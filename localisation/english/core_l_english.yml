@@ -1514,7 +1514,7 @@ modifier_state_production_speed_air_base_factor:0 "§Y$air_base$§! construction
  AIR_WING_NAME_FRA_FALLBACK:0 "$NUMBER$. Groupement"
  AIR_WING_NAME_FRA_CARRIER:0 "$NR$ $NAME$"
  AIR_WING_NAME_ENG_GENERIC:0 "$NR$. $NAME$"
- AIR_WING_NAME_ENG_FALLBACK:0 "No. $NUMBER$ Squadron RAF"
+ AIR_WING_NAME_ENG_FALLBACK:0 "No. $NUMBER$ Squadron Aeroforce"
  AIR_WING_NAME_ENG_CARRIER:0 "$NR$ $NAME$"
  AIR_WING_NAME_ITA_FALLBACK:0 "$NUMBER$° Stormo"
  AIR_WING_NAME_JAP_FALLBACK:0 "$NUMBER$. Hikodan"

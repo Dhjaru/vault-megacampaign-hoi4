@@ -188,7 +188,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_an_interesting_dilemma
-		icon = GFX_ENG_handle_the_inevitable
+		icon = GFX_ENG_george
 
 		prerequisite = { focus = ENG_expand_re-armament }
 		prerequisite = { focus = ENG_led_by_a_new_face }
@@ -545,7 +545,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_national_unity_government
-		icon = GFX_ENG_rule_britannia
+		icon = GFX_ENG_handle_the_inevitable
 		prerequisite = { focus = ENG_an_interesting_dilemma }
 		prerequisite = { focus = ENG_a_healthy_economy focus = ENG_20 }
 		relative_position_id = ENG_led_by_a_new_face
@@ -640,6 +640,78 @@ focus_tree = {
 			set_country_flag = fight_on_the_beaches_speech
 			ENG = {
 				add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 4500	producer = ENG }
+			}
+		}
+	}
+	focus = {
+		id = ENG_lessons_of_africa 
+		prerequisite = { focus = ENG_with_the_free_world }
+
+		icon = GFX_ENG_call_montgomery
+		x = -1
+		y = 1
+		relative_position_id = ENG_with_the_free_world
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+				AND = {
+					date > 1941.1.1
+					NOT = {
+						controls_state = 70
+					}
+				}
+				date > 1942.1.1
+			}
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+			army_experience = 40
+			create_field_marshal = {
+				name = "Bernard Montgomery"
+				picture = "Portrait_Britain_Bernard_Montgomery.dds"
+				traits = {  trickster infantry_leader organizer panzer_leader trait_cautious desert_fox skilled_staffer }
+				skill = 6
+				attack_skill = 5
+				defense_skill = 4
+				planning_skill = 3
+				logistics_skill = 7
+			}
+
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 3
+				category = land_doctrine
+			}
+			every_country = {
+				limit = {
+					OR = {
+						tag = SAF 
+						tag = HOL 
+						tag = RAJ 
+						tag = CAN
+						tag = NZL
+						tag = POL
+							
+					}
+				}
+				add_doctrine_cost_reduction = {
+					name = land_doc_bonus
+					cost_reduction = 0.5
+					uses = 2
+					category = land_doctrine
+				}
+			}
+			AST = {
+				complete_national_focus = ast_lessons_of_africa
 			}
 		}
 	}
@@ -775,7 +847,22 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = ENG_our_sword_and_shield_tt
-			custom_effect_tooltip = ENG_our_sword_and_shield_tt2
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = ENG_the_economic_problem
+					}
+				}
+				custom_effect_tooltip = ENG_our_sword_and_shield_tt3
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = ENG_new_british_economy
+					}
+				}
+				custom_effect_tooltip = ENG_our_sword_and_shield_tt3
+			}
 			add_to_variable = {
 				ENG_research_speed_factor_var = 0.1
 			}
@@ -1097,7 +1184,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = ENG_raf_expansion
+		id = ENG_airforce_expansion
 		prerequisite = { focus = ENG_churchill focus= ENG_thomas_inskip } 
 
 		icon = GFX_goal_GBR_royal_air_force
@@ -1155,7 +1242,7 @@ focus_tree = {
 	}
 	focus = {
 		id = shadow_scheme_focus
-		prerequisite = { focus = ENG_raf_expansion }
+		prerequisite = { focus = ENG_airforce_expansion }
 		available = {
 			threat > 0.05
 		}
@@ -1166,7 +1253,7 @@ focus_tree = {
 		icon = GFX_The_Shadow_Scheme
 		x = 0
 		y = 1
-		relative_position_id = ENG_raf_expansion
+		relative_position_id = ENG_airforce_expansion
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -1798,7 +1885,7 @@ focus_tree = {
 	focus = { 
 		id = ENG_the_future_of_the_british_army
 		prerequisite = { focus = ENG_churchill focus= ENG_thomas_inskip } 
-		icon = GFX_goal_GBR_royal_army
+		icon = GFX_ENG_royal_army
 		relative_position_id = ENG_start_rearmament
 		x = -5
 		y = 2
@@ -1869,7 +1956,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = ENG_royal_ordinance_factories
+		id = ENG_arms_factories_for_the_republic
 		prerequisite = { focus = uk_small_arms_focus }
 		relative_position_id = uk_small_arms_focus
 		icon = GFX_ordnance
@@ -2051,7 +2138,7 @@ focus_tree = {
 	focus = {
 		id = ENG_infantry_tank
 		icon = GFX_matilda
-		prerequisite = { focus = ENG_motorized_focus focus = ENG_royal_ordinance_factories }
+		prerequisite = { focus = ENG_motorized_focus focus = ENG_arms_factories_for_the_republic }
 		x = 1
 		y = 1
 		cost = 5
@@ -2116,7 +2203,7 @@ focus_tree = {
 	focus = {
 		id = ENG_cruiser_tank
 		icon = GFX_crusader
-		prerequisite = { focus = ENG_form_mobile_forces focus = ENG_royal_ordinance_factories }
+		prerequisite = { focus = ENG_form_mobile_forces focus = ENG_arms_factories_for_the_republic }
 		x = -1
 		y = 1
 		cost = 5
@@ -2237,7 +2324,7 @@ focus_tree = {
 		icon = GFX_tank_board
 		x = 0
 		y = 2
-		relative_position_id = ENG_royal_ordinance_factories
+		relative_position_id = ENG_arms_factories_for_the_republic
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -2282,35 +2369,12 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = crypto_bomb_focus
-		icon = GFX_focus_cryptozzz
-		prerequisite = { focus = ENG_we_will_prevail }
-		prerequisite = {  focus = ENG_with_the_free_world }
-		relative_position_id = ENG_national_unity_government
-		x = 8
-		y = 2
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-			custom_effect_tooltip = ENG_park_tt
-			add_to_variable = {
-				ENG_decryption_power_var = 25
-			}
-			add_to_variable = {
-				ENG_crypto_strength_var = 2
-			}
-		}
-	}
-	focus = {
 		id = ENG_crimson_sun
 		icon = GFX_shadow_over_asia
 		prerequisite = { focus = ENG_we_will_prevail }
 		prerequisite = {  focus = ENG_with_the_free_world }
 		relative_position_id = ENG_national_unity_government
-		x = -8
+		x = 4
 		y = 2
 		cost = 5
 		ai_will_do = {
@@ -2457,13 +2521,6 @@ focus_tree = {
 			focus = ENG_secure_burma_road
 		}
 		relative_position_id = ENG_singapore_strategy
-		available = {
-			RAJ = {
-				NOT = {
-					has_full_control_of_state = 431
-				}
-			}
-		}
 		x = -1
 		y = 1
 		cost = 2
@@ -2712,6 +2769,11 @@ focus_tree = {
 				uses = 1
 				category = electronics
 			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = support_tech
+			}
 		}
 	}
 	focus = {
@@ -2824,336 +2886,13 @@ focus_tree = {
 			
 		}
 	}
-	focus = {
-		id = ENG_battle_of_med
-		icon = GFX_ENG_invade_libya
-		prerequisite = { focus = ENG_we_will_prevail }
-		prerequisite = {  focus = ENG_with_the_free_world }
-		relative_position_id = ENG_national_unity_government
-		available = {
-			FRA = {
-				has_war_with = HOL
-			}
-		}
-		x = 4
-		y = 2
-		cost = 2
-		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-			every_country = {
-				limit = {
-					OR = {
-						is_in_faction_with = ENG
-						tag = ENG
-					}
-				}
-				add_ideas = ENG_afrika_campaign
-			}
-			hidden_effect = {
-				every_country = {
-					limit = {
-						is_in_faction_with = ENG
-					}
-					set_country_flag = ENG_compass_bonus
-				}
-			}
-			348 = {
-				set_building_level = {
-					type = air_base
-					level = 12
-					instant_build = yes
-
-				}
-			}
-			355 = {
-				set_building_level = {
-					type = air_base
-					level = 12
-					instant_build = yes
-
-				}
-			}
-			503 = {
-				set_building_level = {
-					type = air_base
-					level = 12
-					instant_build = yes
-
-				}
-			}
-		}
-	}
-	focus = {
-		id = ENG_desert_rats
-		icon = GFX_focus_AST_rats_tobruk
-		prerequisite = {
-			focus = ENG_battle_of_med
-		}
-		available = {
-			date > 1941.1.1
-		}
-		relative_position_id = ENG_battle_of_med
-		x = -1
-		y = 1
-		cost = 2
-		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-			every_country = {
-				limit = {
-					OR = {
-						is_in_faction_with = ENG 
-						tag = ENG 
-					}
-				}
-				add_timed_idea = {
-					idea = ENG_battleaxe
-					days = 400
-				}
-			}
-		}
-	}
-	
 ##########gives montgomery
-	focus = {
-		id = ENG_lessons_of_africa 
-		prerequisite = { focus = ENG_desert_rats }
-
-		icon = GFX_ENG_call_montgomery
-		x = 0
-		y = 1
-		relative_position_id = ENG_desert_rats
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			OR = {
-				AND = {
-					date > 1941.1.1
-					NOT = {
-						controls_state = 66
-					}
-				}
-				date > 1942.1.1
-			}
-					
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			
-			add_doctrine_cost_reduction = {
-				name = land_doc_bonus
-				cost_reduction = 0.5
-				uses = 3
-				category = land_doctrine
-			}
-			every_country = {
-				limit = {
-					OR = {
-						tag = SAF 
-						tag = HOL 
-						tag = RAJ 
-						tag = CAN
-						tag = NZL
-						tag = POL
-							
-					}
-				}
-				add_doctrine_cost_reduction = {
-					name = land_doc_bonus
-					cost_reduction = 0.5
-					uses = 2
-					category = land_doctrine
-				}
-			}
-			AST = {
-				complete_national_focus = ast_lessons_of_africa
-			}
-			add_tech_bonus = {
-				bonus = 1
-				uses = 2
-				category = support_tech
-			}
-			army_experience = 40
-			create_field_marshal = {
-				name = "Bernard Montgomery"
-				picture = "Portrait_Britain_Bernard_Montgomery.dds"
-				traits = {  trickster infantry_leader organizer panzer_leader trait_cautious desert_fox skilled_staffer }
-				skill = 6
-				attack_skill = 5
-				defense_skill = 4
-				planning_skill = 3
-				logistics_skill = 7
-			}
-		}
-	}
-	focus = {
-		id = ENG_hit_taranto
-		icon = GFX_taranto
-		prerequisite = {
-			focus = ENG_battle_of_med
-		}
-		
-		relative_position_id = ENG_battle_of_med
-		x = 1
-		y = 1
-		cost = 2
-		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-			add_timed_idea = {
-				idea = ENG_strike_taranto
-				days = 30
-			}
-		}
-	}
-	focus = {
-		id = ENG_sink_burn_destroy
-		icon = GFX_SINK_BURN_DESTROY
-		prerequisite = {
-			focus = ENG_hit_taranto
-		}
-		relative_position_id = ENG_hit_taranto
-		available = {
-			OR = {
-				AND = {
-					ITA = {
-						controls_state = 663
-						controls_state = 451
-						controls_state = 450
-						controls_state = 448
-					}
-					NOT = {
-						has_idea = ENG_strike_taranto
-					}
-				}
-				AND = {
-					date > 1942.1.1
-					NOT = {
-						has_idea = ENG_strike_taranto
-					}
-				}
-			}
-		}
-		x = 0
-		y = 1
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-			add_timed_idea = {
-				days = 180
-				idea = ENG_battle_of_mediterranian
-			}
-			
-			
-		}
-	}
-	focus = {
-		id = ENG_the_weak_underbelly
-		icon = GFX_ENG_operation_husky
-		prerequisite = {
-			focus = ENG_sink_burn_destroy
-			focus = ENG_lessons_of_africa
-		}
-		relative_position_id = ENG_battle_of_med
-		x = 0
-		y = 3
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-			every_state = {
-				limit = {
-					is_core_of = ITA
-				}
-				add_dynamic_modifier = { modifier = USA_bombardment days = 180 }
-			}
-		}
-	}
-	focus = {
-		id = ENG_special_military_operations
-		icon = GFX_goal_CAN_commando
-		prerequisite = {
-			focus = crypto_bomb_focus
-		}
-		relative_position_id = crypto_bomb_focus
-		x = 0
-		y = 1
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-			custom_effect_tooltip = "Will unlock operations to sabotage German industry and infrastructure in occupied Europe."
-		}
-	}
-	focus = {
-		id = ENG_aid_de_gaulle
-		icon = GFX_r56_goal_FRA_de_gaulle
-		available = {
-			HOL = {
-				has_capitulated = yes
-			}
-		}
-		prerequisite = {
-			focus = ENG_special_military_operations
-		}
-		relative_position_id = ENG_special_military_operations
-		x = 0
-		y = 1
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-
-		completion_reward = {
-			HOL = {
-				add_equipment_to_stockpile = {
-					type = infantry_equipment
-					amount = 5000
-				}
-			}
-			if = {
-				limit = {
-					POL = {
-						exists = yes
-					}
-				}
-				POL = {
-					add_equipment_to_stockpile = {
-						type = infantry_equipment
-						amount = 5000
-					}
-				}
-
-			}
-		}
-	}
 
 	focus = {
 		id = ENG_operation_overlord
-		prerequisite = { focus = ENG_bridge_mid_atlantic }
+		prerequisite = { focus = ENG_bridge_mid_atlantic focus = ENG_last_line_of_defense }
 		prerequisite = { focus = ENG_anglo_american_tech_innovations }
-		prerequisite = { focus = ENG_the_weak_underbelly }
-		icon = GFX_USA_short_of_war
+		icon = GFX_Victory_in_Europe
 		relative_position_id = ENG_national_unity_government
 		x = 0
 		y = 6

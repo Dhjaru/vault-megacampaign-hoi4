@@ -2869,6 +2869,10 @@ spriteTypes = {
 		name = "GFX_idea_collectivised_economy"
 		texturefile = "gfx/interface/ideas/idea_generic_collectivised_economy.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_hung_parliment"
+		texturefile = "gfx/interface/ideas/ENG/ENG_hung_parliment.dds"
+	}
 
 }	
 

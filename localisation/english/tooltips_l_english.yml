@@ -918,15 +918,15 @@ ENG_form_tank_board_tt:0 "Modify §YThe British Army§! by\nArmor Division Attac
 
 ENG_battle_of_britain_tt:0 "Modify §YThe British Army§! by\nAir Wing Training Experience Gain: §G+10%§!\nAir Wing Combat Experience Gain: §G+10%§!"
 
-ENG_battle_of_atlantic_tt:0 "Modify §YThe Royal Navy§! by\nDestroyer Training Experience Gain: §G+10%§!\nDestroyer Combat Experience Gain: §G+10%§!"
+ENG_battle_of_atlantic_tt:0 "Modify §YThe British Navy§! by\nDestroyer Training Experience Gain: §G+10%§!\nDestroyer Combat Experience Gain: §G+10%§!"
 
 ENG_shadow_scheme_focus_tt2:0 "Modify §YProsperity of the Empire§! by\nMilitary Factory Construction Speed: §G+5%§!"
 
 ENG_trading_modifier_tt:0 "(§YAll Allies§!)Target country trade cost: §G-50%§!
 
-ENG_expand_repair_yards_tt:0 "Modify §YThe Royal Navy§! by\nRefitting Speed: §G+10%§!\nRefitting Cost: §G-10%§!\nRepair Speed: §G+10%§!\nNaval Experience Gain: §G+5%§!"
+ENG_expand_repair_yards_tt:0 "Modify §YThe British Navy§! by\nRefitting Speed: §G+10%§!\nRefitting Cost: §G-10%§!\nRepair Speed: §G+10%§!\nNaval Experience Gain: §G+5%§!"
 
-ENG_expand_xp_gain_tt:0 "Modify §YThe Royal Navy§! by\nNaval Experience Gain: §G+5%§!"
+ENG_expand_xp_gain_tt:0 "Modify §YThe British Navy§! by\nNaval Experience Gain: §G+5%§!"
 
 ENG_naval_games_tt:0 "\n\nTakes §Y90§! days to renable.\n"
 

@@ -71,7 +71,7 @@ ENG_hung_parliament = {
     name="Hung Parliament"
     enable = { always = yes }
 
-    icon = GFX_generic_disjointed_gov
+    icon = GFX_idea_hung_parliment
 
     political_power_factor = ENG_political_power_factor_var
     political_power_cost = ENG_political_power_cost_var

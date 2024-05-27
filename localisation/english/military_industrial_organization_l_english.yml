@@ -837,7 +837,7 @@ CHI_mio_trait_chinese_panzer_armor: "Chinese Panzer Armor"
 CHI_mio_trait_chinese_panzer_weapons: "Chinese Panzer Weapons"
 CHI_mio_trait_morozov_reliability: "Morozov Reliability"
 CHI_mio_trait_morozov_speed: "Morozov Speed"
-CHI_mio_trait_raf_cooperation: "RAF Cooperation"
+CHI_mio_trait_raf_cooperation: "Aeroforce Cooperation"
 CHI_mio_trait_camco_fighters: "CAMCO Fighters"
 CHI_mio_trait_camco_bombers: "CAMCO Bombers"
 
@@ -1050,7 +1050,7 @@ POL_mio_trait_multi_role_tank_designer: "Multi Role Tank Designer"
 BALTIC_ford_organization: "$BALTIC_ford$"
 BALTIC_rsaf_enfield_organization: "$BALTIC_RSAF_enfield$"
 BALTIC_royal_arsenal_organization: "$BALTIC_royal_arsenal$"
-BALTIC_RAF_organization: "$BALTIC_RAF$"
+BALTIC_Aeroforce_organization: "$BALTIC_Aeroforce$"
 
 ### TRAITS ###
 
@@ -1529,7 +1529,7 @@ generic_mio_trait_naval_all_purpose_defense_systems: "All-Purpose Defense System
 
 
 #######################################
-#### GENERAL AIRCRAFT MANUFACTURER ####
+#### GENERAL AIRCAeroforceT MANUFACTURER ####
 #######################################
 generic_general_aircraft_organization: "General Aircraft Manufacturer"
 generic_mio_initial_trait_general_aircraft_designer: "General Aircraft Designer"
@@ -1549,7 +1549,7 @@ generic_mio_trait_naval_aircraft_production: "Naval Aircraft Production"
 
 
 #####################################
-#### LIGHT AIRCRAFT MANUFACTURER ####
+#### LIGHT AIRCAeroforceT MANUFACTURER ####
 #####################################
 generic_light_aircraft_organization: "Light Aircraft Manufacturer"
 generic_mio_initial_trait_light_aircraft_designer: "Light Aircraft Designer"
@@ -1572,7 +1572,7 @@ generic_mio_trait_fighter_expertise: "Fighter Expertise"
 generic_mio_trait_close_air_support_expertise: "Close Air Support Expertise"
 
 ######################################
-#### MEDIUM AIRCRAFT MANUFACTURER ####
+#### MEDIUM AIRCAeroforceT MANUFACTURER ####
 ######################################
 generic_medium_aircraft_organization: "Medium Aircraft Manufacturer"
 generic_mio_initial_trait_multi_role_tactical_aircraft: "Multi-Role Tactical Aircraft"
@@ -1593,7 +1593,7 @@ generic_mio_trait_skip_bombing: "Skip Bombing"
 generic_mio_trait_high_frequency_direction_finding: "High-Frequency Direction Finding"
 
 #####################################
-#### HEAVY AIRCRAFT MANUFACTURER ####
+#### HEAVY AIRCAeroforceT MANUFACTURER ####
 #####################################
 generic_heavy_aircraft_organization: "Heavy Aircraft Manufacturer"
 generic_mio_initial_trait_heavy_aircraft_designer: "Heavy Aircraft Designer"
@@ -1613,7 +1613,7 @@ generic_mio_trait_flying_fortress: "Flying Fortress"
 generic_mio_trait_advanced_instruments: "Advanced Instruments"
 
 ###################################
-#### CAS AIRCRAFT MANUFACTURER ####
+#### CAS AIRCAeroforceT MANUFACTURER ####
 ###################################
 generic_cas_aircraft_organization: "CAS Aircarft Manufacturer"
 generic_mio_initial_trait_cas_aircraft_designer: "CAS Aircraft Designer"
@@ -1634,7 +1634,7 @@ generic_mio_cluster_bombs: "Cluster Bombs"
 
 
 #####################################
-#### NAVAL AIRCRAFT MANUFACTURER ####
+#### NAVAL AIRCAeroforceT MANUFACTURER ####
 #####################################
 generic_naval_aircraft_organization: "Naval Aircraft Organization"
 generic_mio_initial_trait_naval_aircraft_designer: "Naval Aircraft Designer"
@@ -1654,7 +1654,7 @@ generic_mio_advanced_materials: "Advanced Materials"
 
 
 ##########################################
-#### MULTI-ROLE AIRCRAFT MANUFACTURER ####
+#### MULTI-ROLE AIRCAeroforceT MANUFACTURER ####
 ##########################################
 generic_multi_role_aircraft_organization: "Multi-Role Aircraft Manufacturer"
 generic_mio_initial_trait_multi_role_aircraft_designer: "Multi-Role Aircraft Designer"
@@ -1677,7 +1677,7 @@ generic_mio_trait_bomber_specialization: "Bomber Specialization"
 
 
 ####################################################
-#### HIGH AGILITY FIGHTER AIRCRAFT MANUFACTURER ####
+#### HIGH AGILITY FIGHTER AIRCAeroforceT MANUFACTURER ####
 ####################################################
 generic_high_agility_fighter_aircraft_organization: "High Agility Fighter Aircraft Manufacturer"
 generic_mio_initial_trait_high_agility_fighters_designer: "High Agility Fighters Designer"
@@ -1697,7 +1697,7 @@ generic_mio_trait_fighter_interceptors: "Fighter Interceptors"
 
 
 #############################################
-#### RANGE FOCUSED AIRCRAFT MANUFACTURER ####
+#### RANGE FOCUSED AIRCAeroforceT MANUFACTURER ####
 #############################################
 generic_range_focused_aircraft_organization: "Range Focused Aircraft Manufacturer"
 generic_mio_initial_trait_range_focused_aircraft_designer: "Range Focused Aircraft Designer"

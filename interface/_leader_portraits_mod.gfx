@@ -29,5 +29,8 @@ spriteTypes = {
   spriteType = {   name =	"GFX_SIA_Chin_Peng"	   texturefile =	"gfx/leaders/Asia/Portrait_Asia_Generic_1.dds"	    }
   spriteType = {   name =	"GFX_SIA_Plaek_Phibunsongk"	   texturefile =	"gfx/leaders/Asia/Portrait_Asia_Generic_2.dds"	    }
   spriteType = {   name =	"GFX_SIA_Pridi_Banomyon"	   texturefile =	"gfx/leaders/Asia/Portrait_Asia_Generic_2.dds"	    }
-  spriteType = {   name =	"GFX_TUR_Fevzi_Cakmak"	   texturefile =	"gfx/leaders/SAU/Portrait_Saudi_arabia_Abdulazis_Ibn_Saud.dds"	    }
+  spriteType = {   name =   "GFX_TUR_Fevzi_Cakmak"     texturefile =    "gfx/leaders/SAU/Portrait_Saudi_arabia_Abdulazis_Ibn_Saud.dds"      }
+  spriteType = {   name =   "GFX_Portrait_Britain_Philip_Snowden"      texturefile =    "gfx/leaders/ENG/Portrait_Britain_Philip_Snowden.dds"       }
+  spriteType = {   name =   "GFX_Portrait_Britain_Ramsay_MacDonald"    texturefile =    "gfx/leaders/ENG/Portrait_Britain_Ramsay_MacDonald.dds"     }
+  spriteType = {   name =	"GFX_Portrait_Britain_Ellen_Wilkinson"	   texturefile =	"gfx/leaders/ENG/Portrait_Britain_Ellen_Wilkinson.dds"	    }
 }

@@ -3,7 +3,7 @@ characters={
 		name="Ramsay MacDonald"
 		portraits={
 			civilian={
-				large="gfx/leaders/ENG/Portrait_Britain_Neville_Chamberlain.dds"
+				large="GFX_Portrait_Britain_Ramsay_MacDonald"
 			}
 		}
 		country_leader={
@@ -17,7 +17,7 @@ characters={
 		name="Philip Snowden"
 		portraits={
 			civilian={
-				large="gfx//leaders//ENG//Portrait_Britain_Stanley_Baldwin.dds"
+				large="GFX_Portrait_Britain_Philip_Snowden"
 			}
 		}
 		country_leader={
@@ -31,7 +31,7 @@ characters={
 		name="Ellen Wilkinson"
 		portraits={
 			civilian={
-				large="gfx//leaders//ENG//Portrait_Britain_Stanley_Baldwin.dds"
+				large="GFX_Portrait_Britain_Ellen_Wilkinson"
 			}
 		}
 		country_leader={
@@ -1590,10 +1590,10 @@ characters={
 	ENG_herbert_samuel = {
 		portraits={
 			army={
-				small="gfx/interface/ideas/ministers/portrait_generic_11.dds"
+				small="gfx/interface/ideas/ENG/ENG_herbert_samuel.dds"
 			}
 		}
-		name="Herbery Samuel"
+		name="Herbert Samuel"
 		advisor={
 			slot = political_advisor
 			idea_token = herbert_samuel
