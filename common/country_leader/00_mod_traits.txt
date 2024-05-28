@@ -231,7 +231,6 @@ leader_traits = {
 		sprite = 13
 		random = yes
 		stability_weekly  = 0.002
-		crypto_strength  = 1.000
 		ai_will_do = {
 			factor = 1
 		}
@@ -849,7 +848,6 @@ leader_traits = {
 		stability_factor = 0.1
 		stability_weekly = 0.002 
 		political_power_factor = -0.15	
-		crypto_strength = 2
 	}
 	JAP_weird_trait = {
 		sprite = 13 
@@ -1000,7 +998,6 @@ leader_traits = {
 		random = no 
 		stability_factor = 0.20
 		stability_weekly = 0.002 
-		crypto_strength = 1
 	}
 	AST_Minister_for_Supply_and_Development = {
 		sprite = 13 

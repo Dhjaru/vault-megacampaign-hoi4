@@ -775,10 +775,6 @@ USA_Chrysler_Corporation = {
 
 
 		available = {
-			USA = {
-				has_completed_focus = USA_quality_and_quantity
-				
-				}
 			}
 		on_complete = {
 			custom_effect_tooltip = USA_dcompleted1
@@ -926,7 +922,6 @@ USA_army_ordnance_department_organization = {
 			USA = {
 				has_war_with = JAP
 			}
-			FROM = {has_completed_focus = USA_detroit_vehicle_arsenal}
 		}
 		on_complete = {
 			custom_effect_tooltip = USA_dcompletedWAR
@@ -1218,14 +1213,6 @@ add_trait = {
 		}
 
 		available = {
-			FROM= {
-				has_completed_focus = USA_improve_teething
-				
-				}
-			FROM = {
-				has_full_control_of_state = 393 #Detroid
-
-			}
 		}
 		on_complete = {
 				custom_effect_tooltip = USA_dcompleted7
@@ -1266,9 +1253,6 @@ add_trait = {
 
 	
 		available = {
-			FROM= {
-				has_completed_focus = USA_improve_armour
-				}	
 			}
 			on_complete = {
 				custom_effect_tooltip = USA_dcompleted6
@@ -1308,14 +1292,6 @@ add_trait = {
 		}
 
 		available = {
-			FROM= {
-				has_completed_focus = USA_improve_teething
-				
-				}
-			FROM = {
-				has_full_control_of_state = 393 #Detroid
-
-			}
 		}
 		on_complete = {
 			custom_effect_tooltip = USA_dcompleted8
@@ -1352,16 +1328,6 @@ add_trait = {
 		}
 
 		available = {
-			FROM= {
-				has_completed_focus = USA_improve_armour
-				
-				}
-			
-			FROM = {
-				has_full_control_of_state = 393 #Detroid
-
-			}
-			
 		}
 		on_complete = {
 			custom_effect_tooltip = USA_dcompleted9
@@ -2529,9 +2495,6 @@ USA_norfolk_naval_yard_organization = {
 	
 
 		available = {
-		USA = {
-			has_completed_focus = USA_iowa
-		    }
 	    }
 		position = { x=-3 y= -2  }
 		relative_position_id = generic_mio_trait_secondary_fire_director_control
@@ -2566,9 +2529,6 @@ trait = {
 	}
 
 	available = {
-	USA = {
-		has_completed_focus = USA_iowa
-		}
 	}
 	position = { x=-2 y= -2  }
 	relative_position_id = generic_mio_trait_secondary_fire_director_control
@@ -2625,10 +2585,6 @@ USA_brooklyn_naval_yard_organization = {
 		any_parent = { f1 }
 
 		available = {
-		USA = {
-			has_completed_focus = USA_quality_saves_lives
-			
-		    }
 	    }
 		position = { x=0 y= 1 }
 		relative_position_id = f1
@@ -2650,10 +2606,6 @@ USA_brooklyn_naval_yard_organization = {
 		any_parent = { save_lives }
 
 		available = {
-		USA = {
-			has_completed_focus = USA_quality_saves_lives
-			
-		    }
 	    }
 		position = { x=1 y= 1 }
 		relative_position_id = save_lives
@@ -2691,12 +2643,6 @@ USA_newport_news_shipbuilding_organization = {
 		}
 
 		available = {
-		USA = {
-			has_completed_focus = USA_lay_down_new_carriers
-			has_completed_focus = USA_victory_program 
-			
-			
-		    }
 	    }
 		position = { x=3 y= 1  }
 		relative_position_id = generic_mio_trait_long_range_cruising
@@ -3320,9 +3266,6 @@ USA_boeing_organization = {
 		tag = USA 
 	}
 	available = {
-		USA = {
-			has_completed_focus = USA_begin_heavy_bomber_program
-		}
 	}
 	
 	override_trait = {

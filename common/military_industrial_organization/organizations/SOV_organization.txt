@@ -250,9 +250,6 @@ SOV_kharkov_diesel = {
 		mutually_exclusive = { advanced_internals }
 		any_parent = { prot_fire armored_cav }
 		available = {
-			SOV = {
-				has_completed_focus = SOV_morozov_will_show_the_way
-			}
 		}
 		
 		equipment_bonus = {
@@ -272,9 +269,6 @@ SOV_kharkov_diesel = {
 		mutually_exclusive = { destroyer }
 		any_parent = { prot_fire armored_cav }
 		available = {
-			SOV = {
-				has_completed_focus = SOV_morozov_will_show_the_way
-			}
 		}
 
 		equipment_bonus = {
@@ -565,9 +559,6 @@ SOV_stalingrad_tractor = {
 			tag = SOV
     }
 	available = {
-		SOV = {
-			has_completed_focus = SOV_tractor_factories
-		}
 	}
 	equipment_type = { armor }
 	research_categories = { armor }
@@ -738,11 +729,12 @@ SOV_chelyabinsk_tractor_plant = {
 
 		organization_modifier = {
 			military_industrial_organization_design_team_change_cost = -1.0
+			military_industrial_organization_funds_gain = 1
 		}
 		
 		equipment_bonus = {
-			soft_attack = 0.035
-			hard_attack = 0.035
+			soft_attack = 0.05
+			hard_attack = 0.05
 		}
 	}
 	trait = {
@@ -750,9 +742,6 @@ SOV_chelyabinsk_tractor_plant = {
 		name = "Reorganize Evacuated Factories"
 		icon = GFX_generic_mio_trait_icon_conversion_speed
 		available = {
-			SOV = {
-				has_completed_focus = SOV_tankograd 
-			}
 		}
 		position = { x=4 y=0 }
 		
@@ -791,10 +780,8 @@ SOV_chelyabinsk_tractor_plant = {
 		mutually_exclusive = { reasonable_q }
 		all_parents = {max_l massive_e}			
 		equipment_bonus = {
-			soft_attack = -0.035
-			hard_attack = -0.035
-			build_cost_ic = -0.1
-			reliability = -0.1
+			build_cost_ic = -0.05
+			reliability = -0.2
 		}
 	}
 	trait = {
@@ -1500,9 +1487,6 @@ SOV_kirov_organization = {
 		position = { x=0 y=3 }
 	    relative_position_id = generic_mio_trait_sloping_armor
 		available = {
-			SOV = {
-				has_completed_focus = SOV_okmo_will_show_the_way
-			}
 		}
 		equipment_bonus = {
 			maximum_speed =0.1
@@ -1516,9 +1500,6 @@ SOV_kirov_organization = {
 		position = { x=0 y=3 }
 	    relative_position_id = breakthrough
 		available = {
-			SOV = {
-				has_completed_focus = SOV_okmo_will_show_the_way
-			}
 		}
 		equipment_bonus = {
 			ap_attack = 0.1
@@ -1672,9 +1653,6 @@ SOV_ilyushin_design_bureau_organization = {
 		original_tag = SOV
 	}
 	available = {
-		SOV = {
-			has_completed_focus = SOV_ilyushin_CAS
-		}
 	}
 }
 
@@ -1682,9 +1660,6 @@ SOV_yakovlev_design_bureau_organization = {
 	include = generic_multi_role_aircraft_organization
 	icon = GFX_idea_yakovlev_design_bureau
 	available = {
-		SOV = {
-			has_completed_focus = SOV_strategic_flight_command
-		}
 	}
 	
 	

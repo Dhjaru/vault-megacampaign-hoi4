@@ -2275,7 +2275,8 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {			
+		available = {
+			threat > 0.10
 		}
 		
 		bypass = {
@@ -2314,6 +2315,7 @@ focus_tree = {
 				FRA = {
 					has_war = yes
 				}
+				threat > 0.30
 			}	
 		}
 		
@@ -2357,6 +2359,7 @@ focus_tree = {
 				FRA = {
 					has_war = yes
 				}
+				threat > 0.40
 			}		
 		}
 		
@@ -2399,6 +2402,7 @@ focus_tree = {
 				FRA = {
 					has_war = yes
 				}
+				threat > 0.50
 			}		
 		}
 		

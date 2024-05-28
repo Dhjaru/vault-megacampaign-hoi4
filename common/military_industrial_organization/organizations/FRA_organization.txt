@@ -22,9 +22,6 @@ FRA_renault = {
 	equipment_type = { armor }
 	research_categories = { armor }
 	available = {
-		FRA = {
-			has_completed_focus = FRA_automobile
-		}
 		
 	}
 
