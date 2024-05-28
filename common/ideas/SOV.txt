@@ -663,8 +663,10 @@ ideas = {
 			
 			equipment_bonus = {
 				field_gun_equipment = {
-					hard_attack = 0.2
-					ap_attack = 0.5 instant = yes
+					hard_attack = 0.4
+					soft_attack = 0.2
+					breakthrough = 0.3
+					ap_attack = 0.8 instant = yes
 				}
 			}
 		}
