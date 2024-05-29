@@ -1,0 +1,103 @@
+SPR_polish_army_modifier = {
+    enable = { always = yes }
+
+    icon = GFX_idea_SPR_polish_army
+
+    max_planning_factor = SPR_max_planning_factor_var
+	weekly_manpower = SPR_weekly_manpower_var
+    army_attack_factor  = SPR_army_attack_factor_var
+	army_defence_factor  = SPR_army_defence_factor_var
+	cavalry_attack_factor = SPR_cavalry_attack_factor_var
+	cavalry_defence_factor = SPR_cavalry_defence_factor_var
+	army_armor_attack_factor  = SPR_army_armor_attack_factor_var
+	army_speed_factor  = SPR_army_speed_factor_var
+	army_morale_factor  = SPR_army_morale_factor_var
+	max_dig_in  = SPR_max_dig_in_var
+    planning_speed  = SPR_planning_speed_var
+    max_command_power   = SPR_max_command_power_var
+    command_power_gain_mult  = SPR_command_power_gain_mult_var
+    land_doctrine_cost_factor  = SPR_land_doctrine_cost_factor_var
+	air_ace_generation_chance_factor  = SPR_air_ace_generation_chance_factor_var
+	resistance_growth_on_our_occupied_states  = SPR_resistance_growth_on_our_occupied_states_var
+	intel_network_gain_factor  = SPR_intel_network_gain_factor_var
+	intel_from_operatives_factor  = SPR_intel_from_operatives_factor_var
+	legitimacy_gain_factor  = SPR_legitimacy_gain_factor_var
+	experience_gain_army  = SPR_experience_gain_army_var
+	send_volunteers_tension = SPR_send_volunteers_tension_var
+	send_volunteer_divisions_required = SPR_send_volunteer_divisions_required_var
+	conscription  = SPR_conscription_var
+	agency_upgrade_time    = SPR_agency_upgrade_time_var
+    decryption_power    = SPR_decryption_power_var
+    crypto_strength    = SPR_crypto_strength_var
+	army_core_attack_factor = SPR_army_core_attack_factor
+	army_core_defence_factor = SPR_army_core_defence_factor
+	air_strategic_bomber_bombing_factor = SPR_air_strategic_bomber_bombing_factor
+}
+
+SPR_economy_and_politics = {
+    enable = { always = yes }
+
+    icon = GFX_idea_SPR_eco_good
+
+    political_power_gain   = SPR_political_power_gain_var
+	military_industrial_organization_funds_gain = 0.2
+	consumer_goods_expected_value   = SPR_consumer_goods_factor_var
+	production_speed_buildings_factor   = SPR_production_speed_buildings_factor_var
+	production_factory_max_efficiency_factor  = SPR_production_factory_max_efficiency_factor_var
+	stability_factor    = SPR_stability_factor_var
+	stability_weekly    = SPR_stability_weekly_var
+	production_speed_infrastructure_factor   = SPR_production_speed_infrastructure_factor_var
+    political_power_factor    = SPR_political_power_factor_var
+    industrial_capacity_factory     = SPR_industrial_capacity_factory_var
+    industrial_capacity_dockyard    = SPR_industrial_capacity_dockyard_var
+    production_speed_industrial_complex_factor = SPR_production_speed_industrial_complex_factor_var
+    production_speed_arms_factory_factor    = SPR_production_speed_arms_factory_factor_var
+    production_speed_dockyard_factor    = SPR_production_speed_dockyard_factor_var
+    production_speed_synthetic_refinery_factor = SPR_production_speed_synthetic_refinery_factor_var
+    production_speed_synthetic_rubber_refinery_factor = SPR_production_speed_synthetic_rubber_refinery_factor_var
+    local_resources_factor = SPR_local_resources_factor_var
+
+	custom_modifier_tooltip = SOV_no_naval_invasions_tt
+
+}
+
+SPR_president = {
+    enable = { always = yes }
+
+    icon = GFX_idea_SPR_raczkieiwcz
+
+    political_power_gain   = SPR_political_power_gain_var
+	military_industrial_organization_funds_gain = 0.2
+	consumer_goods_expected_value   = SPR_consumer_goods_factor_var
+	production_speed_buildings_factor   = SPR_production_speed_buildings_factor_var
+	production_factory_max_efficiency_factor  = SPR_production_factory_max_efficiency_factor_var
+	stability_factor    = SPR_stability_factor_var
+	stability_weekly    = SPR_stability_weekly_var
+	production_speed_infrastructure_factor   = SPR_production_speed_infrastructure_factor_var
+    political_power_factor    = SPR_political_power_factor_var
+    industrial_capacity_factory     = SPR_industrial_capacity_factory_var
+    industrial_capacity_dockyard    = SPR_industrial_capacity_dockyard_var
+    production_speed_industrial_complex_factor = SPR_production_speed_industrial_complex_factor_var
+    production_speed_arms_factory_factor    = SPR_production_speed_arms_factory_factor_var
+    production_speed_dockyard_factor    = SPR_production_speed_dockyard_factor_var
+    production_speed_synthetic_refinery_factor = SPR_production_speed_synthetic_refinery_factor_var
+    production_speed_synthetic_rubber_refinery_factor = SPR_production_speed_synthetic_rubber_refinery_factor_var
+    local_resources_factor = SPR_local_resources_factor_var
+
+	custom_modifier_tooltip = SPR_war_industry_tt 
+
+}
+
+SPR_wodzu_prowadz = { #Used as National Spirit
+	enable = { always = yes }
+
+	icon = GFX_idea_SPR_prowadz_wodzu
+
+	army_core_attack_factor = SPR_initial_war_euthasium_army_core_attack_factor_modifier
+	army_core_defence_factor = SPR_initial_war_euthasium_army_core_defence_factor_modifier
+	air_cas_present_factor = SPR_initial_war_euthasium_air_ground_attack_modifier
+	war_support_weekly = SPR_war_support_weekly_modifier
+	surrender_limit = SPR_max_surrender_limit_offset_modifier
+	dig_in_speed_factor = SPR_entrenchment_speed_modifier
+
+}

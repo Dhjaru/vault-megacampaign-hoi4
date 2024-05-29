@@ -167,7 +167,6 @@ technology_folders = {
 					original_tag = HUN
 					original_tag = SCA
 					original_tag = ROM
-					original_tag = SPR
 					original_tag = MAN
 					original_tag = FIN
 					original_tag = SLO
@@ -180,6 +179,7 @@ technology_folders = {
 					original_tag = BUL
 					original_tag = MON
 					original_tag = POL
+					original_tag = SPR
 					original_tag = HOL
 				}
 				has_dlc = "No Step Back"
@@ -192,7 +192,6 @@ technology_folders = {
 			AND = {
 				OR = {
 					original_tag = GER
-					original_tag = SPR
 					original_tag = FIN
 					original_tag = EFR
 				}
@@ -268,6 +267,7 @@ technology_folders = {
 		available = {
 			OR = {
 				original_tag = POL
+				original_tag = SPR
 				original_tag = HOL
 
 			}
@@ -356,7 +356,6 @@ technology_folders = {
 					original_tag = HUN
 					original_tag = SCA
 					original_tag = ROM
-					original_tag = SPR
 					original_tag = MAN
 					original_tag = FIN
 					original_tag = SLO
@@ -366,6 +365,7 @@ technology_folders = {
 					original_tag = EFR
 					original_tag = FRA
 					original_tag = POL
+					original_tag = SPR
 					original_tag = HOL
 				}
 				NOT = {
@@ -403,7 +403,6 @@ technology_folders = {
 				original_tag = GER
 				original_tag = SLO
 				original_tag = EFR
-				original_tag = SPR
 				}
 				NOT = {
 					has_dlc = "No Step Back"
@@ -438,6 +437,7 @@ technology_folders = {
 					original_tag = NZL
 					#original_tag = MEX
 					original_tag = POL
+					original_tag = SPR
 					original_tag = HOL
 				}
 				NOT = {
@@ -508,6 +508,7 @@ technology_folders = {
 			original_tag = MEX
 			original_tag = EFR
 			original_tag = POL
+			original_tag = SPR
 			original_tag = HOL
 		  }
 		}
@@ -570,6 +571,7 @@ technology_folders = {
 			original_tag = NZL
 			original_tag = MEX
 			original_tag = POL
+			original_tag = SPR
 			original_tag = HOL
 		   }	
 		}

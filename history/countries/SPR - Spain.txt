@@ -11,6 +11,73 @@ if = {
 	}
 }
 
+################# POLISH ARMY 
+set_variable = { var = SPR_air_strategic_bomber_bombing_factor value = 0 }
+set_variable = { var = SPR_weekly_manpower_var value = 0  }
+set_variable = { var = SPR_army_attack_factor_var value = 0 }
+set_variable = { var = SPR_army_defence_factor_var value  = -0.05 }
+set_variable = { var = SPR_cavalry_attack_factor_var value = 0.05 }
+set_variable = { var = SPR_cavalry_defence_factor_var value = 0.1 }
+set_variable = { var = SPR_planning_speed_var value = -0.10 } 
+set_variable = { var = SPR_max_planning_factor_var value = 0.1 }
+set_variable = { var = SPR_max_command_power_var value = -20 } 
+set_variable = { var = SPR_command_power_gain_mult_var value = -0.4 } 
+set_variable = { var = SPR_land_doctrine_cost_factor_var value = 0.15 } 
+set_variable = { var = SPR_army_speed_factor_var value = 0 } 
+set_variable = { var = SPR_army_morale_factor_var value = -0.15 } 
+set_variable = { var = SPR_max_dig_in_var value = 0 } 
+set_variable = { var = SPR_army_armor_attack_factor_var value = 0 } 
+set_variable = { var = SPR_air_ace_generation_chance_factor_var value = 0 } 
+set_variable = { var = SPR_resistance_growth_on_our_occupied_states_var value = 0 } 
+set_variable = { var = SPR_intel_network_gain_factor_var value = 0 } 
+set_variable = { var = SPR_intel_from_operatives_factor_var value = 0 } 
+set_variable = { var = SPR_legitimacy_gain_factor_var value = 0 } 
+set_variable = { var = SPR_experience_gain_army_var value = 0 } 
+set_variable = { var = SPR_send_volunteers_tension_var value = 0 } 
+set_variable = { var = SPR_send_volunteer_divisions_required_var value = 0 } 
+set_variable = { var = SPR_conscription_var value = 0 } 
+set_variable = { var = SPR_agency_upgrade_time_var value = 0 } 
+set_variable = { var = SPR_decryption_power_var value = 0 } 
+set_variable = { var = SPR_crypto_strength_var value = 0 } 
+set_variable = { var = SPR_army_core_attack_factor value = 0 } 
+set_variable = { var = SPR_army_core_defence_factor value = 0 } 
+
+################# POLISH ECONOMY
+set_variable = { var = SPR_political_power_gain_var value  = -0.65 }
+set_variable = { var = SPR_consumer_goods_factor_var value  = 0.17  }
+set_variable = { var = SPR_production_speed_buildings_factor_var value  = -0.2 }
+set_variable = { var = SPR_production_factory_max_efficiency_factor_var value  = -0.05 }
+set_variable = { var = SPR_stability_factor_var value  = -0.4 }
+set_variable = { var = SPR_stability_weekly_var value  = -0.004 }
+set_variable = { var = SPR_production_speed_infrastructure_factor_var value  = 0 }
+set_variable = { var = SPR_political_power_factor_var value  = 0.05 }
+set_variable = { var = SPR_industrial_capacity_factory_var value  = -0.15 }
+set_variable = { var = SPR_industrial_capacity_dockyard_var value  = -0.1 }
+set_variable = { var = SPR_production_speed_arms_factory_factor_var value  = 0 }
+set_variable = { var = SPR_production_speed_dockyard_factor_var value  = -0.25 }
+set_variable = { var = SPR_production_speed_industrial_complex_factor_var value  = 0.0 }
+set_variable = { var = SPR_production_speed_synthetic_refinery_factor_var value  = -10 }
+set_variable = { var = SPR_production_speed_synthetic_rubber_refinery_factor_var value  = -10 }
+set_variable = { var = SPR_local_resources_factor_var value  = 0.0 }
+
+##################### Wodzu, Prowadź!
+set_variable = { var = SPR_initial_war_euthasium_army_core_attack_factor_modifier value = -0.05 }
+set_variable = { var = SPR_initial_war_euthasium_army_core_defence_factor_modifier value = -0.05 }
+set_variable = { var = SPR_initial_war_euthasium_air_ground_attack_modifier value = 0.2 } 
+set_variable = { var = SPR_max_surrender_limit_offset_modifier value = 0 }
+set_variable = { var = SPR_entrenchment_speed_modifier value = 0.3 }  
+set_variable = { var = SPR_war_support_weekly_modifier value = -0.012 }
+
+
+
+
+add_dynamic_modifier = {
+   modifier = SPR_polish_army_modifier
+}
+add_dynamic_modifier = {
+	modifier = SPR_economy_and_politics
+}
+
 # Starting tech
 set_technology = {
 	basic_train = 1
@@ -203,10 +270,10 @@ set_country_flag = conv_iberia
 set_convoys = 48
 
 set_politics = {
-    ruling_party = democratic
-    last_election = "1928.1.1"
-    election_frequency = 48
-    elections_allowed = no
+	ruling_party = democratic
+	last_election = "1928.1.1"
+	election_frequency = 48
+	elections_allowed = no
 }
 
 set_popularities = {
@@ -218,15 +285,15 @@ set_popularities = {
 
 # DIPLOMACY
 if = {
-    limit = {
-        has_dlc = "Together for Victory"
-    }
+	limit = {
+		has_dlc = "Together for Victory"
+	}
 }
 
 if = {
-    limit = {has_dlc = "Together for Victory" }
+	limit = {has_dlc = "Together for Victory" }
 
-    add_to_tech_sharing_group = SPR_research
+	add_to_tech_sharing_group = SPR_research
 }
 add_ideas = {
 	SPR_monarch

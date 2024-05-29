@@ -1,6 +1,5 @@
-
 focus_tree = {
-	id = spanish_focus
+	id = polish_focus
 	
 	country = {
 		factor = 0
@@ -8,2804 +7,5799 @@ focus_tree = {
 		modifier = {
 			add = 10
 			tag = SPR
-			has_dlc = "La Resistance"
 		}
 	}
-
+	
 	default = no
 
-	continuous_focus_position = { x = 1000 y = 2500 }
+	continuous_focus_position = { x = 4300 y = 1800	 }
 
 	focus = {
-		id = SPA_a_great_spain
-
-		cancel_if_invalid = yes
-		
-		bypass = {
-			has_global_flag = spanish_civil_war
-		}
-
-		icon = GFX_goal_generic_demand_territory
-		x = 5
+		id = SPR_the_cabinet_of_marian_zyndram
+		icon = GFX_focus_wladyslav
+		x = 25
 		y = 0
-	
+
 		cost = 5
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-	
 		
-			every_owned_state = {
-				limit = {
-					check_variable = { var = SPA_garrison_control value = 4 compare = equals }
-				}
-				create_unit = {
-					division = "division_template = \"División de Infantería\" start_experience_factor = 0.1" 
-					owner = SPR
-					allow_spawning_on_enemy_provs = yes
-					count = 3
-				}
-			}
-
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.1
-			}
-			add_popularity = {
-				ideology = neutrality
-				popularity = 0.05
-			}
-			hidden_effect = {
-				every_owned_state = {
-					limit = {
-						NOT = {
-							state = 290
-							state = 699
-							state = 783
-							state = 297
-						}
-					}
-					SPA_garrison_control_cost_calculation = yes
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = SPA_hand_over_the_ceda_campaign_chest
-		available = {
-		}
-		bypass = {
-			has_global_flag = spanish_civil_war
-		}
-		prerequisite = { focus = SPA_a_great_spain }
-		
-		icon = GFX_focus_generic_concessions
-		x = 0
-		y = 1
-		
-		relative_position_id = SPA_a_great_spain
-		cost = 5
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			add_political_power = 120
-		}
-	}
-
-	focus = {
-		id = SPA_negotiate_carlist_support
-		available = {
-		}
-		bypass = {
-			has_global_flag = spanish_civil_war
-		}
-		prerequisite = { focus = SPA_hand_over_the_ceda_campaign_chest }
-		
-		icon = GFX_goal_generic_military_deal
-		x = 0
-		y = 1
-		relative_position_id = SPA_hand_over_the_ceda_campaign_chest
-		cost = 4
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_SPA_CIVIL_WAR }
-		completion_reward = {
-			set_country_flag = SPA_negotiate_carlist_support_flag
-			add_popularity = {
-				ideology = neutrality
-				popularity = 0.15
-			}
-			add_to_variable = { var = spa_civil_war_divisions_counter_var value = 5 }
-			custom_effect_tooltip = SPA_negotiate_carlist_support_tt
-			custom_effect_tooltip = SPA_negotiate_carlist_support_tt_2
-		}
-	}
-
-	focus = {
-		id = SPA_the_army_of_africa
-		available = {
-		}
-		bypass = {
-			has_global_flag = spanish_civil_war
-		}
-		prerequisite = { focus = SPA_negotiate_carlist_support }
-		
-		icon = GFX_goal_generic_special_forces
-		x = 0
-		y = 1
-		relative_position_id = SPA_negotiate_carlist_support
-		cost = 5
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_SPA_CIVIL_WAR }
-		completion_reward = {
-			
-			add_to_variable = { var = spa_civil_war_divisions_counter_var value = 4 }
-			custom_effect_tooltip = SPA_the_army_of_africa_tt
-		}
-	}
-
-	focus = {
-		id = SPA_secure_the_northern_garrisons
-		available = {
-		}
-		bypass = {
-			has_global_flag = spanish_civil_war
-		}
-		prerequisite = { focus = SPA_the_army_of_africa }
-		
-		icon = GFX_goal_generic_position_armies
-		x = 0
-		y = 1
-		relative_position_id = SPA_the_army_of_africa
-		cost = 5
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_SPA_CIVIL_WAR }
-		completion_reward = {
-			army_experience = 30
-		
-
-		}
-	}
-	focus = {
-		id = SPA_con_paquito
-		available = {
-		}
-		bypass = {
-			has_global_flag = spanish_civil_war
-		}
-		ai_will_do = {
-			factor = 100
-		}
-		prerequisite = { focus = SPA_secure_the_northern_garrisons }		
-		icon = GFX_goal_generic_dangerous_deal
-		x = 0	
-		y = 1
-		relative_position_id = SPA_secure_the_northern_garrisons
-		cost = 1
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_SPA_CIVIL_WAR }
-		completion_reward = {
-			custom_effect_tooltip = SPA_con_paquito_tt
-			random_unit_leader = {
-				limit = {
-					has_id = 1108
-				}
-				add_unit_leader_trait = trait_SPA_nationalist_sympathies
-			}
-		}
-	}
-
-###  ### ###  #  # ###  #   ###  ##   ##  #  #     ###  #  # ### #   ###     #  # ###  
-#  # #   #  # #  # #  # #    #  #  # #  # ## #     #  # #  #  #  #   #  #    #  # #  # 
-###  ##  ###  #  # ###  #    #  #    #### # ##     ###  #  #  #  #   #  # ## #  # ###  
-#  # #   #    #  # #  # #    #  #  # #  # #  #     #  # #  #  #  #   #  #    #  # #    
-#  # ### #     ##  ###  ### ###  ##  #  # #  #     ###   ##  ### ### ###      ##  #    
-
-	
-
-
-#  #  ##  ### ###  ##  #  #  ##  #   ###  ## ###  ##            ### ###   ##  #  #  ##   ##  
-## # #  #  #   #  #  # ## # #  # #    #  #    #  #              #   #  # #  # ## # #  # #  # 
-# ## ####  #   #  #  # # ## #### #    #   #   #   #      ##     ##  ###  #### # ## #    #  # 
-#  # #  #  #   #  #  # #  # #  # #    #    #  #    #            #   #  # #  # #  # #  # #  # 
-#  # #  #  #  ###  ##  #  # #  # ### ### ##   #  ##             #   #  # #  # #  #  ##   ##  
-
-	focus = {
-		id = SPA_unify_the_nationalist_front
-		available = {
-			has_global_flag = spanish_civil_war
-			hidden_trigger = { always = no }
-		}
-		bypass = {
-			has_global_flag = scw_over
-
-		}
-		prerequisite = { focus = SPA_con_paquito }
-		icon = GFX_focus_spa_unify_the_nationalist_front
-		x = 0
-		y = 1
-		relative_position_id = SPA_con_paquito
-		cost = 7.2
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_STABILITY }
-		completion_reward = {
-			custom_effect_tooltip = SPR_unfiy_the_people_idea_tt
-			add_stability = 0.1
-			if = {
-				limit = {
-					ROOT = { is_ai = no }
-				}
-				add_ideas = SPR_unify_the_people
-			}
-		}
-	}
-
-	focus = {
-		id = SPA_save_the_alcazar
-		available = {
-		}
-		bypass = {
-			OR = {
-				controls_province = 858
-				has_global_flag = scw_over
-			}
-		}
-		prerequisite = { focus = SPA_unify_the_nationalist_front }
-		
-		icon = GFX_focus_spa_save_the_alcazar
-		x = -2
-		y = 1
-		relative_position_id = SPA_unify_the_nationalist_front
-		cost = 7.2
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			activate_mission = SPA_save_the_alcazar_mission
-		}
 		ai_will_do = {
 			factor = 10
 		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = SPR_modify_industry_spirit_tt
+			add_to_variable = {
+				SPR_stability_factor_var = 0.075
+				tooltip = SPR_stabn_tt1
+			}
+			add_to_variable = {
+				SPR_political_power_gain_var = 0.6
+				tooltip = SPR_pol_power_fac_tt1
+			}
+			add_to_variable = {
+				SPR_political_power_factor_var = -0.05
+				tooltip = SPR_pol_power_perc_tt_5_procent_zle
+			}
+			hidden_effect = {
+				every_state = {
+					limit={OR={state = 96 state = 784 state = 95 state = 97 state = 94 state = 93 state = 91 state = 89 state = 827 }}
+					add_dynamic_modifier = { modifier = SPR_no_build_speed days = 1247 }
+				}
+			}
+
+		}
 	}
 
 	focus = {
-		id = SPA_martyrdom_for_primo_de_rivera
-		available = {
-		}
-		bypass = {
-			has_global_flag = scw_over
-		}
-		prerequisite = { focus = SPA_save_the_alcazar }
+		id = SPR_pacify_the_strikes
+		icon = GFX_focus_spr_crush_the_revolution
+		prerequisite = { focus = SPR_the_cabinet_of_marian_zyndram }
 		
-		icon = GFX_goal_generic_secret_weapon
-		x = -1
+		x = 25
 		y = 1
-		relative_position_id = SPA_save_the_alcazar
-		cost = 7.2
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			add_war_support = 0.1
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.05
-			}
-		}
-		ai_will_do = {
-			factor = 2
-		}
-	}
-
-	focus = {
-		id = SPA_caudillo_of_spain
-		available = {
-		}
-		bypass = {
-			has_global_flag = scw_over
-
-		}
-		prerequisite = { focus = SPA_save_the_alcazar }
-		
-		icon = GFX_focus_spa_caudillo_of_spain
-		x = 1
-		y = 1
-		relative_position_id = SPA_save_the_alcazar
-		cost = 7.2
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_STABILITY }
-		completion_reward = {
-			add_stability = 0.05
-			add_popularity = { ideology = neutrality popularity = 0.05 }
-			set_politics = { ruling_party = fascism elections_allowed = no }
-			create_country_leader = {
-				name = "Francisco Franco"
-				desc = "POLITICS_FRANCISCO_FRANCO_DESC"
-				picture = "GFX_portrait_spain_francisco_franco"
-				expire = "1965.1.1"
-				ideology = despotism
-				traits = {
-					caudillo_1
-				}
-			}
-			create_country_leader = {
-				name = "Francisco Franco"
-				desc = "POLITICS_FRANCISCO_FRANCO_DESC"
-				picture = "GFX_portrait_spain_francisco_franco"
-				expire = "1965.1.1"
-				ideology = fascism_ideology
-				traits = {
-					caudillo_1
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = SPA_extol_the_martyrs_of_the_war
-		available = {
-		}
-		bypass = {
-			has_global_flag = scw_over
-
-		}
-		prerequisite = { focus = SPA_martyrdom_for_primo_de_rivera }
-		prerequisite = { focus = SPA_caudillo_of_spain }
-		
-		icon = GFX_goal_generic_propaganda
-		x = 1
-		y = 1
-		relative_position_id = SPA_martyrdom_for_primo_de_rivera
-		cost = 7.2
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_SPA_CARLIST_UPRISING }
-		completion_reward = {
-			add_war_support = 0.1
-		}
-	}
-
-	focus = {
-		id = SPA_consolidate_the_north
-		available = {
-			controls_state = 176
-			controls_state = 792
-			controls_state = 790
-		}
-		bypass = {
-			has_global_flag = scw_over
-		}
-		prerequisite = { focus = SPA_unify_the_nationalist_front }
-		
-		icon = GFX_goal_generic_position_armies
-		x = 0
-		y = 1
-		relative_position_id = SPA_unify_the_nationalist_front
-		cost = 7.2
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-			176 = {
-				if = {
-					limit = {
-						176 = {
-							free_building_slots = {
-								building = arms_factory
-								size > 0
-								include_locked = yes
-							}
-						}
-					}
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = arms_factory
-						level = 2
-						instant_build = yes
-					}
-				}
-			}
-			792 = {
-				if = {
-					limit = {
-						792 = {
-							free_building_slots = {
-								building = arms_factory
-								size > 0
-								include_locked = yes
-							}
-						}
-					}
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = arms_factory
-						level = 2
-						instant_build = yes
-					}
-				}
-			}
-			790 = {
-				if = {
-					limit = {
-						790 = {
-							free_building_slots = {
-								building = arms_factory
-								size > 0
-								include_locked = yes
-							}
-						}
-					}
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = arms_factory
-						level = 2
-						instant_build = yes
-					}
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 5
-		}
-	}
-
-	focus = {
-		id = SPA_foment_a_carlist_split
-		available = {
-		}
-		bypass = {
-			has_global_flag = SPR_carlist_uprising_flag
-			has_global_flag = scw_over
-		}
-		prerequisite = { focus = SPA_consolidate_the_north }
-		
-		icon = GFX_goal_generic_military_deal
-		x = 0
-		y = 2
-		relative_position_id = SPA_consolidate_the_north
-		cost = 7.2
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_SPA_CARLIST_UPRISING }
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = SPA_carlism_1
-				add_idea = SPA_carlism_2
-			}		
-		}
-		ai_will_do = {
-			factor = 2
-		}
-	}
-
-	focus = {
-		id = SPA_a_methodical_approach
-		available = {
-		}
-		bypass = {
-			has_global_flag = scw_over
-		}
-		prerequisite = { focus = SPA_unify_the_nationalist_front }
-		
-		icon = GFX_goal_generic_more_territorial_claims
-		x = 2
-		y = 1
-		relative_position_id = SPA_unify_the_nationalist_front
-		cost = 7.2
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_ideas = SPA_a_methodical_approach
-			custom_effect_tooltip = SPR_seize_public_transport_tt
-		}
-	}
-
-	focus = {
-		id = SPA_tackle_the_vulnerable_fronts
-		available = {
-		}
-		bypass = {
-			has_global_flag = scw_over
-		}
-		prerequisite = { focus = SPA_a_methodical_approach }
-		
-		icon = GFX_goal_generic_major_war
-		x = -1
-		y = 1
-		relative_position_id = SPA_a_methodical_approach
-		cost = 7.2
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_doctrine_cost_reduction = {
-				name = land_doc_bonus
-				cost_reduction = 0.5
-				uses = 1
-				category = land_doctrine
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	focus = {
-		id = SPA_integrate_the_requetes
-		available = {
-		}
-		bypass = {
-			has_global_flag = SPR_carlist_uprising_flag
-			has_global_flag = scw_over
-		}
-		prerequisite = { focus = SPA_tackle_the_vulnerable_fronts }
-		prerequisite = { focus = SPA_foment_a_carlist_split }
-		
-		icon = GFX_goal_generic_military_sphere
-		x = 0
-		y = 2
-		relative_position_id = SPA_tackle_the_vulnerable_fronts
-		cost = 7.2
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_MANPOWER }
-		completion_reward = {
-			add_popularity = {
-				ideology = neutrality
-				popularity = 0.05
-			}
-			if = {
-				limit = {
-					NOT = {
-						has_idea = SPA_carlism_2
-						has_idea = SPA_carlism_5
-					}
-				}
-				effect_tooltip = {
-					swap_ideas = {
-						remove_idea = SPA_carlism_2
-						add_idea = SPA_carlism_3
-					}
-				}
-			}
-			if = {
-				limit = {
-					has_idea = SPA_carlism_2
-				}
-				swap_ideas = {
-					remove_idea = SPA_carlism_2
-					add_idea = SPA_carlism_3
-				}
-			}
-			if = {
-				limit = {
-					has_idea = SPA_carlism_5
-				}
-				swap_ideas = {
-					remove_idea = SPA_carlism_5
-					add_idea = SPA_carlism_4
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	focus = {
-		id = SPA_portuguese_aid
-		available = {
-		
-		}
-		bypass = {
-			has_global_flag = scw_over
-
-		}
-		prerequisite = { focus = SPA_a_methodical_approach }
-		
-		icon = GFX_focus_generic_befriend_portugal
-		x = 1
-		y = 1
-		relative_position_id = SPA_a_methodical_approach
-		cost = 7.2
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_MANPOWER }
-		completion_reward = {
-		
-				add_manpower = 50000
-				
-		}
-		ai_will_do = {
-			factor = 0.5
-		}
-	}
-	focus = {
-		id = SPA_utilize_the_intellectuals
-		available = {
-		}
-		bypass = {
-			
-		}
-		prerequisite = { focus = SPA_integrate_the_requetes }
-		
-		icon = GFX_focus_research
-		x = 0
-		y = 1
-		relative_position_id = SPA_integrate_the_requetes
 		cost = 5
 
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_research_slot = 1
-		}
 		ai_will_do = {
-			factor = 1
+			factor = 20
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = SPR_modify_industry_spirit_tt
+			add_to_variable = {
+				SPR_stability_weekly_var = 0.002
+				tooltip = SPR_stab_weekly_tt1
+			}
+			add_to_variable = {
+				SPR_industrial_capacity_factory_var = 0.05
+				tooltip = SPR_fact_output_tt1
+			}
+			add_to_variable = {
+				SPR_consumer_goods_factor_var = -0.05
+				tooltip = SPR_consumer_goods_tt2
+			}
+			add_timed_idea = { idea = SPR_chaos_in_the_streets days = 35 }
 		}
 	}
 
 	focus = {
-		id = SPA_banish_the_party_leaders
+		id = SPR_summon_a_new_cabinet
+		icon = GFX_focus_skladkowski_cabinet
+		prerequisite = { focus = SPR_pacify_the_strikes }
 		available = {
+			NOT = {
+				has_idea = SPR_chaos_in_the_streets
+			}
 		}
-		bypass = {
-			has_global_flag = SPR_carlist_uprising_flag
-			has_global_flag = scw_over
-		}
-		prerequisite = { focus = SPA_extol_the_martyrs_of_the_war }
-		prerequisite = { focus = SPA_foment_a_carlist_split }
 		
-		icon = GFX_focus_generic_support_the_left_right
-		x = 1
-		y = 1
-		relative_position_id = SPA_extol_the_martyrs_of_the_war
-		cost = 7.2
+		x = 25
+		y = 2
+		cost = 5
 
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_SPA_CARLIST_UPRISING }
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = no
+
 		completion_reward = {
-			add_political_power = 200
-			custom_effect_tooltip = remove_political_advisor
-			show_ideas_tooltip = SPA_manuel_hedilla
+			custom_effect_tooltip = SPR_modify_industry_spirit_tt
+			add_to_variable = {
+				SPR_stability_factor_var = 0.125
+				tooltip = SPR_stabn_tt1
+			}
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = SPA_jose_antonio_primo_de_rivera
+			show_ideas_tooltip = SPR_felicjan_slawoj_skladkowski
+			show_ideas_tooltip = SPR_juliusz_ulrych
+			show_ideas_tooltip = SPR_michal_grazynski
+			show_ideas_tooltip = SPR_antoni_roman
+			show_ideas_tooltip = SPR_witold_grabowski
+			custom_effect_tooltip = available_theorist
+			show_ideas_tooltip = SPR_gowno_gowno
 		}
 	}
 
 	focus = {
-		id = SPA_fuse_the_parties
-		available = {
+		id = SPR_becks_vision
+		icon = GFX_beck_good
+		prerequisite = { focus = SPR_summon_a_new_cabinet }
+		mutually_exclusive = {
+			focus = SPR_force_a_change_on_beck
 		}
-		bypass = {
-			has_global_flag = SPR_carlist_uprising_flag
-			has_global_flag = scw_over
-		}
-		prerequisite = { focus = SPA_banish_the_party_leaders }
-		prerequisite = { focus = SPA_safeguard_the_freedom_of_worship }
-		
-		icon = GFX_focus_spa_fuse_the_parties
-		x = -1
-		y = 1
-		relative_position_id = SPA_banish_the_party_leaders
-		cost = 7.2
 
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_MANPOWER }
-		completion_reward = {
-			set_party_name = { ideology = fascism long_name = SPR_fascism_francoist_party_long name = SPR_fascism_francoist_party }
-			set_party_name = { ideology = neutrality long_name = SPR_fascism_francoist_party_long name = SPR_fascism_francoist_party }
-			if = {
-				limit = {
-					NOT = {
-						has_idea = SPA_carlism_2
-						has_idea = SPA_carlism_3
-					}
-				}
-				effect_tooltip = {
-					swap_ideas = {
-						remove_idea = SPA_carlism_2
-						add_idea = SPA_carlism_3
-					}
-				}
-			}
-			if = {
-				limit = {
-					has_idea = SPA_carlism_2
-				}
-				swap_ideas = {
-					remove_idea = SPA_carlism_2
-					add_idea = SPA_carlism_5
-				}
-			}
-			if = {
-				limit = {
-					has_idea = SPA_carlism_3
-				}
-				swap_ideas = {
-					remove_idea = SPA_carlism_3
-					add_idea = SPA_carlism_4
-				}
-			}
-		
-		}
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	focus = {
-		id = SPA_join_the_axis
-		available = {
-			date > 1940.1.1
-			has_global_flag = scw_over
-			is_in_faction = no
-			OR = {
-				AND = {
-					GER = {
-						has_government = fascism
-						is_faction_leader = yes
-					}
-				}
-				AND = {
-					ITA = {
-						has_government = fascism
-						is_faction_leader = yes
-					}
-				}
-			}
-			NOT = { has_global_flag = POR_iberian_summit_in_progress_flag }
-		}
-		bypass = {
-			OR = {
-				AND = {
-					NOT = { GER = { has_government = fascism } }
-					NOT = { ITA = { has_government = fascism } }
-				}
-				is_in_faction_with = GER
-				is_in_faction_with = ITA
-			}
-		}
-		prerequisite = { focus = SPA_fuse_the_parties }
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		
-		icon = GFX_goal_support_fascism
-		x = -2
-		y = 1
-		relative_position_id = SPA_fuse_the_parties
+		x = 22
+		y = 3
 		cost = 5
 
-		available_if_capitulated = yes
-
-		completion_reward = {
-			hidden_effect = {
-				if = {
-					limit = {
-						has_idea = SPR_fuck_joining
-					}
-					remove_ideas = SPR_fuck_joining
-				}
-			}
-			SPR = { 
-				add_to_war = { 
-					targeted_alliance = GER
-					enemy = ENG 
-				}
-			}
-			GER = {
-				add_to_faction = SPR
-			}
-		}
-	}
-	focus = {
-		id = SPA_fascist_economic_aid
-		available = {
-			OR = {
-				NOT = {
-					has_global_flag = scw_over_spr_lost
-				}
-				AND = {
-					has_global_flag = scw_over_spr_lost
-					date > 1939.6.1
-				}
-			}
-				
-		}
-		bypass = {
-		}
-		prerequisite = { focus = SPA_national_recovery }
-		mutually_exclusive = { focus = SPA_autarky }
-		mutually_exclusive = { focus = SPA_the_stabilization_plan }
-		
-		icon = GFX_goal_generic_construction
-		x = -1
-		y = 1
-		relative_position_id = SPA_join_the_axis
-		cost = 7.2
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			112 = {
-				add_resource = {
-					type = tungsten
-					amount = 8
-				}
-			}
-			181 = {
-				add_resource = {
-					type = tungsten
-					amount = 8
-				}
-			}
-			795 = {
-				add_resource = {
-					type = chromium
-					amount = 15
-				}
-			}
-			
-			swap_ideas = {
-				remove_idea = SPA_national_recovery_5
-				add_idea = SPA_national_recovery_6
-			}
-			add_ideas = SPA_fascist_economic_aid
-			
-			add_tech_bonus = {
-				name = SPA_fascist_economic_aid
-				bonus = 1.0
-				uses = 1
-				category = industry
-			}
-		}
-	}
-
-	focus = {
-		id = SPA_facilitate_pyrenees_freight_transports
-		available = {
-			has_full_control_of_state = 793
-			has_full_control_of_state = 794
-			has_full_control_of_state = 165
-			has_full_control_of_state = 176
-			has_full_control_of_state = 792
-			has_full_control_of_state = 41
-			
-		}
-		bypass = {
-		}
-		prerequisite = { focus = SPA_fascist_economic_aid }
-		
-		icon = GFX_goal_generic_construct_infrastructure
-		x = 0
-		y = 1
-		relative_position_id = SPA_fascist_economic_aid
-		cost = 7.2
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-			custom_effect_tooltip = SPA_facilitate_pyrenees_freight_transports_tt
-			
-			swap_ideas = {
-				remove_idea = SPA_recovering_from_civil_war
-				add_idea = SPA_recovering_from_civil_war_2
-			}
-			hidden_effect = {
-				793 = {
-					if = {
-						limit = { is_controlled_by = ROOT }
-						add_building_construction = {
-							type = infrastructure
-							level = 10
-							instant_build = yes
-						}
-					}
-				}
-				794 = {
-					if = {
-						limit = { is_controlled_by = ROOT }
-
-						add_building_construction = {
-							type = infrastructure
-							level = 10
-							instant_build = yes
-						}
-					}
-				}
-				165 = {
-					if = {
-						limit = { is_controlled_by = ROOT }
-
-						add_building_construction = {
-							type = infrastructure
-							level = 10
-							instant_build = yes
-						}
-					}
-				}
-				176 = {
-					if = {
-						limit = { is_controlled_by = ROOT }
-
-						add_building_construction = {
-							type = infrastructure
-							level = 10
-							instant_build = yes
-						}
-					}
-				}
-				792 = {
-					if = {
-						limit = { is_controlled_by = ROOT }
-
-						add_building_construction = {
-							type = infrastructure
-							level = 10
-							instant_build = yes
-						}
-					}
-				}
-				41 = {
-					if = {
-						limit = { is_controlled_by = ROOT }
-						add_building_construction = {
-							type = infrastructure
-							level = 10
-							instant_build = yes
-						}
-					}
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = SPA_improve_cross_country_railways
-		available = {
-			
-		}
-		bypass = {
-		}
-		prerequisite = { focus = SPA_fascist_economic_aid focus = SPA_spanish_austerity }
-		
-		icon = GFX_goal_generic_construct_infrastructure
-		x = 1
-		y = 2
-		relative_position_id = SPA_fascist_economic_aid
-		cost = 7.2
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-			every_owned_state = {
-				limit = {
-					is_controlled_by = ROOT
-					is_core_of = ROOT
-					NOT = {
-						state = 793
-						state = 794
-						state = 165
-						state = 176
-						state = 792
-						state = 41
-					}
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
 		ai_will_do = {
-			factor = 2
+			factor = 90
 		}
-	}
 
-	focus = {
-		id = SPA_support_the_war_industry
-		available = {
-			
-		}
-		bypass = {
-		}
-		prerequisite = { focus = SPA_facilitate_pyrenees_freight_transports }
-		prerequisite = { focus = SPA_improve_cross_country_railways }
-		
-		icon = GFX_goal_generic_construct_civ_factory
-		x = 0
-		y = 2
-		relative_position_id = SPA_facilitate_pyrenees_freight_transports
-		cost = 7.2
+		available_if_capitulated = no
 
-		available_if_capitulated = yes
-
-		complete_tooltip = {
-			every_state = {
-				limit	= {	has_state_flag = SPA_support_the_war_industry_1civ }
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-					}
-					is_core_of = ROOT
-				}
-				set_state_flag = SPA_support_the_war_industry_1civ
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-					}
-					is_core_of = ROOT
-					NOT = { has_state_flag = SPA_support_the_war_industry_1civ }
-				}
-				set_state_flag = SPA_support_the_war_industry_1civ
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-					}
-					is_core_of = ROOT
-					NOT = { has_state_flag = SPA_support_the_war_industry_1civ }
-				}
-				set_state_flag = SPA_support_the_war_industry_1civ
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			custom_effect_tooltip = SPA_reduce_reliance_on_foreign_resources_tt
-		}
-	}
-
-
-	focus = {
-		id = SPA_the_duty_to_work
-		available = {
-			
-		}
-		bypass = {
-		}
-		prerequisite = { focus = SPA_support_the_war_industry }
-		
-		icon = GFX_goal_generic_construct_military
-		x = 0
-		y = 2
-		relative_position_id = SPA_support_the_war_industry
-		cost = 5
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-			add_ideas = SPA_the_duty_to_work
-			
+			custom_effect_tooltip = SPR_beck_good_tt
 			if = {
 				limit = {
-					has_idea = SPA_recovering_from_civil_war
-				}
-				remove_ideas = SPA_recovering_from_civil_war
-			}
-			if = {
-				limit = {
-					has_idea = SPA_recovering_from_civil_war_2
-				}
-				remove_ideas = SPA_recovering_from_civil_war_2
-			}
-			if = {
-				limit = {
-					has_idea = SPA_recovering_from_civil_war_ai
-				}
-				remove_ideas = SPA_recovering_from_civil_war_ai
-			}
-			if = {
-				limit = {
-					has_idea = SPA_recovering_from_civil_war_3
-				}
-				remove_ideas = SPA_recovering_from_civil_war_3
-			}
-		}
-	}
-	focus = {
-		id = SPA_expand_the_war_industry
-		available = {
-			
-		}
-		bypass = {
-		}
-		prerequisite = { focus = SPA_support_the_war_industry focus = SPA_expand_the_axis_gold_trade }
-		
-		icon = GFX_goal_generic_construct_mil_factory
-		x = 1
-		y = 1
-		relative_position_id = SPA_support_the_war_industry
-		cost = 5
-
-		available_if_capitulated = yes
-
-		complete_tooltip = {
-			every_state = {
-				limit	= {	has_state_flag = SPA_expand_the_war_industry_2mil }
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-					}
-					is_core_of = ROOT
-				}
-				set_state_flag = SPA_expand_the_war_industry_2mil
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-					}
-					is_core_of = ROOT
-					NOT = { has_state_flag = SPA_expand_the_war_industry_2mil }
-				}
-				set_state_flag = SPA_expand_the_war_industry_2mil
-				add_extra_state_shared_building_slots = 4
-				add_building_construction = {
-					type = arms_factory
-					level = 4
-					instant_build = yes
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 5
-		}
-	}
-
-	focus = {
-		id = SPA_national_recovery
-		available = {
-			has_global_flag = scw_over
-		}
-		bypass = {
-		}
-		prerequisite = { focus = SPA_fuse_the_parties }
-		
-		icon = GFX_goal_generic_consumer_goods
-		x = 0
-		y = 1
-		relative_position_id = SPA_fuse_the_parties
-		cost = 7.2
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		complete_tooltip = {
-			every_state = {
-				limit	= {	has_state_flag = SPA_national_recovery_2civ }
-				add_extra_state_shared_building_slots = 4
-				add_building_construction = {
-					type = industrial_complex
-					level = 4
-					instant_build = yes
-				}
-			}
-		}
-		completion_reward = {
-			add_ideas = { SPA_national_recovery_5 }
-			add_ideas = SPR_no_airfields
-			set_cosmetic_tag = SPR_afterscw
-			set_capital = {state = 41}
-			custom_effect_tooltip = SPR_airbases_tt
-			POR = { give_resource_rights = { receiver = SPR state = 181 }}
-			POR = {give_resource_rights = { receiver = SPR state = 112 }}
-			POR = {give_resource_rights = { receiver = SPR state = 795 }}
-			hidden_effect = {
-				169 = { 
-					remove_building = { type = air_base  level = 10 }  
-					set_building_level = {
-						type = anti_air_building
-						level = 10
-						instant_build = yes
+					POL = {
+						is_ai = no
 					}		
 				}
-				173 = { 
-					remove_building = { type = air_base  level = 10 }  
-					set_building_level = {
-						type = anti_air_building
-						level = 10
-						instant_build = yes
-					}		
+				POL = {
+					transfer_state = 831
 				}
-				168 = { 
-					remove_building = { type = air_base  level = 10 }  
-					set_building_level = {
-						type = anti_air_building
-						level = 10
-						instant_build = yes
-					}		
-				}
-				789 = { 
-					remove_building = { type = air_base  level = 10 }  
-					set_building_level = {
-						type = anti_air_building
-						level = 10
-						instant_build = yes
-					}		
-				}
-				170 = { 
-					remove_building = { type = air_base  level = 10 }  
-					set_building_level = {
-						type = anti_air_building
-						level = 10
-						instant_build = yes
-					}		
-				}
-				175 = { 
-					remove_building = { type = air_base  level = 10 }  
-					set_building_level = {
-						type = anti_air_building
-						level = 10
-						instant_build = yes
-					}		
-				}
-				167 = { 
-					remove_building = { type = air_base  level = 10 }  
-					set_building_level = {
-						type = anti_air_building
-						level = 10
-						instant_build = yes
-					}		
-				}
-				793 = { 
-					remove_building = { type = air_base  level = 10 }  
-					set_building_level = {
-						type = anti_air_building
-						level = 10
-						instant_build = yes
-					}		
-				}
-				41 = { 
-					remove_building = { type = air_base  level = 10 }  
-					set_building_level = {
-						type = anti_air_building
-						level = 10
-						instant_build = yes
-					}		
-				}
-				788 = { 
-					remove_building = { type = air_base  level = 10 }  
-					set_building_level = {
-						type = anti_air_building
-						level = 10
-						instant_build = yes
-					}		
-				}
-				791 = { 
-					remove_building = { type = air_base  level = 10 }  
-					set_building_level = {
-						type = anti_air_building
-						level = 10
-						instant_build = yes
-					}		
-				}
-				794 = { 
-					remove_building = { type = air_base  level = 10 }  
-					set_building_level = {
-						type = anti_air_building
-						level = 10
-						instant_build = yes
-					}		
-				}
-				166 = { 
-					remove_building = { type = air_base  level = 10 }  
-					set_building_level = {
-						type = anti_air_building
-						level = 10
-						instant_build = yes
-					}		
-				}
-				165 = { 
-					remove_building = { type = air_base  level = 10 }  
-					set_building_level = {
-						type = anti_air_building
-						level = 10
-						instant_build = yes
-					}		
-				}
-				176 = { 
-					remove_building = { type = air_base  level = 10 }  
-					set_building_level = {
-						type = anti_air_building
-						level = 10
-						instant_build = yes
-					}		
-				}
-				172 = { 
-					remove_building = { type = air_base  level = 10 }  
-					set_building_level = {
-						type = anti_air_building
-						level = 10
-						instant_build = yes
-					}		
-				}
-				792 = { 
-					remove_building = { type = air_base  level = 10 }  
-					set_building_level = {
-						type = anti_air_building
-						level = 10
-						instant_build = yes
-					}		
-				}
-				790 = { 
-					remove_building = { type = air_base  level = 10 }  
-					set_building_level = {
-						type = anti_air_building
-						level = 10
-						instant_build = yes
-					}		
-				}
-				171 = { 
-					remove_building = { type = air_base  level = 10 }  
-					set_building_level = {
-						type = anti_air_building
-						level = 10
-						instant_build = yes
-					}		
-				}
-				174 = { 
-					remove_building = { type = air_base  level = 10 }  
-					set_building_level = {
-						type = anti_air_building
-						level = 10
-						instant_build = yes
-					}		
-				}
-				290 = { 
-					remove_building = { type = air_base  level = 10 }		 
-				}
-				699 = { 
-					remove_building = { type = air_base  level = 10 }		 
-				}
-				178 = { 
-					remove_building = { type = air_base  level = 10 }		 
-				}
-				177 = { 
-					remove_building = { type = air_base  level = 10 }		 
+				831 = {
+					add_core_of = POL
+					
 				}
 			}	
-
-		}
-		ai_will_do = {
-			factor = 5
+			custom_effect_tooltip = SPR_modify_industry_spirit_tt
+			add_to_variable = {
+				SPR_political_power_gain_var = -0.15
+				tooltip = SPR_pol_power_fac_tt2
+			}
+			add_to_variable = {
+				SPR_production_speed_buildings_factor_var = 0.05
+				tooltip = SPR_constra_tt1
+			}
+			add_to_variable = {
+				SPR_production_speed_industrial_complex_factor_var = 0.05
+				tooltip = SPR_civ_construction_tt1
+			}
 		}
 	}
 
 	focus = {
-		id = SPA_autarky
-		available = {
-			OR = {
-				NOT = {
-					has_global_flag = scw_over_spr_lost
-				}
-				AND = {
-					has_global_flag = scw_over_spr_lost
-					date > 1939.6.1
-				}
-			}
-		}
-		bypass = {
-		}
-		prerequisite = { focus = SPA_national_recovery }
-		mutually_exclusive = { focus = SPA_fascist_economic_aid }
-		mutually_exclusive = { focus = SPA_the_stabilization_plan }
-		
-		icon = GFX_goal_generic_oil_refinery
-		x = -1
-		y = 1
-		relative_position_id = SPA_national_recovery
-		cost = 7.2
+		id = SPR_continue_the_policy_of_even_distances
+		icon = GFX_pol_even_distances
+		prerequisite = { focus = SPR_becks_vision }
 
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		x = 22
+		y = 4
+		cost = 5
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		available_if_capitulated = no
+
 		completion_reward = {
-			
-			112 = {
-				add_resource = {
-					type = tungsten
-					amount = 10
+			custom_effect_tooltip = SPR_modify_industry_spirit_tt
+			add_to_variable = {
+				SPR_political_power_factor_var = 0.05
+				tooltip = SPR_pol_power_perc_tt_5_procent_dobre
+			}
+			add_to_variable = {
+				SPR_production_speed_industrial_complex_factor_var = 0.05
+				tooltip = SPR_civ_construction_tt1
+			}
+			470 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
 				}
+				
 			}
-			181 = {
-				add_resource = {
-					type = tungsten
-					amount = 12
+			503 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
 				}
+				
 			}
-			795 = {
-				add_resource = {
-					type = chromium
-					amount = 22
-				}
-			}
-			
-			add_tech_bonus = {
-				name = HOL_make_use_of_our_riches
-				bonus = 1.0
-				uses = 2
-				category = excavation_tech
-			}
-			add_tech_bonus = {
-				name = HOL_expand_curacao_oil_refineries
-				bonus = 1.0
-				uses = 1
-				category = synth_resources
-			}
-			
-		}
-		ai_will_do = {
-			factor = 5
 		}
 	}
 
 	focus = {
-		id = SPA_spanish_austerity
-		available = {
+		id = SPR_strengthen_state_monopolies
+		icon = GFX_tfu_socjalisci
+		prerequisite = { focus = SPR_seek_recoaliton_with_germany }
+
+		x = 21
+		y = 6
+		cost = 5
+
+		ai_will_do = {
+			factor = 90
 		}
-		bypass = {
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = SPR_modify_industry_spirit_tt
+			add_to_variable = {
+				SPR_stability_factor_var = 0.075
+				tooltip = SPR_stabn_tt1
+			}
+			add_to_variable = {
+				SPR_industrial_capacity_factory_var = 0.04
+				tooltip = SPR_fact_output_tt1
+			}
+			add_to_variable = {
+				SPR_production_speed_industrial_complex_factor_var = 0.05
+				tooltip = SPR_civ_construction_tt1
+			}
+			add_to_variable = {
+				SPR_production_speed_arms_factory_factor_var = -0.05
+				tooltip = SPR_mil_construction_tt1
+			}
+			472 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				
+			}
+			503 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				
+			}
+			503 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				
+			}
 		}
-		prerequisite = { focus = SPA_autarky }
+	}
+
+	focus = {
+		id = SPR_seek_recoaliton_with_germany
+		icon = GFX_pol_yes_germany
+		prerequisite = { focus = SPR_continue_the_policy_of_even_distances }
+
+		x = 22
+		y = 5
+		cost = 5
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = SPR_modify_industry_spirit_tt
+			add_to_variable = {
+				SPR_stability_factor_var = 0.075
+				tooltip = SPR_stabn_tt1
+			}
+			add_to_variable = {
+				SPR_consumer_goods_factor_var = -0.03
+				tooltip = SPR_consumer_goods_tt1
+			}
+			add_to_variable = {
+				SPR_production_speed_buildings_factor_var = 0.025
+				tooltip = SPR_constra_tt1
+			}
+			add_to_variable = {
+				SPR_production_speed_arms_factory_factor_var = -0.075
+				tooltip = SPR_mil_construction_tt1
+			}
+		}
+	}
+
+	focus = {
+		id = SPR_prevent_the_next_depression
+		icon = GFX_GER_private_military_industrial_complex
+		prerequisite = { focus = SPR_seek_recoaliton_with_germany }
+
+		x = 23
+		y = 6
+		cost = 5
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = SPR_modify_industry_spirit_tt
+			add_to_variable = {
+				SPR_stability_factor_var = 0.1
+				tooltip = SPR_stabn_tt1
+			}
+			add_to_variable = {
+				SPR_consumer_goods_factor_var = -0.05
+				tooltip = SPR_consumer_goods_tt2
+			}
+			add_to_variable = {
+				SPR_production_speed_industrial_complex_factor_var = 0.05
+				tooltip = SPR_civ_construction_tt1
+			}
+			add_to_variable = {
+				SPR_production_speed_arms_factory_factor_var = -0.05
+				tooltip = SPR_mil_construction_tt1
+			}
+			add_tech_bonus = {
+				category = construction_tech
+				technology = advanced_machine_tools
+				technology = assembly_line_production
+				uses = 1
+				bonus = 0.75
+				name = USA_heavy_public_works_spending
+			}
+			503 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				
+			}
+		}
+	}
+
+	focus = {
+		id = SPR_force_a_change_on_beck
+		icon = GFX_beck_bad
+		prerequisite = { focus = SPR_summon_a_new_cabinet }
+		mutually_exclusive = {
+			focus = SPR_becks_vision
+		}
+		
+		x = 28
+		y = 3
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
 		}
-		
-		icon = GFX_goal_generic_construct_civilian
-		x = 0
-		y = 1
-		relative_position_id = SPA_autarky
-		cost = 7.2
 
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		available_if_capitulated = no
+
 		completion_reward = {
-			112 = {
-				add_resource = {
-					type = steel
-					amount = 10
-				}
+			custom_effect_tooltip = SPR_beck_bad_tt
+			remove_ideas = SPR_jozef_beck
+			custom_effect_tooltip = SPR_modify_industry_spirit_tt
+			add_to_variable = {
+				SPR_industrial_capacity_factory_var = 0.04
+				tooltip = SPR_fact_output_tt1
 			}
-			181 = {
-				add_resource = {
-					type = tungsten
-					amount = 10
-				}
+			add_to_variable = {
+				SPR_political_power_gain_var = -0.15
+				tooltip = SPR_pol_power_fac_tt2
 			}
-			795 = {
-				add_resource = {
-					type = chromium
-					amount = 10
-				}
+			add_to_variable = {
+				SPR_consumer_goods_factor_var = 0.02
+				tooltip = SPR_consumer_goods_tt909
 			}
-			if = {
-				limit = {
-					NOT = {
-						has_idea = SPA_recovering_from_civil_war
-						has_idea = SPA_recovering_from_civil_war_2
-					}
-				}
-				effect_tooltip = {
-					swap_ideas = {
-						remove_idea = SPA_recovering_from_civil_war
-						add_idea = SPA_recovering_from_civil_war_2
-					}
-				}
+			add_to_variable = {
+				SPR_production_speed_arms_factory_factor_var = 0.05
+				tooltip = SPR_mil_construction_tt1
 			}
-			if = {
-				limit = {
-					has_idea = SPA_recovering_from_civil_war
-				}
-				swap_ideas = {
-					remove_idea = SPA_recovering_from_civil_war
-					add_idea = SPA_recovering_from_civil_war_2
-				}
-			}
-			
-			
-		}
-		ai_will_do = {
-			factor = 5
+			add_political_power = 50
 		}
 	}
 
 	focus = {
-		id = SPA_reduce_reliance_on_foreign_resources
-		available = {
-		}
-		bypass = {
-		}
-		prerequisite = { focus = SPA_spanish_austerity focus = SPA_expand_spanish_bases }
-		
-		icon = GFX_goal_generic_construction2
-		x = 1
-		y = 1
-		relative_position_id = SPA_spanish_austerity
+		id = SPR_embrace_dmowskis_thought
+		icon = GFX_pol_dmowski_repl
+		prerequisite = { focus = SPR_force_a_change_on_beck }
+
+		x = 28
+		y = 4
 		cost = 5
 
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_tech_bonus = {
-				name = SPA_reduce_reliance_on_foreign_resources
-				bonus = 1.5
-				uses = 2
-				category = excavation_tech
-			}
-			custom_effect_tooltip = SPA_reduce_reliance_on_foreign_resources_tt
-		}
-	}
-
-	focus = {
-		id = SPA_expand_the_axis_gold_trade
-		available = {
-			NOT = { has_completed_focus = SPA_the_stabilization_plan }
-		}
-		bypass = {
-		}
-		prerequisite = { focus = SPA_spanish_austerity }
-		
-		
-		icon = GFX_focus_usa_reestablish_the_gold_standard
-		x = 0
-		y = 2
-		relative_position_id = SPA_spanish_austerity
-		cost = 5
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_ideas = SPA_expand_the_axis_gold_trade
-		}
 		ai_will_do = {
-			factor = 5
+			factor = 10
 		}
-	}
 
-	focus = {
-		id = SPA_ensure_agricultural_self_sufficiency
-		available = {
-		}
-		bypass = {
-		}
-		prerequisite = { focus = SPA_expand_the_axis_gold_trade }
-		
-		icon = GFX_goal_generic_construct_civ_factory
-		x = 0
-		y = 2
-		relative_position_id = SPA_expand_the_axis_gold_trade
-		cost = 7.2
+		available_if_capitulated = no
 
-		available_if_capitulated = yes
-
-		complete_tooltip = {
-			every_state = {
-				limit	= {	has_state_flag = SPA_ensure_agricultural_self_sufficiency_2civ }
+		completion_reward = {
+			add_war_support = 0.05
+			custom_effect_tooltip = SPR_modify_industry_spirit_tt
+			add_to_variable = {
+				SPR_industrial_capacity_factory_var = 0.05
+				tooltip = SPR_fact_output_tt1
+			}
+			add_to_variable = {
+				SPR_stability_factor_var = 0.075
+				tooltip = SPR_stabn_tt1
+			}
+			add_to_variable = {
+				SPR_production_speed_arms_factory_factor_var = 0.05
+				tooltip = SPR_mil_construction_tt1
+			}
+			472 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
 					level = 2
 					instant_build = yes
 				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-			
-			
-			if = {
-				limit = {
-					has_idea = SPA_recovering_from_civil_war
-				}
-				remove_ideas = SPA_recovering_from_civil_war
-			}
-			if = {
-				limit = {
-					has_idea = SPA_recovering_from_civil_war_2
-				}
-				remove_ideas = SPA_recovering_from_civil_war_2
-			}
-			if = {
-				limit = {
-					has_idea = SPA_recovering_from_civil_war_ai
-				}
-				remove_ideas = SPA_recovering_from_civil_war_ai
-			}
-			if = {
-				limit = {
-					has_idea = SPA_recovering_from_civil_war_3
-				}
-				remove_ideas = SPA_recovering_from_civil_war_3
-			}
-			
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-					}
-					is_core_of = ROOT
-				}
-				set_state_flag = SPA_ensure_agricultural_self_sufficiency_2civ
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-					}
-					is_core_of = ROOT
-					NOT = { has_state_flag = SPA_ensure_agricultural_self_sufficiency_2civ }
-				}
-				set_state_flag = SPA_ensure_agricultural_self_sufficiency_2civ
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-					}
-					is_core_of = ROOT
-					NOT = { has_state_flag = SPA_ensure_agricultural_self_sufficiency_2civ }
-				}
-				set_state_flag = SPA_ensure_agricultural_self_sufficiency_2civ
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 5
-		}
-	}
-
-
-	focus = {
-		id = SPA_the_stabilization_plan
-		available = {
-			OR = {
-				NOT = {
-					has_global_flag = scw_over_spr_lost
-				}
-				AND = {
-					has_global_flag = scw_over_spr_lost
-					date > 1939.6.1
-				}
-			}
-		}
-		bypass = {
-		}
-		prerequisite = { focus = SPA_national_recovery }
-		mutually_exclusive = { focus = SPA_autarky }
-		mutually_exclusive = { focus = SPA_fascist_economic_aid }
-		
-		icon = GFX_goal_generic_neutrality_focus
-		x = 1
-		y = 1
-		relative_position_id = SPA_national_recovery
-		cost = 7.2
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = SPA_national_recovery_5
-				add_idea = SPA_national_recovery_8
-			}
-			if = {
-				limit = {
-					NOT = {
-						has_idea = SPA_recovering_from_civil_war
-						has_idea = SPA_recovering_from_civil_war_2
-					}
-				}
-				effect_tooltip = {
-					swap_ideas = {
-						remove_idea = SPA_recovering_from_civil_war
-						add_idea = SPA_recovering_from_civil_war_2
-					}
-				}
-			}
-			if = {
-				limit = {
-					has_idea = SPA_recovering_from_civil_war
-				}
-				swap_ideas = {
-					remove_idea = SPA_recovering_from_civil_war
-					add_idea = SPA_recovering_from_civil_war_2
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = SPA_expand_spanish_bases
-		available = {
-
-		}
-		bypass = {
-		}
-		prerequisite = { focus = SPA_the_stabilization_plan }
-		
-		icon = GFX_goal_generic_construct_military
-		x = 0
-		y = 1
-		relative_position_id = SPA_the_stabilization_plan
-		cost = 7.2
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes 
-				}	
-			}
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes 
-				}	
-			}
-		}
-	}
-
-	focus = {
-		id = SPA_capitalist_economic_aid
-		available = {
-		}
-		bypass = {
-		}
-		prerequisite = { focus = SPA_expand_spanish_bases }
-		
-		icon = GFX_focus_generic_the_giant_wakes
-		x = 0
-		y = 2
-		relative_position_id = SPA_expand_spanish_bases
-		cost = 7.2
-
-		available_if_capitulated = yes
-		complete_tooltip = {
-			every_state = {
-				limit	= {	has_state_flag = SPA_capitalist_economic_aid_2civ }
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = SPA_national_recovery_8
-				add_idea = SPA_national_recovery_9
-			}
-			add_tech_bonus = {
-				name = SPA_capitalist_economic_aid
-				bonus = 1.0
-				uses = 1
-				category = industry
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-					}
-					is_core_of = ROOT
-				}
-				set_state_flag = SPA_capitalist_economic_aid_2civ
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			remove_ideas = SPA_recovering_from_civil_war_2
-			
-		}
-	}
-
-	focus = {
-		id = SPA_improve_living_standards
-		available = {
-		
-		}
-		bypass = {
-		}
-		prerequisite = { focus = SPA_capitalist_economic_aid }
-		
-		icon = GFX_goal_generic_consumer_goods
-		x = -1
-		y = 1
-		relative_position_id = SPA_capitalist_economic_aid
-		cost = 7.2
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-			add_stability = 0.15
-			add_political_power = 120
-		}
-	}
-
-	focus = {
-		id = SPA_domestic_industrial_developments
-		available = {
-		
-		}
-		bypass = {
-		}
-		prerequisite = { focus = SPA_capitalist_economic_aid }
-		
-		icon = GFX_goal_generic_production
-		x = 1
-		y = 1
-		relative_position_id = SPA_capitalist_economic_aid
-		cost = 7.2
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-			
 				
-			swap_ideas = {
-				remove_idea = SPA_national_recovery_9
-				add_idea = SPA_national_recovery_10
 			}
-			
-			
+			503 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				
+			}
 		}
 	}
 
 	focus = {
-		id = SPA_the_spanish_miracle
-		available = {
-		
+		id = SPR_partial_privatization
+		icon = GFX_focus_didts_dont_change_focusesaaaaaa
+		prerequisite = { focus = SPR_cut_diplomatic_ties_with_germany }
+
+		x = 29
+		y = 6
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
 		}
-		bypass = {
-		}
-		prerequisite = { focus = SPA_improve_living_standards }
-		prerequisite = { focus = SPA_domestic_industrial_developments }
-		
-		icon = GFX_focus_spa_the_spanish_miracle
-		x = 1
-		y = 1
-		relative_position_id = SPA_improve_living_standards
-		cost = 10
 
-		available_if_capitulated = yes
+		available_if_capitulated = no
 
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-					}
-					is_core_of = ROOT
-				}
-				set_state_flag = SPA_the_spanish_miracle_2civ
-				add_extra_state_shared_building_slots = 2
+			custom_effect_tooltip = SPR_modify_industry_spirit_tt
+			add_to_variable = {
+				SPR_production_speed_buildings_factor_var = 0.05
+				tooltip = SPR_constra_tt1
+			}
+			add_to_variable = {
+				SPR_consumer_goods_factor_var = 0.03
+				tooltip = SPR_consumer_goods_tt3
+			}
+			add_to_variable = {
+				SPR_production_speed_industrial_complex_factor_var = -0.05
+				tooltip = SPR_civ_construction_tt1
+			}
+			add_to_variable = {
+				SPR_production_speed_arms_factory_factor_var = 0.05
+				tooltip = SPR_mil_construction_tt1
+			}
+			470 = {
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
-					type = industrial_complex
-					level = 2
+					type = arms_factory
+					level = 3
 					instant_build = yes
 				}
+				
 			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-					}
-					is_core_of = ROOT
-					NOT = { has_state_flag = SPA_the_spanish_miracle_2civ }
-				}
-				set_state_flag = SPA_the_spanish_miracle_2civ
-				add_extra_state_shared_building_slots = 2
+			add_tech_bonus = {
+				category = construction_tech
+				technology = advanced_machine_tools
+				technology = assembly_line_production
+				uses = 1
+				bonus = 0.75
+				name = USA_heavy_public_works_spending
+			}
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = SPR_prioratize_arms_industry
+		icon = GFX_goal_equpiment
+		prerequisite = { focus = SPR_cut_diplomatic_ties_with_germany }
+
+		x = 27
+		y = 6
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			unlock_decision_tooltip = SPR_expantion_of_radom_small_arms_factory
+			unlock_decision_tooltip = SPR_expantion_of_pws
+			unlock_decision_tooltip = SPR_expantion_of_cegielski_industrial_complex
+			unlock_decision_tooltip = SPR_expantion_of_statachowice_works
+			custom_effect_tooltip = SPR_modify_industry_spirit_tt
+			add_to_variable = {
+				SPR_stability_factor_var = 0.075
+				tooltip = SPR_stabn_tt1
+			}
+			add_to_variable = {
+				SPR_production_speed_industrial_complex_factor_var = -0.05
+				tooltip = SPR_civ_construction_tt1
+			}
+			add_to_variable = {
+				SPR_production_speed_arms_factory_factor_var = 0.05
+				tooltip = SPR_mil_construction_tt1
+			}
+			503 = {
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-					type = industrial_complex
-					level = 2
+					type = arms_factory
+					level = 1
 					instant_build = yes
 				}
+				
 			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-					}
-					is_core_of = ROOT
-					NOT = { has_state_flag = SPA_the_spanish_miracle_2civ }
-				}
-				set_state_flag = SPA_the_spanish_miracle_2civ
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-					}
-					is_core_of = ROOT
-				}
-				set_state_flag = SPA_the_spanish_miracle_2mil
+			503 = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
 					level = 3
 					instant_build = yes
 				}
-			}
-			
-		}
-	}
-
-	focus = {
-		id = SPA_adopt_the_26_points
-		available = {
-			has_global_flag = scw_over
-		}
-		bypass = {
-		}
-		prerequisite = { focus = SPA_fuse_the_parties }
-		
-		icon = GFX_focus_generic_treaty
-		x = 4
-		y = 1
-		relative_position_id = SPA_fuse_the_parties
-		cost = 7.2
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.1
-			}
-			if = {
-				limit = {
-					NOT = {
-						has_idea = war_economy
-						has_idea = tot_economic_mobilisation
-					}
-				}
-				add_ideas = war_economy
-			}
-			if = {
-				limit = {
-					has_idea = limited_conscription
-				}
-				add_ideas = extensive_conscription
-			}
-			if = {
-				limit = {
-					has_idea = volunteer_only
-				}
-				add_ideas = limited_conscription
-			}
-			every_owned_state = {
-				limit = {
-					OR = {
-						state = 165
-						state = 171
-						state = 792
-					}
-				}
-				remove_dynamic_modifier = { modifier = autonomous_state }
-			}
-		}
-		ai_will_do = {
-			factor = 15
-		}
-	}
-
-	focus = {
-		id = SPA_direct_the_universities
-		available = {
-			num_of_factories > 50
-		}
-		bypass = {
-		}
-		prerequisite = { focus = SPA_adopt_the_26_points }
-		
-		icon = GFX_focus_research2
-		x = -1
-		y = 1
-		relative_position_id = SPA_adopt_the_26_points
-		cost = 5
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_tech_bonus = {
-				name = ITA_tank_bonus
-				bonus = 0.5
-				uses = 2
-				category = armor
-				category = artillery
-				category = infantry_weapons
-				category = industry
-				category = electronics
-			}
-		}
-		ai_will_do = {
-			factor = 3
-		}
-	}
-
-	focus = {
-		id = SPA_dictator_for_life
-		available = {
-			has_country_leader = {
-				name = "Francisco Franco"
-				ruling_only = yes
-			}
-		}
-		bypass = {
-		}
-		prerequisite = { focus = SPA_adopt_the_26_points }
-		
-		icon = GFX_goal_generic_political_pressure
-		x = 1
-		y = 1
-		relative_position_id = SPA_adopt_the_26_points
-		cost = 5
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_STABILITY }
-		completion_reward = {
-			add_stability = 0.05
-			remove_country_leader_trait = caudillo_1
-			add_country_leader_trait = caudillo_2
-			hidden_effect = {
-				if = {
-					limit = {
-						has_government = neutrality
-					}
-					retire_ideology_leader = fascism
-					create_country_leader = {
-						name = "Francisco Franco"
-						desc = "POLITICS_FRANCISCO_FRANCO_DESC"
-						picture = "GFX_portrait_spain_francisco_franco_old"
-						expire = "1965.1.1"
-						ideology = fascism_ideology
-						traits = {
-							caudillo_2
-						}
-					}
-				}
-				if = {
-					limit = {
-						has_government = fascism
-					}
-					retire_ideology_leader = neutrality
-					create_country_leader = {
-						name = "Francisco Franco"
-						desc = "POLITICS_FRANCISCO_FRANCO_DESC"
-						picture = "GFX_portrait_spain_francisco_franco_old"
-						expire = "1965.1.1"
-						ideology = despotism
-						traits = {
-							caudillo_2
-						}
-					}
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 5
-		}
-	}
-
-	
-
-	focus = {
-		id = SPA_la_division_azul
-		available = {
-			has_completed_focus = SPA_adopt_the_26_points
-			OR = {
-			country_exists = EFR 
-			date > 1939.6.1
-			
-			}
-		}
-		bypass = {
-		}
-		prerequisite = { focus = SPA_dictator_for_life }
-		
-		icon = GFX_goal_rhineland
-		x = -1
-		y = 1
-		relative_position_id = SPA_dictator_for_life
-		cost = 5
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_ideas = SPA_la_division_azul
-			if = {
-				limit = {
-					has_government = neutrality
-				}
-				set_rule = {
-					can_send_volunteers = yes
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 3
-		}
-	}
-
-	focus = {
-		id = SPA_stamp_out_the_maquis
-		available = {
-		}
-		bypass = {
-		}
-		prerequisite = { focus = SPA_dictator_for_life }
-		
-		icon = GFX_goal_generic_more_territorial_claims
-		x = 1
-		y = 1
-		relative_position_id = SPA_dictator_for_life
-		cost = 5
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			custom_effect_tooltip = SPR_recovering_from_civil_war_focus_tt
-		}
-	}
-	focus = {
-		id = SPA_the_corpo_truppe_volontarie
-		available = {
-			NOT = { has_global_flag = scw_over }
-			has_volunteers_amount_from = {
-				tag = ITA
-				count > 0
-			}
-		}
-		bypass = {
-		}
-		prerequisite = { focus = SPA_unify_the_nationalist_front }
-		
-		icon = GFX_focus_befriend_italy
-		x = -7
-		y = 1
-		relative_position_id = SPA_unify_the_nationalist_front
-		cost = 7.2
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_tech_bonus = {
-				name = SPA_the_corpo_truppe_volontarie
-				bonus = 0.5
-				uses = 1
-				category = infantry_weapons
-			}
-			add_tech_bonus = {
-				name = SPA_the_corpo_truppe_volontarie
-				bonus = 0.5
-				uses = 1
-				category = artillery
-			}
-		}
-		ai_will_do = {
-			factor = 5
-		}
-	}
-
-	focus = {
-		id = SPA_the_condor_legion
-		available = {
-			NOT = { has_global_flag = scw_over }
-			has_volunteers_amount_from = {
-				tag = GER
-				count > 0
-			}
-		}
-		bypass = {
-		}
-		prerequisite = { focus = SPA_unify_the_nationalist_front }
-		
-		icon = GFX_focus_chi_mission_to_germany
-		x = -5
-		y = 1
-		relative_position_id = SPA_unify_the_nationalist_front
-		cost = 7.2
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_tech_bonus = {
-				name = SPA_the_condor_legion
-				bonus = 0.5
-				uses = 1
-				category = armor
-			}
-			add_tech_bonus = {
-				name = SPA_the_condor_legion
-				bonus = 0.5
-				uses = 1
-				category = 	cat_mechanized_equipment
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	focus = {
-		id = SPA_equipment_shipments
-		available = {
-			NOT = { has_global_flag = scw_over }
-			OR = {
-				has_volunteers_amount_from = {
-					tag = ITA
-					count > 0
-				}
-				has_volunteers_amount_from = {
-					tag = GER
-					count > 0
-				}
-			}
-		}
-		bypass = {
-		}
-		prerequisite = { focus = SPA_the_corpo_truppe_volontarie }
-		prerequisite = { focus = SPA_the_condor_legion }
-		
-		icon = GFX_goal_generic_build_tank
-		x = 1
-		y = 1
-		relative_position_id = SPA_the_corpo_truppe_volontarie
-		cost = 7.2
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_equipment_to_stockpile = {
-				type = light_tank_chassis_1934
-				amount = 300
-				producer = GER
-			}
-			add_equipment_to_stockpile = {
-				type = light_tank_chassis_1934
-				amount = 300
-				producer = ITA
-			}
-			add_equipment_to_stockpile = {
-				type = motorized_equipment
-				amount = 600
-				producer = GER
-			}
-		division_template = {
-			name = "Experimental Panzer Division"
-			priority = 2s
-  
-			regiments = {
-				light_armor = { x = 0 y = 0 }
-				light_armor = { x = 0 y = 1 }
-				light_armor = { x = 0 y = 2 }
-				light_armor = { x = 0 y = 3 }
-	  
-				light_armor = { x = 1 y = 0 }
-				light_armor = { x = 1 y = 1 }
-				light_armor = { x = 1 y = 2 }
-				light_armor = { x = 1 y = 3 }
-	  
-				motorized = { x = 2 y = 0 }
-				motorized = { x = 2 y = 1 }
-				motorized = { x = 2 y = 2 }
 				
-				motorized = { x = 3 y = 0 }
-				motorized = { x = 3 y = 1 }
-				motorized = { x = 3 y = 2 }
-				motorized = { x = 3 y = 3 }
 			}
-			 support = {
-				artillery = { x = 0 y = 0 }
-				recon = { x = 0 y = 1 }
-				engineer = { x = 0 y = 2 }
-				anti_air_company = { x = 0 y = 3 }
-		  	}
-		}
-			every_state = {
-				limit = { state = 171 }
-				create_unit = {
-					division = "name = \"1st Experimental Panzer Division\" division_template = \"Experimental Panzer Division\" start_experience_factor = 0.4 start_equipment_factor = 0.01" 
-					owner = SPR
-				} 
-				create_unit = {
-					division = "name = \"2st Experimental Panzer Division\" division_template = \"Experimental Panzer Division\" start_experience_factor = 0.4 start_equipment_factor = 0.01" 
-					owner = SPR
-				} 
-			}
-		}
-		ai_will_do = {
-			factor = 2
 		}
 	}
 
 	focus = {
-		id = SPA_obtain_training_staff
+		id = SPR_cut_diplomatic_ties_with_germany
+		icon = GFX_pol_no_germany
+		prerequisite = { focus = SPR_embrace_dmowskis_thought }
+
+		x = 28
+		y = 5
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_war_support = 0.05
+			custom_effect_tooltip = SPR_modify_industry_spirit_tt
+			add_to_variable = {
+				SPR_production_speed_industrial_complex_factor_var = -0.075
+				tooltip = SPR_civ_construction_tt1
+			}
+			add_ideas = low_economic_mobilisation
+		}
+	}
+
+
+	focus = {
+		id = SPR_support_the_dabrowszczacy
+		icon = GFX_pol_dabdabdabadada
+		mutually_exclusive = {
+			focus = SPR_take_a_neutral_stance
+		}
 		available = {
-			NOT = { has_global_flag = scw_over }
-			OR = {
-				has_volunteers_amount_from = {
-					tag = ITA
-					count > 0
-				}
-				has_volunteers_amount_from = {
-					tag = GER
-					count > 0
-				}
+			GER = { 
+				has_war = yes
 			}
 		}
-		bypass = {
-		}
-		prerequisite = { focus = SPA_equipment_shipments }
-		
-		icon = GFX_focus_generic_military_academy
-		x = -1
-		y = 1
-		relative_position_id = SPA_equipment_shipments
-		cost = 7.2
+		x = 26
+		y = 4
 
-		available_if_capitulated = yes
+		cost = 3
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_rule = { can_send_volunteers = yes }
+			custom_effect_tooltip = SPR_modify_army_spirit_tt
+			add_to_variable = {
+				SPR_experience_gain_army_var = 0.07
+				tooltip = SPR_add_army_xp_tt1
+			}
+			add_to_variable = {
+				SPR_send_volunteers_tension_var = -0.50
+				tooltip = SPR_tension_tt1
+			}
+			add_to_variable = {
+				SPR_send_volunteer_divisions_required_var = -1
+				tooltip = SPR_force_tt1
+			}
+		}
+	}
+
+	focus = {
+		id = SPR_take_a_neutral_stance
+		icon = GFX_goal_generic_break_army
+		mutually_exclusive = {
+			focus = SPR_support_the_dabrowszczacy
+		}
+		available = {
+			OR = {
+				GER = { 
+					has_war = yes
+				}
+				GER = {
+					has_completed_focus = SPA_national_recovery
+				}
+			}
+
+		}
+		x = 24
+		y = 4
+
+		cost = 3
+		
+		ai_will_do = {
+			factor = 1000
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+		    add_political_power = 100
+			army_experience = 100
+		}
+	}
+
+	focus = {
+		id = SPR_increase_spanish_weapon_trade
+		icon = GFX_FRA_token_support
+		prerequisite = {
+			focus = SPR_take_a_neutral_stance
+			focus = SPR_support_the_dabrowszczacy
+		}
+		available = {
+			W31 = {
+				exists = yes
+			}
+		}
+		x = 25
+		y = 5
+
+		cost = 5
+		
+		ai_will_do = {
+			factor = 1000
+		}
+
+		available_if_capitulated = no
 
 		completion_reward = {
 			army_experience = 50
-			add_timed_idea = { idea = SPA_foreign_training_staff days = 730 }
+			W31 = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 4000
+					producer = GER
+				}
+				add_equipment_to_stockpile = { 
+					type = artillery_equipment_1 
+					amount = 300
+					producer = GER
+				}
+				add_equipment_to_stockpile = { type = support_equipment_1
+				    amount = 250 
+					producer = GER
+				}
+				add_equipment_to_stockpile = { type = horse_equipment
+				    amount = 500 
+					producer = GER
+				}	
+			}
+			GER = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 1000
+					producer = GER
+				}	
+			}
 		}
 	}
 
 	focus = {
-		id = SPA_doctrinal_advancements
+		id = SPR_start_the_four_year_plan
+		icon = GFX_focus_czterolatka
 		available = {
-			NOT = { has_global_flag = scw_over }
-			OR = {
-				has_volunteers_amount_from = {
-					tag = ITA
-					count > 0
-				}
-				has_volunteers_amount_from = {
-					tag = GER
-					count > 0
-				}
-			}
-		}
-		bypass = {
-		}
-		prerequisite = { focus = SPA_equipment_shipments }
+			has_completed_focus = SPR_summon_a_new_cabinet
+		}	
 		
-		icon = GFX_goal_generic_army_doctrines
-		x = 1
-		y = 1
-		relative_position_id = SPA_equipment_shipments
-		cost = 7.2
+		x = 25
+		y = 6
+		cost = 5
 
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_doctrine_cost_reduction = {
-				name = land_doc_bonus
-				cost_reduction = 0.5
-				uses = 1
-				category = land_doctrine
-			}
-			add_doctrine_cost_reduction = {
-				name = land_doc_bonus
-				cost_reduction = 0.5
-				uses = 1
-				category = air_doctrine
-			}
-		}
-	}
-	focus = {
-		id = SPA_expand_conscription
-		available = {
-		}
-		bypass = {
-		}
-		prerequisite = { focus = SPA_extol_the_martyrs_of_the_war }
-		
-		icon = GFX_goal_generic_axis_build_infantry
-		x = -3
-		y = 1
-		relative_position_id = SPA_extol_the_martyrs_of_the_war
-		cost = 7.2
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_MANPOWER }
-		completion_reward = {
-			add_ideas = SPA_expand_conscription
-		}
-	}
-
-	focus = {
-		id = SPA_safeguard_the_freedom_of_worship
-		available = {
-		}
-		bypass = {
-		}
-		prerequisite = { focus = SPA_extol_the_martyrs_of_the_war }
-		
-		icon = GFX_focus_generic_strike_at_democracy1
-		x = -1
-		y = 1
-		relative_position_id = SPA_extol_the_martyrs_of_the_war
-		cost = 7.2
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			add_stability = 0.1
-			add_political_power = 60
-		}
-	}
-	focus = {
-		id = SPA_the_national_and_popular_army_of_spain
-		available = {
-			has_global_flag = scw_over
-		}
-		bypass = {
-		}
-		prerequisite = { focus = SPA_fuse_the_parties }
-		
-		icon = GFX_goal_generic_army_doctrines
-		x = -5
-		y = 1
-		relative_position_id = SPA_fuse_the_parties
-		cost = 7.2
-
-		available_if_capitulated = yes
-		complete_tooltip = {
-			every_state = {
-				limit	= {	has_state_flag = SPA_the_national_and_popular_army_of_spain_2mil }
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 4
-					instant_build = yes
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-			army_experience = 10
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-					}
-					is_core_of = ROOT
-				}
-				set_state_flag = SPA_the_national_and_popular_army_of_spain_2mil
-				add_extra_state_shared_building_slots = 4
-				add_building_construction = {
-					type = arms_factory
-					level = 4
-					instant_build = yes
-				}
-			}
-		}
 		ai_will_do = {
-			factor = 3
+			factor = 900
 		}
-	}
-	focus = {
-		id = SPA_the_army_of_africa_model
-		available = {
-		}
-		bypass = {
-		}
-		prerequisite = { focus = SPA_the_national_and_popular_army_of_spain }
-		
-		icon = GFX_goal_generic_army_artillery
-		x = 0
-		y = 1
-		relative_position_id = SPA_the_national_and_popular_army_of_spain
-		cost = 5
 
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		available_if_capitulated = no
+
 		completion_reward = {
-			army_experience = 25
-			add_doctrine_cost_reduction = {
-				name = land_doc_bonus
-				cost_reduction = 0.5
+			custom_effect_tooltip = SPR_modify_industry_spirit_tt
+			add_to_variable = {
+				SPR_production_speed_buildings_factor_var = 0.05
+				tooltip = SPR_constra_tt1
+			}
+			add_to_variable = {
+				SPR_consumer_goods_factor_var = -0.07
+				tooltip = SPR_consumer_goods_tt6
+			}
+			add_tech_bonus = {
+				name = industry_bonus
+				bonus = 1.25
 				uses = 1
-				category = land_doctrine
+				category = industry
 			}
 		}
+	}
+
+	focus = {
+		id = SPR_the_central_industrial_region_strategy
+		icon = GFX_focus_cop
+		prerequisite = {
+			focus = SPR_start_the_four_year_plan
+		}
+		prerequisite = {
+			focus = SPR_prevent_the_next_depression
+			focus = SPR_prioratize_arms_industry
+		}
+		prerequisite = {
+			focus = SPR_strengthen_state_monopolies
+			focus = SPR_partial_privatization
+		}
+		
+		
+
+		x = 25
+		y = 7
+		cost = 5
+
 		ai_will_do = {
-			factor = 0.5
+			factor = 900
 		}
-	}
 
-	focus = {
-		id = SPA_equipment_modernization
-		available = {
-		}
-		bypass = {
-		}
-		prerequisite = { focus = SPA_the_army_of_africa_model }
-		
-		icon = GFX_goal_generic_small_arms
-		x = -1
-		y = 2
-		relative_position_id = SPA_the_army_of_africa_model
-		cost = 5
+		available_if_capitulated = no
 
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+			custom_effect_tooltip = SPR_cop1_tt
+			custom_effect_tooltip = SPR_modify_industry_spirit_tt
+			add_to_variable = {
+				SPR_industrial_capacity_factory_var = 0.04
+				tooltip = SPR_fact_output_tt1
+			}
+			add_to_variable = {
+				SPR_production_speed_buildings_factor_var = 0.05
+				tooltip = SPR_constra_tt1
+			}
+			add_to_variable = {
+				SPR_production_factory_max_efficiency_factor_var = 0.02
+				tooltip = SPR_cap_tt1
+			}
 			add_tech_bonus = {
-				name = SPA_equipment_modernization
-				bonus = 0.5
-				uses = 2
-				category = infantry_weapons
+				name = lasers
+				bonus = 1
+				uses = 1
+				category = electronics		
 			}
 		}
 	}
 
 	focus = {
-		id = SPA_artillery_modernization
+		id = SPR_form_the_ozn
+		icon = GFX_focus_ozn
 		available = {
+			date > 1937.01.18
 		}
-		bypass = {
-		}
-		prerequisite = { focus = SPA_equipment_modernization }
-		
-		icon = GFX_goal_generic_army_artillery2
-		x = -1
-		y = 1
-		relative_position_id = SPA_equipment_modernization
+	
+		x = 25
+		y = 8
 		cost = 5
 
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = no
+
 		completion_reward = {
-			add_tech_bonus = {
-				name = SPA_artillery_modernization
-				bonus = 0.5
-				uses = 2
-				category = artillery
+			set_party_name = { 
+				ideology = neutrality 
+				long_name = SPR_ozn_name_long
+				name = SPR_ozn_name_short
 			}
+			custom_effect_tooltip = SPR_modify_industry_spirit_tt
+			add_to_variable = {
+				SPR_stability_factor_var = 0.1
+				tooltip = SPR_stabn_tt1
+			}
+			custom_effect_tooltip = available_theorist
+			show_ideas_tooltip = SPR_adam_koc
 		}
 	}
 
 	focus = {
-		id = SPA_expand_the_air_branch
-		available = {
-		}
-		bypass = {
-		}
-		prerequisite = { focus = SPA_equipment_modernization }
-		
-		icon = GFX_goal_generic_air_doctrine
-		x = 0
-		y = 2
-		relative_position_id = SPA_equipment_modernization
+		id = SPR_zwiazek_mlodej_polski
+		icon = GFX_pol_narodowa_org_wojskowa
+		prerequisite = { focus = SPR_form_the_ozn }
+	
+		x = 25
+		y = 9
 		cost = 5
 
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		ai_will_do = {
+			factor = 5
+		}
+
+		available_if_capitulated = no
+
 		completion_reward = {
-			random_core_state  = {
+			add_ideas = SPR_zmp
+		}
+	}
+
+	focus = {
+		id = SPR_mielec_aircraft_factory
+		icon = GFX_focus_mielec_pzl
+		prerequisite = { focus = SPR_the_central_industrial_region_strategy }
+		available = {
+			has_completed_focus = SPR_form_the_ozn
+			NOT = {
+				has_country_flag = SPR_cop_construction_focus
+			}
+		}
+
+		x = 28
+		y = 8
+		cost = 5
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_country_flag = { flag = SPR_cop_construction_focus  value = 1 days = 100}
+			custom_effect_tooltip = SPR_modify_industry_spirit_tt
+			add_to_variable = {
+				SPR_production_speed_buildings_factor_var = 0.025
+				tooltip = SPR_constra_tt1
+			}
+			add_to_variable = {
+				SPR_production_factory_max_efficiency_factor_var = 0.03
+				tooltip = SPR_cap_tt1
+			}
+			mio:SPR_pppzzzlll = {
+				add_mio_funds = 5000
+			}
+			custom_effect_tooltip = available_air_designer
+			503 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
 					level = 2
 					instant_build = yes
 				}
+				
 			}
+			503 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				
+			}
+		}
+	}
+
+	focus = {
+		id = SPR_stomil_debica_rubber_plant
+		icon = GFX_focus_generic_rubber
+		prerequisite = { focus = SPR_expand_the_lucznik_state_arms_factory }
+
+		available = {
+			NOT = {
+				has_country_flag = SPR_cop_construction_focus
+			}
+		}
+
+		x = 23
+		y = 9
+		cost = 5
+		
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_country_flag = { flag = SPR_cop_construction_focus  value = 1 days = 100}
+			custom_effect_tooltip = SPR_modify_industry_spirit_tt
+			add_to_variable = {
+				SPR_production_speed_buildings_factor_var = 0.025
+				tooltip = SPR_constra_tt1
+			}
+			add_to_variable = {
+				SPR_production_factory_max_efficiency_factor_var = 0.03
+				tooltip = SPR_cap_tt1
+			}
+			custom_effect_tooltip = available_refinery_concern
+			show_ideas_tooltip = SPR_debica
+			add_resource = {
+				type = rubber
+				amount = 4
+				state = 88
+			}	
+
+		}
+	}
+
+	focus = {
+		id = SPR_consturct_new_hydroelectric_power_plants
+		icon = GFX_focus_generic_hydroelectric_energy
+		prerequisite = { focus = SPR_mielec_aircraft_factory }
+
+		available = {
+			NOT = {
+				has_country_flag = SPR_cop_construction_focus
+			}
+		}
+
+		x = 27
+		y = 9
+		cost = 5
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_country_flag = { flag = SPR_cop_construction_focus  value = 1 days = 100}
+			custom_effect_tooltip = SPR_modify_industry_spirit_tt
+			add_to_variable = {
+				SPR_production_speed_buildings_factor_var = 0.025
+				tooltip = SPR_constra_tt1
+			}
+			add_to_variable = {
+				SPR_industrial_capacity_factory_var = 0.05
+				tooltip = SPR_fact_output_tt1
+			}
+			add_tech_bonus = {
+				name = industry_bonus
+				bonus = 1
+				uses = 2
+				technology = basic_skills
+				technology = specialized_skills
+				technology = streamlined_skills
+				technology = expanded_workforce
+			}
+			add_resource = {
+				type = steel
+				amount = 4
+				state = 90
+			}
+			add_resource = {
+				type = tungsten
+				amount = 4
+				state = 90
+			}		
+		}
+	}
+
+	focus = {
+		id = SPR_expand_the_lucznik_state_arms_factory
+		icon = GFX_focus_lucznik_radom
+		prerequisite = { focus = SPR_the_central_industrial_region_strategy }
+		available = {
+			has_completed_focus = SPR_form_the_ozn
+			NOT = {
+				has_country_flag = SPR_cop_construction_focus
+			}
+		}
+
+		x = 22
+		y = 8
+		cost = 5
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_country_flag = { flag = SPR_cop_construction_focus  value = 1 days = 100}
+			custom_effect_tooltip = SPR_modify_industry_spirit_tt
+			add_to_variable = {
+				SPR_production_speed_buildings_factor_var = 0.025
+				tooltip = SPR_constra_tt1
+			}
+			add_to_variable = {
+				SPR_industrial_capacity_factory_var = 0.05
+				tooltip = SPR_fact_output_tt1
+			}
+			mio:SPR_fb_lucznik = {
+				add_mio_funds = 3000
+			}
+			503 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				
+			}
+			503 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				
+			}
+		}
+	}
+
+	focus = {
+		id = SPR_huta_stalowa_wola
+		icon = GFX_focus_hsw
+		prerequisite = {
+			focus = SPR_stomil_debica_rubber_plant
+		}
+		prerequisite = {
+			focus = SPR_consturct_new_hydroelectric_power_plants
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = SPR_cop_construction_focus
+			}
+		}
+
+		x = 25
+		y = 10
+		cost = 5
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = SPR_cop2_tt
+			custom_effect_tooltip = SPR_modify_industry_spirit_tt
+			add_to_variable = {
+				SPR_production_factory_max_efficiency_factor_var = 0.03
+				tooltip = SPR_cap_tt1
+			}
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = SPR_huta_stalowa_wola
+			mio:SPR_huta_stalowa_wola = {
+				add_mio_funds = 9000
+			}
+			503 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				
+			}
+			503 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				
+			}
+		}
+	}
+
+	focus = {
+		id = SPR_begin_the_fifteen_year_plan
+		icon = GFX_plan_pietnastoletni
+		prerequisite = {
+			focus = SPR_huta_stalowa_wola
+		}
+
+		x = 25
+		y = 11
+		cost = 5
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.1
+		}
+	}
+
+ ####Army
+
+	focus = {
+		id = SPR_start_the_rearment
+		icon = GFX_focus_Pol_rearmament
+		relative_position_id = SPR_the_cabinet_of_marian_zyndram 
+		prerequisite = { focus = SPR_the_cabinet_of_marian_zyndram }
+	
+		x = -13
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.3
+				uses = 1
+				category = land_doctrine
+			}
+			army_experience = 40
+	
+		}
+	}
+
+	focus = {
+		id = SPR_hel_fortified_area
+		icon = GFX_goal_fortify_the_westwall
+		prerequisite = { focus = SPR_start_the_rearment }
+	
+		x = 11
+		y = 2
+		cost = 5
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = SPR_modify_army_spirit_tt
+			add_to_variable = {
+				SPR_max_dig_in_var = 1
+			}
+			custom_effect_tooltip = SPR_army2_tt
+			828 = {
+				set_building_level = {
+				  type = bunker
+				  province = {
+					  id = 13352   
+				    }
+				  level = 10
+				  instant_build = yes
+			    }
+		    }
+			828 = {
+				set_building_level = {
+				  type = coastal_bunker
+				  province = {
+					  id = 13352   
+				    }
+				  level = 7
+				  instant_build = yes
+			    }
+		    }
+	
+		}
+	}
+
+	focus = {
+		id = SPR_marshal_is_dead_long_live_the_marshal
+		icon = GFX_r56_goal_SPR_sanitation_right
+		prerequisite = { focus = SPR_start_the_rearment }
+	
+		x = 13
+		y = 2
+		cost = 5
+
+		ai_will_do = {
+			factor = 7
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = -50
+			custom_effect_tooltip = SPR_modify_army_spirit_tt
+			add_to_variable = {
+				SPR_army_defence_factor_var = 0.05
+			}
+			custom_effect_tooltip = SPR_army3_tt
+			add_to_variable = {
+				SPR_army_morale_factor_var = 0.05
+			}
+			custom_effect_tooltip = SPR_army4_tt
+	
+		}
+	}
+
+	focus = {
+		id = SPR_mobilization_plan_w
+		icon = GFX_pol_mobilizacja_good
+		prerequisite = {
+			focus = SPR_hel_fortified_area
+		}
+		prerequisite = {
+			focus = SPR_marshal_is_dead_long_live_the_marshal
+		}
+
+		x = 12
+		y = 3
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = SPR_modify_industry_spirit_tt
+			add_to_variable = {
+				SPR_consumer_goods_factor_var = 0.025
+				tooltip = SPR_consumer_goods_tt69
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 300
+				producer = SPR
+			}	
+			503 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				
+			}
+	
+		}
+	}
+
+	focus = {
+		id = SPR_emergency_mobilization
+		icon = GFX_pol_mobilizacja_chuj
+		prerequisite = {
+			focus = SPR_mobilization_plan_w
+		}
+		mutually_exclusive = {
+			focus = SPR_preemptive_mobilization
+		}
+		available = {
+			POL = {
+				has_war = yes
+			}
+		}
+
+		x = 11
+		y = 4
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = extensive_conscription
+		}
+	}
+
+	focus = {
+		id = SPR_preemptive_mobilization
+		icon = GFX_deploy_reserve_division_big
+		prerequisite = {
+			focus = SPR_mobilization_plan_w
+		}
+		mutually_exclusive = {
+			focus = SPR_emergency_mobilization
+		}
+		available = {
+			has_completed_focus = SPR_cut_diplomatic_ties_with_germany
+		}
+
+		x = 13
+		y = 4
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = SPR_mobilizacja_tt
+			custom_effect_tooltip = SPR_modify_army_spirit_tt
+			add_to_variable = {
+				SPR_army_morale_factor_var = 0.05
+			}
+			custom_effect_tooltip = SPR_army4_tt
+			add_political_power = -50
+			add_ideas = limited_conscription
+			
+		}
+	}
+
+	focus = {
+		id = SPR_silni_zwarci_i_gotowi
+		icon = GFX_pol_silnizwarcidwa
+		prerequisite = {
+			focus = SPR_emergency_mobilization
+			focus = SPR_preemptive_mobilization
+		}
+		available = {
+			POL = {
+				has_war = yes
+			}
+		}
+
+		x = 12
+		y = 5
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = SPR_slini_zwarci_tt
+			add_to_variable = { var = SPR_initial_war_euthasium_army_core_attack_factor_modifier value = 0.05 }
+			add_to_variable = { var = SPR_initial_war_euthasium_army_core_defence_factor_modifier value = 0.05 }
+			add_political_power = -50
+			add_ideas = war_economy
+
+		}
+	}
+
+	focus = {
+		id = SPR_plan_operacyjny_zachod
+		icon = GFX_focus_plan_zachod
+		prerequisite = {
+			focus = SPR_hel_fortified_area
+		}
+		prerequisite = {
+			focus = SPR_marshal_is_dead_long_live_the_marshal
+		}
+	
+		x = 7
+		y = 3
+		cost = 5
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = SPR_modify_army_spirit_tt
+			add_to_variable = {
+				SPR_max_dig_in_var = 1
+			}
+			custom_effect_tooltip = SPR_army2_tt
+			army_experience = 25
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.4
+				uses = 1
+				category = land_doctrine
+			}
+
+		}
+	}
+
+	focus = {
+		id = SPR_national_defence_fund
+		icon = GFX_fundusz_obrony_narodowej
+		prerequisite = {
+			focus = SPR_expand_polish_cipher
+		}
+		prerequisite = {
+			focus = SPR_bydgoszcz_military_parachute_centre
+		}
+
+		x = 7
+		y = 6
+		cost = 5
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = SPR_modify_industry_spirit_tt
+			add_to_variable = {
+				SPR_consumer_goods_factor_var = 0.025
+				tooltip = SPR_consumer_goods_tt69
+			}
+			add_timed_idea = {
+				idea = SPR_fundusz
+				days = 100
+			}	
+			add_tech_bonus = {
+				name = SPR_national_defence_fund
+				bonus = 0.5
+				uses = 2
+				category = support_tech
+			}
+	
+		}
+	}
+
+	focus = {
+		id = SPR_silesia_fortified_area
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = {
+			focus = SPR_plan_operacyjny_zachod
+		}
+
+		x = 9
+		y = 4
+		cost = 3
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			90 = {
+				set_building_level = {
+					type = bunker
+					province = {
+						id = 3586
+					  }
+					level = 2
+					instant_build = yes
+				}
+		    }
+			762 = {
+				set_building_level = {
+					type = bunker
+					province = {
+						id = 506
+					  }
+					level = 4
+					instant_build = yes
+				}
+		    }
+			762 = {
+				set_building_level = {
+					type = bunker
+					province = {
+						id = 6464
+					  }
+					level = 4
+					instant_build = yes
+				}
+		    }
+			88 = {
+				set_building_level = {
+					type = bunker
+					province = {
+						id = 13205
+					  }
+					level = 2
+					instant_build = yes
+				}
+		    }
+			88 = {
+				set_building_level = {
+					type = bunker
+					province = {
+						id = 9412
+					  }
+					level = 4
+					instant_build = yes
+				}
+		    }
+			add_tech_bonus = {
+				name = SPR_silesia_fortified_area
+				bonus = 1
+				uses = 1
+				technology = tech_engineers2
+				technology = tech_engineers3
+				technology = tech_engineers4
+			}
+	
+		}
+	}
+
+	focus = {
+		id = SPR_golan_and_wizna_fortifications
+		icon = GFX_wizna_forts
+		prerequisite = {
+			focus = SPR_plan_operacyjny_zachod
+		}
+
+		x = 5
+		y = 4
+		cost = 3
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			487 = {
+				set_building_level = {
+				  type = bunker
+				  province = {
+					  id = 279  
+				    }
+				  level = 2
+				  instant_build = yes
+			    }
+		    }
+			483 = {
+				set_building_level = {
+				  type = bunker
+				  province = {
+					  id = 9945
+				    }
+				  level = 2
+				  instant_build = yes
+			    }
+		    }
+			482 = {
+				set_building_level = {
+				  type = bunker
+				  province = {
+					  id = 989
+				    }
+				  level = 2
+				  instant_build = yes
+			    }
+		    }
+			481 = {
+				set_building_level = {
+				  type = bunker
+				  province = {
+					  id = 10070
+				    }
+				  level = 2
+				  instant_build = yes
+			    }
+		    }
+			484 = {
+				set_building_level = {
+					type = bunker
+					province = {
+						id = 11943
+					  }
+					level = 2
+					instant_build = yes
+				}
+		    }
+			485 = {
+				set_building_level = {
+					type = bunker
+					province = {
+						id = 12857
+					  }
+					level = 2
+					instant_build = yes
+				}
+		    }
+			502 = {
+				set_building_level = {
+					type = bunker
+					province = {
+						id = 5012
+					  }
+					level = 4
+					instant_build = yes
+				}
+		    }
+			495 = {
+				set_building_level = {
+					type = bunker
+					province = {
+						id = 5034
+					  }
+					level = 2
+					instant_build = yes
+				}
+		    }
+			487 = {
+				set_building_level = {
+					type = bunker
+					province = {
+						id = 2038
+					  }
+					level = 4
+					instant_build = yes
+				}
+		    }
+			488 = {
+				set_building_level = {
+					type = bunker
+					province = {
+						id = 7959
+					  }
+					level = 4
+					instant_build = yes
+				}
+		    }
+			503 = {
+				set_building_level = {
+					type = bunker
+					province = {
+						id = 8244
+					  }
+					level = 4
+					instant_build = yes
+				}
+		    }
+			add_tech_bonus = {
+				name = SPR_golan_and_wizna_fortifications
+				bonus = 1
+				uses = 1
+				technology = tech_dig_2
+				technology = tech_dig_3
+				technology = tech_dig_4
+			}
+
+			
+
+		}
+	}
+
+	focus = {
+		id = SPR_expand_polish_cipher
+		icon = GFX_focus_SPR_expand_polish_intelligence
+		prerequisite = {
+			focus = SPR_golan_and_wizna_fortifications
+		}
+		prerequisite = {
+			focus = SPR_the_legion_czechs_and_slovaks
+		}
+
+		x = 6
+		y = 5
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_intel = {
+				target = GER
+				civilian_intel = 40
+				army_intel = 40
+				navy_intel = 40
+				airforce_intel = 40
+			}
+			custom_effect_tooltip = SPR_modify_army_spirit_tt
+			add_to_variable = {
+				SPR_agency_upgrade_time_var = -0.15
+				tooltip = SPR_agency_tt1
+			}
+			add_to_variable = {
+				SPR_decryption_power_var = 30
+				tooltip = SPR_decryption_tt1
+			}
+			add_to_variable = {
+				SPR_crypto_strength_var = 2
+				tooltip = SPR_encryption_tt1
+			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = SPR_marian_rejewski
+		}
+	}
+
+	focus = {
+		id = SPR_bydgoszcz_military_parachute_centre
+		icon = GFX_focus_generic_paratrooper
+		prerequisite = {
+			focus = SPR_silesia_fortified_area
+		}
+		prerequisite = {
+			focus = SPR_the_legion_czechs_and_slovaks
+		}
+
+		x = 8
+		y = 5
+		cost = 5
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = SPR_bydgoszcz_military_parachute_centre
+				bonus = 1
+				uses = 3
+				category = special_tech
+			}
+			add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 0.5
+				uses = 1
+				category = artillery
+			}
+
+
+	
+		}
+	}
+
+	focus = {
+		id = SPR_the_legion_czechs_and_slovaks
+		icon = GFX_pole_czech
+		prerequisite = {
+			focus = SPR_plan_operacyjny_zachod
+		}
+		available = {
+			CZE = {
+				exists = no
+			}
+			OR = {
+				has_completed_focus = SPR_becks_vision
+				has_completed_focus = SPR_force_a_change_on_beck
+			}
+
+		}
+
+
+		x = 7
+		y = 4
+		cost = 5
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 50
+			custom_effect_tooltip = SPR_legionczechoslawcki_inf_tt
+			hidden_effect = {
+				division_template = {
+				   name = "Legion Czechów i Słowaków"  
+				 priority = 0
+
+				 regiments = {
+				 volkssturm_infantry = { x = 0 y = 0 }
+				 volkssturm_infantry = { x = 0 y = 1 }
+				 volkssturm_infantry = { x = 0 y = 2 }
+
+				 volkssturm_infantry = { x = 1 y = 0 }
+				 volkssturm_infantry = { x = 1 y = 1 }
+				 volkssturm_infantry = { x = 1 y = 2 }
+
+				 volkssturm_infantry = { x = 2 y = 0 }
+				 volkssturm_infantry = { x = 2 y = 1 }
+				 volkssturm_infantry = { x = 2 y = 2 }
+
+				 field_gun_brigade = { x = 3 y = 0 }
+				 field_gun_brigade = { x = 3 y = 1 }
+				 field_gun_brigade = { x = 3 y = 2 }
+
+				 field_gun_brigade = { x = 4 y = 0 }
+				 field_gun_brigade = { x = 4 y = 1 }
+				 field_gun_brigade = { x = 4 y = 2 }
+				 }
+				 support = {
+					 artillery = { x = 0 y = 0 }
+					 recon = { x = 0 y = 1 }
+					 engineer = { x = 0  y = 2 }
+					 field_gun_support = { x = 0  y = 3 }
+				 }
+			 }
+			if = {
+				limit = {
+					has_completed_focus = SPR_becks_vision
+					POL = {
+                        controls_state = 95
+					}
+				}
+
+				every_state = {
+					limit = { state = 95 }
+					create_unit = {
+						division = "name = \"1 Czechosłowacki Samodzielny Batalion Piechoty\" division_template = \"Legion Czechów i Słowaków\" start_experience_factor = 0.4 start_equipment_factor = 1" 
+						owner = POL
+					}  
+				} 
+  
+		 
+			}
+			if = {
+				limit = {
+					has_completed_focus = SPR_force_a_change_on_beck
+					POL = {
+                        controls_state = 95
+					}
+				}
+
+				every_state = {
+					limit = { state = 95 }
+					create_unit = {
+						division = "name = \"1 Czechosłowacki Samodzielny Batalion Piechoty\" division_template = \"Legion Czechów i Słowaków\" start_experience_factor = 0.4 start_equipment_factor = 1" 
+						owner = POL
+					}  
+				} 
+
+				every_state = {
+					limit = { state = 95 }
+					create_unit = {
+						division = "name = \"2 Czechosłowacki Samodzielny Batalion Piechoty\" division_template = \"Legion Czechów i Słowaków\" start_experience_factor = 0.4 start_equipment_factor = 1" 
+						owner = POL
+					}  
+				}
+				
+				every_state = {
+					limit = { state = 95 }
+					create_unit = {
+						division = "name = \"3 Czechosłowacki Samodzielny Batalion Piechoty\" division_template = \"Legion Czechów i Słowaków\" start_experience_factor = 0.4 start_equipment_factor = 1" 
+						owner = POL
+					}  
+				} 
+
+				every_state = {
+					limit = { state = 95 }
+					create_unit = {
+						division = "name = \"4 Czechosłowacki Samodzielny Batalion Piechoty\" division_template = \"Legion Czechów i Słowaków\" start_experience_factor = 0.4 start_equipment_factor = 1" 
+						owner = POL
+					}  
+				} 
+
+				every_state = {
+					limit = { state = 95 }
+					create_unit = {
+						division = "name = \"5 Czechosłowacki Samodzielny Batalion Piechoty\" division_template = \"Legion Czechów i Słowaków\" start_experience_factor = 0.4 start_equipment_factor = 1" 
+						owner = POL
+					}  
+				} 
+  
+		 
+			}    
+		    }
+		}
+	}
+
+	focus = {
+		id = SPR_komitet_do_spraw_uzbrojenia_i_sprzetu
+		icon = GFX_pol_ksus
+		prerequisite = {
+			focus = SPR_hel_fortified_area
+		}
+		prerequisite = {
+			focus = SPR_marshal_is_dead_long_live_the_marshal
+		}
+	
+		x = 17
+		y = 3
+		cost = 5
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+			add_tech_bonus = {
+				name = SPR_karabin_wz_dwadziesciaosiem
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+			custom_effect_tooltip = available_theorist
+			show_ideas_tooltip = SPR_waclaw_stachiewicz
+		}
+	}
+
+	focus = {
+		id = SPR_beton
+		icon = GFX_pol_beton
+		prerequisite = {
+			focus = SPR_komitet_do_spraw_uzbrojenia_i_sprzetu
+		}
+		mutually_exclusive = {
+			focus = SPR_appoint_vissioneris
+		}
+
+		x = 16
+		y = 4
+		cost = 5
+
+		ai_will_do = {
+			factor = 19
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = SPR_beton_tt
+			add_political_power = -50
+			add_ideas = {
+				SPR_waclaw_stachiewicz
+			}
+	
+		}
+	}
+
+	focus = {
+		id = SPR_urugwaj_project
+		icon = GFX_pol_ur
+		prerequisite = {
+			focus = SPR_beton
+			focus = SPR_appoint_vissioneris
+		}
+
+		x = 17
+		y = 5
+		cost = 5
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = FRA_bonus_hard_attack_tt
+			add_tech_bonus = {
+				name = SPR_urugwaj_project
+				bonus = 2
+				uses = 1
+				technology = infantry_at2
+			}
+			hidden_effect = {
+				set_technology = { FRA_panzer_shrek_tech = 1 }
+			}	
+	
+		}
+	}
+
+	focus = {
+		id = SPR_the_modern_cavalery
+		icon = GFX_focus_generic_horse_studs
+		prerequisite = {
+			focus = SPR_beton
+		}
+
+		x = 15
+		y = 5
+		cost = 5
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = SPR_modify_army_spirit_tt
+			add_to_variable = {
+				SPR_cavalry_attack_factor_var = 0.05
+				tooltip = SPR_army1_tt
+			}
+			add_to_variable = {
+				SPR_max_dig_in_var = 1
+			}
+			custom_effect_tooltip = SPR_army2_tt
+			add_equipment_to_stockpile = {
+				type = horse_equipment
+				amount = 5000
+				producer = SPR
+			}	
+		}
+	}
+
+	focus = {
+		id = SPR_karabin_wz_dwadziesciaosiem
+		icon = GFX_SOV_infantry_development
+		prerequisite = {
+			focus = SPR_the_modern_cavalery
+		}
+		prerequisite = {
+			focus = SPR_urugwaj_project
+		}
+
+
+		x = 16
+		y = 6
+		cost = 5
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 4500
+				producer = SPR
+			}	
+			add_tech_bonus = {
+				name = SPR_karabin_wz_dwadziesciaosiem
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+
+	focus = {
+		id = SPR_setup_the_cegielski_artilery_factory
+		icon = GFX_pol_cegielski
+		prerequisite = {
+			focus = SPR_karabin_wz_dwadziesciaosiem
+			focus = SPR_siedmiotonowy_polski
+		}
+
+
+		x = 17
+		y = 7
+		cost = 5
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = SPR_modify_army_spirit_tt
+			add_to_variable = {
+				SPR_consumer_goods_factor_var = 0.03
+				tooltip = SPR_consumer_goods_tt3
+			}
+			add_ideas = SPR_arty_idea
+			add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 0.5
+				uses = 1
+				category = artillery
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 200
+				producer = SPR
+			}		
+			503 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				
+			}
+		}
+	}
+
+
+	focus = {
+		id = SPR_appoint_vissioneris
+		icon = GFX_pol_smaczek
+		prerequisite = {
+			focus = SPR_komitet_do_spraw_uzbrojenia_i_sprzetu
+		}
+		mutually_exclusive = {
+			focus = SPR_beton
+		}
+
+		x = 18
+		y = 4
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = SPR_maczek_tt
+			custom_effect_tooltip = SPR_modify_army_spirit_tt
+			add_to_variable = {
+				SPR_command_power_gain_mult_var = 0.2
+			}
+			custom_effect_tooltip = SPR_army5_tt
+			add_to_variable = {
+				SPR_max_command_power_var = 10
+			}
+			custom_effect_tooltip = SPR_army6_tt
+			add_to_variable = {
+				SPR_army_morale_factor_var = 0.05
+			}
+			custom_effect_tooltip = SPR_army4_tt
+			add_ideas = {
+				SPR_rudolf_gundlach
+			}
+			add_tech_bonus = {
+				name = FRA_mechanization_effort
+				bonus = 0.5
+				uses = 1
+				category = cat_mechanized_equipment
+			}
+			mio:SPR_pzinz = {
+				add_mio_funds = 9000
+			}
+			mio:SPR_pzinz_mech = {
+				add_mio_funds = 3000
+			}
+	
+		}
+	}
+
+	focus = {
+		id = SPR_purchase_forgein_tanks
+		icon = GFX_pol_foregin_tanks
+		prerequisite = {
+			focus = SPR_appoint_vissioneris
+		}
+
+		x = 19
+		y = 5
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = light_tank_chassis_1936
+				amount = 600
+				producer = FRA
+			}
+			add_tech_bonus = {
+				name = armor_bonus	
+				bonus = 0.5
+				uses = 1
+				category = armor 
+			}
+	
+		}
+	}
+
+	focus = {
+		id = SPR_siedmiotonowy_polski
+		icon = GFX_pol_siedmiotonowy_polski
+		prerequisite = {
+			focus = SPR_purchase_forgein_tanks
+		}
+		prerequisite = {
+			focus = SPR_urugwaj_project
+		}
+
+		x = 18
+		y = 6
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = SPR_modify_army_spirit_tt
+			add_to_variable = {
+				SPR_army_armor_attack_factor_var = 0.05
+			}
+			custom_effect_tooltip = SPR_army7_tt
+			add_equipment_to_stockpile = {
+				type = light_tank_chassis
+				amount = 500
+				producer = SPR
+			}
+			add_equipment_to_stockpile = {
+				type = medium_tank_chassis
+				amount = 250
+				producer = SPR
+			}
+		}
+	}
+
+ ####Aviation
+
+	focus = {
+		id = SPR_air_and_gas_league_mobilization
+		icon = GFX_gas_and_air
+		relative_position_id = SPR_the_cabinet_of_marian_zyndram 
+		prerequisite = { focus = SPR_the_cabinet_of_marian_zyndram }
+	
+		x = 13
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			air_experience = 30
+			navy_experience = 30
+			add_tech_bonus = {
+				name = radar_focus
+				bonus = 0.75
+				uses = 2
+				category = radar_tech
+			}
+	
+		}
+	}
+
+	focus = {
+		id = SPR_air_command_of_the_ministry_of_the_army
+		icon = GFX_SPR_Polish_Air_Force
+		relative_position_id = SPR_the_cabinet_of_marian_zyndram 
+		prerequisite = { focus = SPR_air_and_gas_league_mobilization }
+	
+		x = 8
+		y = 2
+		cost = 2.96
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			air_experience = 30
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
 				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
 			}
-			add_tech_bonus = {
-				name = SPA_expand_the_air_branch
-				bonus = 0.5
-				uses = 1
-				category = light_fighter
-				category = cas_bomber
-			}
+	
 		}
 	}
 
 	focus = {
-		id = SPA_expand_the_special_forces
-		available = {
-		}
-		bypass = {
-		}
-		prerequisite = { focus = SPA_equipment_modernization }
-		
-		icon = GFX_goal_generic_special_forces
-		x = 1
-		y = 1
-		relative_position_id = SPA_equipment_modernization
-		cost = 5
+		id = SPR_military_aviation_exports
+		icon = GFX_aviation_exports
+		relative_position_id = SPR_the_cabinet_of_marian_zyndram 
+		prerequisite = { focus = SPR_air_command_of_the_ministry_of_the_army }
+	
+		x = 7
+		y = 3
+		cost = 2.96
 
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = no
+
 		completion_reward = {
-			add_tech_bonus = {
-				name = SPA_expand_the_special_forces
-				bonus = 1.0
-				uses = 1
-				category = marine_tech
+			add_political_power = 50
+			custom_effect_tooltip = SPR_modify_industry_spirit_tt
+			add_to_variable = {
+				SPR_consumer_goods_factor_var = -0.015
+				tooltip = SPR_consumer_goods_tt80
 			}
-			add_tech_bonus = {
-				name = SPA_expand_the_special_forces
-				bonus = 1.0
-				uses = 1
-				category = mountaineers_tech
-			}
+	
 		}
 	}
 
 	focus = {
-		id = SPA_motorization
-		available = {
-		}
-		bypass = {
-		}
-		prerequisite = { focus = SPA_the_army_of_africa_model }
-		
-		icon = GFX_goal_generic_army_motorized
-		x = 0
-		y = 1
-		relative_position_id = SPA_the_army_of_africa_model
-		cost = 5
+		id = SPR_light_aircraft_development
+		icon = GFX_light_aircraft_development
+		relative_position_id = SPR_the_cabinet_of_marian_zyndram 
+		prerequisite = { focus = SPR_air_command_of_the_ministry_of_the_army }
+	
+		x = 9
+		y = 3
+		cost = 2.96
 
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = no
+
 		completion_reward = {
+			set_technology = {
+				eng_fighter_1937 = 1
+			 }
 			add_tech_bonus = {
-				category = cat_mechanized_equipment
+				category = air_equipment
 				uses = 1
 				bonus = 0.5
-				name = ROM_mechanization_of_our_soldiers
 			}
+			add_equipment_to_stockpile = { type = small_plane_cas_airframe amount = 50 producer = SPR }
+			add_equipment_to_stockpile = { type = small_plane_airframe amount = 100 producer = SPR }
+	
 		}
 	}
 
 	focus = {
-		id = SPA_an_armored_corps
-		available = {
+		id = SPR_appoint_rayski
+		icon = GFX_goal_generic_air_bomber
+		relative_position_id = SPR_the_cabinet_of_marian_zyndram 
+		prerequisite = {
+			focus = SPR_military_aviation_exports
 		}
-		bypass = {
+		prerequisite = {
+			focus = SPR_light_aircraft_development
 		}
-		prerequisite = { focus = SPA_motorization }
-		prerequisite = { focus = SPA_join_the_axis }
-		
-		icon = GFX_goal_generic_army_tanks
-		x = 1
-		y = 1
-		relative_position_id = SPA_motorization
-		cost = 5
+		mutually_exclusive = {
+			focus = SPR_appoint_zajac_and_kalkus
+		}
+	
+		x = 6
+		y = 4
+		cost = 2.96
 
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = no
+
 		completion_reward = {
-			add_tech_bonus = {
-				name = SPA_an_armored_corps
-				bonus = 0.5
-				uses = 2
-				category = armor
-			}
+			air_experience = 25
+			custom_effect_tooltip = available_chief_of_airforce
+			show_ideas_tooltip = SPR_ludomil_rayski
+			add_equipment_to_stockpile = { type = small_plane_airframe amount = 100 producer = SPR }
 		}
 	}
-}
 
+	focus = {
+		id = SPR_medium_bomber_development
+		icon = GFX_focus_generic_multi_role_aircraft
+		relative_position_id = SPR_the_cabinet_of_marian_zyndram 
+		prerequisite = {
+			focus = SPR_appoint_rayski
+		}
+		available = {
+			has_tech = formation_flying
+		}
+	
+		x = 6
+		y = 5
+		cost = 2.96
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_technology = {
+				dive_bombing = 1
+			} 
+			add_equipment_to_stockpile = { type = medium_plane_airframe amount = 25 producer = SPR }
+	
+		}
+	}
+
+	focus = {
+		id = SPR_modern_cas_doctrine
+		icon = GFX_modern_cas_doctrince
+		relative_position_id = SPR_the_cabinet_of_marian_zyndram 
+		prerequisite = {
+			focus = SPR_medium_bomber_development
+		}
+		available = {
+			has_tech = formation_flying
+		}
+	
+		x = 6
+		y = 6
+		cost = 2.96
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_technology = {
+				direct_ground_support = 1
+			} 
+			air_experience = 25
+			add_equipment_to_stockpile = { type = small_plane_cas_airframe amount = 50 producer = SPR }
+	
+		}
+	}
+
+	focus = {
+		id = SPR_appoint_zajac_and_kalkus
+		icon = GFX_goal_generic_air_fighter
+		relative_position_id = SPR_the_cabinet_of_marian_zyndram 
+		prerequisite = {
+			focus = SPR_military_aviation_exports
+		}
+		prerequisite = {
+			focus = SPR_light_aircraft_development
+		}
+		mutually_exclusive = {
+			focus = SPR_appoint_rayski
+		}
+	
+		x = 10
+		y = 4
+		cost = 2.96
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			air_experience = 25
+			custom_effect_tooltip = available_chief_of_airforce
+			show_ideas_tooltip = SPR_jozef_zajac
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = SPR_wladyslaw_kalkus
+			add_equipment_to_stockpile = { type = small_plane_airframe amount = 100 producer = SPR }
+		}
+	}
+
+	focus = {
+		id = SPR_open_the_pzl_wp_factory
+		icon = GFX_focus_generic_aircraft_production
+		relative_position_id = SPR_the_cabinet_of_marian_zyndram 
+		prerequisite = {
+			focus = SPR_appoint_rayski
+			focus = SPR_appoint_zajac_and_kalkus
+		}
+	
+		x = 8
+		y = 5
+		cost = 2.96
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = SPR_modify_army_spirit_tt
+			add_to_variable = {
+				SPR_consumer_goods_factor_var = 0.03
+				tooltip = SPR_consumer_goods_tt3
+			}
+			470 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				
+			}
+			add_equipment_to_stockpile = { type = small_plane_cas_airframe amount = 50 producer = SPR }
+			add_equipment_to_stockpile = { type = small_plane_airframe amount = 100 producer = SPR }
+			
+	
+		}
+	}
+
+	focus = {
+		id = SPR_the_karas
+		icon = GFX_karas
+		relative_position_id = SPR_the_cabinet_of_marian_zyndram 
+		prerequisite = {
+			focus = SPR_open_the_pzl_wp_factory
+		}
+	
+		x = 8
+		y = 6
+		cost = 2.96
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_technology = {
+				eng_CAS_1939 = 1
+			 }
+			air_experience = 100
+	
+		}
+	}
+
+	focus = {
+		id = SPR_the_pulawski_wing
+		icon = GFX_the_pulaski_wing
+		relative_position_id = SPR_the_cabinet_of_marian_zyndram 
+		prerequisite = {
+			focus = SPR_appoint_zajac_and_kalkus
+		}
+		available = {
+			has_tech = air_superiority
+		}
+	
+		x = 10
+		y = 5
+		cost = 2.96
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_technology = {
+				infrastructure_destruction = 1
+			} 
+			
+	
+		}
+	}
+
+	focus = {
+		id = SPR_pursuit_brigades
+		icon = GFX_pursiut_brigades
+		relative_position_id = SPR_the_cabinet_of_marian_zyndram 
+		prerequisite = {
+			focus = SPR_the_pulawski_wing
+		}
+		available = {
+			has_tech = air_superiority
+		}
+	
+		x = 10
+		y = 6
+		cost = 2.96
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_equipment_to_stockpile = { type = fighter_equipment_1938 amount = 75 producer = SPR }
+			air_experience = 25
+			set_technology = {
+				home_defence = 1
+			} 
+	
+		}
+	}
+
+	focus = {
+		id = SPR_emergency_aircraft_buildup
+		icon = GFX_goal_italy_increase_aircraft_production
+		relative_position_id = SPR_the_cabinet_of_marian_zyndram 
+		prerequisite = {
+			focus = SPR_the_karas
+		}
+		prerequisite = {
+			focus = SPR_modern_cas_doctrine
+			focus = SPR_pursuit_brigades
+		}
+	
+		x = 8
+		y = 7
+		cost = 2.96
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = SPR_modify_industry_spirit_tt
+			add_to_variable = {
+				SPR_consumer_goods_factor_var = 0.025
+				tooltip = SPR_consumer_goods_tt69
+			}
+			add_timed_idea = {
+				idea = SPR_emerhency_aircraft
+				days = 100
+			}	
+	
+		}
+	}
+ ####Navy
+ 	focus = {
+		id = SPR_maritime_defence_fund
+		icon = GFX_maritime_defence_fund
+		relative_position_id = SPR_the_cabinet_of_marian_zyndram 
+		prerequisite = { focus = SPR_air_and_gas_league_mobilization }
+	
+		x = 18
+		y = 2
+		cost = 2.96
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = SPR_modify_industry_spirit_tt
+			add_to_variable = {
+				SPR_consumer_goods_factor_var = 0.025
+				tooltip = SPR_consumer_goods_tt69
+			}
+			navy_experience = 30
+			add_political_power = -50
+			
 
 	
+		}
+	}
+
+	focus = {
+		id = SPR_modernize_the_pinsk_river_fleet
+		icon = GFX_focus_hol_prepare_the_inundation_lines
+		relative_position_id = SPR_the_cabinet_of_marian_zyndram 
+		prerequisite = { focus = SPR_maritime_defence_fund }
+	
+		x = 16
+		y = 3
+		cost = 2.96
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = SPR_modify_industry_spirit_tt
+			add_to_variable = {
+				SPR_consumer_goods_factor_var = -0.03
+				tooltip = SPR_consumer_goods_tt1
+			}
+
+			add_timed_idea = {
+				idea = SPR_build_new_escorts_1
+				days = 180
+			}
+			
+	
+		}
+	}
+
+	focus = {
+		id = SPR_build_up_the_coastal_defences
+		icon = GFX_focus_generic_coastal_fort
+		relative_position_id = SPR_the_cabinet_of_marian_zyndram 
+		prerequisite = { focus = SPR_maritime_defence_fund }
+	
+		x = 20
+		y = 3
+		cost = 2.96
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			486 = {
+				set_building_level = {
+				  type = bunker
+				  province = {
+					  id = 1013 
+				    }
+				  level = 2
+				  instant_build = yes
+			    }
+		    }
+			add_tech_bonus = {
+				name = smomething
+				bonus = 0.4
+	   			uses = 1
+		  		category = marine_tech
+	  		}
+			add_offsite_building = { type = dockyard level = 2 }
+	
+		}
+	}
+
+	focus = {
+		id = SPR_maritime_and_colonial_league
+		icon = GFX_polska_liga_morska_kolonialna
+		relative_position_id = SPR_the_cabinet_of_marian_zyndram 
+		prerequisite = { focus = SPR_maritime_defence_fund }
+	
+		x = 18
+		y = 3
+		cost = 2.96
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = smomething
+				bonus = 0.5
+	   			uses = 1
+		  		category = naval_doctrine
+	  		}
+			486 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				
+			}
+			487 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				
+			}
+	
+		}
+	}
+
+	focus = {
+		id = SPR_unrugs_modern_regional_fleet
+		icon = GFX_goal_generic_navy_submarine
+		relative_position_id = SPR_the_cabinet_of_marian_zyndram 
+		prerequisite = {
+			focus = SPR_modernize_the_pinsk_river_fleet
+		}
+		prerequisite = {
+			focus = SPR_maritime_and_colonial_league
+		}
+		prerequisite = {
+			focus = SPR_build_up_the_coastal_defences
+		}
+		mutually_exclusive = {
+			focus = SPR_swiriskis_high_fleet
+		}
+	
+		x = 17
+		y = 4
+		cost = 2.96
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = available_chief_of_navy
+			show_ideas_tooltip = SPR_josef_unrug
+			add_tech_bonus = {
+				name = smomething
+				bonus = 0.5
+	   			uses = 1
+		  		category = trade_interdiction_tree
+	  		}
+			add_offsite_building = { type = dockyard level = 2 }
+		}
+	}
+
+	focus = {
+		id = SPR_form_submarine_flotillas
+		icon = GFX_GER_modular_construction
+		relative_position_id = SPR_the_cabinet_of_marian_zyndram 
+		prerequisite = { focus = SPR_unrugs_modern_regional_fleet }
+	
+		x = 17
+		y = 5
+		cost = 2.96
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = SPR_build_new_escorts_2
+				days = 180
+			}
+			add_offsite_building = { type = dockyard level = 2 }
+	
+		}
+	}
+
+	focus = {
+		id = SPR_develop_the_worek_plan
+		icon = GFX_ROM_coastal_defense_navy
+		relative_position_id = SPR_the_cabinet_of_marian_zyndram 
+		prerequisite = { focus = SPR_form_submarine_flotillas }
+	
+		x = 17
+		y = 6
+		cost = 2.96
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_technology = {
+				raider_patrols = 1
+			}
+			navy_experience = 50
+			add_offsite_building = { type = dockyard level = 2 }
+	
+		}
+	}
+
+	focus = {
+		id = SPR_swiriskis_high_fleet
+		icon = GFX_sca_focus_admirality
+		relative_position_id = SPR_the_cabinet_of_marian_zyndram 
+		prerequisite = {
+			focus = SPR_modernize_the_pinsk_river_fleet
+		}
+		prerequisite = {
+			focus = SPR_maritime_and_colonial_league
+		}
+		prerequisite = {
+			focus = SPR_build_up_the_coastal_defences
+		}
+		mutually_exclusive = {
+			focus = SPR_unrugs_modern_regional_fleet
+		}
+	
+		x = 19
+		y = 4
+		cost = 2.96
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = available_chief_of_navy
+			show_ideas_tooltip = SPR_jerzy_swirski
+			add_tech_bonus = {
+				name = smomething
+				bonus = 0.5
+	   			uses = 1
+		  		category = fleet_in_being_tree
+	  		}
+			add_offsite_building = { type = dockyard level = 2 }
+		}
+	}
+
+	focus = {
+		id = SPR_push_for_cruiser_development
+		icon = GFX_cruiser_devee
+		relative_position_id = SPR_the_cabinet_of_marian_zyndram 
+		prerequisite = { focus = SPR_swiriskis_high_fleet }
+	
+		x = 19
+		y = 5
+		cost = 2.96
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = CAN_cruiser_bonus
+				bonus = 1
+				uses = 2
+				category = cl_tech
+			}
+			add_offsite_building = { type = dockyard level = 2 }
+	
+		}
+	}
+
+	focus = {
+		id = SPR_expand_the_merchant_flotilla
+		icon = GFX_goal_navy_funding
+		relative_position_id = SPR_the_cabinet_of_marian_zyndram 
+		prerequisite = { focus = SPR_push_for_cruiser_development }
+	
+		x = 19
+		y = 6
+		cost = 2.96
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_technology = {
+				convoy_sailing = 1
+			}
+			add_equipment_to_stockpile = {
+				type = convoy
+				amount = 200
+				producer = SPR
+			}
+			add_offsite_building = { type = dockyard level = 2 }
+	
+		}
+	}
+
+	focus = {
+		id = SPR_gdynia_universal_port
+		icon = GFX_gdynia_port_gowno
+		relative_position_id = SPR_the_cabinet_of_marian_zyndram 
+		prerequisite = {
+			focus = SPR_expand_the_merchant_flotilla
+			focus = SPR_develop_the_worek_plan
+		}
+		available = {
+
+		}
+	
+		x = 18
+		y = 7
+		cost = 2.96
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = SPR_modify_industry_spirit_tt
+			add_to_variable = {
+				SPR_consumer_goods_factor_var = -0.05
+				tooltip = SPR_consumer_goods_tt2
+			}
+			add_political_power = 25
+			
+			487 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				
+			}
+
+	
+		}
+	}
+
+	focus = {
+		id = SPR_the_six_year_navy_development_plan
+		icon = GFX_SPR_Polish_Navy
+		relative_position_id = SPR_the_cabinet_of_marian_zyndram 
+		prerequisite = {
+			focus = SPR_gdynia_universal_port
+		}
+	
+		x = 18
+		y = 8
+		cost = 2.96
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = SPR_modify_industry_spirit_tt
+			add_to_variable = {
+				SPR_production_speed_dockyard_factor_var = 0.25
+				tooltip = SPR_dock_construction_tt1
+			}
+			add_timed_idea = {
+				idea = SPR_build_new_escorts_3
+				days = 2190
+			}
+	
+		}
+	}
+
+	focus = {
+		id = SPR_poland_is_not_yet_lost
+		icon = GFX_pol_not_yet_lost
+		available = {			
+			has_capitulated = yes
+		}
+
+		x = 25
+		y = 13
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			remove_dynamic_modifier = {
+				modifier = SPR_wodzu_prowadz
+			}
+			add_dynamic_modifier = {
+				modifier = SPR_president
+			}
+			add_resource = {
+				type = steel
+				amount = 80
+				state = 488
+			}	
+			add_resource = {
+				type = tungsten
+				amount = 80
+				state = 488
+			}	
+			add_resource = {
+				type = aluminium
+				amount = 80
+				state = 488
+			}
+			add_resource = {
+				type = chromium
+				amount = 20
+				state = 488
+			}
+			if = {
+				limit = {
+					POL = {
+						has_completed_focus = SPR_appoint_vissioneris
+					}
+				}
+				add_resource = {
+					type = steel
+					amount = 80
+					state = 488
+				}	
+				add_resource = {
+					type = tungsten
+					amount = 80
+					state = 488
+				}	
+
+			}
+			503 = {
+				add_core_of = SPR
+			}
+			488 = {
+				add_core_of = SPR
+			}
+			4472 = {
+				add_core_of = SPR
+			}
+
+			
+			add_political_power = 600
+			if = {
+				limit = {
+					POL = {
+						has_completed_focus = SPR_cut_diplomatic_ties_with_germany
+					}
+				}
+				503 = {
+					add_extra_state_shared_building_slots = 10
+					add_building_construction = {
+						type = arms_factory
+						level = 10
+						instant_build = yes
+					}
+					
+				}
+				503 = {
+					add_extra_state_shared_building_slots = 10
+					add_building_construction = {
+						type = industrial_complex
+						level = 10
+						instant_build = yes
+					}
+					
+				}
+
+			}
+			set_capital = {state = 488}
+			add_equipment_to_stockpile = {
+				type = convoy
+				amount = 800
+				producer = ENG
+			}
+			if = {
+				limit = {
+					has_country_flag = SPR_u_held_1
+				}
+				add_war_support = 0.05
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_appoint_vissioneris
+							has_tech = pol_1938_medium_tank_chassis
+						}
+					}
+					add_equipment_to_stockpile = {
+						type = medium_tank_chassis
+						amount = 85
+						producer = SPR
+					}	
+				}
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_appoint_vissioneris
+							NOT = {
+								has_tech = pol_1938_medium_tank_chassis
+							}
+						}		
+					}
+					add_equipment_to_stockpile = {
+						type = light_tank_chassis
+						amount = 100
+						producer = SPR
+					}	
+				}
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_appoint_vissioneris
+						}		
+					}
+					add_equipment_to_stockpile = {
+						type = motorized_equipment
+						amount = 250
+						producer = SPR
+					}
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 600
+						producer = SPR
+					}
+					add_manpower = 20000
+				}
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_beton
+						}		
+					}
+					add_equipment_to_stockpile = {
+						type = artillery_equipment
+						amount = 100
+						producer = SPR
+					}
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 1000
+						producer = SPR
+					}
+					add_equipment_to_stockpile = {
+						type = special_equipment
+						amount = 500
+						producer = SPR
+					}
+					add_manpower = 20000
+				}
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_beton
+							has_tech = heavy_artillery2
+						}		
+					}
+					add_equipment_to_stockpile = {
+						type = heavy_artillery_equipment
+						amount = 75
+						producer = SPR
+					}
+				}	
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = 50
+					producer = ENG
+				}	
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 100
+					producer = ENG
+				}
+				add_equipment_to_stockpile = {
+					type = radio_equipment
+					amount = 50
+					producer = ENG
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = SPR_u_held_2
+				}
+				add_war_support = 0.05
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_appoint_vissioneris
+							has_tech = pol_1938_medium_tank_chassis
+						}
+					}
+					add_equipment_to_stockpile = {
+						type = medium_tank_chassis
+						amount = 170
+						producer = SPR
+					}	
+				}
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_appoint_vissioneris
+							NOT = {
+								has_tech = pol_1938_medium_tank_chassis
+							}
+						}		
+					}
+					add_equipment_to_stockpile = {
+						type = light_tank_chassis
+						amount = 200
+						producer = SPR
+					}	
+				}
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_appoint_vissioneris
+						}		
+					}
+					add_equipment_to_stockpile = {
+						type = motorized_equipment
+						amount = 500
+						producer = SPR
+					}
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 1200
+						producer = SPR
+					}
+					add_manpower = 40000
+				}
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_beton
+						}		
+					}
+					add_equipment_to_stockpile = {
+						type = artillery_equipment
+						amount = 200
+						producer = SPR
+					}
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 2000
+						producer = SPR
+					}
+					add_equipment_to_stockpile = {
+						type = special_equipment
+						amount = 1000
+						producer = SPR
+					}
+					add_manpower = 40000
+				}
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_beton
+							has_tech = heavy_artillery2
+						}		
+					}
+					add_equipment_to_stockpile = {
+						type = heavy_artillery_equipment
+						amount = 150
+						producer = SPR
+					}
+				}	
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = 100
+					producer = ENG
+				}	
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 200
+					producer = ENG
+				}
+				add_equipment_to_stockpile = {
+					type = radio_equipment
+					amount = 100
+					producer = ENG
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = SPR_u_held_3
+				}
+				add_war_support = 0.05
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_appoint_vissioneris
+							has_tech = pol_1938_medium_tank_chassis
+						}
+					}
+					add_equipment_to_stockpile = {
+						type = medium_tank_chassis
+						amount = 255
+						producer = SPR
+					}	
+				}
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_appoint_vissioneris
+							NOT = {
+								has_tech = pol_1938_medium_tank_chassis
+							}
+						}		
+					}
+					add_equipment_to_stockpile = {
+						type = light_tank_chassis
+						amount = 300
+						producer = SPR
+					}	
+				}
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_appoint_vissioneris
+						}		
+					}
+					add_equipment_to_stockpile = {
+						type = motorized_equipment
+						amount = 750
+						producer = SPR
+					}
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 1800
+						producer = SPR
+					}
+					add_manpower = 60000
+				}
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_beton
+						}		
+					}
+					add_equipment_to_stockpile = {
+						type = artillery_equipment
+						amount = 300
+						producer = SPR
+					}
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 3000
+						producer = SPR
+					}
+					add_equipment_to_stockpile = {
+						type = special_equipment
+						amount = 1500
+						producer = SPR
+					}
+					add_manpower = 60000
+				}
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_beton
+							has_tech = heavy_artillery2
+						}		
+					}
+					add_equipment_to_stockpile = {
+						type = heavy_artillery_equipment
+						amount = 225
+						producer = SPR
+					}
+				}	
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = 150
+					producer = ENG
+				}	
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 300
+					producer = ENG
+				}
+				add_equipment_to_stockpile = {
+					type = radio_equipment
+					amount = 150
+					producer = ENG
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = SPR_u_held_4
+				}
+				add_war_support = 0.05
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_appoint_vissioneris
+							has_tech = pol_1938_medium_tank_chassis
+						}
+					}
+					add_equipment_to_stockpile = {
+						type = medium_tank_chassis
+						amount = 340
+						producer = SPR
+					}	
+				}
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_appoint_vissioneris
+							NOT = {
+								has_tech = pol_1938_medium_tank_chassis
+							}
+						}		
+					}
+					add_equipment_to_stockpile = {
+						type = light_tank_chassis
+						amount = 400
+						producer = SPR
+					}	
+				}
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_appoint_vissioneris
+						}		
+					}
+					add_equipment_to_stockpile = {
+						type = motorized_equipment
+						amount = 1000
+						producer = SPR
+					}
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 2400
+						producer = SPR
+					}
+					add_manpower = 80000
+				}
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_beton
+						}		
+					}
+					add_equipment_to_stockpile = {
+						type = artillery_equipment
+						amount = 400
+						producer = SPR
+					}
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 4000
+						producer = SPR
+					}
+					add_equipment_to_stockpile = {
+						type = special_equipment
+						amount = 2000
+						producer = SPR
+					}
+					add_manpower = 80000
+				}
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_beton
+							has_tech = heavy_artillery2
+						}		
+					}
+					add_equipment_to_stockpile = {
+						type = heavy_artillery_equipment
+						amount = 300
+						producer = SPR
+					}
+				}	
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = 200
+					producer = ENG
+				}	
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 400
+					producer = ENG
+				}
+				add_equipment_to_stockpile = {
+					type = radio_equipment
+					amount = 200
+					producer = ENG
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = SPR_u_held_5
+				}
+				add_war_support = 0.1
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_appoint_vissioneris
+							has_tech = pol_1938_medium_tank_chassis
+						}
+					}
+					add_equipment_to_stockpile = {
+						type = medium_tank_chassis
+						amount = 425
+						producer = SPR
+					}	
+				}
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_appoint_vissioneris
+							NOT = {
+								has_tech = pol_1938_medium_tank_chassis
+							}
+						}		
+					}
+					add_equipment_to_stockpile = {
+						type = light_tank_chassis
+						amount = 500
+						producer = SPR
+					}	
+				}
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_appoint_vissioneris
+						}		
+					}
+					add_equipment_to_stockpile = {
+						type = motorized_equipment
+						amount = 1250
+						producer = SPR
+					}
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 3000
+						producer = SPR
+					}
+					add_manpower = 100000
+				}
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_beton
+						}		
+					}
+					add_equipment_to_stockpile = {
+						type = artillery_equipment
+						amount = 500
+						producer = SPR
+					}
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 5000
+						producer = SPR
+					}
+					add_equipment_to_stockpile = {
+						type = special_equipment
+						amount = 2500
+						producer = SPR
+					}
+					add_manpower = 100000
+				}
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_beton
+							has_tech = heavy_artillery2
+						}		
+					}
+					add_equipment_to_stockpile = {
+						type = heavy_artillery_equipment
+						amount = 375
+						producer = SPR
+					}
+				}	
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = 250
+					producer = ENG
+				}	
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 500
+					producer = ENG
+				}
+				add_equipment_to_stockpile = {
+					type = radio_equipment
+					amount = 250
+					producer = ENG
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = SPR_u_held_6
+				}
+				add_war_support = 0.15
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_appoint_vissioneris
+							has_tech = pol_1938_medium_tank_chassis
+						}
+					}
+					add_equipment_to_stockpile = {
+						type = medium_tank_chassis
+						amount = 510
+						producer = SPR
+					}	
+				}
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_appoint_vissioneris
+							NOT = {
+								has_tech = pol_1938_medium_tank_chassis
+							}
+						}		
+					}
+					add_equipment_to_stockpile = {
+						type = light_tank_chassis
+						amount = 600
+						producer = SPR
+					}	
+				}
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_appoint_vissioneris
+						}		
+					}
+					add_equipment_to_stockpile = {
+						type = motorized_equipment
+						amount = 1500
+						producer = SPR
+					}
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 3600
+						producer = SPR
+					}
+					add_manpower = 120000
+				}
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_beton
+						}		
+					}
+					add_equipment_to_stockpile = {
+						type = artillery_equipment
+						amount = 600
+						producer = SPR
+					}
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 6000
+						producer = SPR
+					}
+					add_equipment_to_stockpile = {
+						type = special_equipment
+						amount = 3000
+						producer = SPR
+					}
+					add_manpower = 120000
+				}
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_beton
+							has_tech = heavy_artillery2
+						}		
+					}
+					add_equipment_to_stockpile = {
+						type = heavy_artillery_equipment
+						amount = 450
+						producer = SPR
+					}
+				}	
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = 300
+					producer = ENG
+				}	
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 600
+					producer = ENG
+				}
+				add_equipment_to_stockpile = {
+					type = radio_equipment
+					amount = 300
+					producer = ENG
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = SPR_u_held_7
+				}
+				add_war_support = 0.2
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_appoint_vissioneris
+							has_tech = pol_1938_medium_tank_chassis
+						}
+					}
+					add_equipment_to_stockpile = {
+						type = medium_tank_chassis
+						amount = 595
+						producer = SPR
+					}	
+				}
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_appoint_vissioneris
+							NOT = {
+								has_tech = pol_1938_medium_tank_chassis
+							}
+						}		
+					}
+					add_equipment_to_stockpile = {
+						type = light_tank_chassis
+						amount = 700
+						producer = SPR
+					}	
+				}
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_appoint_vissioneris
+						}		
+					}
+					add_equipment_to_stockpile = {
+						type = motorized_equipment
+						amount = 1750
+						producer = SPR
+					}
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 4200
+						producer = SPR
+					}
+					add_manpower = 140000
+				}
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_beton
+						}		
+					}
+					add_equipment_to_stockpile = {
+						type = artillery_equipment
+						amount = 700
+						producer = SPR
+					}
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 7000
+						producer = SPR
+					}
+					add_equipment_to_stockpile = {
+						type = special_equipment
+						amount = 3500
+						producer = SPR
+					}
+					add_manpower = 140000
+				}
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_beton
+							has_tech = heavy_artillery2
+						}		
+					}
+					add_equipment_to_stockpile = {
+						type = heavy_artillery_equipment
+						amount = 525
+						producer = SPR
+					}
+				}	
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = 350
+					producer = ENG
+				}	
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 700
+					producer = ENG
+				}
+				add_equipment_to_stockpile = {
+					type = radio_equipment
+					amount = 350
+					producer = ENG
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = SPR_u_held_8
+				}
+				add_war_support = 0.25
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_appoint_vissioneris
+							has_tech = pol_1938_medium_tank_chassis
+						}
+					}
+					add_equipment_to_stockpile = {
+						type = medium_tank_chassis
+						amount = 680
+						producer = SPR
+					}	
+				}
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_appoint_vissioneris
+							NOT = {
+								has_tech = pol_1938_medium_tank_chassis
+							}
+						}		
+					}
+					add_equipment_to_stockpile = {
+						type = light_tank_chassis
+						amount = 800
+						producer = SPR
+					}	
+				}
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_appoint_vissioneris
+						}		
+					}
+					add_equipment_to_stockpile = {
+						type = motorized_equipment
+						amount = 2000
+						producer = SPR
+					}
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 4800
+						producer = SPR
+					}
+					add_manpower = 160000
+				}
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_beton
+						}		
+					}
+					add_equipment_to_stockpile = {
+						type = artillery_equipment
+						amount = 800
+						producer = SPR
+					}
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 8000
+						producer = SPR
+					}
+					add_equipment_to_stockpile = {
+						type = special_equipment
+						amount = 4000
+						producer = SPR
+					}
+					add_manpower = 160000
+				}
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_beton
+							has_tech = heavy_artillery2
+						}		
+					}
+					add_equipment_to_stockpile = {
+						type = heavy_artillery_equipment
+						amount = 600
+						producer = SPR
+					}
+				}	
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = 400
+					producer = ENG
+				}	
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 800
+					producer = ENG
+				}
+				add_equipment_to_stockpile = {
+					type = radio_equipment
+					amount = 400
+					producer = ENG
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = SPR_u_held_9
+				}
+				add_war_support = 0.3
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_appoint_vissioneris
+							has_tech = pol_1938_medium_tank_chassis
+						}
+					}
+					add_equipment_to_stockpile = {
+						type = medium_tank_chassis
+						amount = 765
+						producer = SPR
+					}	
+				}
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_appoint_vissioneris
+							NOT = {
+								has_tech = pol_1938_medium_tank_chassis
+							}
+						}		
+					}
+					add_equipment_to_stockpile = {
+						type = light_tank_chassis
+						amount = 900
+						producer = SPR
+					}	
+				}
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_appoint_vissioneris
+						}		
+					}
+					add_equipment_to_stockpile = {
+						type = motorized_equipment
+						amount = 2250
+						producer = SPR
+					}
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 5400
+						producer = SPR
+					}
+					add_manpower = 180000
+				}
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_beton
+						}		
+					}
+					add_equipment_to_stockpile = {
+						type = artillery_equipment
+						amount = 900
+						producer = SPR
+					}
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 9000
+						producer = SPR
+					}
+					add_equipment_to_stockpile = {
+						type = special_equipment
+						amount = 4500
+						producer = SPR
+					}
+					add_manpower = 180000
+				}
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_beton
+							has_tech = heavy_artillery2
+						}		
+					}
+					add_equipment_to_stockpile = {
+						type = heavy_artillery_equipment
+						amount = 675
+						producer = SPR
+					}
+				}	
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = 450
+					producer = ENG
+				}	
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 900
+					producer = ENG
+				}
+				add_equipment_to_stockpile = {
+					type = radio_equipment
+					amount = 450
+					producer = ENG
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = SPR_u_held_10
+				}
+				add_war_support = 0.35
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_appoint_vissioneris
+							has_tech = pol_1938_medium_tank_chassis
+						}
+					}
+					add_equipment_to_stockpile = {
+						type = medium_tank_chassis
+						amount = 850
+						producer = SPR
+					}	
+				}
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_appoint_vissioneris
+							NOT = {
+								has_tech = pol_1938_medium_tank_chassis
+							}
+						}		
+					}
+					add_equipment_to_stockpile = {
+						type = light_tank_chassis
+						amount = 1000
+						producer = SPR
+					}	
+				}
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_appoint_vissioneris
+						}		
+					}
+					add_equipment_to_stockpile = {
+						type = motorized_equipment
+						amount = 2500
+						producer = SPR
+					}
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 6000
+						producer = SPR
+					}
+					add_manpower = 200000
+				}
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_beton
+						}		
+					}
+					add_equipment_to_stockpile = {
+						type = artillery_equipment
+						amount = 1000
+						producer = SPR
+					}
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 10000
+						producer = SPR
+					}
+					add_equipment_to_stockpile = {
+						type = special_equipment
+						amount = 5000
+						producer = SPR
+					}
+					add_manpower = 200000
+				}
+				if = {
+					limit = {
+						POL = {
+							has_completed_focus = SPR_beton
+							has_tech = heavy_artillery2
+						}		
+					}
+					add_equipment_to_stockpile = {
+						type = heavy_artillery_equipment
+						amount = 750
+						producer = SPR
+					}
+				}	
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = 500
+					producer = ENG
+				}	
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 1000
+					producer = ENG
+				}
+				add_equipment_to_stockpile = {
+					type = radio_equipment
+					amount = 500
+					producer = ENG
+				}
+			}
+			hidden_effect = {
+				################# PRESIDENT
+                set_variable = { var = SPR_political_power_gain_var value  = 0.15 }
+                set_variable = { var = SPR_consumer_goods_factor_var value  = 0.0  }
+                set_variable = { var = SPR_production_speed_buildings_factor_var value  = 0.05 }
+                set_variable = { var = SPR_production_factory_max_efficiency_factor_var value  = 0.05 }
+                set_variable = { var = SPR_stability_factor_var value  = 0.05 }
+                set_variable = { var = SPR_stability_weekly_var value  = -0.001 }
+                set_variable = { var = SPR_production_speed_infrastructure_factor_var value  = 0 }
+                set_variable = { var = SPR_political_power_factor_var value  = 0.00 }
+                set_variable = { var = SPR_industrial_capacity_factory_var value  = 0.05 }
+                set_variable = { var = SPR_industrial_capacity_dockyard_var value  = 0 }
+                set_variable = { var = SPR_production_speed_arms_factory_factor_var value  = 0 }
+                set_variable = { var = SPR_production_speed_dockyard_factor_var value  = 0 }
+                set_variable = { var = SPR_production_speed_industrial_complex_factor_var value  = 0.0 }
+                set_variable = { var = SPR_production_speed_synthetic_refinery_factor_var value  = -10 }
+                set_variable = { var = SPR_production_speed_synthetic_rubber_refinery_factor_var value  = -10 }
+                set_variable = { var = SPR_local_resources_factor_var value  = 0.0 }
+				################# POLISH ARMY 
+				set_variable = { var = SPR_weekly_manpower_var value = 4500  }
+				set_variable = { var = SPR_planning_speed_var value = 0 } 
+				set_variable = { var = SPR_army_core_attack_factor value = -0.5 } 
+                set_variable = { var = SPR_army_core_defence_factor value = -0.5 } 
+                set_variable = { var = SPR_max_command_power_var value = 0 } 
+                set_variable = { var = SPR_command_power_gain_mult_var value = 0 } 
+                set_variable = { var = SPR_land_doctrine_cost_factor_var value = 0 } 
+                set_variable = { var = SPR_army_morale_factor_var value = 0 } 
+				set_variable = { var = SPR_army_attack_factor_var value = 0 }
+				set_variable = { var = SPR_max_planning_factor_var value = 0 }
+				set_variable = { var = SPR_max_dig_in_var value = 0 } 
+				remove_dynamic_modifier = {
+					modifier = SPR_economy_and_politics
+				}
+				remove_ideas = {
+					SPR_home_of_revolution_no_naval_invasions
+				}
+				remove_ideas = SPR_zmp
+				remove_ideas = SPR_arty_idea
+				remove_ideas = SPR_build_new_escorts_3
+				retire_character = SPR_edward_rydzsmigly
+				retire_character = SPR_tadeusz_kutrzeba
+				retire_character = SPR_tadeusz_piskor
+				retire_character = SPR_wladyslaw_bortnowski
+				retire_character = SPR_emil_krukowicz_przedrzymirski
+				retire_character = SPR_franciszek_kleeberg
+				retire_character = SPR_kazimierz_fabrycy
+				retire_character = SPR_antoni_szylling
+				retire_character = SPR_juliusz_rommel
+				retire_character = SPR_stefan_dab_biernacki
+				retire_character = SPR_jozef_unrug
+				retire_character = SPR_stefan_frankowski
+				add_tech_bonus = {
+					name = armor_bonus	
+					bonus = 2
+					uses = 2
+					category = armor 
+				}
+				add_tech_bonus = {
+					name = artillery_bonus
+					bonus = 1
+					uses = 1
+					category = tank_upgrade
+				}
+			    set_technology = { 
+				    government_in_exile = 1 
+			    }
+				mio:SPR_vickers_armstrong_eng_organization = {
+					add_mio_funds = 13000
+				}
+				mio:SPR_nuffield = {
+					add_mio_funds = 13000
+				}
+				mio:SPR_birmingham = {
+					add_mio_funds = 13000
+				}
+				mio:SPR_vauxhall = {
+					add_mio_funds = 13000
+				}
+				mio:SPR_vulcan = {
+					add_mio_funds = 13000
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SPR_establishment_of_the_national_council
+		icon = GFX_pol_rada_krajowa
+		available = {			
+			has_capitulated = yes
+		}
+		prerequisite = {
+			focus = SPR_evacuation_of_polish_gold_reserves
+		}
+
+		x = 25
+		y = 15
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = SPR_modify_president_spirit_tt
+			add_to_variable = {
+				SPR_political_power_gain_var = 0.05
+				tooltip = SPR_pol_power_fac_tt420
+			}
+			add_to_variable = {
+				SPR_industrial_capacity_factory_var = 0.05
+				tooltip = SPR_fact_output_tt1
+			}
+			add_to_variable = {
+				SPR_stability_factor_var = 0.05
+				tooltip = SPR_stabn_tt1
+			}
+			add_war_support = 0.1
+			
+
+	
+		}
+	}
+
+	focus = {
+		id = SPR_pakt_sikorski-mayski
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		available = {			
+			has_capitulated = yes
+			SOV = {
+				has_war = yes
+			}
+		}
+		prerequisite = {
+			focus = SPR_establishment_of_the_national_council
+		}
+
+		x = 25
+		y = 16
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = SPR_modify_president_spirit_tt
+			add_to_variable = {
+				SPR_political_power_gain_var = 0.05
+				tooltip = SPR_pol_power_fac_tt420
+			}
+			add_to_variable = {
+				SPR_stability_factor_var = -0.05
+				tooltip = SPR_stabn_tt1
+			}
+			add_to_variable = {
+				SPR_production_speed_buildings_factor_var = 0.05
+				tooltip = SPR_constra_tt1
+			}
+			add_offsite_building = { type = industrial_complex level = 5 }
+	
+		}
+	}
+
+	focus = {
+		id = SPR_evacuation_of_polish_gold_reserves
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		available = {			
+			has_capitulated = yes
+		}
+		prerequisite = {
+			focus = SPR_poland_is_not_yet_lost
+		}
+
+		x = 25
+		y = 14
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = SPR_modify_president_spirit_tt
+			add_to_variable = {
+				SPR_political_power_gain_var = 0.05
+				tooltip = SPR_pol_power_fac_tt420
+			}
+			add_to_variable = {
+				SPR_stability_factor_var = 0.05
+				tooltip = SPR_stabn_tt1
+			}
+			add_to_variable = {
+				SPR_production_speed_buildings_factor_var = 0.05
+				tooltip = SPR_constra_tt1
+			}
+			add_to_variable = {
+				SPR_consumer_goods_factor_var = -0.05
+				tooltip = SPR_consumer_goods_tt2
+			}
+	
+		}
+	}
+
+	focus = {
+		id = SPR_detention_camps_for_old_santaionists
+		icon = GFX_focus_CZE_german_puppet
+		available = {			
+			has_capitulated = yes
+		}
+		prerequisite = {
+			focus = SPR_poland_is_not_yet_lost
+		}
+
+		x = 27
+		y = 14
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = SPR_modify_president_spirit_tt
+			add_to_variable = {
+				SPR_political_power_gain_var = 0.05
+				tooltip = SPR_pol_power_fac_tt420
+			}
+			add_to_variable = {
+				SPR_stability_weekly_var = 0.003
+				tooltip = SPR_stab_weekly_tt1
+			}
+			add_to_variable = {
+				SPR_stability_factor_var = 0.05
+				tooltip = SPR_stabn_tt1
+			}
+	
+		}
+	}
+
+	focus = {
+		id = SPR_polish_armed_force_in_france
+		icon = GFX_goal_pol_shield1
+		available = {			
+			has_capitulated = yes
+			OR = {
+				ENG = {
+					controls_state = 126
+				}
+				FRA = {
+					controls_state = 16
+				}
+			}
+		}
+		prerequisite = {
+			focus = SPR_poland_is_not_yet_lost
+		}
+
+		x = 21
+		y = 14
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 50
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+			custom_effect_tooltip = SPR_france_inf_tt
+			hidden_effect = {
+				division_template = {
+				   name = "1 Dywizja Grenadierów"  
+				 priority = 1
+
+				 regiments = {
+				 infantry = { x = 0 y = 0 }
+				 infantry = { x = 0 y = 1 }
+				 infantry = { x = 0 y = 2 }
+
+				 infantry = { x = 1 y = 0 }
+				 infantry = { x = 1 y = 1 }
+				 infantry = { x = 1 y = 2 }
+
+				 infantry = { x = 2 y = 0 }
+				 infantry = { x = 2 y = 1 }
+				 infantry = { x = 2 y = 2 }
+
+				 artillery_brigade = { x = 3 y = 0 }
+				 artillery_brigade = { x = 3 y = 1 }
+				 artillery_brigade = { x = 3 y = 2 }
+
+				 artillery_brigade = { x = 4 y = 0 }
+				 artillery_brigade = { x = 4 y = 1 }
+				 anti_tank_brigade = { x = 4 y = 2 }
+				 }
+				 support = {
+					 recon = { x = 0 y = 0 }
+					 mot_recon = { x = 0 y = 1 }
+					 engineer = { x = 0  y = 2 }
+					 field_hospital = { x = 0  y = 3 }
+					 signal_company = { x = 1  y = 0 }
+					 anti_tank = { x = 1  y = 1 }
+					 artillery = { x = 1  y = 2 }
+					 artillery_heavy_support = { x = 1  y = 3 }
+				 }
+			 }
+			 division_template = {
+				name = "2 Dywizja Strzelców Pieszych"  
+			  priority = 1
+
+			  regiments = {
+			  infantry = { x = 0 y = 0 }
+			  infantry = { x = 0 y = 1 }
+			  infantry = { x = 0 y = 2 }
+
+			  infantry = { x = 1 y = 0 }
+			  infantry = { x = 1 y = 1 }
+			  infantry = { x = 1 y = 2 }
+
+			  infantry = { x = 2 y = 0 }
+			  infantry = { x = 2 y = 1 }
+			  infantry = { x = 2 y = 2 }
+
+			  artillery_brigade = { x = 3 y = 0 }
+			  artillery_brigade = { x = 3 y = 1 }
+			  artillery_brigade = { x = 3 y = 2 }
+
+			  artillery_brigade = { x = 4 y = 0 }
+			  artillery_brigade = { x = 4 y = 1 }
+			  anti_tank_brigade = { x = 4 y = 2 }
+			  }
+			  support = {
+				  recon = { x = 0 y = 0 }
+				  mot_recon = { x = 0 y = 1 }
+				  engineer = { x = 0  y = 2 }
+				  field_hospital = { x = 0  y = 3 }
+				  signal_company = { x = 1  y = 0 }
+				  logistics_company = { x = 1  y = 1 }
+				  artillery = { x = 1  y = 2 }
+				  artillery_heavy_support = { x = 1  y = 3 }
+			  }
+		  }
+			if = {
+				limit = {
+					FRA = {
+					    controls_state = 16
+					}
+				}
+
+				every_state = {
+					limit = { state = 16 }
+					create_unit = {
+						division = "name = \"1 Dywizja Grenadierów\" division_template = \"1 Dywizja Grenadierów\" start_experience_factor = 0.7 start_equipment_factor = 1" 
+						owner = POL
+					}  
+				}
+				
+				every_state = {
+					limit = { state = 16 }
+					create_unit = {
+						division = "name = \"2 Dywizja Strzelców Pieszych\" division_template = \"2 Dywizja Strzelców Pieszych\" start_experience_factor = 0.7 start_equipment_factor = 1" 
+						owner = POL
+					}  
+				} 
+  
+		 
+			}
+			if = {
+				limit = {
+					FRA = {
+						NOT = {
+							controls_state = 16
+						}
+					}
+				}
+
+				every_state = {
+					limit = { state = 126 }
+					create_unit = {
+						division = "name = \"1 Dywizja Grenadierów\" division_template = \"1 Dywizja Grenadierów\" start_experience_factor = 0.8 start_equipment_factor = 1" 
+						owner = POL
+					}  
+				}
+				
+				every_state = {
+					limit = { state = 126 }
+					create_unit = {
+						division = "name = \"2 Dywizja Strzelców Pieszych\" division_template = \"2 Dywizja Strzelców Pieszych\" start_experience_factor = 0.8 start_equipment_factor = 1" 
+						owner = POL
+					}  
+				} 
+  
+		 
+			}
+   
+		    }
+		}
+	}
+
+	focus = {
+		id = SPR_samodzielna_brygada_strzelcow_podhalanskich
+		icon = GFX_pol_strzelcy_podhalanscy
+		available = {			
+			has_capitulated = yes
+			ENG = {
+				controls_state = 126
+			}
+			OR = {
+				NOT = {
+					NOR = {
+						exists = yes
+					}
+				}
+				is_in_faction_with = ENG
+				
+			}
+		}
+		prerequisite = {
+			focus = SPR_polish_armed_force_in_france
+		}
+
+		x = 19
+		y = 15
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 30
+			custom_effect_tooltip = SPR_narvik_inf_tt
+			hidden_effect = {
+				division_template = {
+				   name = "Samodzielna Brygada Strzelców Podhalańskich"  
+				 priority = 2
+
+				 regiments = {
+				 mountaineers = { x = 0 y = 0 }
+				 mountaineers = { x = 0 y = 1 }
+				 mountaineers = { x = 0 y = 2 }
+
+				 mountaineers = { x = 1 y = 0 }
+				 mountaineers = { x = 1 y = 1 }
+				 mountaineers = { x = 1 y = 2 }
+
+				 mountaineers = { x = 2 y = 0 }
+				 mountaineers = { x = 2 y = 1 }
+				 mountaineers = { x = 2 y = 2 }
+
+				 artillery_brigade = { x = 3 y = 0 }
+				 artillery_brigade = { x = 3 y = 1 }
+				 artillery_brigade = { x = 3 y = 2 }
+
+				 artillery_brigade = { x = 4 y = 0 }
+				 artillery_brigade = { x = 4 y = 1 }
+				 anti_tank_brigade = { x = 4 y = 2 }
+				 }
+				 support = {
+					 artillery = { x = 0 y = 0 }
+					 mot_recon = { x = 0 y = 1 }
+					 engineer = { x = 0  y = 2 }
+					 field_hospital = { x = 0  y = 3 }
+					 signal_company = { x = 1  y = 0 }
+					 anti_tank = { x = 1  y = 1 }
+				 }
+			 }
+			if = {
+				limit = {
+					NOR = {
+						has_war = yes
+					    controls_state = 144
+					}
+				}
+				load_oob = "SPR_narvik"
+		 
+			}
+			if = {
+				limit = {
+					NOR = {
+						NOT = {
+							has_war = yes
+							controls_state = 144
+						}
+					}
+				}
+
+				every_state = {
+					limit = { state = 126 }
+					create_unit = {
+						division = "name = \"Samodzielna Brygada Strzelców Podhalańskich\" division_template = \"Samodzielna Brygada Strzelców Podhalańskich\" start_experience_factor = 1 start_equipment_factor = 1" 
+						owner = POL
+					}  
+				} 
+  
+		 
+			}    
+		    }
+	    
+		} 
+	}	 
+
+	focus = {
+		id = SPR_samodzielna_brygada_strzelcow_karpackich
+		icon = GFX_pol_karpacka_brygada
+		available = {			
+			has_capitulated = yes
+			OR = {
+				ENG = {
+					controls_state = 126
+				}
+				ENG = {
+					controls_state = 454
+				}
+			}
+		}
+		prerequisite = {
+			focus = SPR_polish_armed_force_in_france
+		}
+
+		x = 23
+		y = 15
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 30
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = SPR_stanislaw_kopanski
+			custom_effect_tooltip = SPR_syria_inf_tt
+			hidden_effect = {
+				division_template = {
+				   name = "Samodzielna Brygada Strzelców Karpackich"  
+				 priority = 2
+
+				 regiments = {
+				 mountaineers = { x = 0 y = 0 }
+				 mountaineers = { x = 0 y = 1 }
+				 mountaineers = { x = 0 y = 2 }
+
+				 mountaineers = { x = 1 y = 0 }
+				 mountaineers = { x = 1 y = 1 }
+				 mountaineers = { x = 1 y = 2 }
+
+				 mountaineers = { x = 2 y = 0 }
+				 mountaineers = { x = 2 y = 1 }
+				 mountaineers = { x = 2 y = 2 }
+
+				 artillery_brigade = { x = 3 y = 0 }
+				 artillery_brigade = { x = 3 y = 1 }
+				 artillery_brigade = { x = 3 y = 2 }
+
+				 artillery_brigade = { x = 4 y = 0 }
+				 pack_artillery_brigade = { x = 4 y = 1 }
+				 anti_tank_brigade = { x = 4 y = 2 }
+				 }
+				 support = {
+					 artillery = { x = 0 y = 0 }
+					 recon = { x = 0 y = 1 }
+					 engineer = { x = 0  y = 2 }
+					 artillery_heavy_support = { x = 0  y = 3 }
+					 signal_company = { x = 1  y = 0 }
+					 pack_artillery = { x = 1  y = 1 }
+				 }
+			 }
+			if = {
+				limit = {
+					ENG = {
+                        controls_state = 454
+					}
+				}
+
+				every_state = {
+					limit = { state = 454 }
+					create_unit = {
+						division = "name = \"Samodzielna Brygada Strzelców Karpackich\" division_template = \"Samodzielna Brygada Strzelców Karpackich\" start_experience_factor = 0.8 start_equipment_factor = 1" 
+						owner = POL
+					}  
+				} 
+  
+		 
+			}
+			if = {
+				limit = {
+					ENG = {
+						NOT = {
+							controls_state = 454
+						}
+					}
+				}
+
+				every_state = {
+					limit = { state = 126 }
+					create_unit = {
+						division = "name = \"Samodzielna Brygada Strzelców Karpackich\" division_template = \"Samodzielna Brygada Strzelców Karpackich\" start_experience_factor = 0.8 start_equipment_factor = 1" 
+						owner = POL
+					}  
+				} 
+  
+		 
+			}    
+		    }
+		}
+	}
+
+	focus = {
+		id = SPR_dziesiata_brygada_kawalerii_pancernej
+		icon = GFX_pol_pancerno_motorowa
+		available = {			
+			has_capitulated = yes
+			OR = {
+				ENG = {
+					controls_state = 126
+				}
+				FRA = {
+					controls_state = 16
+				}
+			}
+		}
+		prerequisite = {
+			focus = SPR_polish_armed_force_in_france
+		}
+
+		x = 21
+		y = 15
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = SPR_wartime_industry
+			custom_effect_tooltip = SPR_france_tank_tt
+			hidden_effect = {
+				if = {
+					limit = { 
+						POL = {
+							NOT = {
+								has_tech = pol_1938_medium_tank_chassis
+							}
+						}
+					}
+				
+				    division_template = {
+				        name = "10 Brygada Kawalerii Pancernej"  
+				    priority = 2
+
+				    regiments = {
+				    light_armor = { x = 0 y = 0 }
+				    light_armor = { x = 0 y = 1 }
+				    light_armor = { x = 0 y = 2 }
+
+				    light_armor = { x = 1 y = 0 }
+				    light_armor = { x = 1 y = 1 }
+				    light_armor = { x = 1 y = 2 }
+
+				    light_armor = { x = 2 y = 0 }
+				    light_armor = { x = 2 y = 1 }
+				    light_armor = { x = 2 y = 2 }
+
+				    motorized = { x = 3 y = 0 }
+				    motorized = { x = 3 y = 1 }
+				    motorized = { x = 3 y = 2 }
+
+				    motorized = { x = 4 y = 0 }
+				    motorized = { x = 4 y = 1 }
+				    anti_air_mot = { x = 4 y = 2 }
+				    }
+				    support = {
+					    artillery = { x = 0 y = 0 }
+					    mot_recon = { x = 0 y = 1 }
+					    mobile_engineer = { x = 0  y = 2 }
+					    anti_air_company = { x = 0  y = 3 }
+					    anti_tank = { x = 1  y = 0 }
+				    }
+			    }
+			}
+			if = {
+				limit = { 
+					POL = {
+						has_tech = pol_1938_medium_tank_chassis
+					}
+				}
+			
+				division_template = {
+					name = "10 Brygada Kawalerii Pancernej"  
+				priority = 2
+
+				regiments = {
+				medium_armor = { x = 0 y = 0 }
+				medium_armor = { x = 0 y = 1 }
+				medium_armor = { x = 0 y = 2 }
+
+				medium_armor = { x = 1 y = 0 }
+				medium_armor = { x = 1 y = 1 }
+				medium_armor = { x = 1 y = 2 }
+
+				medium_armor = { x = 2 y = 0 }
+				medium_armor = { x = 2 y = 1 }
+				medium_armor = { x = 2 y = 2 }
+
+				motorized = { x = 3 y = 0 }
+				motorized = { x = 3 y = 1 }
+				motorized = { x = 3 y = 2 }
+
+				motorized = { x = 4 y = 0 }
+				motorized = { x = 4 y = 1 }
+				anti_air_mot = { x = 4 y = 2 }
+				}
+				support = {
+					artillery = { x = 0 y = 0 }
+					mot_recon = { x = 0 y = 1 }
+					mobile_engineer = { x = 0  y = 2 }
+					anti_air_company = { x = 0  y = 3 }
+					anti_tank = { x = 1  y = 0 }
+				}
+			}
+		}
+			    if = {
+				    limit = {
+						FRA = {
+							controls_state = 16
+						}
+				    }
+
+				    every_state = {
+					    limit = { state = 16 }
+					    create_unit = {
+						    division = "name = \"10 Brygada Kawalerii Pancernej\" division_template = \"10 Brygada Kawalerii Pancernej\" start_experience_factor = 0.8 start_equipment_factor = 1" 
+						    owner = POL
+					    }  
+				    } 
+  
+		 
+			    }
+		    if = {
+				limit = {
+					FRA = {
+						NOT = {
+							controls_state = 16
+						}
+					}
+				}
+
+				every_state = {
+					limit = { state = 126 }
+					create_unit = {
+						division = "name = \"10 Brygada Kawalerii Pancernej\" division_template = \"10 Brygada Kawalerii Pancernej\" start_experience_factor = 1 start_equipment_factor = 1" 
+						owner = POL
+					}  
+				} 
+  
+		 
+			}    
+		    }
+		}
+	}
+
+	focus = {
+		id = SPR_the_anders_army
+		icon = GFX_pol_anders_armia
+		available = {			
+			has_capitulated = yes
+			has_completed_focus = SPR_pakt_sikorski-mayski
+			ENG = {
+				controls_state = 126
+			}
+			242 = { CONTROLLER = { is_in_faction_with = GER } }
+		}
+		prerequisite = {
+			focus = SPR_samodzielna_brygada_strzelcow_podhalanskich
+		}
+		prerequisite = {
+			focus = SPR_samodzielna_brygada_strzelcow_karpackich
+		}
+		prerequisite = {
+			focus = SPR_dziesiata_brygada_kawalerii_pancernej
+		}
+
+		x = 21
+		y = 16
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 30
+			add_manpower = 28000
+			custom_effect_tooltip = SPR_anders_inf_tt
+			SPR_wladyslaw_anders={
+				add_trait = {
+					trait = bearer_of_artillery
+				}
+			}
+			hidden_effect = {
+				division_template = {
+				   name = "Dywizja Strzelecka"  
+				 priority = 1
+
+				 regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					
+					infantry = { x = 2 y = 0 }
+					infantry = { x = 2 y = 1 }
+					infantry = { x = 2 y = 2 }
+					
+					field_gun_brigade = { x = 3 y = 0 }
+					field_gun_brigade = { x = 3 y = 1 }
+					artillery_brigade = { x = 3 y = 2 }
+					anti_tank_brigade = { x = 3 y = 3 }
+					
+					artillery_heavy = { x = 4 y = 0 }
+					artillery_brigade = { x = 4 y = 1 }
+					
+				}
+				support = {
+					artillery = { x = 0 y = 0 } 
+					light_armor_recon = { x = 0 y = 1 } 		
+					engineer = { x = 0 y = 2 }
+					field_hospital = { x = 1 y = 0 }
+					logistics_company = { x = 1 y = 1 }
+					anti_air_heavy_support = { x = 1 y = 2 }
+					pack_artillery = { x = 0 y = 3 }
+				}
+			 }
+			if = {
+				limit = {
+					ENG = {
+                        controls_state = 454
+					}
+				}
+
+				every_state = {
+					limit = { state = 454 }
+					create_unit = {
+						division = "name = \"5 Wileńska Dywizja Piechoty\" division_template = \"Dywizja Strzelecka\" start_experience_factor = 0.4 start_equipment_factor = 1" 
+						owner = POL
+					}  
+				}
+				
+				every_state = {
+					limit = { state = 454 }
+					create_unit = {
+						division = "name = \"6 Lwowska Dywizja Piechoty\" division_template = \"Dywizja Strzelecka\" start_experience_factor = 0.4 start_equipment_factor = 1" 
+						owner = POL
+					}  
+				} 
+
+				every_state = {
+					limit = { state = 454 }
+					create_unit = {
+						division = "name = \"7 Dywizja Piechoty\" division_template = \"Dywizja Strzelecka\" start_experience_factor = 0.4 start_equipment_factor = 1" 
+						owner = POL
+					}  
+				} 
+  
+		 
+			}
+			if = {
+				limit = {
+					ENG = {
+						NOT = {
+							controls_state = 454
+						}
+					}
+				}
+
+				every_state = {
+					limit = { state = 126 }
+					create_unit = {
+						division = "name = \"5 Wileńska Dywizja Piechoty\" division_template = \"Dywizja Strzelecka\" start_experience_factor = 0.4 start_equipment_factor = 1" 
+						owner = POL
+					}  
+				}
+				
+				every_state = {
+					limit = { state = 126 }
+					create_unit = {
+						division = "name = \"6 Lwowska Dywizja Piechoty\" division_template = \"Dywizja Strzelecka\" start_experience_factor = 0.4 start_equipment_factor = 1" 
+						owner = POL
+					}  
+				} 
+
+				every_state = {
+					limit = { state = 126 }
+					create_unit = {
+						division = "name = \"7 Dywizja Piechoty\" division_template = \"Dywizja Strzelecka\" start_experience_factor = 0.4 start_equipment_factor = 1" 
+						owner = POL
+					}  
+				} 
+  
+		 
+			}    
+		    }
+		}
+	}
+
+	focus = {
+		id = SPR_pierwsza_dywizja_pancerna
+		icon = GFX_pol_pierwsza_pancerna
+		available = {			
+			has_capitulated = yes
+			ENG = {
+				controls_state = 121
+			}
+		}
+		prerequisite = {
+			focus = SPR_the_anders_army
+		}
+
+		x = 21
+		y = 17
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+    
+		completion_reward = {
+			custom_effect_tooltip = SPR_maczek_tank_tt
+			hidden_effect = {
+				division_template = {
+					name = "1 Dywizja Pancerna"  
+				priority = 2
+
+				regiments = {
+				medium_armor = { x = 0 y = 0 }
+				medium_armor = { x = 0 y = 1 }
+				medium_armor = { x = 0 y = 2 }
+
+				medium_armor = { x = 1 y = 0 }
+				medium_armor = { x = 1 y = 1 }
+				medium_armor = { x = 1 y = 2 }
+
+				medium_armor = { x = 2 y = 0 }
+				medium_armor = { x = 2 y = 1 }
+				medium_armor = { x = 2 y = 2 }
+
+				mechanized = { x = 3 y = 0 }
+				mechanized = { x = 3 y = 1 }
+				mechanized = { x = 3 y = 2 }
+
+				mechanized = { x = 4 y = 0 }
+				mechanized = { x = 4 y = 1 }
+				mechanized = { x = 4 y = 2 }
+				}
+				support = {
+					artillery = { x = 0 y = 0 }
+					light_armor_recon = { x = 0 y = 1 }
+					mobile_engineer = { x = 0  y = 2 }
+					logistics_company = { x = 0  y = 3 }
+					anti_air_company = { x = 1  y = 0 }
+					maintenance_company = { x = 1  y = 1 }
+					artillery = { x = 1  y = 2 }
+					field_hospital = { x = 1  y = 3 }
+				}
+			}
+		
+			    if = {
+				    limit = {
+						ENG = {
+							controls_state = 121
+						}
+				    }
+
+				    every_state = {
+					    limit = { state = 121 }
+					    create_unit = {
+						    division = "name = \"1 Dywizja Pancerna\" division_template = \"1 Dywizja Pancerna\" start_experience_factor = 0.8 start_equipment_factor = 1" 
+						    owner = POL
+					    }  
+				    } 
+  
+		 
+			    }   
+			}   }
+		
+	}
+
+	focus = {
+		id = SPR_accept_the_polish_deserters_from_wermacht
+		icon = GFX_pol_dereters
+		available = {			
+			has_capitulated = yes
+			OR = {
+				FRA = {
+					controls_state = 15
+				}
+			}
+		}
+		prerequisite = {
+			focus = SPR_the_anders_army
+		}
+
+		x = 23
+		y = 17
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = SPR_modify_army_spirit_tt
+			add_to_variable = {
+				SPR_weekly_manpower_var = 1500
+				tooltip = SPR_army13_tt
+			}
+
+		}
+	}
+
+	focus = {
+		id = SPR_pierwsza_armia_polska_w_zsrr
+		icon = GFX_focus_pol_sov_army
+		available = {			
+			has_capitulated = yes
+			SOV = {
+				controls_state = 249
+			}
+			has_completed_focus = SPR_akcja_burza
+		}
+		prerequisite = {
+			focus = SPR_the_anders_army
+		}
+
+		x = 19
+		y = 17
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = SPR_soviet_inf_tt
+			SOV = {
+				give_military_access = POL
+			}
+			show_unit_leaders_tooltip = SPR_michal_rola_zymierski
+			show_unit_leaders_tooltip = SPR_zygmunt_berling
+			show_unit_leaders_tooltip = SPR_karol_swierczewski
+			show_unit_leaders_tooltip = SPR_stanislaw_poplawski
+			hidden_effect = {
+				POL = {
+					load_oob = "SOV_Polish_army_1"
+				}
+				every_state = {
+					limit = {		
+						is_core_of = SOV
+					}
+					add_core_of = POL
+					
+				}
+
+			}
+		}
+	}
+
+	focus = {
+		id = SPR_polish_air_force_in_exile
+		icon = GFX_goal_fighters_uk
+		available = {			
+			has_capitulated = yes
+		}
+		prerequisite = {
+			focus = SPR_poland_is_not_yet_lost
+		}
+
+		x = 17
+		y = 14
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			air_experience = 60
+			ENG = {
+				add_manpower = 8000
+				add_ace = {
+					name = "Bolesław"
+					surname = "Gładych"
+					callsign = "Mike"
+					type = fighter_genius
+				}
+				add_ace = {
+					name = "Josef"
+					surname = "František"
+					callsign = ""
+					type = fighter_genius
+				}
+				add_ace = {
+					name = "Stanisław"
+					surname = "Skalski"
+					callsign = ""
+					type = fighter_genius
+				}
+				add_ace = {
+					name = "Witold"
+					surname = "Urbanowicz"
+					callsign = "Kobra"
+					type = fighter_genius
+				}
+			}
+
+
+		}
+	}
+
+	focus = {
+		id = SPR_samodzielna_brygada_spadochronowa
+		icon = GFX_focus_generic_paratrooper
+		available = {			
+			has_capitulated = yes
+			ENG = {
+				controls_state = 136
+			}
+			has_completed_focus = SPR_bydgoszcz_military_parachute_centre
+		}
+		prerequisite = {
+			focus = SPR_polish_air_force_in_exile
+		}
+
+		x = 17
+		y = 15
+		cost = 5
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = SPR_stanislaw_sosabowski
+			create_corps_commander ={
+				name="Stanisław Sosabowski"
+				picture = "portrait_SPR_stanislaw_sosabowski.dds"
+				traits={ commando paratrooper infantry_leader commander_trait expert_improviser trait_reckless }
+				skill=3
+				attack_skill=4
+				defense_skill=3
+				planning_skill=3
+				logistics_skill=2
+			}
+			 set_technology = { paratroopers = 1 }
+			 add_equipment_to_stockpile = { type = transport_plane_equipment amount = 100 producer = SPR }
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = special_equipment
+				amount = 1400
+				producer = ENG
+			}
+
+		}
+	}
+
+	focus = {
+		id = SPR_polish_navy_in_exile
+		icon = GFX_goal_sea_navy
+		available = {			
+			has_capitulated = yes
+		}
+		prerequisite = {
+			focus = SPR_poland_is_not_yet_lost
+		}
+
+		x = 33
+		y = 14
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			navy_experience = 60
+			set_technology = { improved_ship_hull_submarine = 1  }
+			set_technology = { improved_ship_hull_light = 1  }
+			set_technology = { early_ship_hull_cruiser = 1  }
+			set_technology = { improved_heavy_armor_scheme = 1 }
+			set_technology = { improved_light_battery = 1 }
+			set_technology = { improved_medium_battery = 1 }
+			set_technology = { advanced_depth_charges = 1 }
+			set_technology = { decimetric_radar = 1 }
+			set_technology = { radio_detection = 1 }
+			add_offsite_building = { type = dockyard level = 5 }
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "U Class"
+					type = ship_hull_submarine_3
+					name_group = SPR_SS_HISTORICAL
+					parent_version = 0
+					modules = {
+						fixed_ship_torpedo_slot = ship_torpedo_sub_3
+						fixed_ship_engine_slot = sub_ship_engine_3
+						rear_1_custom_slot = ship_torpedo_sub_3
+					}
+				}
+				create_equipment_variant = {
+					name = "S Class"
+					type = ship_hull_submarine_1
+					name_group = SPR_SS_HISTORICAL
+					parent_version = 0
+					modules = {
+						fixed_ship_torpedo_slot = ship_torpedo_sub_1
+						fixed_ship_engine_slot = sub_ship_engine_1
+						rear_1_custom_slot = ship_torpedo_sub_1
+					}
+				}
+				create_equipment_variant = {
+					name = "E/F/G/H Class"
+					type = ship_hull_light_2
+					name_group = SPR_DD_HISTORICAL
+					parent_version = 0
+					modules = {
+						fixed_ship_battery_slot = dp_light_battery_1
+						fixed_ship_anti_air_slot = ship_anti_air_1
+						fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+						fixed_ship_radar_slot = ship_sonar_1
+						fixed_ship_engine_slot = light_ship_engine_2
+						fixed_ship_torpedo_slot = ship_torpedo_1
+						mid_1_custom_slot = ship_torpedo_1
+						rear_1_custom_slot = ship_depth_charge_1
+					}
+				}
+				create_equipment_variant = {
+					name = "M/N Class"
+					type = ship_hull_light_3
+					name_group = SPR_DD_HISTORICAL
+					parent_version = 0
+					modules = {
+						fixed_ship_battery_slot = dp_light_battery_2
+						fixed_ship_anti_air_slot = ship_anti_air_2
+						fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+						fixed_ship_radar_slot = ship_sonar_2
+						fixed_ship_engine_slot = light_ship_engine_3
+						fixed_ship_torpedo_slot = ship_torpedo_2
+						mid_1_custom_slot = ship_torpedo_2
+						rear_1_custom_slot = ship_depth_charge_2
+					}
+				}
+				create_equipment_variant = {
+					name = "Hunt II"
+					type = ship_hull_light_3
+					name_group = SPR_DD_HISTORICAL
+					parent_version = 0
+					modules = {
+						fixed_ship_battery_slot = dp_light_battery_2
+						fixed_ship_anti_air_slot = empty
+						fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+						fixed_ship_radar_slot = empty
+						fixed_ship_engine_slot = light_ship_engine_2
+						fixed_ship_torpedo_slot = ship_torpedo_2
+						mid_1_custom_slot = ship_depth_charge_2
+						rear_1_custom_slot = ship_depth_charge_2
+					}
+				}
+				create_equipment_variant = {
+					name = "Bourrasque Class"				# represents Bourrasque and L'Adroit classes
+					type = ship_hull_light_1
+					name_group = SPR_DD_HISTORICAL
+					parent_version = 0
+					modules = {
+						fixed_ship_battery_slot = ship_light_battery_1
+						fixed_ship_anti_air_slot = ship_anti_air_1
+						fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+						fixed_ship_radar_slot = empty
+						fixed_ship_engine_slot = light_ship_engine_2
+						fixed_ship_torpedo_slot = ship_torpedo_1
+						mid_1_custom_slot = ship_torpedo_1
+						rear_1_custom_slot = ship_depth_charge_1
+					}
+					obsolete = yes
+				}
+				create_equipment_variant = {
+					name = "C/D/E Class"
+					type = ship_hull_cruiser_1
+					name_group = ENG_CL_HISTORICAL
+					parent_version = 0
+					modules = {
+						fixed_ship_battery_slot = ship_light_medium_battery_1
+						fixed_ship_anti_air_slot = ship_anti_air_1
+						fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+						fixed_ship_radar_slot = empty
+						fixed_ship_engine_slot = cruiser_ship_engine_1
+						fixed_ship_armor_slot = ship_armor_cruiser_1
+						mid_1_custom_slot = ship_torpedo_1
+						mid_2_custom_slot = ship_torpedo_1
+						rear_1_custom_slot = empty
+					}
+					obsolete = yes
+				}
+			}
+	
+		}
+	}
+
+	focus = {
+		id = SPR_orp_garland
+		icon = GFX_goal_eng_vanguard
+		available = {			
+			has_capitulated = yes
+		}
+		prerequisite = {
+			focus = SPR_polish_navy_in_exile
+		}
+
+		x = 33
+		y = 15
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = SPR_exile_naval_stuff_tt
+			hidden_effect = {
+				load_oob = "SPR_naval_exile"
+			}
+		
+		}
+	}
+
+
+
+	focus = {
+		id = SPR_zwiazek_walki_zbrojnej
+		icon = GFX_focus_SPR_resistance
+		available = {			
+			has_capitulated = yes
+		}
+		prerequisite = {
+			focus = SPR_poland_is_not_yet_lost
+		}
+
+		x = 29
+		y = 14
+		cost = 5
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = SPR_modify_army_spirit_tt
+			add_to_variable = {
+				SPR_intel_network_gain_factor_var = 0.2
+			}
+			custom_effect_tooltip = SPR_army10_tt
+
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = SPR_leopold_okulicki
+			show_ideas_tooltip = SPR_tadeusz_bor_komorowski
+		}
+	}
+
+	focus = {
+		id = SPR_support_the_hubalczycy
+		icon = GFX_pol_hubalczycy
+		available = {			
+			has_capitulated = yes
+		}
+		prerequisite = {
+			focus = SPR_zwiazek_walki_zbrojnej
+		}
+
+		x = 31
+		y = 15
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 30
+			custom_effect_tooltip = SPR_modify_army_spirit_tt
+			add_to_variable = {
+				SPR_resistance_growth_on_our_occupied_states_var = 0.1
+			}
+			custom_effect_tooltip = SPR_army8_tt
+	
+		}
+	}
+
+	focus = {
+		id = SPR_the_home_army
+		icon = GFX_goal_pol_for_poland
+		available = {			
+			has_capitulated = yes
+		}
+		prerequisite = {
+			focus = SPR_zwiazek_walki_zbrojnej
+		}
+
+		x = 29
+		y = 15
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = SPR_modify_army_spirit_tt
+			add_to_variable = {
+				SPR_resistance_growth_on_our_occupied_states_var = 0.1
+			}
+			custom_effect_tooltip = SPR_army8_tt
+	
+		}
+	}
+
+	focus = {
+		id = SPR_merge_the_bch
+		icon = GFX_pol_bch_repl
+		available = {			
+			has_capitulated = yes
+		}
+		prerequisite = {
+			focus = SPR_the_home_army
+		}
+
+		x = 29
+		y = 16
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = SPR_modify_army_spirit_tt
+			add_to_variable = {
+				FRA_legitimacy_gain_factor_var = 0.3
+			}
+			custom_effect_tooltip = SPR_army12_tt
+	
+		}
+	}
+
+	focus = {
+		id = SPR_merge_the_now
+		icon = GFX_pol_nsz_repl
+		available = {			
+			has_capitulated = yes
+		}
+		prerequisite = {
+			focus = SPR_the_home_army
+		}
+
+		x = 31
+		y = 16
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = SPR_modify_army_spirit_tt
+			add_to_variable = {
+				SPR_resistance_growth_on_our_occupied_states_var = 0.05
+			}
+			custom_effect_tooltip = SPR_army9_tt
+	
+		}
+	}
+
+	focus = {
+		id = SPR_merge_the_gl
+		icon = GFX_pol_glglglgglglgllggllggl
+		available = {			
+			has_capitulated = yes
+		}
+		prerequisite = {
+			focus = SPR_the_home_army
+		}
+		available = {
+			has_completed_focus = SPR_pakt_sikorski-mayski
+		}
+
+		x = 27
+		y = 16
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = SPR_modify_army_spirit_tt
+			add_to_variable = {
+				SPR_intel_from_operatives_factor_var = 0.2
+			}
+			custom_effect_tooltip = SPR_army11_tt
+			hidden_effect = {
+				SOV = {
+					add_state_core = 92
+					add_state_core = 88
+					add_state_core = 90
+					add_state_core = 10
+				}
+			}
+		}
+	}
+}		
