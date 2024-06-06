@@ -651,15 +651,15 @@ focus_tree = {
 			428 = {
 				add_resource = {
 					type = chromium
-					amount = 60
+					amount = 160
 				}
 				add_resource = {
 					type = tungsten
-					amount = 60
+					amount = 160
 				}
 				add_resource = {
 					type = aluminium
-					amount = 120
+					amount = 220
 				}
 			}
 		}
@@ -1295,7 +1295,7 @@ focus_tree = {
 		x = 0
 		y = 3
 
-		cost = 5
+		cost = 3
 
 		ai_will_do = {
 			factor = 100
@@ -1313,6 +1313,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			add_research_slot = 1
 			swap_ideas = {
 				remove_idea = SOV_legacy_of_five_year_plan_3
 				add_idea = SOV_total_war_industry
@@ -2675,6 +2676,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			add_research_slot = 1
 			swap_ideas = {
 				add_idea = SOV_ministry_of_aircraft_production_2
 				remove_idea = SOV_ministry_of_aircraft_production
@@ -2784,13 +2786,31 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			swap_ideas = {
-				add_idea = Disorganized_airforce_2_2
-				remove_idea = Disorganized_airforce_1_2
+			if = {
+				limit = { has_idea = Disorganized_airforce_1_2 }
+				swap_ideas = {
+					add_idea = Disorganized_airforce_2_2
+					remove_idea = Disorganized_airforce_1_2
+				}
 			}
-			swap_ideas = {
-				add_idea = Disorganized_airforce_3_1
-				remove_idea = Disorganized_airforce_2_1
+			if = {
+				limit = { has_idea = Disorganized_airforce_2_1 }
+				swap_ideas = {
+					add_idea = Disorganized_airforce_3_1
+					remove_idea = Disorganized_airforce_2_1
+				}
+			}
+			if = {
+				limit = { has_idea = Disorganized_airforce_1_1 }
+				swap_ideas = {
+					add_idea = Disorganized_airforce_3_1
+					remove_idea = Disorganized_airforce_2_1
+				}
+
+				swap_ideas = {
+					add_idea = Disorganized_airforce_2_2
+					remove_idea = Disorganized_airforce_1_2
+				}
 			}
 		}
 	}
@@ -2825,13 +2845,31 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			swap_ideas = {
-				add_idea = Disorganized_airforce_2_2
-				remove_idea = Disorganized_airforce_2_1
+			if = {
+				limit = { has_idea = Disorganized_airforce_2_1 }
+				swap_ideas = {
+					add_idea = Disorganized_airforce_2_2
+					remove_idea = Disorganized_airforce_2_1
+				}
 			}
-			swap_ideas = {
-				add_idea = Disorganized_airforce_1_3
-				remove_idea = Disorganized_airforce_1_2
+			if = {
+				limit = { has_idea = Disorganized_airforce_1_2 }
+				swap_ideas = {
+					add_idea = Disorganized_airforce_1_3
+					remove_idea = Disorganized_airforce_1_2
+				}
+			}
+			if = {
+				limit = { has_idea = Disorganized_airforce_1_1 }
+				swap_ideas = {
+					add_idea = Disorganized_airforce_2_2
+					remove_idea = Disorganized_airforce_2_1
+				}
+
+				swap_ideas = {
+					add_idea = Disorganized_airforce_1_3
+					remove_idea = Disorganized_airforce_1_2
+				}
 			}
 		}
 	}
@@ -2864,21 +2902,68 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			swap_ideas = {
-				add_idea = iron_will_1_3_2
-				remove_idea = Disorganized_airforce_1_3
+			if = {
+				limit = { has_idea = Disorganized_airforce_1_3 }
+				swap_ideas = {
+					add_idea = iron_will_1_3_2
+					remove_idea = Disorganized_airforce_1_3
+				}
 			}
-			swap_ideas = {
-				add_idea = iron_will_3_1_2
-				remove_idea = Disorganized_airforce_3_1
+			if = {
+				limit = { has_idea = Disorganized_airforce_3_1 }
+				swap_ideas = {
+					add_idea = iron_will_3_1_2
+					remove_idea = Disorganized_airforce_3_1
+				}
 			}
-			swap_ideas = {
-				add_idea = iron_will_2_2_2
-				remove_idea = Disorganized_airforce_2_2
+			if = {
+				limit = { has_idea = Disorganized_airforce_2_2 }
+				swap_ideas = {
+					add_idea = iron_will_2_2_2
+					remove_idea = Disorganized_airforce_2_2
+				}
 			}
-		
+			if = {
+				limit = { has_idea = Disorganized_airforce_1_1 }
+				swap_ideas = {
+					add_idea = iron_will_3_1_2
+					remove_idea = Disorganized_airforce_3_1
+				}
 
+				swap_ideas = {
+					add_idea = iron_will_2_2_2
+					remove_idea = Disorganized_airforce_2_2
+				}
+				
+				swap_ideas = {
+					add_idea = iron_will_1_3_2
+					remove_idea = Disorganized_airforce_1_3
+				}
+			}
+			if = {
+				limit = { has_idea = Disorganized_airforce_2_1 }
+				swap_ideas = {
+					add_idea = iron_will_3_1_2
+					remove_idea = Disorganized_airforce_3_1
+				}
 
+				swap_ideas = {
+					add_idea = iron_will_2_2_2
+					remove_idea = Disorganized_airforce_2_2
+				}
+			}
+			if = {
+				limit = { has_idea = Disorganized_airforce_1_2 }
+				swap_ideas = {
+					add_idea = iron_will_1_3_2
+					remove_idea = Disorganized_airforce_1_3
+				}
+
+				swap_ideas = {
+					add_idea = iron_will_2_2_2
+					remove_idea = Disorganized_airforce_2_2
+				}
+			}
 		}
 	}
 

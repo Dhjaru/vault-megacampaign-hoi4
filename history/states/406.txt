@@ -3,7 +3,7 @@ state={
 	id=406
 	name="STATE_406"
 	resources={
-		chromium=2.000
+		chromium=32.000
 		steel=90.000
 	}
 

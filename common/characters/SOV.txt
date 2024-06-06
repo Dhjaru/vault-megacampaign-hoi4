@@ -45,6 +45,20 @@ characters={
 			logistics_skill=4
 			legacy_id=0
 		}
+		advisor={
+			slot = army_chief
+			idea_token = sigurdur_bjornsson_chief
+			allowed = {
+				original_tag = SOV
+			}
+
+			cost = 150
+			traits = { army_chief_defensive_2 }
+			
+			ai_will_do = {
+				factor = 12
+			}
+		}
 	}
 
 	SOV_jon_stefansson={
@@ -129,12 +143,12 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ old_guard infantry_officer inflexible_strategist infantry_leader organizer skilled_staffer ita_kwantung_veto }
+			traits={ sov_skilled_staffer old_guard infantry_officer inflexible_strategist infantry_leader organizer skilled_staffer ita_kwantung_veto }
 			skill=5
 			attack_skill=4
-			defense_skill=8
+			defense_skill=6
 			planning_skill=1
-			logistics_skill=5
+			logistics_skill=7
 			legacy_id=0
 		}
 	}
@@ -175,6 +189,20 @@ characters={
 
 			traits = { mobile_warfare_expert }
 		}
+		advisor={
+			slot = army_chief
+			idea_token = gunnar_jonsson_chief
+			allowed = {
+				original_tag = SOV
+			}
+
+			cost = 150
+			traits = { army_chief_offensive_2 }
+			
+			ai_will_do = {
+				factor = 12
+			}
+		}
 	}
 	
 	SOV_johannes_alfsteinn={
@@ -195,6 +223,20 @@ characters={
 			planning_skill=10
 			logistics_skill=6
 			legacy_id=405
+		}
+		advisor={
+			slot = army_chief
+			idea_token = johannes_alfsteinn_chief
+			allowed = {
+				original_tag = SOV
+			}
+
+			cost = 200
+			traits = { army_chief_organizational_3 }
+			
+			ai_will_do = {
+				factor = 12
+			}
 		}
 	}
 	SOV_simon_timsson={
@@ -245,10 +287,10 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ career_officer infantry_officer inflexible_strategist infantry_leader organizer skilled_staffer ita_kwantung_veto }
+			traits={ sov_skilled_staffer career_officer infantry_officer inflexible_strategist infantry_leader organizer skilled_staffer ita_kwantung_veto }
 			skill=4
 			attack_skill=3
-			defense_skill=9
+			defense_skill=6
 			planning_skill=4
 			logistics_skill=5
 			legacy_id=-1
@@ -268,7 +310,7 @@ characters={
 			traits={ brilliant_strategist inflexible_strategist infantry_officer infantry_leader career_officer organizer skilled_staffer ranger urban_assault_specialist trickster guerilla_fighter camouflage_expert commando ita_kwantung_veto }
 			skill=8
 			attack_skill=4
-			defense_skill=9
+			defense_skill=6
 			planning_skill=4
 			logistics_skill=9
 			legacy_id=4555
@@ -302,7 +344,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ old_guard armor_officer brilliant_strategist panzer_leader organizer trait_engineer trickster urban_assault_specialist ranger ita_kwantung_veto commando camouflage_expert panzer_expert guerilla_fighter }
+			traits={ old_guard armor_officer brilliant_strategist panzer_leader organizer trait_engineer trickster urban_assault_specialist ranger ita_kwantung_veto commando camouflage_expert panzer_expert guerilla_fighter combined_arms_expert }
 			skill=7
 			attack_skill=9
 			defense_skill=3
@@ -420,7 +462,7 @@ characters={
 			traits={ career_officer infantry_officer inflexible_strategist infantry_leader organizer skilled_staffer ita_kwantung_veto }
 			skill=4
 			attack_skill=3
-			defense_skill=9
+			defense_skill=6
 			planning_skill=4
 			logistics_skill=5
 			legacy_id=-1
@@ -466,7 +508,7 @@ characters={
 		}
 	}
 	SOV_aleksandr_yegorov = {
-		name = "Aleksandr Yegorov"
+		name = "Aleksander Ytterbo"
 		portraits = {
 			army = {
 				small = "GFX_idea_aleksandr_yegorov"
@@ -475,10 +517,10 @@ characters={
 		}
 
 		corps_commander = {
-			traits={ career_officer infantry_officer inflexible_strategist infantry_leader organizer skilled_staffer ita_kwantung_veto }
+			traits={ sov_skilled_staffer career_officer infantry_officer inflexible_strategist infantry_leader organizer skilled_staffer ita_kwantung_veto }
 			skill=4
 			attack_skill=3
-			defense_skill=9
+			defense_skill=6
 			planning_skill=4
 			logistics_skill=5
 			legacy_id=-1
@@ -486,7 +528,7 @@ characters={
 	}
 
 	SOV_vasily_blyukher = {
-		name = "Vasily Blyukher"
+		name = "Valedmar Blåqvist"
 		portraits = {
 			army = {
 				small = "GFX_portrait_SOV_blyukher_small" #"gfx/interface/ideas/idea_SOV_blyukher.dds"
@@ -498,14 +540,14 @@ characters={
 			traits={ career_officer infantry_officer inflexible_strategist infantry_leader organizer skilled_staffer ita_kwantung_veto }
 			skill=4
 			attack_skill=3
-			defense_skill=9
+			defense_skill=6
 			planning_skill=4
 			logistics_skill=5
 			legacy_id=-1
 		}
 	}
 	SOV_semyon_budyonny={
-		name="Semyon Budyonny"
+		name="Simon Buskgren"
 		portraits={
 			army = {
 				large = "GFX_portrait_SOV_semyon_budyonny"
@@ -514,17 +556,17 @@ characters={
 		}
 
 		corps_commander = {
-			traits={ career_officer infantry_officer inflexible_strategist infantry_leader organizer skilled_staffer ita_kwantung_veto }
+			traits={ sov_skilled_staffer career_officer infantry_officer inflexible_strategist infantry_leader organizer skilled_staffer ita_kwantung_veto }
 			skill=4
 			attack_skill=3
-			defense_skill=9
+			defense_skill=6
 			planning_skill=4
 			logistics_skill=5
 			legacy_id=-1
 		}
 	}
 	SOV_ivan_chernyakhovsky={
-		name="Ivan Chernyakhovsky"
+		name="Ivar Kärnkåpa"
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SOV_ivan_chernyakhovsky.dds"
@@ -544,7 +586,7 @@ characters={
 		}
 	}
 	SOV_issa_pliyev={
-		name="Issa Pliyev"
+		name="Johan Bogren"
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SOV_issa_pliyev.dds"
@@ -564,7 +606,7 @@ characters={
 		}
 	}
 	SOV_leonid_govorov={
-		name="Leonid Govorov"
+		name="Lennart Gustavsson"
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SOV_leonid_govorov.dds"
@@ -584,7 +626,7 @@ characters={
 		}
 	}
 	SOV_grigory_kulik={
-		name="Grigory Kulik"
+		name="George Kulak"
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SOV_grigory_kulik.dds"
@@ -604,7 +646,7 @@ characters={
 		}
 	}
 	SOV_kirill_meretskov={
-		name="Kirill Meretskov"
+		name="Kjäll Meterkov"
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SOV_kirill_meretskov.dds"
@@ -624,7 +666,7 @@ characters={
 		}
 	}
 	SOV_andrey_yeryomenko={
-		name="Andrey Yeryomenko"
+		name="Andre Lejonhufvud"
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SOV_andrey_yeryomenko.dds"
@@ -644,7 +686,7 @@ characters={
 		}
 	}
 	SOV_georgiy_zakharov={
-		name="Georgiy Zakharov"
+		name="George Zakariasson"
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SOV_georgiy_zakharov.dds"
@@ -683,21 +725,17 @@ characters={
 			legacy_id=-1
 		}
 		advisor={
-			slot = high_command
-			idea_token = yakov_cherevichenko
-			ledger = army
+			slot = army_chief
+			idea_token = yakov_cherevichenko_chief
 			allowed = {
 				original_tag = SOV
+			}
 
-			}
-			available = {
-				
-			}
-			cost = 150			
-			traits = { army_infantry_2 }
+			cost = 150
+			traits = { army_chief_morale_2 }
 			
 			ai_will_do = {
-				factor = 8
+				factor = 12
 			}
 		}
 	}
@@ -1331,59 +1369,6 @@ characters={
 				factor = 1
 			}
 		}
-	}
-	SOV_georgy_zhukov_chief = {
-		portraits = {
-			army = {
-				small = "GFX_idea_georgy_zhukov"
-				large = "gfx/leaders/SOV/Portrait_Soviet_Gregory_Zhukov.dds"
-			}
-		}
-		name="Georgy Zhukov"
-		advisor={
-			slot = army_chief
-			idea_token = georgy_zhukov_chief
-			allowed = {
-				original_tag = SOV
-			}
-
-			available = {
-				has_completed_focus = SOV_hero_of_the_union
-			}
-			cost = 150
-			traits = { army_chief_organizational_3 }
-			
-			ai_will_do = {
-				factor = 12
-			}
-		}
-		advisor={
-			slot = theorist
-			idea_token = georgy_zhukov_chief
-			ledger = army
-			
-			allowed = {
-				original_tag = SOV # Unlocked via focus
-
-			}
-			available = {
-				
-				has_completed_focus = SOV_hero_of_the_union
-			}
-
-			available = {
-			}
-			
-			ai_will_do = {
-				factor = 500
-			}
-			
-			cost = 250
-			
-		
-			
-			traits = { mass_assault_expert }
-		}	
 	}
 	SOV_pyotr_smirnov = {
 		portraits={
