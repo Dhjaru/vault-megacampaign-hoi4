@@ -97,7 +97,7 @@ characters={
 		}
 		advisor={
 			slot = high_command
-			idea_token = SOV_kristjan_rylander
+			idea_token = SOV_svenn_johanesson
 			ledger = army
 			
 			allowed = {
