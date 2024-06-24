@@ -197,6 +197,8 @@ ENG_budget_decisions = {
 			tag = ENG
 			has_stability > 0.2
 		}
+		
+		days_remove = 180
 
 		visible = {
 			USA = {
