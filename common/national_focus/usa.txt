@@ -94,15 +94,11 @@ focus = {
 		completion_reward = { 
 		add_ideas = monroe_doctrine
 		add_ideas = isolation
-		add_country_leader_role = {
-			character = USA_walt_disney
-			promote_leader = yes
-			country_leader = {
-				ideology = conservatism
-			}
+		USA_walt_disney = {
+				promote_character = yes
 		}
 		}
-	}	
+	}
 
 
 focus = {
