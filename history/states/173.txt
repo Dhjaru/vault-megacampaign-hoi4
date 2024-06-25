@@ -3,13 +3,13 @@ state={
 	id=173
 	name="STATE_173"
 	resources={
-		aluminium=1.000
-		chromium=1.000
-		steel=1.000
+		aluminium=14.000
+		chromium=12.000
+		steel=12.000
 	}
 
 	history={
-		owner = W69
+		owner = ENG
 		victory_points = {
 			10171 1 
 		}
@@ -17,7 +17,7 @@ state={
 			infrastructure = 3
 			industrial_complex = 0
 			arms_factory = 0
-			air_base = 1
+			air_base = 0
 
 		}
 		add_core_of = W69
@@ -35,6 +35,6 @@ state={
 	}
 	manpower=10458072
 	buildings_max_level_factor=1.000
-	state_category=megalopolis
+	state_category=large_town
 	local_supplies=10.000
 }

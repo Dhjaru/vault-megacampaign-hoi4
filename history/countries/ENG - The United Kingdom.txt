@@ -304,7 +304,6 @@ add_to_faction = CAN
 add_to_faction = USA
 add_to_faction = SPR
 add_to_faction = HOL
-add_to_faction = ARG
 
 add_ideas = {
 	great_power

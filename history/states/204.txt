@@ -4,19 +4,19 @@ state={
 	name="STATE_204"
 
 	history={
-		owner = W69
+		owner = ENG
 		victory_points = {
 			7404 15 
 		}
 		buildings = {
 			infrastructure = 2
-			industrial_complex = 1
+			industrial_complex = 0
 			arms_factory = 0
 			7404 = {
 				naval_base = 8
 
 			}
-			air_base = 5
+			air_base = 0
 
 		}
 		add_core_of = CAM
@@ -32,6 +32,6 @@ state={
 	}
 	manpower=901928
 	buildings_max_level_factor=1.000
-	state_category=rural
+	state_category=pastoral
 	local_supplies=10.000
 }

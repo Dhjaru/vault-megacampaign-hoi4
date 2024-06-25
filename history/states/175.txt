@@ -3,19 +3,19 @@ state={
 	id=175
 	name="STATE_175"
 	resources={
-		tungsten=9.000
+		tungsten=90.000
 	}
 
 	history={
-		owner = W69
+		owner = ENG
 		victory_points = {
 			12829 10 
 		}
 		buildings = {
 			infrastructure = 4
-			industrial_complex = 1
+			industrial_complex = 0
 			arms_factory = 0
-			air_base = 6
+			air_base = 0
 
 		}
 		add_core_of = PAK
@@ -31,6 +31,6 @@ state={
 	}
 	manpower=7285780
 	buildings_max_level_factor=1.000
-	state_category=megalopolis
+	state_category=large_town
 	local_supplies=10.000
 }

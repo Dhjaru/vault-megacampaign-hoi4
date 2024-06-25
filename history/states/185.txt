@@ -4,13 +4,13 @@ state={
 	name="STATE_185"
 
 	history={
-		owner = W69
+		owner = ENG
 		victory_points = {
 			12708 10 
 		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 2
+			industrial_complex = 0
 			arms_factory = 0
 			air_base = 10
 
@@ -30,6 +30,6 @@ state={
 	}
 	manpower=7161672
 	buildings_max_level_factor=1.000
-	state_category=megalopolis
+	state_category=town
 	local_supplies=10.000
 }

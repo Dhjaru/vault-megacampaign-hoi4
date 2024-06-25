@@ -3,13 +3,13 @@ state={
 	id=136
 	name="STATE_136"
 	resources={
-		aluminium=1.000
-		chromium=4.000
-		steel=5.000
+		aluminium=10.000
+		chromium=40.000
+		steel=50.000
 	}
 
 	history={
-		owner = W69
+		owner = ENG
 		victory_points = {
 			10088 10 
 		}
@@ -38,6 +38,6 @@ state={
 	}
 	manpower=2923984
 	buildings_max_level_factor=1.000
-	state_category=city
+	state_category=rural
 	local_supplies=10.000
 }

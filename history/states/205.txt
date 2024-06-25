@@ -3,13 +3,13 @@ state={
 	id=205
 	name="STATE_205"
 	resources={
-		rubber=8.000
-		steel=1.000
-		tungsten=1.000
+		rubber=38.000
+		steel=21.000
+		tungsten=15.000
 	}
 
 	history={
-		owner = W69
+		owner = ENG
 		victory_points = {
 			12431 10 
 		}

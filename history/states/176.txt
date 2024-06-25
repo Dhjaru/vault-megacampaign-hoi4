@@ -4,7 +4,7 @@ state={
 	name="STATE_176"
 
 	history={
-		owner = W69
+		owner = ENG
 		victory_points = {
 			7374 1 
 		}
@@ -27,6 +27,6 @@ state={
 	}
 	manpower=1442644
 	buildings_max_level_factor=1.000
-	state_category=rural
+	state_category=enclave
 	local_supplies=10.000
 }

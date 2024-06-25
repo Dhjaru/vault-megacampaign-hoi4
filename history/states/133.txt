@@ -3,24 +3,24 @@ state={
 	id=133
 	name="STATE_133"
 	resources={
-		steel=3.000
-		tungsten=2.000
+		steel=30.000
+		tungsten=20.000
 	}
 
 	history={
-		owner = W69
+		owner = ENG
 		victory_points = {
 			7565 10 
 		}
 		buildings = {
 			infrastructure = 4
-			industrial_complex = 3
+			industrial_complex = 0
 			arms_factory = 0
 			4245 = {
 				naval_base = 4
 
 			}
-			air_base = 10
+			air_base = 2
 
 		}
 		add_core_of = BAN
@@ -36,6 +36,6 @@ state={
 	}
 	manpower=12256424
 	buildings_max_level_factor=1.000
-	state_category=megalopolis
+	state_category=city
 	local_supplies=10.000
 }
