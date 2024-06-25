@@ -32,10 +32,10 @@
 		completion_reward = {
 			add_named_threat = { threat = 15 name = JAP_game_1 }
 			every_owned_state = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 5
 				add_building_construction = {
 				    type = industrial_complex
-				    level = 2
+				    level = 5
 				    instant_build = yes
 				}
 			}
@@ -60,19 +60,19 @@
 		completion_reward = {
 			add_named_threat = { threat = 15 name = JAP_game_1 }
 			every_owned_state = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 5
 				add_building_construction = {
 				    type = arms_factory
-				    level = 2
+				    level = 5
 				    instant_build = yes
 				}
 			}
 			every_owned_state = {
 				limit = { is_coastal = yes }
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 				    type = dockyard
-				    level = 2
+				    level = 4
 				    instant_build = yes
 				}
 			}
