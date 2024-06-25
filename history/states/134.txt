@@ -4,19 +4,19 @@ state={
 	name="STATE_134"
 
 	history={
-		owner = W69
+		owner = ENG
 		victory_points = {
 			11929 10 
 		}
 		buildings = {
 			infrastructure = 4
-			industrial_complex = 2
+			industrial_complex = 0
 			arms_factory = 0
 			12010 = {
 				naval_base = 4
 
 			}
-			air_base = 6
+			air_base = 4
 
 		}
 		add_core_of = BAN
@@ -32,6 +32,6 @@ state={
 	}
 	manpower=17774636
 	buildings_max_level_factor=1.000
-	state_category=megalopolis
+	state_category=city
 	local_supplies=10.000
 }

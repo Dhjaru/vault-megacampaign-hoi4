@@ -8,7 +8,7 @@ state={
 	}
 
 	history={
-		owner = W69
+		owner = ENG
 		victory_points = {
 			5043 1 
 		}
@@ -16,7 +16,7 @@ state={
 			infrastructure = 1
 			industrial_complex = 0
 			arms_factory = 0
-			dockyard = 1
+			dockyard = 0
 			7917 = {
 				naval_base = 4
 
@@ -37,6 +37,6 @@ state={
 	}
 	manpower=2000880
 	buildings_max_level_factor=1.000
-	state_category=town
+	state_category=rural
 	local_supplies=10.000
 }

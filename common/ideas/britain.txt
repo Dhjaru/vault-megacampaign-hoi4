@@ -15,37 +15,25 @@ ideas = {
 				trade_cost_for_target_factor = -0.50
 			}
 			targeted_modifier = {
-				tag = FRA
+				tag = W69
 				trade_cost_for_target_factor = -0.50
 			}
 			targeted_modifier = {
-				tag = SAF
+				tag = W70
 				trade_cost_for_target_factor = -0.50
 			}
 			targeted_modifier = {
-				tag = NZL
+				tag = W78
 				trade_cost_for_target_factor = -0.50
 			}
 			targeted_modifier = {
-				tag = POL
+				tag = HOL
 				trade_cost_for_target_factor = -0.50
 			}
 			targeted_modifier = {
-				tag = RAJ
+				tag = SPR
 				trade_cost_for_target_factor = -0.50
 			}
-			targeted_modifier = {
-				tag = MEX
-				trade_cost_for_target_factor = -0.50
-			}
-			targeted_modifier = {
-				tag = BRA
-				trade_cost_for_target_factor = -0.50
-			}
-			targeted_modifier = {
-				tag = IRE
-				trade_cost_for_target_factor = -0.50
-			}				
 		}
 		ENG_commonwealth_trading_idea_4 = {
 			allowed = {
@@ -61,41 +49,25 @@ ideas = {
 				trade_cost_for_target_factor = -0.50
 			}
 			targeted_modifier = {
-				tag = FRA
+				tag = W69
 				trade_cost_for_target_factor = -0.50
 			}
 			targeted_modifier = {
-				tag = AST
+				tag = W70
 				trade_cost_for_target_factor = -0.50
 			}
 			targeted_modifier = {
-				tag = SAF
+				tag = W78
 				trade_cost_for_target_factor = -0.50
 			}
 			targeted_modifier = {
-				tag = NZL
+				tag = HOL
 				trade_cost_for_target_factor = -0.50
 			}
 			targeted_modifier = {
-				tag = POL
+				tag = SPR
 				trade_cost_for_target_factor = -0.50
 			}
-			targeted_modifier = {
-				tag = RAJ
-				trade_cost_for_target_factor = -0.50
-			}
-			targeted_modifier = {
-				tag = MEX
-				trade_cost_for_target_factor = -0.50
-			}
-			targeted_modifier = {
-				tag = BRA
-				trade_cost_for_target_factor = -0.50
-			}
-			targeted_modifier = {
-				tag = IRE
-				trade_cost_for_target_factor = -0.50
-			}				
 		}
 		ENG_commonwealth_trading_idea_5 = {
 			allowed = {
@@ -111,41 +83,25 @@ ideas = {
 				trade_cost_for_target_factor = -0.50
 			}
 			targeted_modifier = {
-				tag = FRA
+				tag = W69
 				trade_cost_for_target_factor = -0.50
 			}
 			targeted_modifier = {
-				tag = CAN
+				tag = W70
 				trade_cost_for_target_factor = -0.50
 			}
 			targeted_modifier = {
-				tag = SAF
+				tag = W78
 				trade_cost_for_target_factor = -0.50
 			}
 			targeted_modifier = {
-				tag = NZL
+				tag = HOL
 				trade_cost_for_target_factor = -0.50
 			}
 			targeted_modifier = {
-				tag = POL
+				tag = SPR
 				trade_cost_for_target_factor = -0.50
 			}
-			targeted_modifier = {
-				tag = RAJ
-				trade_cost_for_target_factor = -0.50
-			}
-			targeted_modifier = {
-				tag = MEX
-				trade_cost_for_target_factor = -0.50
-			}
-			targeted_modifier = {
-				tag = BRA
-				trade_cost_for_target_factor = -0.50
-			}
-			targeted_modifier = {
-				tag = IRE
-				trade_cost_for_target_factor = -0.50
-			}				
 		}
 		ENG_commonwealth_trading_idea_2 = {
 			allowed = {
@@ -161,45 +117,25 @@ ideas = {
 				trade_cost_for_target_factor = -0.50
 			}
 			targeted_modifier = {
-				tag = FRA
+				tag = W69
 				trade_cost_for_target_factor = -0.50
 			}
 			targeted_modifier = {
-				tag = CAN
+				tag = W70
 				trade_cost_for_target_factor = -0.50
 			}
 			targeted_modifier = {
-				tag = AST
+				tag = W78
 				trade_cost_for_target_factor = -0.50
 			}
 			targeted_modifier = {
-				tag = SAF
+				tag = HOL
 				trade_cost_for_target_factor = -0.50
 			}
 			targeted_modifier = {
-				tag = NZL
+				tag = SPR
 				trade_cost_for_target_factor = -0.50
 			}
-			targeted_modifier = {
-				tag = POL
-				trade_cost_for_target_factor = -0.50
-			}
-			targeted_modifier = {
-				tag = RAJ
-				trade_cost_for_target_factor = -0.50
-			}
-			targeted_modifier = {
-				tag = MEX
-				trade_cost_for_target_factor = -0.50
-			}
-			targeted_modifier = {
-				tag = BRA
-				trade_cost_for_target_factor = -0.50
-			}
-			targeted_modifier = {
-				tag = IRE
-				trade_cost_for_target_factor = -0.50
-			}				
 		}
 		ENG_commonwealth_trading_idea_3 = {
 			allowed = {
@@ -215,45 +151,25 @@ ideas = {
 				trade_cost_for_target_factor = -0.50
 			}
 			targeted_modifier = {
-				tag = FRA
+				tag = W69
 				trade_cost_for_target_factor = -0.50
 			}
 			targeted_modifier = {
-				tag = CAN
+				tag = W70
 				trade_cost_for_target_factor = -0.50
 			}
 			targeted_modifier = {
-				tag = AST
+				tag = W78
 				trade_cost_for_target_factor = -0.50
 			}
 			targeted_modifier = {
-				tag = SAF
+				tag = HOL
 				trade_cost_for_target_factor = -0.50
 			}
 			targeted_modifier = {
-				tag = NZL
+				tag = SPR
 				trade_cost_for_target_factor = -0.50
 			}
-			targeted_modifier = {
-				tag = POL
-				trade_cost_for_target_factor = -0.50
-			}
-			targeted_modifier = {
-				tag = RAJ
-				trade_cost_for_target_factor = -0.50
-			}
-			targeted_modifier = {
-				tag = MEX
-				trade_cost_for_target_factor = -0.50
-			}
-			targeted_modifier = {
-				tag = BRA
-				trade_cost_for_target_factor = -0.50
-			}
-			targeted_modifier = {
-				tag = IRE
-				trade_cost_for_target_factor = -0.50
-			}	
 			targeted_modifier = {
 				tag = USA
 				trade_cost_for_target_factor = -0.50
@@ -373,49 +289,21 @@ ideas = {
 				}
 				targeted_modifier = {
 					
-					tag = ITA
+					tag = X14
 					attack_bonus_against = 0.2
 					defense_bonus_against = 0.2
 						
 				}
 				targeted_modifier = {
 					
-					tag = SPR
+					tag = FRA
 					attack_bonus_against = 0.2
 					defense_bonus_against = 0.2
 						
 				}
 				targeted_modifier = {
 					
-					tag = EFR
-					attack_bonus_against = 0.2
-					defense_bonus_against = 0.2
-						
-				}
-				targeted_modifier = {
-					
-					tag = SLO
-					attack_bonus_against = 0.2
-					defense_bonus_against = 0.2
-						
-				}
-				targeted_modifier = {
-					
-					tag = HUN
-					attack_bonus_against = 0.2
-					defense_bonus_against = 0.2
-						
-				}
-				targeted_modifier = {
-					
-					tag = ROM
-					attack_bonus_against = 0.2
-					defense_bonus_against = 0.2
-						
-				}
-				targeted_modifier = {
-					
-					tag = BUL
+					tag = SCA
 					attack_bonus_against = 0.2
 					defense_bonus_against = 0.2
 						
@@ -882,7 +770,7 @@ ideas = {
 				army_org_factor = 0.1
 			}
 			targeted_modifier = {
-				tag = ITA
+				tag = X14
 				attack_bonus_against = -0.05
 				defense_bonus_against = -0.05
 			}
@@ -1025,8 +913,11 @@ ideas = {
 				always = no
 			}
 			cancel = {
-				ITA = {
-					has_full_control_of_state = 446
+				X14 = {
+					OR = {
+						has_full_control_of_state = 189
+						has_full_control_of_state = 197
+					}
 				}
 			}
 			removal_cost = -1
@@ -1293,11 +1184,7 @@ ideas = {
 			picture = idea_cze_planning_bonus
 			
 			targeted_modifier = {
-				tag = ETH
-				attack_bonus_against = 0.15
-			}
-			targeted_modifier = {
-				tag = ITA
+				tag = X14
 				attack_bonus_against = 0.15
 			}
 		}	

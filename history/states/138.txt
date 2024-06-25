@@ -3,20 +3,20 @@ state={
 	id=138
 	name="STATE_138"
 	resources={
-		chromium=2.000
-		tungsten=4.000
+		chromium=20.000
+		tungsten=40.000
 	}
 
 	history={
-		owner = W69
+		owner = ENG
 		victory_points = {
 			1317 10 
 		}
 		buildings = {
 			infrastructure = 4
-			industrial_complex = 1
+			industrial_complex = 0
 			arms_factory = 0
-			air_base = 6
+			air_base = 0
 
 		}
 		add_core_of = RAJ
@@ -34,6 +34,6 @@ state={
 	}
 	manpower=6070264
 	buildings_max_level_factor=1.000
-	state_category=megalopolis
+	state_category=town
 	local_supplies=10.000
 }

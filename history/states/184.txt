@@ -4,15 +4,15 @@ state={
 	name="STATE_184"
 
 	history={
-		owner = W69
+		owner = ENG
 		victory_points = {
 			10905 10 
 		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 1
+			industrial_complex = 0
 			arms_factory = 0
-			air_base = 6
+			air_base = 0
 
 		}
 		add_core_of = TIB

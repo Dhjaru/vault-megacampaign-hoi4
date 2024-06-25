@@ -345,6 +345,11 @@ set_popularities = {
 	neutrality = 70
 }
 
+create_faction = FRA_entante
+add_to_faction = FRA
+add_to_faction = X14
+add_to_faction = SCA
+
 # DIPLOMACY
 if = {
     limit = {

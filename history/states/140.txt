@@ -3,18 +3,18 @@ state={
 	id=140
 	name="STATE_140"
 	resources={
-		aluminium=1.000
-		oil=1.000
+		aluminium=12.000
+		oil=12.000
 	}
 
 	history={
-		owner = W69
+		owner = ENG
 		victory_points = {
 			4132 10 
 		}
 		buildings = {
 			infrastructure = 4
-			industrial_complex = 2
+			industrial_complex = 0
 			arms_factory = 0
 			9975 = {
 				naval_base = 4
@@ -35,6 +35,6 @@ state={
 	}
 	manpower=5889200
 	buildings_max_level_factor=1.000
-	state_category=megalopolis
+	state_category=large_town
 	local_supplies=10.000
 }

@@ -3,24 +3,24 @@ state={
 	id=142
 	name="STATE_142"
 	resources={
-		chromium=3.000
-		tungsten=20.000
+		chromium=39.000
+		tungsten=120.000
 	}
 
 	history={
-		owner = W69
+		owner = ENG
 		victory_points = {
 			4344 10 
 		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 3
+			industrial_complex = 0
 			arms_factory = 0
 			12208 = {
 				naval_base = 4
 
 			}
-			air_base = 10
+			air_base = 0
 
 		}
 		add_core_of = W42
@@ -37,6 +37,6 @@ state={
 	}
 	manpower=5732504
 	buildings_max_level_factor=1.000
-	state_category=metropolis
+	state_category=town
 	local_supplies=10.000
 }

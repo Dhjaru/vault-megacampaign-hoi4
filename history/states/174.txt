@@ -4,15 +4,15 @@ state={
 	name="STATE_174"
 
 	history={
-		owner = W69
+		owner = ENG
 		victory_points = {
 			10751 10 
 		}
 		buildings = {
 			infrastructure = 5
-			industrial_complex = 3
-			arms_factory = 1
-			air_base = 10
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
 
 		}
 		add_core_of = PAK
@@ -31,7 +31,7 @@ state={
 	}
 	manpower=28873004
 	buildings_max_level_factor=1.000
-	state_category=megalopolis
+	state_category=large_city
 
 	local_supplies=10.0
 }
