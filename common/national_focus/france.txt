@@ -1115,7 +1115,7 @@
 		will_lead_to_war_with = SOV
 		
 		available = {
-			always = no
+			date > 1941.6.1 
 		}
 		x = 0
 		y = 1
@@ -1127,116 +1127,11 @@
 		}
 		completion_reward = {
 			SOV = { add_timed_idea = { idea = shattered_retreat days = 150 }   }
-			custom_effect_tooltip = FRA_decision_focus_tt
-			FIN = { country_event = { id = italy.604 days = 3 } if = { limit = { is_ai = yes } add_ideas = fin_sisu_ai }}
 			add_ideas = FRA_barbarossa 	
-			hidden_effect={ 
-			
-			291 = { set_building_level = { type = air_base level = 20 } } 
-				remove_sov_sea_mines = yes
-			every_country ={  remove_ideas = hidden_anti_cold_acclimation_spirit }
-						every_state = { limit = { rearline_military_district_state = yes } add_dynamic_modifier = { scope = SOV modifier = SOV_rearline_military_district days = 120    }   }
-			every_state = { limit = { frontline_military_district_state = yes } add_dynamic_modifier = { scope = SOV modifier = SOV_frontline_military_district days = 180   }   }
-				if = { limit = { has_dynamic_modifier = { modifier = SOV_soviet_imports scope = 64 } }	remove_dynamic_modifier = { modifier = SOV_soviet_imports }   }
-			SOV = { 
-			remove_ideas = transport_plane_nerf_sov 			
-			set_country_flag = { flag = SOV_barbarossa_scorched_earth_delay days = 45 value = 1 }
-			if = { limit = { FIN = { is_ai = no }} delete_unit_template_and_units = { division_template = "Continuation War RanFRAs" } load_oob = "SOV_FIN_AI" } }
-					every_country = { limit = { OR ={ AND = { is_in_faction_with = FRA NOT = { OR = { tag = AOI tag = YUG tag = ALB tag = ITA }} } tag = FIN   } }  add_ideas = FRA_barbarossa      }
-					} 
-			custom_effect_tooltip = FRA_barbarossa_others_text
-			custom_effect_tooltip = FRA_barb_buff_tt
-			SOV = {set_country_flag = SOV_great_patriotic_war_flag set_country_flag = SOV_third_five_year_plan_locked_flag   }
-			country_event = { id = fincon.2 days = 7 }
 			declare_war_on = {
 				target = SOV 
 				type = annex_everything
 			}
-			if = { limit = { country_exists = MON }
-			FIN = {
-				declare_war_on = {
-				target = MON 
-				type = annex_everything
-			}
-			}
-						declare_war_on = {
-				target = MON 
-				type = annex_everything
-			}
-			ROOT_call_against_mongolia = yes
-			}
-			FRA = { activate_mission = FRA_barbarossa_mission }  SOV = { activate_mission = FRA_barbarossa_mission } 
-						hidden_effect = { 
-							if=  { limit ={ NOT ={ ITA = { has_completed_focus = ITA_balkan_ambition } } }
-							ITA= { complete_national_focus = ITA_balkan_ambition }
-							}
-						if=  { limit ={ NOT ={ GRE = { has_completed_focus = GRE_join_allies } } country_exists = GRE }
-							GRE ={ complete_national_focus = GRE_join_allies }
-							ITA = {declare_war_on = { 	target = GRE 	type = annex_everything } } 
-							if = { limit = { country_exists = YUG YUG = { is_ai = no } } YUG = { declare_war_on = { 	target = GRE 	type = annex_everything } } }
-							if = { limit = { country_exists = EFR YUG = { is_ai = no } } EFR = {declare_war_on = { 	target = GRE 	type = annex_everything }  } }
-							if = { limit = { country_exists = ALB YUG = { is_ai = no } } ALB = {declare_war_on = { 	target = GRE 	type = annex_everything }  } }
-						}
-						ITA = { transfer_state = 32 transfer_state = 21 }
-			country_event = { id = news.153 days = 1 }
-			ENG = { diplomatic_relation = { country = SOV  relation = docking_rights   active = yes } }	
-			SOV = { add_ideas = tot_economic_mobilisation country_event = { id = soviet.503 days = 0  } }
-
-			if = { limit = { country_exists = HUN }	HUN = { add_to_war = { targeted_alliance = FRA enemy = SOV } } }
-			if = { limit = { country_exists = CZE }	CZE = { add_to_war = { targeted_alliance = FRA enemy = SOV } } }
-						if = { limit = { country_exists = DEN }	DEN = { add_to_war = { targeted_alliance = FRA enemy = SOV } } }
-
-			if = { limit = { country_exists = ROM }	ROM = { add_to_war = { targeted_alliance = FRA enemy = SOV } }	}
-			if = { limit = { country_exists = BUL NOT = { BUL = { has_completed_focus = BUL_peaceful_development }	} } BUL = { add_to_war = { targeted_alliance = FRA enemy = SOV } } }
-			if = { limit = { country_exists = SPR is_in_faction_with = FRA }	SPR = { add_to_war = { targeted_alliance = FRA enemy = SOV } } }
-			FIN = { 		
-
-			declare_war_on = {
-				target = SOV 
-				type = annex_everything
-			} 
-			if = { limit ={ country_exists = MON  }
-						declare_war_on = {
-				target = MON
-				type = annex_everything
-			} 
-			}
-			}
-		
-			SOV = { 
-			SOV_relocate_mil=yes		
-			SOV_relocate_mil=yes
-			SOV_relocate_civ=yes		
-			SOV_relocate_civ=yes	
-			}
-				if = { limit = { country_exists = ALB }	ALB = { add_to_war = { targeted_alliance = FRA enemy = SOV } }} 
-				if = { limit = { NOT = {EFR = { has_country_flag = EFR_torch_declared} } } EFR = { every_owned_state = {  limit ={  NOT = { has_state_flag = keep_milled } }  set_demilitarized_zone = yes } 26 = { set_demilitarized_zone = no  } }  }
-				
-				if = { 
-				limit = { 
-				NOT = { has_decision = FRA_desert_flower_dec }
-					OR = {
-					controls_state = 291 
-					any_other_country = {
-						is_in_faction_with = FRA
-						controls_state = 291
-					}
-				} 
-				OR = {
-					controls_state = 594 
-					any_other_country = {
-						is_in_faction_with = FRA
-						controls_state = 594
-					}
-				} 
-				
-				}
-				activate_decision = FRA_desert_flower_dec
-				}
-				
-				
-			}	
-			
 		}
 	}	
 	

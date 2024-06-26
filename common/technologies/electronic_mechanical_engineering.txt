@@ -1476,12 +1476,12 @@ technologies = {
 
 		# can build reactors
 		
-		start_year = 1943
-		research_cost = 5
+		start_year = 1944
+		research_cost = 6
 		
 		folder = {
 			name = electronics_folder
-			position = { x = 2 y = 2 }
+			position = { x = 2 y = 4 }
 		}
 
 		path = {
@@ -1510,12 +1510,12 @@ technologies = {
 
 	nukes = {
 	
-		start_year = 1945
-		research_cost = 10
+		start_year = 1947
+		research_cost = 12
 		
 		folder = {
 			name = electronics_folder
-			position = { x = 2 y = 6 }
+			position = { x = 2 y = 10 }
 		}
 		
 		ai_will_do = {
